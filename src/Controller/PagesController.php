@@ -31,7 +31,7 @@ class PagesController extends AppController
 
 	function beforeFilter(Event $event){
 		parent::beforeFilter($event);
-		//$this->Auth->allow('index');
+		$this->Auth->allow('index');
 	}
 	/**
      * Index method

@@ -2510,3 +2510,40 @@ Stack Trace:
 #2 {main}
 
 
+2015-04-14 22:18:33 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cake_pairs.modules' doesn't exist
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'modules', Array, Object(Cake\Database\Schema\Table))
+#1 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(65): Cake\Database\Schema\Collection->describe('modules', Array)
+#2 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Schema\CachedCollection->describe('modules')
+#3 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/Form/EntityContext.php(458): Cake\ORM\Table->schema()
+#4 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1147): Cake\View\Form\EntityContext->type('name')
+#5 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1119): Cake\View\Helper\FormHelper->_inputType('name', Array)
+#6 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(983): Cake\View\Helper\FormHelper->_parseOptions('name', Array)
+#7 /opt/lampp/htdocs/pairs/src/Template/Modules/add.ctp(14): Cake\View\Helper\FormHelper->input('name', Array)
+#8 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/View.php(815): include('/opt/lampp/htdo...')
+#9 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/View.php(775): Cake\View\View->_evaluate('/opt/lampp/htdo...', Array)
+#10 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/View.php(463): Cake\View\View->_render('/opt/lampp/htdo...')
+#11 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Controller/Controller.php(576): Cake\View\View->render(NULL, NULL)
+#12 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#13 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#14 /opt/lampp/htdocs/pairs/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2015-04-15 07:35:23 Error: Fatal Error (1): Call to a member function identify() on boolean in [/opt/lampp/htdocs/pairs/src/Controller/UsersController.php, line 59]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-15 07:35:24 Error: [Cake\Error\FatalErrorException] Call to a member function identify() on boolean
+Request URL: /pairs/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 59)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
