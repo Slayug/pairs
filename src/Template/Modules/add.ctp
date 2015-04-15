@@ -15,7 +15,6 @@
             echo $this->Form->input('description', ['label' => 'Description:']);
             echo $this->Form->input('groups._ids', ['options' => $groups,
 													'label' => 'Groupes:']);
-			echo $this->Form->hidden('users._ids', ['default' => $id]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

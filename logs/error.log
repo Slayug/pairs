@@ -2547,3 +2547,148 @@ Stack Trace:
 #2 {main}
 
 
+2015-04-15 10:13:50 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cake_pairs.modules' doesn't exist
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'modules', Array, Object(Cake\Database\Schema\Table))
+#1 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(65): Cake\Database\Schema\Collection->describe('modules', Array)
+#2 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Schema\CachedCollection->describe('modules')
+#3 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/Form/EntityContext.php(458): Cake\ORM\Table->schema()
+#4 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1147): Cake\View\Form\EntityContext->type('name')
+#5 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1119): Cake\View\Helper\FormHelper->_inputType('name', Array)
+#6 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(983): Cake\View\Helper\FormHelper->_parseOptions('name', Array)
+#7 /opt/lampp/htdocs/pairs/src/Template/Modules/add.ctp(14): Cake\View\Helper\FormHelper->input('name', Array)
+#8 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/View.php(815): include('/opt/lampp/htdo...')
+#9 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/View.php(775): Cake\View\View->_evaluate('/opt/lampp/htdo...', Array)
+#10 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/View/View.php(463): Cake\View\View->_render('/opt/lampp/htdo...')
+#11 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Controller/Controller.php(576): Cake\View\View->render(NULL, NULL)
+#12 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#13 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#14 /opt/lampp/htdocs/pairs/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2015-04-15 10:32:59 Error: Fatal Error (1): Call to a member function get() on integer in [/opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Association/BelongsToMany.php, line 874]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-15 10:33:00 Error: [Cake\Error\FatalErrorException] Call to a member function get() on integer
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 874)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-15 10:33:17 Error: Fatal Error (1): Call to a member function get() on integer in [/opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Association/BelongsToMany.php, line 874]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-15 10:33:18 Error: [Cake\Error\FatalErrorException] Call to a member function get() on integer
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 874)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-15 10:34:12 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must implement interface Cake\Datasource\EntityInterface, array given in [/opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE/src/ORM/Table.php, line 2024
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller/ModulesController.php, line 75
+App\Controller\ModulesController::add() - APP/Controller/ModulesController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2015-04-15 10:34:12 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, none given in [/opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE/src/ORM/Table.php, line 2024
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller/ModulesController.php, line 75
+App\Controller\ModulesController::add() - APP/Controller/ModulesController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2015-04-15 10:34:12 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must implement interface Cake\Datasource\EntityInterface, array given, called in /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Table.php on line 2030 and defined in [/opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE/src/ORM/Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE/src/ORM/Table.php, line 2030
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller/ModulesController.php, line 75
+App\Controller\ModulesController::add() - APP/Controller/ModulesController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2015-04-15 10:34:12 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Table.php on line 2030 and defined in [/opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE/src/ORM/Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE/src/ORM/Table.php, line 2030
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller/ModulesController.php, line 75
+App\Controller\ModulesController::add() - APP/Controller/ModulesController.php, line 75
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2015-04-15 10:34:12 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Table.php(2030): Cake\ORM\Marshaller->merge(Array, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(Array)
+#4 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Association.php(835): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/pairs/src/Controller/ModulesController.php(75): Cake\ORM\Association->__call('patchEntity', Array)
+#6 /opt/lampp/htdocs/pairs/src/Controller/ModulesController.php(75): Cake\ORM\Association\BelongsToMany->patchEntity(Array)
+#7 [internal function]: App\Controller\ModulesController->add()
+#8 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#9 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 /opt/lampp/htdocs/pairs/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-04-15 10:35:36 Error: Fatal Error (1): Call to a member function get() on array in [/opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/ORM/Association/BelongsToMany.php, line 874]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-15 10:35:36 Error: [Cake\Error\FatalErrorException] Call to a member function get() on array
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 /opt/lampp/htdocs/pairs/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 874)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

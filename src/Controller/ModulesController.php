@@ -21,6 +21,19 @@ class ModulesController extends AppController
 		$role = $user['role_id'];
 		$action = $this->request->params['action'];
 		
+		//debug($action);
+		if(in_array($action, ['index', 'add', 'edit', 'delete'])){
+			if($role == 2){ // professeur
+				return true;
+			}
+		}else if(in_array($action, ['view'])){
+			//un étudiant peut voir un module pour consulter son/ses groupes dedans
+			//on doit aussi tester si l'étudiant est bien dans ce module
+			if($role >= 2){
+				return true;
+			}
+		}
+		
 		return parent::isAuthorized($user);
 		
 	}
@@ -52,7 +65,15 @@ class ModulesController extends AppController
     public function add(){
 		$module = $this->Modules->newEntity();
         if ($this->request->is('post')) {
+			
+            debug($this->request->data);
+            
             $module = $this->Modules->patchEntity($module, $this->request->data);
+           // $userTable = TableRegistry::get('Users');
+            $session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			$module->users = [$currentUser];
+            //debug($module);
             if ($this->Modules->save($module)) {
                 $this->Flash->success('Le module a été sauvegardé.');
                 return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
