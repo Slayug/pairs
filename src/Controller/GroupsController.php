@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
+use App\Model\Entity\Group;
 
 /**
  * Groups Controller
@@ -70,17 +72,36 @@ class GroupsController extends AppController
      *
      * @return void Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function add($idModule = null)
     {
         $group = $this->Groups->newEntity();
         if ($this->request->is('post')) {
-            $group = $this->Groups->patchEntity($group, $this->request->data);
-            if ($this->Groups->save($group)) {
+		
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			
+			$this->request->data['users'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer que c'est lui qui possède le groupe.
+			
+			$group = $this->Groups->patchEntity($group, $this->request->data);
+           			
+			if($idModule != null){
+				if(ctype_digit($idModule) == true){
+					$moduleSelected = $this->Groups->Modules->get($idModule);
+					//$moduleSelected = $modulesTable->get($idModule);
+					/**debug($moduleSelected);
+					$this->request->data['modules'][0] = $moduleSelected->properties;
+					debug('added..');debug($this->request->data);**/
+					$this->Groups->Modules->link($group, [$moduleSelected]);
+					
+				}
+			}
+			debug($group);
+           /** if ($this->Groups->save($group)) {
                 $this->Flash->success('Le groupe a été sauvegardé.');
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error('Le groupe ne peut pas être sauvegardé, merci de réessayer.');
-            }
+            }**/
         }
         $users = $this->Groups->Users->find('list', ['limit' => 200]);
         $questionnaires = $this->Groups->Questionnaires->find('list', ['limit' => 200]);

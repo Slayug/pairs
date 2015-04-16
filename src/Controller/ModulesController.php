@@ -72,7 +72,6 @@ class ModulesController extends AppController
 			
             $session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
-			$idUser = $currentUser['id'];
 			
 			$this->request->data['users'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer que c'est lui qui possède le module.
             $module = $this->Modules->patchEntity($module, $this->request->data);

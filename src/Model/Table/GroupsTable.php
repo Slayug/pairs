@@ -34,6 +34,11 @@ class GroupsTable extends Table
             'targetForeignKey' => 'questionnaire_id',
             'joinTable' => 'questionnaires_groups'
         ]);
+		$this->belongsToMany('Modules', [
+            'foreignKey' => 'group_id',
+            'targetForeignKey' => 'module_id',
+            'joinTable' => 'modules_groups'
+        ]);
     }
 
     /**
