@@ -76,9 +76,9 @@
         </tr>
         <?php foreach ($user->modules as $module): ?>
 			<tr>
-				<td><?= $this->Html->link(__($module->name), ['controller' => 'Modules', 'action' => 'view', $module->id]) ?></td>
-				<td><?= $this->Html->link(__('Editer'), ['controller' => 'Modules', 'action' => 'edit', $module->id]) ?>
-				<?= $this->Html->link(__('Supprimer'), ['controller' => 'Modules', 'action' => 'delete', $module->id]) ?></td>
+				<td class="td_link"><?= $this->Html->link(__($module->name), ['controller' => 'Modules', 'action' => 'view', $module->id]);?></td>
+				<td><?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Modules', 'action' => 'edit', $module->id), array('escape' => false));?>
+				<?= $this->Html->link($this->Html->image('delete.png'), ['controller' => 'Modules', 'action' => 'delete', $module->id], array('escape' => false)) ?></td>
 			</tr>
 		
         <?php endforeach; ?>

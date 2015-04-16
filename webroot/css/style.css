@@ -190,10 +190,14 @@ a:hover {
 	text-align:center;
 }
 
-td a { 
+.td_link a { 
   display: block; 
   height: 100%; 
 }
-td a:hover{
+.td_link a:hover{
 	color:#232323;
+}
+td img{
+	height:32px;
+	width:32px;
 }

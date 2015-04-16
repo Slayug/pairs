@@ -3041,3 +3041,35 @@ Stack Trace:
 #2 {main}
 
 
+2015-04-16 16:20:40 Error: Fatal Error (1): Call to a member function link() on a non-object in [D:\wamp\www\pairs\src\Template\Users\panel.ctp, line 80]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-16 16:20:41 Error: [Cake\Error\FatalErrorException] Call to a member function link() on a non-object
+Request URL: /pairs/users/panel
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 80)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-16 16:21:14 Error: Fatal Error (1): Call to a member function link() on a non-object in [D:\wamp\www\pairs\src\Template\Users\panel.ctp, line 80]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-16 16:21:15 Error: [Cake\Error\FatalErrorException] Call to a member function link() on a non-object
+Request URL: /pairs/users/panel
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 80)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
