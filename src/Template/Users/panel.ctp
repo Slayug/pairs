@@ -12,7 +12,7 @@
 		<p>Bonjour <?php echo $currentUser['first_name']; ?></p>
 	<?php
 	
-	if($role == 1){
+	if($role == 1){ //admin
 	
 		?>
 			<h4>Gestion des utilisateurs</h4>
@@ -30,15 +30,18 @@
 		<?php
 	}
 	
-	if($role == 2){
+	if($role == 2){ // professeur
 		?>
-			<h4>Gestion des groupes</h4>
+			<h4>Gestion</h4>
 			<ul>
-		<?php
-			echo '<li>';
-			echo $this->Html->link(__('Créer un groupe'), ['controller' => 'Groups', 'action' => 'add']);
-			echo '</li>';
-		?>
+			<?php
+				echo '<li>';
+				echo $this->Html->link(__('Créer un module'), ['controller' => 'Modules', 'action' => 'add']);
+				echo '</li>';
+				echo '<li>';
+				echo $this->Html->link(__('Créer un groupe'), ['controller' => 'Groups', 'action' => 'add']);
+				echo '</li>';
+			?>
 			</ul>
 			<h4>Gestion des questionnaires</h4>
 			<ul>			
@@ -63,33 +66,21 @@
     <div class="column large-12">
 	
     <?php
-	if (!empty($user->groups)): ?>
+	if (!empty($user->modules)): ?>
 	
-    <h4 class="subheader"><?= __('Mes Groupes') ?></h4>
+    <h4 class="subheader"><?= __('Mes Modules') ?></h4>
     <table cellpadding="0" cellspacing="0">
         <tr>
-            <th><?= __('Name') ?></th>
-            <th><?= __('Description') ?></th>
+            <th><?= __('Nom') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
-        <?php foreach ($user->groups as $groups): ?>
-        <tr>
-            <td><?= h($groups->name) ?></td>
-            <td><?= h($groups->description) ?></td>
-
-            <td class="actions">
-				<?php
-					if($role == 2){
-						echo $this->Html->link(__('Editer '), ['controller' => 'Groups', 'action' => 'edit', $groups->id]);
-						echo $this->Form->postLink(__('Supprimer'), ['controller' => 'Groups', 'action' => 'delete', $groups->id], ['confirm' => __('Êtes vous sûr de vouloir supprimer # {0}?', $groups->id)]);
-					}
-				
-				?>
-                <?= $this->Html->link(__('Voir'), ['controller' => 'Groups', 'action' => 'view', $groups->id]) ?>
-
-            </td>
-        </tr>
-
+        <?php foreach ($user->modules as $module): ?>
+			<tr>
+				<td><?= $this->Html->link(__($module->name), ['controller' => 'Modules', 'action' => 'view', $module->id]) ?></td>
+				<td><?= $this->Html->link(__('Editer'), ['controller' => 'Modules', 'action' => 'edit', $module->id]) ?>
+				<?= $this->Html->link(__('Supprimer'), ['controller' => 'Modules', 'action' => 'delete', $module->id]) ?></td>
+			</tr>
+		
         <?php endforeach; ?>
     </table>
     <?php endif; ?>

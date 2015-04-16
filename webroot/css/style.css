@@ -189,3 +189,11 @@ a:hover {
 	color:green;
 	text-align:center;
 }
+
+td a { 
+  display: block; 
+  height: 100%; 
+}
+td a:hover{
+	color:#232323;
+}

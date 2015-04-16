@@ -85,7 +85,7 @@ class UsersController extends AppController
 		
 		if($role > 1){ // c'est à dire que c'est un étudiant ou un professeur
 			$user = $this->Users->get($id, [
-            'contain' => ['Groups']
+            'contain' => ['Modules']
 			]);
 			$this->set('user', $user);
 			$this->set('_serialize', ['user']);

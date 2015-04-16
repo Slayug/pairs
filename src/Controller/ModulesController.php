@@ -53,8 +53,12 @@ class ModulesController extends AppController
      * @return void
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function view($id = null)
-    {
+    public function view($id = null){
+        $module = $this->Modules->get($id, [
+            'contain' => ['Users', 'Groups']
+        ]);
+        $this->set('module', $module);
+        $this->set('_serialize', ['module']);
     }
 
     /**
