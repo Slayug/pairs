@@ -2,6 +2,8 @@
 
 <h2>Panel</h2>
 <p>
+
+	<?= $this->Flash->render() ?>
 <?php
 	$session = $this->request->session();
 	$currentUser = $session->read('Auth.User');

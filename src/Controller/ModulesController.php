@@ -66,14 +66,12 @@ class ModulesController extends AppController
 		$module = $this->Modules->newEntity();
         if ($this->request->is('post')) {
 			
-            debug($this->request->data);
-            
-            $module = $this->Modules->patchEntity($module, $this->request->data);
-           // $userTable = TableRegistry::get('Users');
             $session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
-			$module->users = [$currentUser];
-            //debug($module);
+			$idUser = $currentUser['id'];
+			
+			$this->request->data['users'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer que c'est lui qui possède le module.
+            $module = $this->Modules->patchEntity($module, $this->request->data);
             if ($this->Modules->save($module)) {
                 $this->Flash->success('Le module a été sauvegardé.');
                 return $this->redirect(['controller' => 'Users', 'action' => 'panel']);

@@ -2692,3 +2692,288 @@ Stack Trace:
 #2 {main}
 
 
+2015-04-15 21:21:31 Error: Fatal Error (1): Call to a member function get() on a non-object in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 874]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-15 21:21:31 Error: [Cake\Error\FatalErrorException] Call to a member function get() on a non-object
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 874)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-15 21:27:11 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Association\BelongsToMany::replaceLinks() must be of the type array, string given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php on line 443 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 717]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 717
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-15 21:27:11 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 873]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::_collectJointEntities() - CORE\src\ORM\Association\BelongsToMany.php, line 873
+Cake\ORM\Association\BelongsToMany::Cake\ORM\Association\{closure}() - CORE\src\ORM\Association\BelongsToMany.php, line 734
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 756
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-15 21:27:12 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 804]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::_diffLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 804
+Cake\ORM\Association\BelongsToMany::Cake\ORM\Association\{closure}() - CORE\src\ORM\Association\BelongsToMany.php, line 735
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 756
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-15 21:27:12 Error: [InvalidArgumentException] Could not save users, it cannot be traversed
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(737): Cake\ORM\Association\BelongsToMany->_saveTarget(Object(App\Model\Entity\Module), 'Array', Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Association\BelongsToMany->Cake\ORM\Association\{closure}(Object(Cake\Database\Connection))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(756): Cake\Database\Connection->transactional(Object(Closure))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(443): Cake\ORM\Association\BelongsToMany->replaceLinks(Object(App\Model\Entity\Module), 'Array', Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(248): Cake\ORM\Association\BelongsToMany->saveAssociated(Object(App\Model\Entity\Module), Array)
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(224): Cake\ORM\AssociationCollection->_save(Object(Cake\ORM\Association\BelongsToMany), Object(App\Model\Entity\Module), Array, Array)
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(189): Cake\ORM\AssociationCollection->_saveAssociations(Object(App\Model\Table\ModulesTable), Object(App\Model\Entity\Module), Array, Array, true)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1445): Cake\ORM\AssociationCollection->saveChildren(Object(App\Model\Table\ModulesTable), Object(App\Model\Entity\Module), Array, Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Module), Object(ArrayObject))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#11 D:\wamp\www\pairs\src\Controller\ModulesController.php(77): Cake\ORM\Table->save(Object(App\Model\Entity\Module))
+#12 [internal function]: App\Controller\ModulesController->add()
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-04-15 21:27:50 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Association\BelongsToMany::replaceLinks() must be of the type array, string given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php on line 443 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 717]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 717
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-15 21:27:50 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 873]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::_collectJointEntities() - CORE\src\ORM\Association\BelongsToMany.php, line 873
+Cake\ORM\Association\BelongsToMany::Cake\ORM\Association\{closure}() - CORE\src\ORM\Association\BelongsToMany.php, line 734
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 756
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-15 21:27:50 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 804]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::_diffLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 804
+Cake\ORM\Association\BelongsToMany::Cake\ORM\Association\{closure}() - CORE\src\ORM\Association\BelongsToMany.php, line 735
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 756
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 77
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-15 21:27:51 Error: [InvalidArgumentException] Could not save users, it cannot be traversed
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(737): Cake\ORM\Association\BelongsToMany->_saveTarget(Object(App\Model\Entity\Module), '4', Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Association\BelongsToMany->Cake\ORM\Association\{closure}(Object(Cake\Database\Connection))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(756): Cake\Database\Connection->transactional(Object(Closure))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(443): Cake\ORM\Association\BelongsToMany->replaceLinks(Object(App\Model\Entity\Module), '4', Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(248): Cake\ORM\Association\BelongsToMany->saveAssociated(Object(App\Model\Entity\Module), Array)
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(224): Cake\ORM\AssociationCollection->_save(Object(Cake\ORM\Association\BelongsToMany), Object(App\Model\Entity\Module), Array, Array)
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(189): Cake\ORM\AssociationCollection->_saveAssociations(Object(App\Model\Table\ModulesTable), Object(App\Model\Entity\Module), Array, Array, true)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1445): Cake\ORM\AssociationCollection->saveChildren(Object(App\Model\Table\ModulesTable), Object(App\Model\Entity\Module), Array, Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Module), Object(ArrayObject))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#11 D:\wamp\www\pairs\src\Controller\ModulesController.php(77): Cake\ORM\Table->save(Object(App\Model\Entity\Module))
+#12 [internal function]: App\Controller\ModulesController->add()
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-04-15 21:37:44 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, string given, called in D:\wamp\www\pairs\src\Controller\ModulesController.php on line 78 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-15 21:37:44 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, string given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-15 21:37:45 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct('ArrayArray')
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions('ArrayArray', Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\Module), 'ArrayArray', Array)
+#3 D:\wamp\www\pairs\src\Controller\ModulesController.php(78): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\Module), 'ArrayArray')
+#4 [internal function]: App\Controller\ModulesController->add()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#8 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2015-04-15 21:37:54 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, string given, called in D:\wamp\www\pairs\src\Controller\ModulesController.php on line 78 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-15 21:37:54 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, string given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 78
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-15 21:37:54 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/add
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct('ArrayArray')
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions('ArrayArray', Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\Module), 'ArrayArray', Array)
+#3 D:\wamp\www\pairs\src\Controller\ModulesController.php(78): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\Module), 'ArrayArray')
+#4 [internal function]: App\Controller\ModulesController->add()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#8 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2015-04-16 09:05:44 Warning: Warning (2): Attempt to assign property of non-object in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 79]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::add() - APP/Controller\ModulesController.php, line 79
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
