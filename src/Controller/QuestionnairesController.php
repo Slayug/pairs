@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\ORM\TableRegistry;
 /**
  * Questionnaires Controller
  *
@@ -10,8 +10,6 @@ use App\Controller\AppController;
  */
 class QuestionnairesController extends AppController
 {
-
-
 
 	/**
 	 * Methode permettant de gérer les droits pour
@@ -83,9 +81,24 @@ class QuestionnairesController extends AppController
                 $this->Flash->error('The questionnaire could not be saved. Please, try again.');
             }
         }
-        $groups = $this->Questionnaires->Groups->find('list', ['limit' => 200]);
+        //$groups = $this->Questionnaires->Modules->find('list', ['limit' => 200]);
+		$groups = TableRegistry::get('Groups');
+		
+		
+		
+		$query = $groups->find();
+		$query->matching('Users', function($q){
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			$role = $currentUser['role_id'];
+			return $q
+					->select(['Users.id')
+					->where(['Users.id' => $role]);
+		});
+		debug($query->all());
+		
         $questions = $this->Questionnaires->Questions->find('list', ['limit' => 200]);
-        $this->set(compact('questionnaire', 'groups', 'questions'));
+        $this->set(compact('questionnaire', 'questions'));
         $this->set('_serialize', ['questionnaire']);
     }
 

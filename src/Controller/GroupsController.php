@@ -83,25 +83,27 @@ class GroupsController extends AppController
 			$this->request->data['users'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer que c'est lui qui possède le groupe.
 			
 			$group = $this->Groups->patchEntity($group, $this->request->data);
-           			
+           	$fromModule = false;
 			if($idModule != null){
 				if(ctype_digit($idModule) == true){
 					$moduleSelected = $this->Groups->Modules->get($idModule);
-					//$moduleSelected = $modulesTable->get($idModule);
-					/**debug($moduleSelected);
-					$this->request->data['modules'][0] = $moduleSelected->properties;
-					debug('added..');debug($this->request->data);**/
-					$this->Groups->Modules->link($group, [$moduleSelected]);
-					
+					$group->modules = [$moduleSelected];
+					$fromModule = true;
 				}
 			}
 			debug($group);
-           /** if ($this->Groups->save($group)) {
+           if ($this->Groups->save($group)) {
                 $this->Flash->success('Le groupe a été sauvegardé.');
-                return $this->redirect(['action' => 'index']);
+                if(!$fromModule){
+					return $this->redirect(['controller' => 'Users',
+										'action' => 'panel']);
+				}else{
+					return $this->redirect(['controller' => 'Modules',
+										'action' => 'view', $idModule]);
+				}
             } else {
                 $this->Flash->error('Le groupe ne peut pas être sauvegardé, merci de réessayer.');
-            }**/
+            }
         }
         $users = $this->Groups->Users->find('list', ['limit' => 200]);
         $questionnaires = $this->Groups->Questionnaires->find('list', ['limit' => 200]);

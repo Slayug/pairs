@@ -6,6 +6,7 @@
 ?>
 
 <div class="users view large-10 medium-9 columns">
+	<?= $this->Flash->render() ?>
     <h2>Module: <?= h($module->name) ?></h2>
     <div class="row">
         <div class="large-5 columns strings">
@@ -46,7 +47,7 @@
 	<?php if($role == 2){
 		echo $this->Html->link(__('Ajouter un groupe'), ['controller' => 'Groups', 'action' => 'add', $module->id]);
 	}
-    if (!empty($module->group)): ?>
+    if (!empty($module->groups)): ?>
     <table cellpadding="0" cellspacing="0">
         <tr>
             <th><?= __('Nom') ?></th>
