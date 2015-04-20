@@ -82,21 +82,20 @@ class QuestionnairesController extends AppController
             }
         }
         //$groups = $this->Questionnaires->Modules->find('list', ['limit' => 200]);
-		$groups = TableRegistry::get('Groups');
+		$modules = TableRegistry::get('Modules');		
 		
-		
-		
-		$query = $groups->find();
+		$query = $modules->find('list', array(
+        'fields' => array('Modules.name', 'Modules.id')));
 		$query->matching('Users', function($q){
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
-			$role = $currentUser['role_id'];
+			$idUser = $currentUser['id'];
 			return $q
-					->select(['Users.id')
-					->where(['Users.id' => $role]);
+					->select(['Users.id', 'Modules.name'])
+					->where(['Users.id' => $idUser]);
 		});
-		debug($query->all());
 		
+		$this->set('modules', $query->all());
         $questions = $this->Questionnaires->Questions->find('list', ['limit' => 200]);
         $this->set(compact('questionnaire', 'questions'));
         $this->set('_serialize', ['questionnaire']);

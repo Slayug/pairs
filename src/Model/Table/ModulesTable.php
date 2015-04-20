@@ -22,7 +22,7 @@ class ModulesTable extends Table
     public function initialize(array $config)
     {
         $this->table('modules');
-        $this->displayField('id');
+        $this->displayField('name');
         $this->primaryKey('id');
         $this->belongsToMany('Groups', [
             'foreignKey' => 'module_id',
