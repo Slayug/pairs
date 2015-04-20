@@ -32,6 +32,23 @@ a:hover {
 	#pairs_header h2{
 		padding-top:35px;
 	}
+	#login{
+		width:500px;
+	}
+	#login input{
+		width: 353px; /* 353 + 2 + 45 = 400 */
+	}
+}
+@media (max-width: 767px) {
+	#pairs_header h2{
+		padding-top:5px;
+	}
+	#login{
+		width: 92%;
+	}
+	#login input{
+		width: 90%; /* 353 + 2 + 45 = 400 */
+	}
 }
 #pairs_header h2{
 	color:#e16244;
@@ -69,12 +86,15 @@ a:hover {
 	formulaire login
 */
 #login{
-	width:500px;
 	height: auto;
 	border: 2px solid #242424;
 	margin:auto;
 	margin-top: 20px;
 	border-radius: 10px 10px 10px 10px;
+	
+	@media (min-width: @screen-sm-min) {
+		width:80%;
+	}
 }
 #login_title{
 	margin:0px;
@@ -100,7 +120,6 @@ a:hover {
 	background: #f1f1f1 url('../img/login-sprite.png') no-repeat;
     padding: 15px 15px 15px 30px;
     margin: 0 0 10px 0;
-    width: 353px; /* 353 + 2 + 45 = 400 */
     border: 1px solid #ccc;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;

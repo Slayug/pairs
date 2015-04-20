@@ -46,7 +46,7 @@
 			<ul>			
 				<?php
 					echo '<li>';
-					echo $this->Html->link(__('Lister les questionnaire'), ['controller' => 'Questionnaires', 'action' => 'index']);
+					echo $this->Html->link(__('Lister les questionnaires'), ['controller' => 'Questionnaires', 'action' => 'index']);
 					echo '</li>';
 					echo '<li>';
 					echo $this->Html->link(__('Créer un questionnaire'), ['controller' => 'Questionnaires', 'action' => 'add']);
