@@ -2846,3 +2846,721 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2015-04-21 17:03:23 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:03:23 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:07:22 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:07:22 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:09:53 Notice: Notice (8): Undefined variable: module in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 39]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 39
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:09:53 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:09:53 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:10:13 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:10:13 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:10:35 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:10:35 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:14:10 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:14:10 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:14:12 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:14:12 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:14:12 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:14:12 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:14:18 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:14:18 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:17:13 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:17:13 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:17:57 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:17:57 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:18:07 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:18:07 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:20:26 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:20:26 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:20:52 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:20:52 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:20:57 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:20:57 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:21:29 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:21:29 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:23:28 Notice: Notice (8): Undefined property: Cake\ORM\Query::$_matchingData in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 38]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 38
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:23:28 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:23:28 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:23:38 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:23:38 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:23:47 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:23:47 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:25:38 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:25:38 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:25:52 Notice: Notice (8): Undefined variable: user in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:25:52 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Modules\view.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:26:50 Notice: Notice (8): Undefined variable: request in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 42]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 42
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:37:14 Notice: Notice (8): Undefined variable: modules in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 32]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 32
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:38:52 Notice: Notice (8): Undefined variable: modules in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 32]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 32
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:39:03 Notice: Notice (8): Undefined variable: id in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 39]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::App\Controller\{closure}() - APP/Controller\ModulesController.php, line 39
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 502
+Cake\ORM\Association\BelongsToMany::attachTo() - CORE\src\ORM\Association\BelongsToMany.php, line 245
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 322
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 669
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 625
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 116
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 220
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 272
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 515
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 43
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 17:39:40 Notice: Notice (8): Undefined variable: id in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 50]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 50
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

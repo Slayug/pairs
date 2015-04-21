@@ -75,17 +75,21 @@ class QuestionnairesController extends AppController
         if ($this->request->is('post')) {
             $questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
             if ($this->Questionnaires->save($questionnaire)) {
-                $this->Flash->success('The questionnaire has been saved.');
+                $this->Flash->success('Le questionnaire a été sauvegardé.');
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error('The questionnaire could not be saved. Please, try again.');
             }
         }
         //$groups = $this->Questionnaires->Modules->find('list', ['limit' => 200]);
-		$modules = TableRegistry::get('Modules');		
 		
+		$modules = TableRegistry::get('Modules');
+		
+		//permet de récupérer les modules de l'utilisateur
 		$query = $modules->find('list', array(
-        'fields' => array('Modules.name', 'Modules.id')));
+								'fields' =>
+									array('Modules.name',
+										  'Modules.id')));
 		$query->matching('Users', function($q){
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');

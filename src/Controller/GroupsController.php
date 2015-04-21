@@ -91,7 +91,6 @@ class GroupsController extends AppController
 					$fromModule = true;
 				}
 			}
-			debug($group);
            if ($this->Groups->save($group)) {
                 $this->Flash->success('Le groupe a été sauvegardé.');
                 if(!$fromModule){

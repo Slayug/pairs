@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Utility\Hash;
+use Cake\ORM\TableRegistry;
 /**
  * Users Controller
  *
@@ -21,15 +22,39 @@ class ModulesController extends AppController
 		$role = $user['role_id'];
 		$action = $this->request->params['action'];
 		
-		//debug($action);
+		$modules = TableRegistry::get('Modules');
+		//permet de récupérer les modules de l'utilisateur
+		$query = $modules->find()->matching('Users', function($q){
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			$idUser = $currentUser['id'];
+			
+			$id = null;
+			if($this->request->pass != null){
+				if(ctype_digit($this->request->pass['0'])){ // on vérifie que c'est bien un entier
+					$id = $this->request->pass['0'];
+				}
+			}
+			
+			return $q
+					->select(['Users.id', 'Modules.name'])
+					->where(['Users.id' => $idUser,
+							 'Modules.id' => $id]);
+		});
+		
+		
+		$canAccess = $query->count();
 		if(in_array($action, ['index', 'add', 'edit', 'delete'])){
 			if($role == 2){ // professeur
-				return true;
+				// on vérifie si le module est bien au professeur
+				if($canAccess){
+					return true;
+				}
 			}
 		}else if(in_array($action, ['view'])){
 			//un étudiant peut voir un module pour consulter son/ses groupes dedans
-			//on doit aussi tester si l'étudiant est bien dans ce module
-			if($role >= 2){
+			//on doit aussi tester si l'étudiant est bien dans ce module de même pour le professeur
+			if($role >= 2 && $canAccess){
 				return true;
 			}
 		}

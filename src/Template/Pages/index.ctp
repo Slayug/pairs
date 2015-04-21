@@ -1,3 +1,5 @@
+<?= $this->Flash->render() ?>
+<?= $this->Flash->render('auth') ?>
 <p>
 Dans le cadre de nos formations, en licence et en master, plusieurs modules sont évalués en contrôle continue et
 demandent la réalisation d’un ou plusieurs projets aux étudiants. C’est le cas de ce module, par exemple.

@@ -59,6 +59,7 @@ class AppController extends Controller
         // Autorise l'action display pour que notre controller de pages
         // continue de fonctionner.
         $this->Auth->allow(['display']);
+		$this->Auth->AuthError = "Vous ne pouvez pas accèder à cette page.";
 		
 		
     }

@@ -204,6 +204,10 @@ a:hover {
 	color:red;
 	text-align:center;
 }
+.message.error{
+	color:red;
+	text-align:center;
+}
 .message_success{
 	color:green;
 	text-align:center;
