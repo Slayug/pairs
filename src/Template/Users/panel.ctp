@@ -76,8 +76,18 @@
         <?php foreach ($user->modules as $module): ?>
 			<tr>
 				<td class="td_link"><?= $this->Html->link(__($module->name), ['controller' => 'Modules', 'action' => 'view', $module->id]);?></td>
-				<td><?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Modules', 'action' => 'edit', $module->id), array('escape' => false));?>
-				<?= $this->Html->link($this->Html->image('delete.png'), ['controller' => 'Modules', 'action' => 'delete', $module->id], array('escape' => false)) ?></td>
+				<td>
+					<?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Modules', 'action' => 'edit', $module->id), array('escape' => false));?>
+				
+					<?= $this->Form->postLink(
+							$this->Html->image('delete.png',
+							array('alt' => __('Supprimer'),
+								  'title' => __('Supprimer'))),
+							array('controller' => 'Modules',
+								  'action' => 'delete', $module->id),
+							array('escape' => false,
+								  'confirm' => __('Êtes vous sûr de supprimer le module #{0}# ?', $module->name))) ?>
+						</td>
 			</tr>
 		
         <?php endforeach; ?>

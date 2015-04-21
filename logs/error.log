@@ -3918,3 +3918,109 @@ Stack Trace:
 #5 {main}
 
 
+2015-04-21 16:35:08 Error: Fatal Error (1): Call to a member function patchEntity() on a non-object in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 105]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-21 16:35:08 Error: [Cake\Error\FatalErrorException] Call to a member function patchEntity() on a non-object
+Request URL: /pairs/modules/edit/8
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 105)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-21 16:35:29 Error: [Cake\View\Exception\MissingTemplateException] Template file "Modules\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Modules\\index.ctp',
+)
+Request URL: /pairs/modules
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(576): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#4 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2015-04-21 16:36:55 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /pairs/modules/delete/8
+Stack Trace:
+#0 D:\wamp\www\pairs\src\Controller\ModulesController.php(125): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\ModulesController->delete('8')
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#5 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2015-04-21 16:44:45 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [D:\wamp\www\pairs\src\Template\Users\panel.ctp, line 82]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-21 16:44:45 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /pairs/users/panel
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 82)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-21 16:46:51 Warning: Warning (512): Method Cake\View\Helper\HtmlHelper::postLink does not exist in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\Helper.php, line 138]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\View\Helper::__call() - CORE\src\View\Helper.php, line 138
+Cake\View\Helper\HtmlHelper::postLink() - APP/Template\Users\panel.ctp, line 84
+include - APP/Template\Users\panel.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-21 16:53:24 Error: Fatal Error (4): syntax error, unexpected ',' in [D:\wamp\www\pairs\src\Template\Users\panel.ctp, line 85]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-21 16:53:24 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ','
+Request URL: /pairs/users/panel
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 85)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-21 16:53:52 Error: Fatal Error (4): syntax error, unexpected ',' in [D:\wamp\www\pairs\src\Template\Users\panel.ctp, line 85]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-21 16:53:52 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ','
+Request URL: /pairs/users/panel
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 85)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

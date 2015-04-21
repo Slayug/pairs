@@ -97,6 +97,21 @@ class ModulesController extends AppController
      */
     public function edit($id = null)
     {
+		if($id == null){
+			return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
+		}
+        $module = $this->Modules->get($id);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $module = $this->Modules->patchEntity($module, $this->request->data);
+            if ($this->Modules->save($module)) {
+                $this->Flash->success('Le module a été sauvegardé.');
+			return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
+            } else {
+                $this->Flash->error('Le module n\'a pas pu être sauvegardé, merci de réessayer plus tard.');
+            }
+        }
+        $this->set(compact('module'));
+        $this->set('_serialize', ['module']);
     }
 
     /**
@@ -106,7 +121,14 @@ class ModulesController extends AppController
      * @return void Redirects to index.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function delete($id = null)
-    {
+    public function delete($id = null){
+        $this->request->allowMethod(['post', 'delete']);
+        $module = $this->Modules->get($id);
+        if ($this->Modules->delete($module)) {
+            $this->Flash->success('Le module a bien été supprimé.');
+        } else {
+            $this->Flash->error('Le module ne peut pas être supprimé, merci de réessayer plus tard.');
+        }
+		return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
     }
 }

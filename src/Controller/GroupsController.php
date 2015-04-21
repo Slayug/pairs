@@ -129,10 +129,10 @@ class GroupsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $group = $this->Groups->patchEntity($group, $this->request->data);
             if ($this->Groups->save($group)) {
-                $this->Flash->success('The group has been saved.');
+                $this->Flash->success('Le groupe a été sauvegardé.');
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error('The group could not be saved. Please, try again.');
+                $this->Flash->error('Le groupe n\'a pas pu être sauvegardé, merci de réessayer plus tard.');
             }
         }
         $users = $this->Groups->Users->find('list', ['limit' => 200]);

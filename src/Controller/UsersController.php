@@ -22,10 +22,10 @@ class UsersController extends AppController
 		$action = $this->request->params['action'];
 		//debug($action);
 		if(in_array($action, ['index', 'add', 'edit', 'view'])){
-			if($role < 3){
+			if($role < 2){
 				return true;
 			}
-		}else if(in_array($action, ['panel', 'logout'])){
+		}else if(in_array($action, ['panel', 'logout', 'view'])){
 			return true;
 		}else if(in_array($action, ['delete'])){
 			if($role == 1){
