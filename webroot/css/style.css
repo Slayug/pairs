@@ -118,7 +118,7 @@ a:hover {
 }
 #login input{
 	background: #f1f1f1 url('../img/login-sprite.png') no-repeat;
-    padding: 15px 15px 15px 30px;
+    padding: 8px 8px 8px 30px;
     margin: 0 0 10px 0;
     border: 1px solid #ccc;
     -moz-border-radius: 5px;
@@ -219,4 +219,19 @@ a:hover {
 td img{
 	height:32px;
 	width:32px;
+}
+#faq h3
+{
+	color: red;
+	font-size:15;
+	text-align:center;
+}
+.titre
+{
+	padding: 5px; 
+	background-color: #F7F7F7;
+	border: 1px solid #EAEAEA;
+	margin-top:5px;
+	margin-bottom:5px;
+
 }
