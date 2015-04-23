@@ -84,9 +84,7 @@ class QuestionnairesController extends AppController
 	
 	private function isOwner(){
 		$questionnaires = TableRegistry::get('Questionnaires');
-		$queryOwner = $questionnaires->find()
-		->select(['Questionnaires.title'])
-		->matching('Owners',
+		$queryOwner = $questionnaires->find()->matching('Owners',
 			function($q){
 			$session = $this->request->session();		
 			$currentUser = $session->read('Auth.User');
@@ -102,7 +100,7 @@ class QuestionnairesController extends AppController
 						->where(['Owners.id' => $idUser,
 								'Questionnaires.id' => $id]);
 		});
-		return $queryOwner->all();
+		return $queryOwner->count();
 	}
 	
     /**
