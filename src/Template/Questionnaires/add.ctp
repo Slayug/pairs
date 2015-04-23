@@ -8,10 +8,10 @@
     <fieldset>
         <legend><?= __('Ajouter un Questionnaire') ?></legend>
         <?php
-            echo $this->Form->input('titre');
+            echo $this->Form->input('title');
             echo $this->Form->input('description');
             echo $this->Form->input('date_creation', array('class' => 'date'));
-            echo $this->Form->input('date_limite', array('class' => 'date'));
+            echo $this->Form->input('date_limit', array('class' => 'date'));
             echo $this->Form->input('modules._ids', ['options' => $modules]);
             echo $this->Form->input('questions._ids', ['options' => $questions]);
         ?>

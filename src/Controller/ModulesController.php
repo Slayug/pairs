@@ -47,23 +47,9 @@ class ModulesController extends AppController
 								'Modules.id' => $id]);
 			});
 			
-			$queryOwner = $modules->find()->matching('Owners', function($q){
-				$session = $this->request->session();
-				$currentUser = $session->read('Auth.User');
-				$idUser = $currentUser['id'];
-				$id = null;
-				if($this->request->pass != null){
-					if(ctype_digit($this->request->pass['0'])){ // on vérifie que c'est bien un entier
-						$id = $this->request->pass['0'];
-					}
-				}
-				return $q
-						->select(['Owners.id', 'Modules.name'])
-						->where(['Owners.id' => $idUser,
-								'Modules.id' => $id]);
-			});
-			$canAccess = $queryAccess->count() + $queryOwner->count();
-			$isOwner = $queryOwner->count();
+			
+			$isOwner = $this->isOwner();
+			$canAccess = $queryAccess->count() + $isOwner;
 		}
 		
 		
@@ -88,6 +74,27 @@ class ModulesController extends AppController
 		return parent::isAuthorized($user);
 		
 	}
+	
+	
+	private function isOwner(){
+		$modules = TableRegistry::get('Modules');
+		$queryOwner = $modules->find()->matching('Owners', function($q){
+			$session = $this->request->session();			$currentUser = $session->read('Auth.User');
+			$idUser = $currentUser['id'];
+			$id = null;
+			if($this->request->pass != null){
+				if(ctype_digit($this->request->pass['0'])){ // on vérifie que c'est bien un entier
+					$id = $this->request->pass['0'];
+				}
+			}
+			return $q
+						->select(['Owners.id', 'Modules.name'])
+						->where(['Owners.id' => $idUser,
+								'Modules.id' => $id]);
+		});
+		return $queryOwner->count();
+	}
+	
     /**
      * Index method
      *
@@ -109,7 +116,6 @@ class ModulesController extends AppController
         $group = $this->Modules->Groups->get($id);
         if ($this->Modules->Groups->delete($group)) {
             $this->Flash->success('Le groupe a bien été supprimé.');
-			debug('done');
         } else {
             $this->Flash->error('Le groupe ne peut pas être supprimé, merci de réessayer plus tard.');
         }
@@ -127,6 +133,7 @@ class ModulesController extends AppController
         $module = $this->Modules->get($id, [
             'contain' => ['Owners', 'Users', 'Groups']
         ]);
+		$this->set('isOwner', $this->isOwner());
         $this->set('module', $module);
         $this->set('_serialize', ['module']);
     }
@@ -144,10 +151,8 @@ class ModulesController extends AppController
 			$currentUser = $session->read('Auth.User');
 			
 			$this->request->data['owners'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer qu'il est lier au groupe
-			debug($module);
             $module = $this->Modules->patchEntity($module, $this->request->data);
 			
-			debug($module);
             if ($this->Modules->save($module)) {
                 $this->Flash->success('Le module a été sauvegardé.');
                 return $this->redirect(['controller' => 'Users', 'action' => 'panel']);

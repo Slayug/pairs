@@ -9,6 +9,23 @@
 	<?= $this->Flash->render() ?>
 	<?= $this->Flash->render('auth') ?>
     <h2>Module: <?= h($module->name) ?></h2>
+	<?php 
+	if($isOwner){?>
+		<div class="actions">
+			<?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Modules', 'action' => 'edit', $module->id), array('escape' => false));?>
+			
+			<?= $this->Form->postLink(
+				$this->Html->image('delete.png',
+							array('alt' => __('Supprimer'),
+								  'title' => __('Supprimer'))),
+							array('controller' => 'Modules',
+								  'action' => 'delete', $module->id),
+							array('escape' => false,
+								  'confirm' => __('Êtes vous sûr de supprimer le module #{0}# ?', $module->name))) ?>
+		</div>
+	<?php
+	}
+	?>
     <div class="row">
         <div class="large-5 columns strings">
             <h6 class="subheader"><?= __('Description:') ?></h6>

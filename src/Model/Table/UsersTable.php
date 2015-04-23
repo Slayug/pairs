@@ -59,6 +59,15 @@ class UsersTable extends Table
             'joinTable' => 'groups_owners',
 			'propertyName' => 'group_owner'
         ]);
+		
+		// Questionnaires
+		
+		$this->belongsToMany('Questionnaires', [
+            'foreignKey' => 'user_id',
+            'targetForeignKey' => 'questionnaires_id',
+            'joinTable' => 'questionnaires_owners',
+        ]);
+		
     }
 
     /**

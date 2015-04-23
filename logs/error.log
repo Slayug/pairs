@@ -6474,3 +6474,816 @@ Stack Trace:
 #2 {main}
 
 
+2015-04-23 12:48:15 Error: Fatal Error (1): Call to a member function count() on a non-object in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 52]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-23 12:48:16 Error: [Cake\Error\FatalErrorException] Call to a member function count() on a non-object
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 52)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-23 15:39:07 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 53]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-23 15:39:08 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /pairs/questionnaires/add
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 53)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-23 15:39:20 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de 'INNER JOIN groups_users g ON a.group_id = g.group_id INNER JOIN users u ON g.use' à la ligne 1
+Request URL: /pairs/questionnaires/add
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(54): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 15:41:53 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de 'JOIN groups_users g ON a.group_id = g.group_id LEFT JOIN users u ON g.user_id = ' à la ligne 1
+Request URL: /pairs/questionnaires/add
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(54): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 15:42:21 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de 'JOIN groups_users g ON a.group_id = g.group_id LEFT JOIN users u ON g.user_id = ' à la ligne 1
+Request URL: /pairs/questionnaires
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(54): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 15:42:28 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 La table 'cake_pairs.questionnaire' n'existe pas
+Request URL: /pairs/questionnaires/edit/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'questionnaire', Array, Object(Cake\Database\Schema\Table))
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(65): Cake\Database\Schema\Collection->describe('questionnaire', Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(422): Cake\Database\Schema\CachedCollection->describe('questionnaire')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(140): Cake\ORM\Table->schema()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(880): Cake\ORM\Table->query()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(87): Cake\ORM\Table->find()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(56): App\Controller\QuestionnairesController->isOwner()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 15:45:54 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 La table 'cake_pairs.questionnaire' n'existe pas
+Request URL: /pairs/questionnaires/edit/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'questionnaire', Array, Object(Cake\Database\Schema\Table))
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(65): Cake\Database\Schema\Collection->describe('questionnaire', Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(422): Cake\Database\Schema\CachedCollection->describe('questionnaire')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(140): Cake\ORM\Table->schema()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(880): Cake\ORM\Table->query()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(57): Cake\ORM\Table->find()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(26): App\Controller\QuestionnairesController->isOwner()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 15:47:37 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de 'JOIN groups_users g ON a.group_id = g.group_id LEFT JOIN users u ON g.user_id = ' à la ligne 1
+Request URL: /pairs/questionnaires/add
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(54): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 16:09:13 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 51]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-23 16:09:13 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /pairs/questionnaires
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 51)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-23 16:10:18 Error: [Cake\Controller\Exception\MissingActionException] Action QuestionnairesController::reply() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'QuestionnairesController',
+  'action' => 'reply',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#2 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-04-23 16:11:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'a.questionnaire_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(51): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 16:11:35 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'a.questionnaire_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(51): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 16:11:44 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 La table 'cake_pairs.questionnaire' n'existe pas
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'questionnaire', Array, Object(Cake\Database\Schema\Table))
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(65): Cake\Database\Schema\Collection->describe('questionnaire', Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(422): Cake\Database\Schema\CachedCollection->describe('questionnaire')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(140): Cake\ORM\Table->schema()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(880): Cake\ORM\Table->query()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(89): Cake\ORM\Table->find()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(54): App\Controller\QuestionnairesController->isOwner()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 16:13:55 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 La table 'cake_pairs.questionnaire' n'existe pas
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'questionnaire', Array, Object(Cake\Database\Schema\Table))
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(65): Cake\Database\Schema\Collection->describe('questionnaire', Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(422): Cake\Database\Schema\CachedCollection->describe('questionnaire')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(140): Cake\ORM\Table->schema()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(880): Cake\ORM\Table->query()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(90): Cake\ORM\Table->find()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(55): App\Controller\QuestionnairesController->isOwner()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 16:17:10 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 La table 'cake_pairs.questionnaire' n'existe pas
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'questionnaire', Array, Object(Cake\Database\Schema\Table))
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(65): Cake\Database\Schema\Collection->describe('questionnaire', Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(422): Cake\Database\Schema\CachedCollection->describe('questionnaire')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(140): Cake\ORM\Table->schema()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(880): Cake\ORM\Table->query()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(90): Cake\ORM\Table->find()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(55): App\Controller\QuestionnairesController->isOwner()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 16:17:56 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 51]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-23 16:17:57 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 51)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-23 16:19:17 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 50]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-23 16:19:18 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 50)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-23 16:19:49 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 La table 'cake_pairs.questionnaire' n'existe pas
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'questionnaire', Array, Object(Cake\Database\Schema\Table))
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(65): Cake\Database\Schema\Collection->describe('questionnaire', Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(422): Cake\Database\Schema\CachedCollection->describe('questionnaire')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(140): Cake\ORM\Table->schema()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(880): Cake\ORM\Table->query()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(90): Cake\ORM\Table->find()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(55): App\Controller\QuestionnairesController->isOwner()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#18 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2015-04-23 16:24:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(103): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#17 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2015-04-23 16:26:01 Error: Fatal Error (1): Call to a member function count() on a non-object in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 54]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-23 16:26:01 Error: [Cake\Error\FatalErrorException] Call to a member function count() on a non-object
+Request URL: /pairs/questionnaires
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 54)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-23 16:27:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(103): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#17 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2015-04-23 16:27:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(103): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#17 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2015-04-23 16:27:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(103): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#17 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2015-04-23 16:28:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(100): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#17 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2015-04-23 16:28:25 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(88): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#17 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2015-04-23 16:28:39 Error: [InvalidArgumentException] Questionnaires is not associated with Users
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(232): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\QuestionnairesTable), 'Users', Array, Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(338): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\QuestionnairesTable))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(316): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\QuestionnairesTable))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(669): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\QuestionnairesTable), false)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(625): Cake\ORM\Query->_transformQuery()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(116): Cake\ORM\Query->sql()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(220): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(103): Cake\ORM\Query->count()
+#11 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#19 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#20 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#21 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2015-04-23 16:28:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(103): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#17 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2015-04-23 16:30:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(105): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#17 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2015-04-23 16:31:06 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(105): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#19 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2015-04-23 16:33:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(105): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#19 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2015-04-23 16:34:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(105): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#19 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2015-04-23 16:34:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(105): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#19 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2015-04-23 16:34:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(105): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#19 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2015-04-23 16:34:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(105): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#19 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2015-04-23 16:34:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'QuestionnairesOwners.question_id' inconnu dans on clause
+Request URL: /pairs/questionnaires/reply/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(105): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(53): App\Controller\QuestionnairesController->isOwner()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\QuestionnairesController->isAuthorized(Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#19 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+

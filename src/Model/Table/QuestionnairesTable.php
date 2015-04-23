@@ -40,6 +40,15 @@ class QuestionnairesTable extends Table
             'targetForeignKey' => 'question_id',
             'joinTable' => 'questionnaires_questions'
         ]);
+		
+		// Users owners
+		$this->belongsToMany('Owners', [
+			'className' => 'Users',
+            'foreignKey' => 'question_id',
+            'targetForeignKey' => 'user_id',
+            'joinTable' => 'questionnaires_owners',
+        ]);
+		
     }
 
     /**
@@ -59,7 +68,7 @@ class QuestionnairesTable extends Table
             ->notEmpty('description')
             ->add('date_creation', 'valid', ['rule' => 'datetime'])
             ->allowEmpty('date_creation')
-            ->add('date_limite', 'valid', ['rule' => 'datetime'])
+            ->add('date_limit', 'valid', ['rule' => 'datetime'])
             ->allowEmpty('date_limit');
 
         return $validator;
