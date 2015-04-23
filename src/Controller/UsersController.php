@@ -18,11 +18,10 @@ class UsersController extends AppController
 	 * 
 	 **/
 	public function isAuthorized($user){
-	return true;
 		$role = $user['role_id'];
 		$action = $this->request->params['action'];
 		//debug($action);
-		if(in_array($action, ['index', 'add', 'edit', 'view'])){
+		if(in_array($action, ['index', 'add', 'edit'])){
 			if($role < 2){
 				return true;
 			}

@@ -19,8 +19,6 @@ class ModulesController extends AppController
 	 * 
 	 **/
 	public function isAuthorized($user){
-	
-		return true;
 		$role = $user['role_id'];
 		$action = $this->request->params['action'];
 		
@@ -30,7 +28,7 @@ class ModulesController extends AppController
 		}
 		$modules = TableRegistry::get($table);
 		//permet de récupérer les modules de l'utilisateur
-		$query = $modules->find()->matching('Users', function($q){
+		$queryAccess = $modules->find()->matching('Users', function($q){
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
 			$idUser = $currentUser['id'];
@@ -47,8 +45,25 @@ class ModulesController extends AppController
 							 'Modules.id' => $id]);
 		});
 		
-		$canAccess = $query->count();
-		$isOwner = true;
+		$queryOwner = $modules->find()->matching('Owners', function($q){
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			$idUser = $currentUser['id'];
+			
+			$id = null;
+			if($this->request->pass != null){
+				if(ctype_digit($this->request->pass['0'])){ // on vérifie que c'est bien un entier
+					$id = $this->request->pass['0'];
+				}
+			}
+			return $q
+					->select(['Owners.id', 'Modules.name'])
+					->where(['Owners.id' => $idUser,
+							 'Modules.id' => $id]);
+		});
+		
+		$canAccess = $queryAccess->count() + $queryOwner->count();
+		$isOwner = $queryOwner->count();
 		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add'])){
 			if($role == 2){ // professeur
 				if(in_array($action, ['add'])){

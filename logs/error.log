@@ -6136,3 +6136,147 @@ Stack Trace:
 #23 {main}
 
 
+2015-04-23 11:25:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'Users.id' inconnu dans on clause
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(65): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\ModulesController->isAuthorized(Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-04-23 11:31:17 Error: [InvalidArgumentException] Modules is not associated with ModuleOwners
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(232): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\ModulesTable), 'ModuleOwners', Array, Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(338): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\ModulesTable))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(316): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\ModulesTable))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(669): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\ModulesTable), false)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(625): Cake\ORM\Query->_transformQuery()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(116): Cake\ORM\Query->sql()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(220): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#10 D:\wamp\www\pairs\src\Controller\ModulesController.php(65): Cake\ORM\Query->count()
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\ModulesController->isAuthorized(Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#19 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#20 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 {main}
+
+
+2015-04-23 11:31:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'Users.id' inconnu dans on clause
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(65): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\ModulesController->isAuthorized(Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-04-23 11:32:00 Error: Fatal Error (1): Call to a member function count() on a non-object in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 49]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-23 11:32:00 Error: [Cake\Error\FatalErrorException] Call to a member function count() on a non-object
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 49)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-23 11:35:04 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 66]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-23 11:35:04 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /pairs/modules/view/3
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 66)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-23 11:35:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'Users.id' inconnu dans on clause
+Request URL: /pairs/modules/view/3
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(66): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\ModulesController->isAuthorized(Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-04-23 11:41:22 Error: Fatal Error (1): Call to a member function count() on a non-object in [D:\wamp\www\pairs\src\Controller\GroupsController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-23 11:41:23 Error: [Cake\Error\FatalErrorException] Call to a member function count() on a non-object
+Request URL: /pairs/groups/view/5
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

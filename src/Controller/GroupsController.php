@@ -20,13 +20,12 @@ class GroupsController extends AppController
 	 * 
 	 **/
 	public function isAuthorized($user){
-	return true;
 		$role = $user['role_id'];
 		$action = $this->request->params['action'];
 		
 		$groups = TableRegistry::get('Groups');
 		//permet de récupérer les groups de l'utilisateur
-		$query = $groups->find()->matching('Users', function($q){
+		$queryAccess = $groups->find()->matching('Users', function($q){
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
 			$idUser = $currentUser['id'];
@@ -44,23 +43,39 @@ class GroupsController extends AppController
 							 'Groups.id' => $id]);
 		});
 		
+		$queryOwner = $groups->find()->matching('Owners', function($q){
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			$idUser = $currentUser['id'];
+			
+			$id = null;
+			if($this->request->pass != null){
+				if(ctype_digit($this->request->pass['0'])){ // on vérifie que c'est bien un entier
+					$id = $this->request->pass['0'];
+				}
+			}
+			return $q
+					->select(['Owners.id', 'Groups.name'])
+					->where(['Owners.id' => $idUser,
+							 'Groups.id' => $id]);
+		});
 		
-		$canAccess = $query->count();
-		if(in_array($action, ['index', 'add', 'edit'])){
-			if($role == 2){
+		debug($canAccess . ' ' . $isOwner);
+		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add'])){
+			if($role == 2){ // professeur
 				if(in_array($action, ['add'])){
 					return true;
-				}else if($canAccess){
+				}
+				// on vérifie si le groupe est bien au professeur
+				if($isOwner){
 					return true;
 				}
 			}
 		}else if(in_array($action, ['view'])){
-			//un étudiant peut voir le groupe,
-			//on doit aussi tester si l'étudiant est bien dans le groupe
-			if($role > 0){
-				if($canAccess){
-					return true;
-				}
+			//un étudiant peut voir un groupe
+			//on doit aussi tester si l'étudiant est bien dans ce groupê de même pour le professeur
+			if($role >= 2 && $canAccess){
+				return true;
 			}
 		}
 		return parent::isAuthorized($user);
