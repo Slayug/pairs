@@ -7313,3 +7313,34 @@ Stack Trace:
 #20 {main}
 
 
+2015-04-23 16:50:26 Error: [Cake\Controller\Exception\MissingActionException] Action ModulesController::delete_user() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'ModulesController',
+  'action' => 'delete_user',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /pairs/modules/delete_user/3
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#2 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-04-23 16:51:43 Error: Fatal Error (4): syntax error, unexpected '.' in [D:\wamp\www\pairs\src\Controller\GroupsController.php, line 228]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-23 16:51:43 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '.'
+Request URL: /pairs/groups/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 228)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

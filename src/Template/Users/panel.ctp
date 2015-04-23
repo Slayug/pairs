@@ -98,4 +98,26 @@
     </div>
 </div>
 
+<div class="related row">
+    <div class="column large-12">
+	
+    <?php
+	if (!empty($user->modules)): ?>
+	
+    <h4 class="subheader"><?= __('Mes Modules') ?></h4>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th><?= __('Nom') ?></th>
+        </tr>
+        <?php foreach ($user->modules as $module): ?>
+			<tr>
+				<td class="td_link"><?= $this->Html->link(__($module->name), ['controller' => 'Modules', 'action' => 'view', $module->id]);?></td>
+			</tr>
+		
+        <?php endforeach; ?>
+    </table>
+    <?php endif; ?>
+    </div>
+</div>
+
 </div>

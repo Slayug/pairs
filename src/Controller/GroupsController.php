@@ -225,6 +225,6 @@ class GroupsController extends AppController
         } else {
             $this->Flash->error('Le groupe ne peut pas être supprimé. Please, try again.');
         }
-		.return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
+		return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
     }
 }

@@ -2,6 +2,7 @@
 
 	$session = $this->request->session();
 	$currentUser = $session->read('Auth.User');
+	$role = $currentUser['role_id'];
 
 ?>
 <div class="groups view large-10 medium-9 columns">
@@ -67,10 +68,10 @@
         </tr>
         <?php foreach ($group->questionnaires as $questionnaires): ?>
         <tr>
-            <td><?= h($questionnaires->titre) ?></td>
+            <td><?= h($questionnaires->title) ?></td>
             <td><?= h($questionnaires->description) ?></td>
             <td><?= h($questionnaires->date_creation) ?></td>
-            <td><?= h($questionnaires->date_limite) ?></td>
+            <td><?= h($questionnaires->date_limit) ?></td>
 
             <td class="actions">
 			
@@ -78,11 +79,13 @@
 				<?php
 					if($role == 2){ // professeur
 						echo $this->Html->link(__('Editer'), ['controller' => 'Questionnaires', 'action' => 'edit', $questionnaires->id]);
+						?>
+						 <?= $this->Form->postLink(__('Supprimer'), ['controller' => 'Questionnaires', 'action' => 'delete', $questionnaires->id], ['confirm' => __('Are you sure you want to delete # {0}?', $questionnaires->id)]) ?>
+							<?php
 					}
 				?>
 		
-                <?= $this->Form->postLink(__('Supprimer'), ['controller' => 'Questionnaires', 'action' => 'delete', $questionnaires->id], ['confirm' => __('Are you sure you want to delete # {0}?', $questionnaires->id)]) ?>
-
+               
             </td>
         </tr>
 
