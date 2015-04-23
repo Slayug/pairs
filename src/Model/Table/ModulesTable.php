@@ -22,6 +22,7 @@ class ModulesTable extends Table
         $this->table('modules');
         $this->displayField('name');
         $this->primaryKey('id');
+		
         $this->belongsToMany('Groups', [
             'foreignKey' => 'module_id',
             'targetForeignKey' => 'group_id',

@@ -6280,3 +6280,154 @@ Stack Trace:
 #2 {main}
 
 
+2015-04-23 11:46:06 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'Modules.id' inconnu dans on clause
+Request URL: /pairs/modules/deleteGroup/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(65): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\ModulesController->isAuthorized(Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-04-23 11:49:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'Modules.id' inconnu dans on clause
+Request URL: /pairs/modules/deleteGroup/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(65): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\ModulesController->isAuthorized(Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-04-23 11:49:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'Modules.id' inconnu dans on clause
+Request URL: /pairs/modules/deleteGroup/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(65): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\ModulesController->isAuthorized(Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-04-23 11:49:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'Modules.id' inconnu dans on clause
+Request URL: /pairs/modules/deleteGroup/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(65): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\ModulesController->isAuthorized(Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-04-23 11:50:56 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de '= '2') INNER JOIN modules_users ModulesUsers ON (Modules.id = (ModulesUsers.modu' à la ligne 1
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(65): Cake\ORM\Query->count()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(92): App\Controller\ModulesController->isAuthorized(Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(473): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(282): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(381): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManager.php(351): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Event\EventManagerTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(471): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(109): Cake\Controller\Controller->startupProcess()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-04-23 11:58:17 Error: [Cake\View\Exception\MissingTemplateException] Template file "Modules\delete_group.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Modules\\delete_group.ctp',
+)
+Request URL: /pairs/modules/deleteGroup/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(576): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#4 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2015-04-23 12:01:58 Error: [LogicException] Controller action can only return an instance of Response
+Request URL: /pairs/modules/deleteGroup/8
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#1 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 {main}
+
+
+2015-04-23 12:02:40 Error: [Cake\View\Exception\MissingTemplateException] Template file "Modules\delete_group.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Modules\\delete_group.ctp',
+)
+Request URL: /pairs/modules/deleteGroup/9
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(576): Cake\View\View->render(NULL, NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#4 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+

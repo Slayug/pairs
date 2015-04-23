@@ -60,7 +60,8 @@ class GroupsController extends AppController
 							 'Groups.id' => $id]);
 		});
 		
-		debug($canAccess . ' ' . $isOwner);
+		$canAccess = $queryAccess->count() + $queryOwner->count();
+		$isOwner = $queryOwner->count();
 		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add'])){
 			if($role == 2){ // professeur
 				if(in_array($action, ['add'])){
