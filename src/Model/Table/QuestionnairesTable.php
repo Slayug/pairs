@@ -53,14 +53,14 @@ class QuestionnairesTable extends Table
         $validator
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create')
-            ->requirePresence('titre', 'create')
-            ->notEmpty('titre')
+            ->requirePresence('title', 'create')
+            ->notEmpty('title')
             ->requirePresence('description', 'create')
             ->notEmpty('description')
             ->add('date_creation', 'valid', ['rule' => 'datetime'])
             ->allowEmpty('date_creation')
             ->add('date_limite', 'valid', ['rule' => 'datetime'])
-            ->allowEmpty('date_limite');
+            ->allowEmpty('date_limit');
 
         return $validator;
     }

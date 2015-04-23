@@ -21,7 +21,7 @@
     <fieldset>
         <legend><?= __('Add Question') ?></legend>
         <?php
-            echo $this->Form->input('contenu');
+            echo $this->Form->input('content');
             echo $this->Form->input('type');
             echo $this->Form->input('answers._ids', ['options' => $answers]);
             echo $this->Form->input('questionnaires._ids', ['options' => $questionnaires]);

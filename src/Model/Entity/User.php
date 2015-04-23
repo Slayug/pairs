@@ -23,6 +23,8 @@ class User extends Entity
         'password' => true,
         'role' => true,
         'groups' => true,
+		'owners' => true,
+		'members' => true,
     ];
 	
 	protected function _setPassword($value)

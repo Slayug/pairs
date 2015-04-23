@@ -22,7 +22,7 @@ class QuestionsTable extends Table
     public function initialize(array $config)
     {
         $this->table('questions');
-        $this->displayField('id');
+        $this->displayField('content');
         $this->primaryKey('id');
         $this->hasMany('AnswersQuestionnaireUsers', [
             'foreignKey' => 'question_id'
@@ -53,8 +53,8 @@ class QuestionsTable extends Table
         $validator
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create')
-            ->requirePresence('contenu', 'create')
-            ->notEmpty('contenu')
+            ->requirePresence('content', 'create')
+            ->notEmpty('content')
             ->add('type', 'valid', ['rule' => 'numeric'])
             ->requirePresence('type', 'create')
             ->notEmpty('type');

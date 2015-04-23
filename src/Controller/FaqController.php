@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
+use Cake\ORM\TableRegistry;
 
 class FaqController extends AppController
 {
@@ -19,7 +20,20 @@ class FaqController extends AppController
      */
     public function index()
     {
-	
+	$session = $this->request->session();
+		$currentUser = $session->read('Auth.User');
+		$role = $currentUser['role_id'];
+		$id = $currentUser['id'];
+		
+		
+		if($role > 1){ // c'est à dire que c'est un étudiant ou un professeur
+			$users = TableRegistry::get('Users');
+			$user = $users->get($id, [
+            'contain' => ['Modules']
+			]);
+			$this->set('user', $user);
+			$this->set('_serialize', ['user']);
+		}
     }
 
     /**

@@ -20,18 +20,47 @@ class GroupsController extends AppController
 	 * 
 	 **/
 	public function isAuthorized($user){
+	return true;
 		$role = $user['role_id'];
 		$action = $this->request->params['action'];
-		//debug($action);
+		
+		$groups = TableRegistry::get('Groups');
+		//permet de récupérer les groups de l'utilisateur
+		$query = $groups->find()->matching('Users', function($q){
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			$idUser = $currentUser['id'];
+			
+			$id = null;
+			if($this->request->pass != null){
+				if(ctype_digit($this->request->pass['0'])){ // on vérifie que c'est bien un entier
+					$id = $this->request->pass['0'];
+				}
+			}
+			
+			return $q
+					->select(['Users.id', 'Groups.name'])
+					->where(['Users.id' => $idUser,
+							 'Groups.id' => $id]);
+		});
+		
+		
+		$canAccess = $query->count();
 		if(in_array($action, ['index', 'add', 'edit'])){
 			if($role == 2){
-				return true;
+				if(in_array($action, ['add'])){
+					return true;
+				}else if($canAccess){
+					return true;
+				}
 			}
 		}else if(in_array($action, ['view'])){
 			//un étudiant peut voir le groupe,
 			//on doit aussi tester si l'étudiant est bien dans le groupe
 			if($role > 0){
-				return true;
+				if($canAccess){
+					return true;
+				}
 			}
 		}
 		return parent::isAuthorized($user);
@@ -80,7 +109,7 @@ class GroupsController extends AppController
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
 			
-			$this->request->data['users'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer que c'est lui qui possède le groupe.
+			$this->request->data['owners'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer que c'est lui qui possède le groupe.
 			
 			$group = $this->Groups->patchEntity($group, $this->request->data);
            	$fromModule = false;

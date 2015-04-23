@@ -20,5 +20,7 @@ class Module extends Entity
         'description' => true,
         'users' => true,
         'groups' => true,
+		'owners' => true,
+		'members' => true,
     ];
 }

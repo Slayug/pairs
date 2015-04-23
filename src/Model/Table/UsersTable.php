@@ -22,20 +22,42 @@ class UsersTable extends Table
     public function initialize(array $config)
     {
         $this->table('users');
-        $this->displayField('id');
+        $this->displayField('first_name');
         $this->primaryKey('id');
         $this->belongsTo('Roles', [
             'foreignKey' => 'role_id'
         ]);
+		
+		//Modules
+		
+		$this->belongsToMany('Modules', [
+			'className' => 'Modules',
+            'foreignKey' => 'user_id',
+            'targetForeignKey' => 'module_id',
+            'joinTable' => 'modules_users',
+        ]);
+        $this->belongsToMany('ModuleOwner', [
+			'className' => 'Modules',
+            'foreignKey' => 'user_id',
+            'targetForeignKey' => 'module_id',
+            'joinTable' => 'modules_owners',
+			'propertyName' => 'module_owner'
+        ]);
+		
+		//Groups
+		
         $this->belongsToMany('Groups', [
+			'className' => 'Groups',
             'foreignKey' => 'user_id',
             'targetForeignKey' => 'group_id',
             'joinTable' => 'groups_users'
         ]);
-		$this->belongsToMany('Modules', [
+		$this->belongsToMany('GroupOwner', [
+			'className' => 'Groups',
             'foreignKey' => 'user_id',
-            'targetForeignKey' => 'module_id',
-            'joinTable' => 'modules_users'
+            'targetForeignKey' => 'group_id',
+            'joinTable' => 'groups_owners',
+			'propertyName' => 'group_owner'
         ]);
     }
 

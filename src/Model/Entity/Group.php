@@ -19,5 +19,6 @@ class Group extends Entity
         'description' => true,
         'users' => true,
         'questionnaires' => true,
+		'owners' => true,
     ];
 }

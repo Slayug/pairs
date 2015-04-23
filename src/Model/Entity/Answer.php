@@ -15,7 +15,7 @@ class Answer extends Entity
      * @var array
      */
     protected $_accessible = [
-        'valeur' => true,
+        'value' => true,
         'questions' => true,
     ];
 }

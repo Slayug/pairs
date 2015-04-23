@@ -7,6 +7,7 @@
 
 <div class="users view large-10 medium-9 columns">
 	<?= $this->Flash->render() ?>
+	<?= $this->Flash->render('auth') ?>
     <h2>Module: <?= h($module->name) ?></h2>
     <div class="row">
         <div class="large-5 columns strings">
@@ -15,6 +16,28 @@
         </div>
     </div>
 </div>
+
+<div class="related row">
+    <div class="column large-12">
+    <h4 class="subheader"><?= __('Propriétaire du module') ?></h4>
+    <?php if (!empty($module->owners)): ?>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th><?= __('Prénom') ?></th>
+            <th><?= __('Nom') ?></th>
+        </tr>
+        <?php foreach ($module->owners as $user): ?>
+        <tr>
+            <td><?= h($user->first_name) ?></td>
+            <td><?= h($user->last_name) ?></td>
+        </tr>
+
+        <?php endforeach; ?>
+    </table>
+    <?php endif; ?>
+    </div>
+</div>
+
 <div class="related row">
     <div class="column large-12">
     <h4 class="subheader"><?= __('Membres du module') ?></h4>
@@ -53,15 +76,29 @@
             <th><?= __('Nom') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
-        <?php foreach ($module->groups as $group): ?>
-        <tr>
-            <td><?= h($group->name) ?></td>
-
-            <td class="actions">
-                <?= $this->Form->postLink(__('Supprimer'), ['controller' => 'Modules', 'action' => 'delete_group', $group->id], ['confirm' => __('Êtes vous sûr de supprimer ce groupe du module # {0}?', $user->id)]) ?>
-
-            </td>
-        </tr>
+        <?php foreach ($module->groups as $group): ?>		
+			<tr>
+				<td class="td_link"><?= $this->Html->link(__($group->name), ['controller' => 'Groups', 'action' => 'view', $group->id]);?></td>
+				<?php
+					if($role == 2){
+				?>
+					<td>
+				
+					<?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Groups', 'action' => 'edit', $group->id), array('escape' => false));?>
+				
+					<?= $this->Form->postLink(
+							$this->Html->image('delete.png',
+							array('alt' => __('Supprimer'),
+								  'title' => __('Supprimer'))),
+							array('controller' => 'Modules',
+								  'action' => 'deleteGroup', $group->id),
+							array('escape' => false,
+								  'confirm' => __('Êtes vous sûr de supprimer le groupe #{0}# ?', $group->name))) ?>
+					</td>
+				<?php
+					}
+				?>
+			</tr>
 
         <?php endforeach; ?>
     </table>

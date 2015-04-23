@@ -3,7 +3,6 @@
 
 
 
-
 <ul>
     <li><a href="#compte">Comment accéder à mon compte?</a></li>
     <li><a href="#cgroup">Comment créer un groupe ?</a></li>

@@ -15,7 +15,7 @@ class Question extends Entity
      * @var array
      */
     protected $_accessible = [
-        'contenu' => true,
+        'content' => true,
         'type' => true,
         'answers_questionnaire_users' => true,
         'answers_questionnaire_users_partials' => true,

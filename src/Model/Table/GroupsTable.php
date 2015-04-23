@@ -24,11 +24,6 @@ class GroupsTable extends Table
         $this->table('groups');
         $this->displayField('name');
         $this->primaryKey('id');
-        $this->belongsToMany('Users', [
-            'foreignKey' => 'group_id',
-            'targetForeignKey' => 'user_id',
-            'joinTable' => 'groups_users'
-        ]);
         $this->belongsToMany('Questionnaires', [
             'foreignKey' => 'group_id',
             'targetForeignKey' => 'questionnaire_id',
@@ -38,6 +33,22 @@ class GroupsTable extends Table
             'foreignKey' => 'group_id',
             'targetForeignKey' => 'module_id',
             'joinTable' => 'modules_groups'
+        ]);
+		
+		// Users
+		
+		$this->belongsToMany('Users', [
+			'className' => 'Users',
+            'foreignKey' => 'group_id',
+            'targetForeignKey' => 'user_id',
+            'joinTable' => 'groups_users',
+        ]);
+		$this->belongsToMany('Owners', [
+			'className' => 'Users',
+            'foreignKey' => 'group_id',
+            'targetForeignKey' => 'user_id',
+            'joinTable' => 'groups_owners',
+			'propertyName' => 'owners'
         ]);
     }
 

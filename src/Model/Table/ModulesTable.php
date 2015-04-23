@@ -7,9 +7,7 @@ use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
-/**
- * Users Model
- */
+
 class ModulesTable extends Table
 {
 
@@ -29,10 +27,21 @@ class ModulesTable extends Table
             'targetForeignKey' => 'group_id',
             'joinTable' => 'modules_groups'
         ]);
-		 $this->belongsToMany('Users', [
+		
+		// Users
+		
+		$this->belongsToMany('Users', [
+			'className' => 'Users',
             'foreignKey' => 'module_id',
             'targetForeignKey' => 'user_id',
-            'joinTable' => 'modules_users'
+            'joinTable' => 'modules_users',
+        ]);
+		$this->belongsToMany('Owners', [
+			'className' => 'Users',
+            'foreignKey' => 'module_id',
+            'targetForeignKey' => 'user_id',
+            'joinTable' => 'modules_owners',
+			'propertyName' => 'owners'
         ]);
     }
 

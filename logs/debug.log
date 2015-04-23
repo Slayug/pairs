@@ -3564,3 +3564,88 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2015-04-22 15:13:55 Notice: Notice (8): Undefined property: Cake\ORM\Query::$items in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 46]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 46
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-22 15:14:14 Notice: Notice (8): Undefined property: Cake\ORM\ResultSet::$items in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 46]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 46
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-22 15:14:20 Notice: Notice (8): Undefined property: Cake\ORM\ResultSet::$items in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 46]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 46
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-22 15:20:11 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 47]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 47
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-04-22 15:25:14 Notice: Notice (8): Trying to get property of non-object in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 47]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\ModulesController::isAuthorized() - APP/Controller\ModulesController.php, line 47
+Cake\Auth\ControllerAuthorize::authorize() - CORE\src\Auth\ControllerAuthorize.php, line 92
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE\src\Controller\Component\AuthComponent.php, line 473
+Cake\Controller\Component\AuthComponent::startup() - CORE\src\Controller\Component\AuthComponent.php, line 282
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 471
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

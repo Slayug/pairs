@@ -15,10 +15,10 @@ class Questionnaire extends Entity
      * @var array
      */
     protected $_accessible = [
-        'titre' => true,
+        'title' => true,
         'description' => true,
         'date_creation' => true,
-        'date_limite' => true,
+        'date_limit' => true,
         'answers_questionnaire_users' => true,
         'answers_questionnaire_users_partials' => true,
         'groups' => true,

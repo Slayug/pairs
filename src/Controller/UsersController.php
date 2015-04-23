@@ -18,6 +18,7 @@ class UsersController extends AppController
 	 * 
 	 **/
 	public function isAuthorized($user){
+	return true;
 		$role = $user['role_id'];
 		$action = $this->request->params['action'];
 		//debug($action);
@@ -85,7 +86,7 @@ class UsersController extends AppController
 		
 		if($role > 1){ // c'est à dire que c'est un étudiant ou un professeur
 			$user = $this->Users->get($id, [
-            'contain' => ['Modules']
+				'contain' => ['ModuleOwner', 'Modules']
 			]);
 			$this->set('user', $user);
 			$this->set('_serialize', ['user']);

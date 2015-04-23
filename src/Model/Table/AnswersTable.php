@@ -42,8 +42,8 @@ class AnswersTable extends Table
         $validator
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create')
-            ->requirePresence('valeur', 'create')
-            ->notEmpty('valeur');
+            ->requirePresence('value', 'create')
+            ->notEmpty('value');
 
         return $validator;
     }

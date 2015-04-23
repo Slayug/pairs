@@ -19,10 +19,16 @@ class ModulesController extends AppController
 	 * 
 	 **/
 	public function isAuthorized($user){
+	
+		return true;
 		$role = $user['role_id'];
 		$action = $this->request->params['action'];
 		
-		$modules = TableRegistry::get('Modules');
+		$table = 'Modules';
+		if(in_array($action, ['deleteGroup'])){
+			$table = 'Groups';
+		}
+		$modules = TableRegistry::get($table);
 		//permet de récupérer les modules de l'utilisateur
 		$query = $modules->find()->matching('Users', function($q){
 			$session = $this->request->session();
@@ -35,19 +41,21 @@ class ModulesController extends AppController
 					$id = $this->request->pass['0'];
 				}
 			}
-			
 			return $q
 					->select(['Users.id', 'Modules.name'])
 					->where(['Users.id' => $idUser,
 							 'Modules.id' => $id]);
 		});
 		
-		
 		$canAccess = $query->count();
-		if(in_array($action, ['index', 'add', 'edit', 'delete'])){
+		$isOwner = true;
+		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add'])){
 			if($role == 2){ // professeur
+				if(in_array($action, ['add'])){
+					return true;
+				}
 				// on vérifie si le module est bien au professeur
-				if($canAccess){
+				if($canAccess && $isOwner){
 					return true;
 				}
 			}
@@ -70,6 +78,22 @@ class ModulesController extends AppController
     public function index()
     {
     }
+	
+	/**
+	*	Permet de supprimer un groupe de ce module
+	*
+	*/
+	public function deleteGroup($id = null){
+		$this->request->allowMethod(['post', 'delete']);
+        $group = $this->Modules->Groups->get($id);
+        if ($this->Modules->Groups->delete($group)) {
+            $this->Flash->success('Le groupe a bien été supprimé.');
+			debug('done');
+        } else {
+            $this->Flash->error('Le groupe ne peut pas être supprimé, merci de réessayer plus tard.');
+        }
+		return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
+	}
 
     /**
      * View method
@@ -80,7 +104,7 @@ class ModulesController extends AppController
      */
     public function view($id = null){
         $module = $this->Modules->get($id, [
-            'contain' => ['Users', 'Groups']
+            'contain' => ['Owners', 'Users', 'Groups']
         ]);
         $this->set('module', $module);
         $this->set('_serialize', ['module']);
@@ -98,8 +122,11 @@ class ModulesController extends AppController
             $session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
 			
-			$this->request->data['users'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer que c'est lui qui possède le module.
+			$this->request->data['owners'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer qu'il est lier au groupe
+			debug($module);
             $module = $this->Modules->patchEntity($module, $this->request->data);
+			
+			debug($module);
             if ($this->Modules->save($module)) {
                 $this->Flash->success('Le module a été sauvegardé.');
                 return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
@@ -108,7 +135,16 @@ class ModulesController extends AppController
             }
         }
 		
-        $groups = $this->Modules->Groups->find('list', ['limit' => 200]);
+        $groups = $this->Modules->Groups->find('list')->matching('Users', function($q){
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			$idUser = $currentUser['id'];
+						
+			return $q
+					->select(['Users.id', 'Groups.name'])
+					->where(['Users.id' => $idUser]);
+		});
+		
         $this->set(compact('module', 'groups'));
         $this->set('_serialize', ['module']);
     }

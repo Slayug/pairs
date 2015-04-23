@@ -3,12 +3,13 @@
 <h2>Panel</h2>
 <p>
 	<?= $this->Flash->render() ?>
+	<?= $this->Flash->render('auth') ?>
 <?php
 	$session = $this->request->session();
 	$currentUser = $session->read('Auth.User');
 	$role = $currentUser['role_id'];
 	?>
-		<p>Bonjour <?php echo $currentUser['first_name']; ?></p>
+		<p>Bonjour <?php echo h($currentUser['first_name'] . ' ' . $currentUser['last_name']); ?></p>
 	<?php
 	
 	if($role == 1){ //admin
@@ -65,7 +66,7 @@
     <div class="column large-12">
 	
     <?php
-	if (!empty($user->modules)): ?>
+	if (!empty($user->module_owner)): ?>
 	
     <h4 class="subheader"><?= __('Mes Modules') ?></h4>
     <table cellpadding="0" cellspacing="0">
@@ -73,10 +74,14 @@
             <th><?= __('Nom') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
-        <?php foreach ($user->modules as $module): ?>
+        <?php foreach ($user->module_owner as $module): ?>
 			<tr>
 				<td class="td_link"><?= $this->Html->link(__($module->name), ['controller' => 'Modules', 'action' => 'view', $module->id]);?></td>
-				<td>
+				<?php
+					if($role == 2){
+				?>
+					<td>
+				
 					<?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Modules', 'action' => 'edit', $module->id), array('escape' => false));?>
 				
 					<?= $this->Form->postLink(
@@ -87,7 +92,10 @@
 								  'action' => 'delete', $module->id),
 							array('escape' => false,
 								  'confirm' => __('Êtes vous sûr de supprimer le module #{0}# ?', $module->name))) ?>
-						</td>
+					</td>
+				<?php
+					}
+				?>
 			</tr>
 		
         <?php endforeach; ?>
