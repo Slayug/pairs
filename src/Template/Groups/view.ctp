@@ -1,18 +1,29 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-    </ul>
-</div>
-
 <?php
 
 	$session = $this->request->session();
 	$currentUser = $session->read('Auth.User');
-	$role = $currentUser['role_id'];
 
 ?>
 <div class="groups view large-10 medium-9 columns">
     <h2><?= h($group->name) ?></h2>
+	<?php 
+		if($isOwner){?>
+			<div class="actions">
+				<?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Groups', 'action' => 'edit', $group->id), array('escape' => false));?>
+				
+				<?= $this->Form->postLink(
+							$this->Html->image('delete.png',
+							array('alt' => __('Supprimer'),
+								  'title' => __('Supprimer'))),
+							array('controller' => 'Groups',
+								  'action' => 'delete', $group->id),
+							array('escape' => false,
+								  'confirm' => __('Êtes vous sûr de supprimer le module #{0}# ?', $group->name))) ?>
+			</div>
+		<?php
+		}
+		?>
+	
     <div class="row">
         <div class="large-5 columns strings">
             <h6 class="subheader"><?= __('Nom') ?></h6>
@@ -30,27 +41,11 @@
         <tr>
             <th><?= __('Prénom') ?></th>
             <th><?= __('Nom') ?></th>
-			<?php
-			if($role == 2){?>
-            <th class="actions"><?= __('Actions') ?></th>
-			<?php
-			}
-			?>
         </tr>
         <?php foreach ($group->users as $users): ?>
         <tr>
             <td><?= h($users->first_name) ?></td>
             <td><?= h($users->last_name) ?></td>
-
-			
-				<?php
-				if($role == 2){?>
-            <td class="actions"><?php
-						echo $this->Form->postLink(__('Supprimer'), ['controller' => 'Users', 'action' => 'delete', $users->id], ['confirm' => __('Êtes vous sûr de supprimer ce membre de ce groupe # {0}?', $users->id)]);
-           ?></td>
-		   <?php
-				}
-		   ?>
         </tr>
 
         <?php endforeach; ?>
@@ -84,10 +79,8 @@
 					if($role == 2){ // professeur
 						echo $this->Html->link(__('Editer'), ['controller' => 'Questionnaires', 'action' => 'edit', $questionnaires->id]);
 					}
-				
 				?>
 		
-
                 <?= $this->Form->postLink(__('Supprimer'), ['controller' => 'Questionnaires', 'action' => 'delete', $questionnaires->id], ['confirm' => __('Are you sure you want to delete # {0}?', $questionnaires->id)]) ?>
 
             </td>

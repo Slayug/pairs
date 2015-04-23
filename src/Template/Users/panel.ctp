@@ -77,9 +77,6 @@
         <?php foreach ($user->module_owner as $module): ?>
 			<tr>
 				<td class="td_link"><?= $this->Html->link(__($module->name), ['controller' => 'Modules', 'action' => 'view', $module->id]);?></td>
-				<?php
-					if($role == 2){
-				?>
 					<td>
 				
 					<?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Modules', 'action' => 'edit', $module->id), array('escape' => false));?>
@@ -93,9 +90,6 @@
 							array('escape' => false,
 								  'confirm' => __('Êtes vous sûr de supprimer le module #{0}# ?', $module->name))) ?>
 					</td>
-				<?php
-					}
-				?>
 			</tr>
 		
         <?php endforeach; ?>

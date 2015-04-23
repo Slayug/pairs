@@ -102,6 +102,9 @@ class ModulesController extends AppController
 	*
 	*/
 	public function deleteGroup($id = null){
+		if($id == null){
+			return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
+		}
 		$this->request->allowMethod(['post', 'delete']);
         $group = $this->Modules->Groups->get($id);
         if ($this->Modules->Groups->delete($group)) {

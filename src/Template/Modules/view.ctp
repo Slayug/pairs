@@ -90,8 +90,8 @@
 							$this->Html->image('delete.png',
 							array('alt' => __('Supprimer'),
 								  'title' => __('Supprimer'))),
-							array('controller' => 'Modules',
-								  'action' => 'deleteGroup', $group->id),
+							array('controller' => 'Groups',
+								  'action' => 'delete', $group->id),
 							array('escape' => false,
 								  'confirm' => __('Êtes vous sûr de supprimer le groupe #{0}# ?', $group->name))) ?>
 					</td>

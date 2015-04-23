@@ -22,7 +22,7 @@ class QuestionnairesTable extends Table
     public function initialize(array $config)
     {
         $this->table('questionnaires');
-        $this->displayField('id');
+        $this->displayField('title');
         $this->primaryKey('id');
         $this->hasMany('AnswersQuestionnaireUsers', [
             'foreignKey' => 'questionnaire_id'

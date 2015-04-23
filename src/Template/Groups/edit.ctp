@@ -1,4 +1,7 @@
 <div class="actions columns large-2 medium-3">
+
+	<?= $this->Flash->render() ?>
+	<?= $this->Flash->render('auth') ?>
     <h3><?= __('Actions') ?></h3>
     <ul class="side-nav">
         <li><?= $this->Form->postLink(
@@ -12,10 +15,10 @@
 <div class="groups form large-10 medium-9 columns">
     <?= $this->Form->create($group); ?>
     <fieldset>
-        <legend><?= __('Edit Group') ?></legend>
+        <legend><?= __('Editer le groupe: ' . $group->name) ?></legend>
         <?php
-            echo $this->Form->input('name');
-            echo $this->Form->input('description');
+            echo $this->Form->input('name', ['label' => 'Nom:']);
+            echo $this->Form->input('description', ['label' => 'Description:']);
             echo $this->Form->input('users._ids', ['options' => $users]);
             echo $this->Form->input('questionnaires._ids', ['options' => $questionnaires]);
         ?>

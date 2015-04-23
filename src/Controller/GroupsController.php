@@ -43,7 +43,7 @@ class GroupsController extends AppController
 							 'Groups.id' => $id]);
 		});
 		
-		$queryOwner = $groups->find()->matching('Owners', function($q){
+		/*$queryOwner = $groups->find()->matching('Owners', function($q){
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
 			$idUser = $currentUser['id'];
@@ -59,9 +59,10 @@ class GroupsController extends AppController
 					->where(['Owners.id' => $idUser,
 							 'Groups.id' => $id]);
 		});
+		*/
 		
-		$canAccess = $queryAccess->count() + $queryOwner->count();
-		$isOwner = $queryOwner->count();
+		$isOwner = $this->isOwner();
+		$canAccess = $queryAccess->count() + $isOwner;
 		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add'])){
 			if($role == 2){ // professeur
 				if(in_array($action, ['add'])){
@@ -81,6 +82,28 @@ class GroupsController extends AppController
 		}
 		return parent::isAuthorized($user);
 		
+	}
+	
+	private function isOwner(){
+		$groups = TableRegistry::get('Groups');
+		$queryOwner = $groups->find()->matching('Owners', function($q){
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			$idUser = $currentUser['id'];
+			
+			$id = null;
+			if($this->request->pass != null){
+				if(ctype_digit($this->request->pass['0'])){ // on vérifie que c'est bien un entier
+					$id = $this->request->pass['0'];
+				}
+			}
+			return $q
+					->select(['Owners.id', 'Groups.name'])
+					->where(['Owners.id' => $idUser,
+							 'Groups.id' => $id]);
+		});
+		
+		return $queryOwner->count();
 	}
 
     /**
@@ -104,8 +127,9 @@ class GroupsController extends AppController
     public function view($id = null)
     {
         $group = $this->Groups->get($id, [
-            'contain' => ['Users', 'Questionnaires']
+            'contain' => ['Users', 'Questionnaires', 'Owners']
         ]);
+		$this->set('isOwner', $this->isOwner());
         $this->set('group', $group);
         $this->set('_serialize', ['group']);
         
@@ -174,9 +198,10 @@ class GroupsController extends AppController
             $group = $this->Groups->patchEntity($group, $this->request->data);
             if ($this->Groups->save($group)) {
                 $this->Flash->success('Le groupe a été sauvegardé.');
-                return $this->redirect(['action' => 'index']);
+				return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
             } else {
                 $this->Flash->error('Le groupe n\'a pas pu être sauvegardé, merci de réessayer plus tard.');
+				return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
             }
         }
         $users = $this->Groups->Users->find('list', ['limit' => 200]);
@@ -196,10 +221,10 @@ class GroupsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $group = $this->Groups->get($id);
         if ($this->Groups->delete($group)) {
-            $this->Flash->success('The group has been deleted.');
+            $this->Flash->success('Le groupe a bien été supprimé.');
         } else {
-            $this->Flash->error('The group could not be deleted. Please, try again.');
+            $this->Flash->error('Le groupe ne peut pas être supprimé. Please, try again.');
         }
-        return $this->redirect(['action' => 'index']);
+		.return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
     }
 }
