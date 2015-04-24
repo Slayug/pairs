@@ -63,7 +63,7 @@ class GroupsController extends AppController
 		
 		$isOwner = $this->isOwner();
 		$canAccess = $queryAccess->count() + $isOwner;
-		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add'])){
+		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add', 'import'])){
 			if($role == 2){ // professeur
 				if(in_array($action, ['add'])){
 					return true;

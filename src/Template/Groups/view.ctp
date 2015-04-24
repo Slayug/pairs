@@ -37,6 +37,11 @@
 <div class="related row">
     <div class="column large-12">
     <h4 class="subheader"><?= __('Utilisateurs') ?></h4>
+	<a href="#" onClick="spawnDiv('add_user_group');">Ajouter un utilisateur</a>
+	<div id="add_user_group" class="initMove">
+		<p>Coucou</p>
+		<a style="float:right;"  href="" onClick="closeDiv('add_user_group');">clsoe</a>
+	</div>
     <?php if (!empty($group->users)): ?>
     <table cellpadding="0" cellspacing="0">
         <tr>

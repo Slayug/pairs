@@ -114,6 +114,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<?php echo $this->Html->script('bootstrap.min'); ?>
 	<?php echo $this->Html->script('holder.js'); ?>
+	<?php echo $this->Html->script('div.js'); ?>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<?php echo $this->Html->script('ie10-viewport-bug-workaround.js'); ?>
 	<?php echo $this->fetch("script"); ?>

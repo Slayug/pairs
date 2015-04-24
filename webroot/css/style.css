@@ -239,3 +239,28 @@ td img{
 	margin-bottom:5px;
 
 }
+.initMove
+{
+	display:none;
+    right:2%;
+    top: 3%;
+    opacity: 0.0;
+	-moz-opacity:0.0;
+	filter:alpha(opacity=0);
+	-khtml-opacity: 0.0;	
+    right:2%;
+}
+.startMove
+{
+	display:block;
+    -webkit-transition: all 1.5s cubic-bezier(0.25, 0.1, 0.27, 0.73) 0s;
+	-moz-transition: all 1.5s cubic-bezier(0.25, 0.1, 0.27, 0.73) 0s;
+	-o-transition: all 1.5s cubic-bezier(0.25, 0.1, 0.27, 0.73) 0s;
+	-ms-transition: all 1.5s cubic-bezier(0.25, 0.1, 0.27, 0.73) 0s;
+    right:2%;
+    top: 3%;
+    opacity: 1.0;
+	-moz-opacity:1.0;
+	-khtml-opacity: 1.0;	
+	filter:alpha(opacity=100);	
+}
