@@ -86,6 +86,7 @@
     <h4 class="subheader"><?= __('Groupe du Module') ?></h4>
 	<?php if($isOwner){
 		echo $this->Html->link(__('Ajouter un groupe'), ['controller' => 'Groups', 'action' => 'add', $module->id]);
+		echo '<br />';
 		echo $this->Html->link(__('Importer un groupe'), ['controller' => 'Groups', 'action' => 'import', $module->id]);
 	}
     if (!empty($module->groups)): ?>

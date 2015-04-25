@@ -12,6 +12,8 @@ use App\Model\Entity\Group;
  */
 class GroupsController extends AppController
 {
+
+	const EXT_EMAIL = '@etu.univ-tours.fr';
 	
 	/**
 	 * Methode permettant de gérer les droits pour
@@ -63,7 +65,7 @@ class GroupsController extends AppController
 		
 		$isOwner = $this->isOwner();
 		$canAccess = $queryAccess->count() + $isOwner;
-		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add', 'import'])){
+		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add', 'addUser'])){
 			if($role == 2){ // professeur
 				if(in_array($action, ['add'])){
 					return true;
@@ -106,6 +108,9 @@ class GroupsController extends AppController
 		return $queryOwner->count();
 	}
 
+	public function import($idModule = null){
+	
+	}
     /**
      * Index method
      *
@@ -124,8 +129,7 @@ class GroupsController extends AppController
      * @return void
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function view($id = null)
-    {
+    public function view($id = null){
         $group = $this->Groups->get($id, [
             'contain' => ['Users', 'Questionnaires', 'Owners']
         ]);
@@ -135,6 +139,52 @@ class GroupsController extends AppController
         
         
     }
+	
+	public function addUser($idGroup = null){
+	
+        if ($this->request->is('PUT')) {
+			// on suppose d'abord que l'utilisateur n'existe pas donc on va le crée et l'associer puis le save
+			$user = $this->Groups->Users->newEntity();
+			$group = $this->Groups->get($idGroup);
+			$currentGroup = array();
+			$currentGroup['id'] = $group->id;
+			$currentGroup['name'] = $group->name;
+			$currentGroup['description'] = $group->description;
+			$this->request->data['groups'][0] = $currentGroup;
+			$user = $this->Groups->Users->patchEntity($user, $this->request->data);
+			
+			$first_name = strtolower($this->request->data['first_name']);
+			$last_name = strtolower($this->request->data['last_name']);
+			$user->first_name = $first_name;
+			$user->last_name = $last_name;
+			
+			$user->email = $first_name . '.' . $last_name . self::EXT_EMAIL;
+			$user->role_id = 3;
+			$user->password = null;
+			if($this->Groups->Users->save($user)){
+                $this->Flash->success('L\'étudiant a été ajouté avec succès.');
+				return $this->redirect(['controller' => 'Groups', 'action' => 'view', $idGroup]);
+			}
+			// l'utilisateur existe déjà
+			// on le récupère pour lui ajouter l'assocation avec le groupe et le save
+			$users = TableRegistry::get('Users');
+			$userQuery = $users->find()->where(['Users.email' => $user->email]);
+			$newUser = $userQuery->first();
+			if($newUser != null){
+				$newUser = $this->Groups->Users->patchEntity($newUser, $this->request->data);
+				$newUser->first_name = $first_name;
+				$newUser->last_name = $last_name;
+				if($this->Groups->Users->save($newUser)){
+					$this->Flash->success('L\'étudiant a été ajouté avec succès.');
+					return $this->redirect(['controller' => 'Groups', 'action' => 'view', $idGroup]);				
+				}
+			}
+			
+            $this->Flash->error('Une erreur s\'est produite l\'étudiant n\'a pas été ajouté.');
+			return $this->redirect(['controller' => 'Groups', 'action' => 'view', $idGroup]);
+					
+		}
+	}
 
     /**
      * Add method
@@ -186,8 +236,7 @@ class GroupsController extends AppController
      * @return void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
-    {
+    public function edit($id = null){
 		if($id == null){
 			return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
 		}

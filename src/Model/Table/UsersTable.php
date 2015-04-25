@@ -85,6 +85,7 @@ class UsersTable extends Table
             ->requirePresence('role_id', 'create')
             ->notEmpty('role_id')
             ->add('email', 'valid', ['rule' => 'email'])
+			->add('email', ['unique' => ['rule' => 'validateUnique', 'provider' => 'table']])
             ->requirePresence('email', 'create')
             ->notEmpty('email')
             ->requirePresence('first_name', 'create')

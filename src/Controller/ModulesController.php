@@ -79,7 +79,8 @@ class ModulesController extends AppController
 	private function isOwner(){
 		$modules = TableRegistry::get('Modules');
 		$queryOwner = $modules->find()->matching('Owners', function($q){
-			$session = $this->request->session();			$currentUser = $session->read('Auth.User');
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
 			$idUser = $currentUser['id'];
 			$id = null;
 			if($this->request->pass != null){

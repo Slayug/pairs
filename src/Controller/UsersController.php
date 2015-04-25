@@ -85,7 +85,7 @@ class UsersController extends AppController
 		
 		if($role > 1){ // c'est à dire que c'est un étudiant ou un professeur
 			$user = $this->Users->get($id, [
-				'contain' => ['ModuleOwner', 'Modules']
+				'contain' => ['ModuleOwner']
 			]);
 			$this->set('user', $user);
 			$this->set('_serialize', ['user']);
@@ -114,15 +114,18 @@ class UsersController extends AppController
      *
      * @return void Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {
+    public function add($idGroup = null){
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
-			debug($this->request->data);
             $user = $this->Users->patchEntity($user, $this->request->data);
             if ($this->Users->save($user)) {
                 $this->Flash->success('The user has been saved.');
-                return $this->redirect(['action' => 'index']);
+				if($idGroup != null && ctype_digit($idGroup)){
+					return $this->redirect(['controller' => 'Groups',
+											'action' => 'view',
+											$idGroup]);
+				}
+                return $this->redirect(['action' => 'panel']);
             } else {
                 $this->Flash->error('The user could not be saved. Please, try again.');
             }
@@ -142,7 +145,7 @@ class UsersController extends AppController
 		}
 		$condition = array("Roles.id >=" => $rolePossible);
         $roles = $this->Users->Roles->find('list');
-        $groups = $this->Users->Groups->find('all', ['limit' => 200]);
+        $groups = $this->Users->Groups->find('list', ['limit' => 200]);
         $this->set(compact('user', 'roles', 'groups'));
         $this->set('_serialize', ['user']);
     }

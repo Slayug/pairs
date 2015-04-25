@@ -7,6 +7,10 @@ a:hover {
 	color: #e16244;
 	outline: 0;
 }
+a:focus{
+	color: #e16040;
+
+}
 .navbar{
 	background-image: url('../img/bg_vert.jpg');
 	position:relative;
@@ -263,4 +267,11 @@ td img{
 	-moz-opacity:1.0;
 	-khtml-opacity: 1.0;	
 	filter:alpha(opacity=100);	
+}
+#add_user_group .input.text{
+	width: 200px;
+	float:left;
+	margin:0px;
+	margin-right: 10px;
+	position:relative;
 }
