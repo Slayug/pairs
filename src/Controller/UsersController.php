@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Utility\Hash;
+use Cake\ORM\TableRegistry;
 /**
  * Users Controller
  *
@@ -87,7 +88,25 @@ class UsersController extends AppController
 			$user = $this->Users->get($id, [
 				'contain' => ['ModuleOwner']
 			]);
+			$modules = TableRegistry::get('Modules');
+			$modulesUser = $modules->find()->hydrate(false)
+									 ->join([
+										'mg' => [ // on join les modules
+											'table' => 'modules_groups',
+											'type' => 'INNER',
+											'conditions' => 'mg.module_id = modules.id',
+										],
+										'gu' => [ // on join les users associés au join précédent
+											'table' => 'groups_users',
+											'type' => 'INNER',
+											'conditions' => 'mg.group_id = gu.group_id',
+										]
+									
+									])
+									->where(['gu.user_id' => $id]); // où l'id de l'user est le même que celui qui est connecté
+			// $this->set('modules', $modulesUser);
 			$this->set('user', $user);
+			$this->set('modulesUser', $modulesUser);
 			$this->set('_serialize', ['user']);
 		}
 		

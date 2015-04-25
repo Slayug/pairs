@@ -63,17 +63,23 @@
         <tr>
             <th><?= __('Prénom') ?></th>
             <th><?= __('Nom') ?></th>
+			<?php
+			if($isOwner){?>
             <th class="actions"><?= __('Actions') ?></th>
+			<?php } ?>
         </tr>
         <?php foreach ($module->users as $user): ?>
         <tr>
             <td><?= h($user->first_name) ?></td>
             <td><?= h($user->last_name) ?></td>
-
+			
+			<?php
+			if($isOwner){?>
             <td class="actions">
                 <?= $this->Form->postLink(__('Supprimer'), ['controller' => 'Modules', 'action' => 'delete_user', $user->id], ['confirm' => __('Êtes vous sûr de supprimer ce membre du module # {0}?', $user->id)]) ?>
 
             </td>
+			<?php } ?>
         </tr>
 
         <?php endforeach; ?>
@@ -93,13 +99,16 @@
     <table cellpadding="0" cellspacing="0">
         <tr>
             <th><?= __('Nom') ?></th>
+			<?php
+			if($isOwner){?>
             <th class="actions"><?= __('Actions') ?></th>
+			<?php } ?>
         </tr>
         <?php foreach ($module->groups as $group): ?>		
 			<tr>
 				<td class="td_link"><?= $this->Html->link(__($group->name), ['controller' => 'Groups', 'action' => 'view', $group->id]);?></td>
 				<?php
-					if($role == 2){
+					if($isOwner){
 				?>
 					<td>
 				

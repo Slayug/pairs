@@ -39,6 +39,7 @@
     <div class="column large-12">
     <h4 class="subheader"><?= __('Utilisateurs') ?></h4>
 	
+	<?php if($isOwner){ ?>
 	<a href="#" onClick="spawnDiv('add_user_group');">Ajouter un utilisateur</a>	
 	
 	<div id="add_user_group" class="initMove" class="column large-11">
@@ -54,6 +55,8 @@
 		<?= $this->Form->end() ?>
 		<a style="float:right;"  href="" onClick="closeDiv('add_user_group');">Fermer</a>
 	</div>
+	
+	<?php } ?>
 	
     <?php if (!empty($group->users)): ?>
     <table cellpadding="0" cellspacing="0">

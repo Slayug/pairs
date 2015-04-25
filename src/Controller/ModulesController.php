@@ -22,6 +22,16 @@ class ModulesController extends AppController
 		$role = $user['role_id'];
 		$action = $this->request->params['action'];
 		
+		$idModule = null;
+		if($this->request->pass != null){
+			if(ctype_digit($this->request->pass['0'])){ // on vérifie que c'est bien un entier
+				$idModule = $this->request->pass['0'];
+			}
+		}
+		if($idModule == null){
+			return false;
+		}
+		
 		$canAccess = 0;
 		$isOwner = 0;
 		
@@ -30,28 +40,26 @@ class ModulesController extends AppController
 			
 		}else{
 			$modules = TableRegistry::get('Modules');
-			//permet de récupérer les modules de l'utilisateur
-			$queryAccess = $modules->find()->matching('Users', function($q){
-				$session = $this->request->session();
-				$currentUser = $session->read('Auth.User');
-				$idUser = $currentUser['id'];
-				$id = null;
-				if($this->request->pass != null){
-					if(ctype_digit($this->request->pass['0'])){ // on vérifie que c'est bien un entier
-						$id = $this->request->pass['0'];
-					}
-				}
-				return $q
-						->select(['Users.id', 'Modules.name'])
-						->where(['Users.id' => $idUser,
-								'Modules.id' => $id]);
-			});
-			
+			$queryAccess = $modules->find()->hydrate(false)
+									 ->join([
+										'mg' => [ // on join les modules
+											'table' => 'modules_groups',
+											'type' => 'INNER',
+											'conditions' => 'mg.module_id = modules.id',
+										],
+										'gu' => [ // on join les users associés au join précédent
+											'table' => 'groups_users',
+											'type' => 'INNER',
+											'conditions' => 'mg.group_id = gu.group_id',
+										]
+									
+									])
+									->where(['gu.user_id' => $user['id']])
+									->andWhere(['modules.id' => $idModule]); // et on cible le module où on est
 			
 			$isOwner = $this->isOwner();
 			$canAccess = $queryAccess->count() + $isOwner;
 		}
-		
 		
 		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add'])){
 			if($role == 2){ // professeur

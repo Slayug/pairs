@@ -35,7 +35,7 @@ class QuestionnairesController extends AppController
 			//en vérifiant qu'il appartient bien au groupe, auquel le le questionnaire appartient lui aussi.
 			$queryReply = $questionnaires->find()->hydrate(false)
 									 ->join([
-										'qg' => [ // on join les groupes associés aux quastionnaires
+										'qg' => [ // on join les groupes associés aux questionnaires
 											'table' => 'questionnaires_groups',
 											'type' => 'INNER',
 											'conditions' => 'qg.questionnaire_id = questionnaires.id',

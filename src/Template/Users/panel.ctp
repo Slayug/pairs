@@ -9,7 +9,7 @@
 	$currentUser = $session->read('Auth.User');
 	$role = $currentUser['role_id'];
 	?>
-		<p>Bonjour <?php echo h($currentUser['first_name'] . ' ' . $currentUser['last_name']); ?></p>
+		<p>Bonjour <?php echo h(ucfirst($currentUser['first_name']) . ' ' . ucfirst($currentUser['last_name'])); ?></p>
 	<?php
 	
 	if($role == 1){ //admin
@@ -102,16 +102,16 @@
     <div class="column large-12">
 	
     <?php
-	if (!empty($user->modules)): ?>
+	if (!empty($modulesUser)): ?>
 	
     <h4 class="subheader"><?= __('Mes Modules') ?></h4>
     <table cellpadding="0" cellspacing="0">
         <tr>
             <th><?= __('Nom') ?></th>
         </tr>
-        <?php foreach ($user->modules as $module): ?>
+        <?php foreach ($modulesUser as $module): ?>
 			<tr>
-				<td class="td_link"><?= $this->Html->link(__($module->name), ['controller' => 'Modules', 'action' => 'view', $module->id]);?></td>
+				<td class="td_link"><?= $this->Html->link(__($module['name']), ['controller' => 'Modules', 'action' => 'view', $module['id']]);?></td>
 			</tr>
 		
         <?php endforeach; ?>
