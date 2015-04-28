@@ -86,6 +86,10 @@ class GroupsController extends AppController
 		
 	}
 	
+	/**
+	*	Permet de vérifier si l'utilisateur actuellement connecté
+	*	est le propriétaire de ce groupe
+	*/
 	private function isOwner(){
 		$groups = TableRegistry::get('Groups');
 		$queryOwner = $groups->find()->matching('Owners', function($q){
@@ -108,9 +112,7 @@ class GroupsController extends AppController
 		return $queryOwner->count();
 	}
 
-	public function import($idModule = null){
 	
-	}
     /**
      * Index method
      *
@@ -140,6 +142,10 @@ class GroupsController extends AppController
         
     }
 	
+	/**
+	*	Ajoute un utilisateur à ce groupe,
+	*	Si l'utilisateur n'existe pas, alors il est crée
+	*/
 	public function addUser($idGroup = null){
 	
         if ($this->request->is('PUT')) {

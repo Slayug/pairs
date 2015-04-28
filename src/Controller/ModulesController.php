@@ -4,6 +4,8 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Utility\Hash;
 use Cake\ORM\TableRegistry;
+use Cake\Core\App;
+
 /**
  * Users Controller
  *
@@ -16,6 +18,9 @@ class ModulesController extends AppController
 	 * Methode permettant de gérer les droits pour
 	 * ce controller
 	 * on suppose d'abord que l'utilisateur est déjà connecté
+	 * et on vérifie ensuite ses droits
+	 * - Si il a accès à la page
+	 * - et si c'est le propriétaire de contenu de la page
 	 * 
 	 **/
 	public function isAuthorized($user){
@@ -61,7 +66,7 @@ class ModulesController extends AppController
 			$canAccess = $queryAccess->count() + $isOwner;
 		}
 		
-		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add'])){
+		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add', 'importGroup'])){
 			if($role == 2){ // professeur
 				if(in_array($action, ['add'])){
 					return true;
@@ -83,7 +88,10 @@ class ModulesController extends AppController
 		
 	}
 	
-	
+	/**
+	*	Permet de vérifier si l'utilisateur actuellement connecté
+	*	est le propriétaire de ce module
+	*/
 	private function isOwner(){
 		$modules = TableRegistry::get('Modules');
 		$queryOwner = $modules->find()->matching('Owners', function($q){
@@ -104,6 +112,111 @@ class ModulesController extends AppController
 		return $queryOwner->count();
 	}
 	
+	
+	/**
+	*	Permet d'importer un ou plusieurs groupe(s) depuis un document .xlsx ou .ods
+	*	trois types d'organisations de tableau peuvent être comprise
+	*
+	*	TYPE 1)
+	*	Groupe | Etudiant
+	*	1	   | Paul
+	*		   | Marie
+	*	2	   | Jean
+	*		   | Jim
+	*		   | Manon
+	*
+	*	TYPE 2)
+	*	Groupe | Etudiant 1 | Etudiant 2
+	*	1	   | Paul		| Jim
+	*	2	   | Alexis		| Manon
+	*
+	*	TYPE 3)
+	*	1
+	*	Paul
+	*	Marie
+	*	2
+	*	Jim
+	*	Manon
+	*
+	*/
+	public function importGroup($idModule = null){
+		require_once(ROOT . DS . 'vendor' . DS  . 'phpexcel' . DS . 'Classes' . DS . 'PHPExcel.php');
+		require_once(ROOT . DS . 'vendor' . DS  . 'phpexcel' . DS . 'Classes' . DS . 'PHPExcel' . DS . 'IOFactory.php');
+		$phpExcel = new \PHPExcel();
+		
+		
+		$objReader = \PHPExcel_IOFactory::createReader('Excel2007');
+		$objReader->setReadDataOnly(true);
+
+		$objPHPExcel = $objReader->load($this->request->data['submittedfile']['tmp_name']);
+		$objWorksheet = $objPHPExcel->getActiveSheet();
+
+		$highestRow = $objWorksheet->getHighestRow(); 
+		$highestColumn = $objWorksheet->getHighestColumn();
+		
+		//tableau qui contiendra les groupes à créer.
+		$groups = array();
+		
+		
+		$firstCase = $objWorksheet->getCellByColumnAndRow('A', 1)->getValue();
+		// on check déjà la première valeur pour savoir sur quel type de tableau on va tomber
+		if(stristr($firstCase, 'groupe')){
+			// Dans ce cas on se trouve soit dans le TYPE 1) ou le TYPE 2)
+			$containsInteger = false;
+			$bOne = $objWorksheet->getCellByColumnAndRow(1, 1)->getValue();
+			for($i = 0; $i < strlen($bOne); $i++){
+				if(ctype_digit($bOne[$i])){
+					$containsInteger = true;
+				}
+			}
+			if($containsInteger){
+				// On se trouve dans le TYPE 2)
+				echo '2';
+			}else{
+				// On se trouve dans le TYPE 1)
+				for($row = 1; $row < $highestRow; $row++){
+					echo $row . '##';
+					echo $objWorksheet->getCellByColumnAndRow('A', $row)->getValue() . ' - ';
+					echo $objWorksheet->getCellByColumnAndRow(1, $row)->getValue();
+					echo '<br/>';
+				}
+			}
+		}else{
+			// Dans ce cas on se trouve dans le TYPE 3)
+			echo '3';
+		}
+		
+		//debug($this->request->data['submittedfile']);
+	
+	
+	}
+	
+	/**
+	*
+	* @param $names censé contenir prénom nom
+	*/
+	private function splitName($names){
+	
+	
+	}
+	
+	/**
+	*
+	*	@return retourne une UserEntity si elle existe en BD
+	*			sinon retourne null
+	*/
+	private function getUserFromNames($first_name, $last_name){
+		
+	}
+	
+	/**
+	*
+	*	@return UserEntity
+	*/
+	private function createUser($first_name, $last_name){
+	
+	}
+	
     /**
      * Index method
      *
@@ -115,7 +228,6 @@ class ModulesController extends AppController
 	
 	/**
 	*	Permet de supprimer un groupe de ce module
-	*
 	*/
 	public function deleteGroup($id = null){
 		if($id == null){

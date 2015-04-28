@@ -11,7 +11,11 @@
 	<?php 
 	if($isOwner){?>
 		<div class="actions">
-			<?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Groups', 'action' => 'edit', $group->id), array('escape' => false));?>
+			<?= $this->Html->link($this->Html->image('edit.png'),
+									array('controller'=>'Groups',
+											'action' => 'edit',
+											$group->id),
+									array('escape' => false));?>
 			
 			<?= $this->Form->postLink(
 				$this->Html->image('delete.png',

@@ -93,7 +93,22 @@
 	<?php if($isOwner){
 		echo $this->Html->link(__('Ajouter un groupe'), ['controller' => 'Groups', 'action' => 'add', $module->id]);
 		echo '<br />';
-		echo $this->Html->link(__('Importer un groupe'), ['controller' => 'Groups', 'action' => 'import', $module->id]);
+		?>
+		<a href="#" onClick="spawnDiv('import_group');">Importation de groupe</a>	
+	
+		<div id="import_group" class="initMove" class="column large-11">
+		<?= $this->Form->create($module, ['action' => 'importGroup', 'enctype' => 'multipart/form-data']); ?>
+		<?php echo $this->Form->input('submittedfile', [
+    		'type' => 'file',
+			'label' => 'Document (.xlsx - .ods):'
+		]); ?>
+		<?= $this->Form->button(__('Importer')) ?>
+		<?= $this->Form->end() ?>
+		<a style="float:right;"  href="" onClick="closeDiv('import_group');">Fermer</a>
+	</div>
+	<?php
+		
+		
 	}
     if (!empty($module->groups)): ?>
     <table cellpadding="0" cellspacing="0">
