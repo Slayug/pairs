@@ -119,24 +119,24 @@ class ModulesController extends AppController
 	*
 	*	TYPE 1)
 	*	Groupe | Etudiant
-	*	1	   | Paul
-	*		   | Marie
-	*	2	   | Jean
-	*		   | Jim
-	*		   | Manon
+	*	1	   | Paul DUPONT
+	*		   | Marie DUPONT
+	*	2	   | Jean DUPONT
+	*		   | Jim DUPONT
+	*		   | Manon DUPONT
 	*
 	*	TYPE 2)
-	*	Groupe | Etudiant 1 | Etudiant 2
-	*	1	   | Paul		| Jim
-	*	2	   | Alexis		| Manon
+	*	Groupe | Etudiant 1 	| Etudiant 2
+	*	1	   | Paul DUPONT	| Jim
+	*	2	   | Alexis	DUPONT	| Manon
 	*
 	*	TYPE 3)
 	*	1
-	*	Paul
-	*	Marie
+	*	Paul DUPONT
+	*	Marie DUPONT
 	*	2
-	*	Jim
-	*	Manon
+	*	Jim DUPONT
+	*	Manon DUPONT
 	*
 	*/
 	public function importGroup($idModule = null){
@@ -144,8 +144,27 @@ class ModulesController extends AppController
 		require_once(ROOT . DS . 'vendor' . DS  . 'phpexcel' . DS . 'Classes' . DS . 'PHPExcel' . DS . 'IOFactory.php');
 		$phpExcel = new \PHPExcel();
 		
+		//gestion de l'extension du fichier
+		$name = $this->request->data['submittedfile']['name'];
+		$ext = 'Excel2007';
+		if(strstr($name, '.')){
+			$names = explode('.', $name);
+			if(count($names) == 2){
+				if(strtolower($names[1]) == 'ods'){
+					$ext = 'OOCalc';
+				}else if(strtolower($names[1]) == 'xls'){
+					$ext = 'Excel5';
+				}
+			}else{
+				$this->Flash->error('Le nom du fichier contient une erreur.');
+				return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);			
+			}
+		}else{
+            $this->Flash->error('Le nom du fichier contient une erreur.');
+			return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);	
+		}
 		
-		$objReader = \PHPExcel_IOFactory::createReader('Excel2007');
+		$objReader = \PHPExcel_IOFactory::createReader($ext);
 		$objReader->setReadDataOnly(true);
 
 		$objPHPExcel = $objReader->load($this->request->data['submittedfile']['tmp_name']);
@@ -174,11 +193,40 @@ class ModulesController extends AppController
 				echo '2';
 			}else{
 				// On se trouve dans le TYPE 1)
-				for($row = 1; $row < $highestRow; $row++){
-					echo $row . '##';
-					echo $objWorksheet->getCellByColumnAndRow('A', $row)->getValue() . ' - ';
-					echo $objWorksheet->getCellByColumnAndRow(1, $row)->getValue();
-					echo '<br/>';
+				$data = array();
+				for($row = 2; $row <= $highestRow; $row++){
+					$columnA = $objWorksheet->getCellByColumnAndRow(0, $row)->getValue();
+					if($columnA != ''){
+						array_push($groups,  $this->Modules->Groups->newEntity()); // on ajoute un groupe à la liste à ajouter
+						$n = count($groups) - 1;
+						$session = $this->request->session();						
+						$currentUser = $session->read('Auth.User'); // on récupère l'utilisateur actuel pour l'associer avec le(s) groupe(s)
+						$data = [
+							'name' => 'Groupe ' . $columnA,
+							'description' => 'Groupe ' . $columnA,
+							'owners' => [
+								['id' => $currentUser['id']],
+							],
+							'users' => array()
+						];
+						
+					}
+					$columnB = $objWorksheet->getCellByColumnAndRow(1, $row)->getValue();
+					$n = count($groups) - 1;
+					$names = $this->splitName($columnB);
+					$user = null;
+					if($names != null){
+						$user = $this->getUserFromNames($names[0], $names[1]);
+						if($user == null){
+							$user = $this->createUser($names[0], $names[1]);
+						}
+					}
+					if($user != null){
+						array_push($data['users'], ['id' => $user->id]);						
+					}
+					$groups[$n] = $this->Modules->Groups->patchEntity($groups[$n], $data);
+					$moduleSelected = $this->Modules->get($idModule);
+					$groups[$n]->modules = [$moduleSelected];
 				}
 			}
 		}else{
@@ -186,8 +234,9 @@ class ModulesController extends AppController
 			echo '3';
 		}
 		
-		//debug($this->request->data['submittedfile']);
-	
+		for($i = 0; $i < count($groups); $i++){
+			$de = $this->Modules->Groups->save($groups[$i]);
+		}
 	
 	}
 	
@@ -196,7 +245,10 @@ class ModulesController extends AppController
 	* @param $names censé contenir prénom nom
 	*/
 	private function splitName($names){
-	
+		$namesExploded = explode(' ', $names);
+		if(count($namesExploded) == 2){
+			return $namesExploded;
+		}
 	
 	}
 	
@@ -206,7 +258,12 @@ class ModulesController extends AppController
 	*			sinon retourne null
 	*/
 	private function getUserFromNames($first_name, $last_name){
-		
+		$first_name = strtolower($first_name);
+		$last_name = strtolower($last_name);
+		$email = $first_name . '.' . $last_name . GroupsController::EXT_EMAIL;
+		$users = TableRegistry::get('Users');
+		$userQuery = $users->find()->where(['Users.email' => $email]);
+		return $userQuery->first();
 	}
 	
 	/**
@@ -214,7 +271,22 @@ class ModulesController extends AppController
 	*	@return UserEntity
 	*/
 	private function createUser($first_name, $last_name){
-	
+		$first_name = strtolower($first_name);
+		$last_name = strtolower($last_name);
+		
+		$user = $this->Modules->Users->newEntity();
+		
+		$user->first_name = $first_name;
+		$user->last_name = $last_name;
+			
+		$user->email = $first_name . '.' . $last_name . GroupsController::EXT_EMAIL;
+		$user->role_id = 3;
+		$user->password = null;
+		$newUser = $this->Modules->Users->save($user);
+		if($newUser){
+			return $newUser;
+		}
+		return null;
 	}
 	
     /**
