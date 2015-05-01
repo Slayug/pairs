@@ -5,6 +5,7 @@ use App\Controller\AppController;
 use Cake\Utility\Hash;
 use Cake\ORM\TableRegistry;
 use Cake\Core\App;
+use Cake\Datasource\ConnectionManager;
 
 /**
  * Users Controller
@@ -181,16 +182,44 @@ class ModulesController extends AppController
 		// on check déjà la première valeur pour savoir sur quel type de tableau on va tomber
 		if(stristr($firstCase, 'groupe')){
 			// Dans ce cas on se trouve soit dans le TYPE 1) ou le TYPE 2)
-			$containsInteger = false;
-			$bOne = $objWorksheet->getCellByColumnAndRow(1, 1)->getValue();
-			for($i = 0; $i < strlen($bOne); $i++){
-				if(ctype_digit($bOne[$i])){
-					$containsInteger = true;
-				}
-			}
-			if($containsInteger){
+			$bOne = $objWorksheet->getCellByColumnAndRow(1, 1)->getValue();		
+			if($this->containsInteger($bOne)){
 				// On se trouve dans le TYPE 2)
-				echo '2';
+				$highestColumn = ord($highestColumn)-65;
+				$data = array();
+				for($row = 2; $row <= $highestRow; $row++){
+					array_push($groups,  $this->Modules->Groups->newEntity()); // on ajoute un groupe à la liste à ajouter
+					$n = count($groups) - 1;
+					$session = $this->request->session();						
+					$currentUser = $session->read('Auth.User'); // on récupère l'utilisateur actuel pour l'associer avec le(s) groupe(s)
+					$columnA = $objWorksheet->getCellByColumnAndRow(0, $row)->getValue();
+					$data = [
+						'name' => 'Groupe ' . $columnA,
+						'description' => 'Groupe ' . $columnA,
+						'owners' => [
+							['id' => $currentUser['id']],
+						],
+						'users' => array()
+					];
+					for($column = 1; $column <= $highestColumn; $column++){
+						$columnB = $objWorksheet->getCellByColumnAndRow($column, $row)->getValue();
+						$n = count($groups) - 1;
+						$names = $this->splitName($columnB);
+						$user = null;
+						if($names != null){
+							$user = $this->getUserFromNames($names[0], $names[1]);
+							if($user == null){
+								$user = $this->createUser($names[0], $names[1]);
+							}
+						}
+						if($user != null){
+							array_push($data['users'], ['id' => $user->id]);						
+						}
+					}
+					$groups[$n] = $this->Modules->Groups->patchEntity($groups[$n], $data);
+					$moduleSelected = $this->Modules->get($idModule);
+					$groups[$n]->modules = [$moduleSelected];
+				}
 			}else{
 				// On se trouve dans le TYPE 1)
 				$data = array();
@@ -231,13 +260,73 @@ class ModulesController extends AppController
 			}
 		}else{
 			// Dans ce cas on se trouve dans le TYPE 3)
-			echo '3';
+			for($row = 1; $row <= $highestRow; $row++){
+					$columnA = $objWorksheet->getCellByColumnAndRow(0, $row)->getValue();
+					if($this->containsInteger($columnA)){
+						array_push($groups,  $this->Modules->Groups->newEntity()); // on ajoute un groupe à la liste à ajouter
+						$n = count($groups) - 1;
+						$session = $this->request->session();						
+						$currentUser = $session->read('Auth.User'); // on récupère l'utilisateur actuel pour l'associer avec le(s) groupe(s)
+						$data = [
+							'name' => 'Groupe ' . $columnA,
+							'description' => 'Groupe ' . $columnA,
+							'owners' => [
+								['id' => $currentUser['id']],
+							],
+							'users' => array()
+						];
+						$row++;
+						$columnA = $objWorksheet->getCellByColumnAndRow(0, $row)->getValue();
+					}
+					$n = count($groups) - 1;
+					if($n < 0){
+						$this->Flash->error('Le fichier contient une erreur, merci de le vérifier avec les exemples fournis.');
+						return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);
+					}
+					$names = $this->splitName($columnA);
+					$user = null;
+					if($names != null){
+						$user = $this->getUserFromNames($names[0], $names[1]);
+						if($user == null){
+							$user = $this->createUser($names[0], $names[1]);
+						}
+					}
+					if($user != null){
+						array_push($data['users'], ['id' => $user->id]);						
+					}
+					$groups[$n] = $this->Modules->Groups->patchEntity($groups[$n], $data);
+					$moduleSelected = $this->Modules->get($idModule);
+					$groups[$n]->modules = [$moduleSelected];			
+			}
+			
 		}
-		
+		$success = true;
+		$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
 		for($i = 0; $i < count($groups); $i++){
-			$de = $this->Modules->Groups->save($groups[$i]);
+			$success = $success AND $this->Modules->Groups->save($groups[$i]);
+		}
+		if($success){
+			$transaction->commit();
+			$this->Flash->success('Le(s) groupe(s) ont bien été ajouté(s) avec succès.');
+			return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);
+		}else{
+			$transaction->rollback();
+			$this->Flash->success('Une erreur s\'est produite, merci de vérifier le fichier avec les exemples fournis.');
+			return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);
 		}
 	
+	}
+	
+	private function containsInteger($str){
+		if(is_numeric($str)){
+			return true;
+		}
+		for($i = 0; $i < strlen($str); $i++){
+			if(ctype_digit($str[$i])){
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**

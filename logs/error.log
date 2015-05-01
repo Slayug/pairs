@@ -11022,3 +11022,1132 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2015-05-01 18:40:35 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:40:35 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:40:35 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:40:35 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:40:36 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:41:22 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 266
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 266
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:22 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 266
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 266
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:22 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 266
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 266
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:22 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 266
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 266
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:23 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(266): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(266): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:41:47 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 267
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 267
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:47 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 267
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 267
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:47 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 267
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 267
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:47 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 267
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 267
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:47 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(267): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(267): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:41:56 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 267
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 267
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:56 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 267
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 267
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:56 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 267
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 267
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:56 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 267
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 267
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:41:56 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(267): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(267): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:43:40 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 271
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:43:40 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 271
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:43:40 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 271
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:43:40 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 271
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:43:40 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(271): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(271): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:44:07 Error: Fatal Error (4): syntax error, unexpected '$columnA' (T_VARIABLE), expecting ',' or ';' in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 237]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-01 18:44:08 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$columnA' (T_VARIABLE), expecting ',' or ';'
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 237)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-01 18:44:19 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 271
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:44:19 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 271
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:44:19 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 271
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:44:19 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 271
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:44:19 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(271): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(271): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:46:28 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 264
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 264
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:28 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 264
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 264
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:28 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 264
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 264
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:28 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 264
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 264
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:28 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(264): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(264): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:46:39 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:39 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:39 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:39 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:40 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:46:57 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:57 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:57 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:57 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:46:58 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:51:50 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:51:50 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:51:50 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:51:50 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:51:51 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:52:03 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:52:03 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:52:03 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:52:03 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:52:04 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:52:23 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:52:23 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:52:23 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:52:23 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:52:24 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 18:53:47 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must be an instance of Cake\Datasource\EntityInterface, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:53:47 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:53:47 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must be an instance of Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:53:47 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::patchEntity() - APP/Controller\ModulesController.php, line 265
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 265
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 18:53:48 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(200): ArrayObject->__construct(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php(363): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(2030): Cake\ORM\Marshaller->merge(NULL, NULL, Array)
+#3 [internal function]: Cake\ORM\Table->patchEntity(NULL, NULL)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association->__call('patchEntity', Array)
+#6 D:\wamp\www\pairs\src\Controller\ModulesController.php(265): Cake\ORM\Association\BelongsToMany->patchEntity(NULL, NULL)
+#7 [internal function]: App\Controller\ModulesController->importGroup('2')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-01 19:42:20 Error: Fatal Error (4): syntax error, unexpected '<' in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 202]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-01 19:42:20 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '<'
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 202)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-01 19:45:18 Error: [BadMethodCallException] Unknown method "getDataSource"
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 [internal function]: Cake\ORM\Table->__call('getDataSource', Array)
+#1 [internal function]: App\Model\Table\GroupsTable->getDataSource()
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#3 D:\wamp\www\pairs\src\Controller\ModulesController.php(303): Cake\ORM\Association->__call('getDataSource', Array)
+#4 D:\wamp\www\pairs\src\Controller\ModulesController.php(303): Cake\ORM\Association\BelongsToMany->getDataSource()
+#5 [internal function]: App\Controller\ModulesController->importGroup('2')
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#9 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2015-05-01 19:46:23 Warning: Warning (2): Missing argument 1 for Cake\ORM\Table::get() in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1069]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::get() - CORE\src\ORM\Table.php, line 1069
+Cake\ORM\Association::__call() - CORE\src\ORM\Association.php, line 835
+Cake\ORM\Association\BelongsToMany::get() - APP/Controller\ModulesController.php, line 303
+App\Controller\ModulesController::importGroup() - APP/Controller\ModulesController.php, line 303
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-01 19:46:24 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "groups" with primary key [NULL]
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 [internal function]: Cake\ORM\Table->get()
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association.php(835): call_user_func_array(Array, Array)
+#2 D:\wamp\www\pairs\src\Controller\ModulesController.php(303): Cake\ORM\Association->__call('get', Array)
+#3 D:\wamp\www\pairs\src\Controller\ModulesController.php(303): Cake\ORM\Association\BelongsToMany->get()
+#4 [internal function]: App\Controller\ModulesController->importGroup('2')
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#8 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2015-05-01 19:47:48 Error: Fatal Error (1): Class 'App\Controller\ConnectionManager' not found in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 303]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-01 19:47:49 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\ConnectionManager' not found
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'D:\\wamp\\www\\pai...', 303)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-01 19:48:14 Error: Fatal Error (1): Class 'Database\ConnectionManager' not found in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 304]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-01 19:48:14 Error: [Cake\Error\FatalErrorException] Class 'Database\ConnectionManager' not found
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Database...', 'D:\\wamp\\www\\pai...', 304)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-01 19:49:01 Error: Fatal Error (1): Class 'Cake\Database\ConnectionManager' not found in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 304]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-01 19:49:02 Error: [Cake\Error\FatalErrorException] Class 'Cake\Database\ConnectionManager' not found
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\\Dat...', 'D:\\wamp\\www\\pai...', 304)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-01 19:49:29 Error: Fatal Error (1): Class 'App\Controller\ConnectionManager' not found in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 304]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-01 19:49:29 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\ConnectionManager' not found
+Request URL: /pairs/modules/importGroup/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'D:\\wamp\\www\\pai...', 304)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

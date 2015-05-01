@@ -97,15 +97,22 @@
 		<a href="#" onClick="spawnDiv('import_group');">Importation de groupe</a>	
 	
 		<div id="import_group" class="initMove" class="column large-11">
-		<?= $this->Form->create($module, ['action' => 'importGroup', 'enctype' => 'multipart/form-data']); ?>
-		<?php echo $this->Form->input('submittedfile', [
-    		'type' => 'file',
-			'label' => 'Document (.xlsx - .ods):'
-		]); ?>
-		<?= $this->Form->button(__('Importer')) ?>
-		<?= $this->Form->end() ?>
-		<a style="float:right;"  href="" onClick="closeDiv('import_group');">Fermer</a>
-	</div>
+			<?= $this->Form->create($module, ['action' => 'importGroup', 'enctype' => 'multipart/form-data']); ?>
+			<?php echo $this->Form->input('submittedfile', [
+				'type' => 'file',
+				'label' => 'Document (.xlsx - .ods):'
+			]); ?>
+			<?= $this->Form->button(__('Importer')) ?>
+			<?= $this->Form->end() ?>
+			<div class="alert alert-warning">Pour pouvoir utiliser cette fonctionnalité, votre fichier doit être organisé comme l'un des exemples suivants:
+				<ul>
+					<li>Exemple 1 <?php echo $this->Html->link('.xlsx', '/files/exemple_1.xlsx'); ?> | <?php echo $this->Html->link('.ods', '/files/exemple_1.ods'); ?></li>
+					<li>Exemple 2 <?php echo $this->Html->link('.xlsx', '/files/exemple_2.xlsx'); ?> | <?php echo $this->Html->link('.ods', '/files/exemple_2.ods'); ?></li>
+					<li>Exemple 3 <?php echo $this->Html->link('.xlsx', '/files/exemple_3.xlsx'); ?> | <?php echo $this->Html->link('.ods', '/files/exemple_3.ods'); ?></li>
+				</ul>
+			</div>
+			<a style="float:right;"  href="" onClick="closeDiv('import_group');">Fermer</a>
+		</div>
 	<?php
 		
 		
