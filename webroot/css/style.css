@@ -141,7 +141,7 @@ a:focus{
     -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
     box-shadow: 0 0 0 1px #e8c291 inset;
 }
-#login  button
+button
 {		
     background-color: #ffb94b;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f), to(#ffb94b));
@@ -174,7 +174,7 @@ a:focus{
 	margin-bottom:0px;
 }
 
-#login  button:hover,button:focus
+button:hover,button:focus
 {		
     background-color: #fddb6f;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b), to(#fddb6f));
@@ -185,7 +185,7 @@ a:focus{
     background-image: linear-gradient(top, #ffb94b, #fddb6f);
 }	
 
-#login  button:active
+button:active
 {		
     outline: none;
    
@@ -194,7 +194,7 @@ a:focus{
      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
 }
 
-#login  button::-moz-focus-inner
+button::-moz-focus-inner
 {
   border: none;
 }
@@ -274,4 +274,9 @@ td img{
 	margin:0px;
 	margin-right: 10px;
 	position:relative;
+}
+#import_group{
+	padding: 5px;
+	border: 1px solid #e16244;
+    border-radius: 3px;
 }

@@ -58,11 +58,11 @@
     </div>
 </div>
 
-
+<?php if($isOwner){ ?>
 <div class="related row">
     <div class="column large-12">
     <h4 class="subheader"><?= __('Groupe du Module') ?></h4>
-	<?php if($isOwner){
+	<?php 
 		echo $this->Html->link(__('Ajouter un groupe'), ['controller' => 'Groups', 'action' => 'add', $module->id]);
 		echo '<br />';
 		?>
@@ -86,24 +86,15 @@
 			<a style="float:right;"  href="" onClick="closeDiv('import_group');">Fermer</a>
 		</div>
 	<?php
-		
-		
-	}
     if (!empty($module->groups)): ?>
     <table cellpadding="0" cellspacing="0">
         <tr>
             <th><?= __('Nom') ?></th>
-			<?php
-			if($isOwner){?>
             <th class="actions"><?= __('Actions') ?></th>
-			<?php } ?>
         </tr>
         <?php foreach ($module->groups as $group): ?>		
 			<tr>
 				<td class="td_link"><?= $this->Html->link(__($group->name), ['controller' => 'Groups', 'action' => 'view', $group->id]);?></td>
-				<?php
-					if($isOwner){
-				?>
 					<td>
 				
 					<?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Groups', 'action' => 'edit', $group->id), array('escape' => false));?>
@@ -117,9 +108,6 @@
 							array('escape' => false,
 								  'confirm' => __('Êtes vous sûr de supprimer le groupe #{0}# ?', $group->name))) ?>
 					</td>
-				<?php
-					}
-				?>
 			</tr>
 
         <?php endforeach; ?>
@@ -127,3 +115,26 @@
     <?php endif; ?>
     </div>
 </div>
+<?php }else{
+?>
+
+	<div class="related row">
+		<div class="column large-12">
+		<h4 class="subheader"><?= __('Questionnaires') ?></h4>
+
+	<?php
+
+	if(!empty($questionnaires)){
+		foreach ($questionnaires as $questionnaire): ?>
+			<tr>
+				<td class="td_link"><?= $this->Html->link(__($questionnaire['title']), ['controller' => 'Questionnaires', 'action' => 'view', $questionnaire['id']]);?></td>
+			</tr>
+		<?php
+		endforeach;
+	}
+	?>
+		</div>
+	</div>
+
+<?php
+} ?>

@@ -9,7 +9,7 @@
 	$currentUser = $session->read('Auth.User');
 	$role = $currentUser['role_id'];
 	?>
-		<p>Bonjour <?php echo h(ucfirst($currentUser['first_name']) . ' ' . ucfirst($currentUser['last_name'])); ?></p>
+		<p>Bonjour <?php echo h(ucfirst($currentUser['first_name']) . ' ' . ucfirst($currentUser['last_name'])); ?>.</p>
 	<?php
 	
 	if($role == 1){ //admin
@@ -38,9 +38,6 @@
 				echo '<li>';
 				echo $this->Html->link(__('Créer un module'), ['controller' => 'Modules', 'action' => 'add']);
 				echo '</li>';
-				echo '<li>';
-				echo $this->Html->link(__('Créer un groupe'), ['controller' => 'Groups', 'action' => 'add']);
-				echo '</li>';
 			?>
 			</ul>
 			<h4>Gestion des questionnaires</h4>
@@ -48,9 +45,6 @@
 				<?php
 					echo '<li>';
 					echo $this->Html->link(__('Lister les questionnaires'), ['controller' => 'Questionnaires', 'action' => 'index']);
-					echo '</li>';
-					echo '<li>';
-					echo $this->Html->link(__('Créer un questionnaire'), ['controller' => 'Questionnaires', 'action' => 'add']);
 					echo '</li>';
 				?>
 			</ul>

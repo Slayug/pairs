@@ -49,9 +49,10 @@ class QuestionnairesController extends AppController
 									])
 									->where(['gu.user_id' => $user['id']]) // où l'id de l'user est le même que celui qui est connecté
 									->andWhere(['questionnaire_id' => $idQuestionnaire]); // et on cible le questionnaire voulu
+			
+			$canReply = $queryReply->count();
 		}
 		$isOwner = $this->isOwner();
-		$canReply = $queryReply->count();
 		if(in_array($action, ['edit', 'delete', 'add'])){
 			if($role == 2){ // professeur
 				if(in_array($action, ['add'])){
@@ -124,7 +125,7 @@ class QuestionnairesController extends AppController
     public function view($id = null)
     {
         $questionnaire = $this->Questionnaires->get($id, [
-            'contain' => ['Groups', 'Questions', 'AnswersQuestionnaireUsers', 'AnswersQuestionnaireUsersPartials', 'QuestionnairesGroups', 'QuestionnairesQuestions']
+            'contain' => ['Groups', 'Questions']
         ]);
         $this->set('questionnaire', $questionnaire);
         $this->set('_serialize', ['questionnaire']);

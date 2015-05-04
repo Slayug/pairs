@@ -1,5 +1,5 @@
 
-<?= $this->Flash->render('error') ?>
+<?= $this->Flash->render() ?>
 <div id="login">
 	<div id="login_title">
 		<h3>Connexion</h3>

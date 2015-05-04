@@ -61,7 +61,7 @@ class UsersController extends AppController
 			$this->Flash->set($user);
 			if ($user){
 				$this->Auth->setUser($user);
-				$this->Flash->set('Connexion réussie !');
+				$this->Flash->success('Connexion réussie !');
 				return $this->redirect($this->Auth->redirectUrl('/users/panel'));
 			}
 			$this->Flash->error('Votre email ou mot de passe est incorrect.');
@@ -72,7 +72,6 @@ class UsersController extends AppController
 		$this->Flash->success('Vous êtes maintenant déconnecté.');
 		return $this->redirect($this->Auth->logout());
 	}
-
 	
 	/**
 	 * Panel method

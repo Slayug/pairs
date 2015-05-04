@@ -399,12 +399,60 @@ class ModulesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function view($id = null){
-        $module = $this->Modules->get($id, [
-            'contain' => ['Owners', 'Users', 'Groups']
-        ]);
-		$this->set('isOwner', $this->isOwner());
-        $this->set('module', $module);
-        $this->set('_serialize', ['module']);
+		$isOwner = $this->isOwner();
+		if(!$isOwner){
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			
+			$groups = TableRegistry::get('Groups');
+			$queryQuestionnaires = $groups->find()->hydrate(false)
+									 ->join([
+										'gm' => [ // on join les modules
+											'table' => 'questionnaires_groups',
+											'type' => 'INNER',
+											'conditions' => 'gm.group_id = groups.id',
+										],
+										'gu' => [
+											'table' => 'groups_users',
+											'type' => 'INNER',
+											'conditions' => 'gm.group_id = gm.group_id',
+										]
+									
+									])
+									->where(['gu.user_id' => $currentUser['id']])
+									->andWhere(['mg.module_id' => $id]); // et on cible le module où on est
+			
+			
+			$questionnaires = TableRegistry::get('Questionnaires');
+			$queryQuestionnaires = $questionnaires->find()->hydrate(false)
+									 ->join([
+										'qg' => [ // on join les groupes
+											'table' => 'questionnaires_groups',
+											'type' => 'INNER',
+											'conditions' => 'qg.questionnaire_id = questionnaires.id',
+										],
+										'mg' => [
+											'table' => 'modules_groups',
+											'type' => 'INNER',
+											'conditions' => 'mg.group_id = qg.group_id',
+										],
+										'gu' => [ // on join les users associés au join précédent
+											'table' => 'groups_users',
+											'type' => 'INNER',
+											'conditions' => 'qg.group_id = gu.group_id',
+										]
+									
+									])
+									->where(['gu.user_id' => $currentUser['id']])
+									->andWhere(['mg.module_id' => $id]); // et on cible le module où on est
+			$this->set('questionnaires', $queryQuestionnaires);
+		}
+		$module = $this->Modules->get($id, [
+			'contain' => ['Owners', 'Users', 'Groups']
+		]);
+		$this->set('module', $module);
+		$this->set('_serialize', ['module']);
+		$this->set('isOwner', $isOwner);
     }
 
     /**

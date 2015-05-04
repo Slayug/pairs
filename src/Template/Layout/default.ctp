@@ -26,6 +26,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
+	<?= $this->Html->css('jquery-ui.min.css') ?>
+	<?= $this->Html->css('jquery-ui.structure.min.css') ?>
+	<?= $this->Html->css('jquery-ui.theme.min.css') ?>
     <?= $this->Html->css('bootstrap.css') ?>
     <?= $this->Html->css('dashboard.css') ?>
     <?= $this->Html->css('base.css') ?>
@@ -34,6 +37,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<?php echo $this->Html->script('jquery-ui.min.js'); ?>
 </head>
 <body>
 
@@ -111,7 +117,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
 	<?php echo $this->Html->script('bootstrap.min'); ?>
 	<?php echo $this->Html->script('holder.js'); ?>
 	<?php echo $this->Html->script('div.js'); ?>
