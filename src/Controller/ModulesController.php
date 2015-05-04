@@ -34,9 +34,6 @@ class ModulesController extends AppController
 				$idModule = $this->request->pass['0'];
 			}
 		}
-		if($idModule == null){
-			return false;
-		}
 		
 		$canAccess = 0;
 		$isOwner = 0;
@@ -44,7 +41,7 @@ class ModulesController extends AppController
 		if(in_array($action, ['deleteGroup'])){
 			$canAccess = $isOwner = GroupsController::isAuthorized($user);
 			
-		}else{
+		}else if($idModule != null){
 			$modules = TableRegistry::get('Modules');
 			$queryAccess = $modules->find()->hydrate(false)
 									 ->join([
@@ -183,7 +180,7 @@ class ModulesController extends AppController
 		if(stristr($firstCase, 'groupe')){
 			// Dans ce cas on se trouve soit dans le TYPE 1) ou le TYPE 2)
 			$bOne = $objWorksheet->getCellByColumnAndRow(1, 1)->getValue();		
-			if($this->containsInteger($bOne)){
+			if(containsInteger($bOne)){
 				// On se trouve dans le TYPE 2)
 				$highestColumn = ord($highestColumn)-65;
 				$data = array();
@@ -262,7 +259,7 @@ class ModulesController extends AppController
 			// Dans ce cas on se trouve dans le TYPE 3)
 			for($row = 1; $row <= $highestRow; $row++){
 					$columnA = $objWorksheet->getCellByColumnAndRow(0, $row)->getValue();
-					if($this->containsInteger($columnA)){
+					if(containsInteger($columnA)){
 						array_push($groups,  $this->Modules->Groups->newEntity()); // on ajoute un groupe à la liste à ajouter
 						$n = count($groups) - 1;
 						$session = $this->request->session();						
@@ -317,17 +314,7 @@ class ModulesController extends AppController
 	
 	}
 	
-	private function containsInteger($str){
-		if(is_numeric($str)){
-			return true;
-		}
-		for($i = 0; $i < strlen($str); $i++){
-			if(ctype_digit($str[$i])){
-				return true;
-			}
-		}
-		return false;
-	}
+	
 	
 	/**
 	*

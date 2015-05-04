@@ -25,6 +25,20 @@ use Cake\Error\Debugger;
     define('WEEK', 604800);
     define('MONTH', 2592000);
     define('YEAR', 31536000);
+	
+	
+function containsInteger($str){
+		if(is_numeric($str)){
+			return true;
+		}
+		for($i = 0; $i < strlen($str); $i++){
+			if(ctype_digit($str[$i])){
+				return true;
+			}
+		}
+		return false;
+	}	
+	
 
 if (!function_exists('debug')) {
     /**

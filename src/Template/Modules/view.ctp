@@ -22,6 +22,9 @@
 								  'action' => 'delete', $module->id),
 							array('escape' => false,
 								  'confirm' => __('Êtes vous sûr de supprimer le module #{0}# ?', $module->name))) ?>
+			 <?= $this->Html->link('Ajouter un questionnaire', ['controller' => 'Questionnaires',
+																'action' => 'add',
+																$module->id]); ?>
 		</div>
 	<?php
 	}
@@ -55,38 +58,7 @@
     </div>
 </div>
 
-<div class="related row">
-    <div class="column large-12">
-    <h4 class="subheader"><?= __('Membres du module') ?></h4>
-    <?php if (!empty($module->users)): ?>
-    <table cellpadding="0" cellspacing="0">
-        <tr>
-            <th><?= __('Prénom') ?></th>
-            <th><?= __('Nom') ?></th>
-			<?php
-			if($isOwner){?>
-            <th class="actions"><?= __('Actions') ?></th>
-			<?php } ?>
-        </tr>
-        <?php foreach ($module->users as $user): ?>
-        <tr>
-            <td><?= h($user->first_name) ?></td>
-            <td><?= h($user->last_name) ?></td>
-			
-			<?php
-			if($isOwner){?>
-            <td class="actions">
-                <?= $this->Form->postLink(__('Supprimer'), ['controller' => 'Modules', 'action' => 'delete_user', $user->id], ['confirm' => __('Êtes vous sûr de supprimer ce membre du module # {0}?', $user->id)]) ?>
 
-            </td>
-			<?php } ?>
-        </tr>
-
-        <?php endforeach; ?>
-    </table>
-    <?php endif; ?>
-    </div>
-</div>
 <div class="related row">
     <div class="column large-12">
     <h4 class="subheader"><?= __('Groupe du Module') ?></h4>
