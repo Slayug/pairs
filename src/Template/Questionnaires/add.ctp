@@ -17,6 +17,17 @@
 				 });
 			</script>
 			
+			<div class="input-append date form_datetime">
+    <input size="16" type="text" value="" readonly>
+    <span class="add-on"><i class="icon-th"></i></span>
+</div>
+ 
+<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        format: "dd MM yyyy - hh:ii"
+    });
+</script>  
+			
 			<label for="date_begin">Date de début:</label>
 			<input type="text" id="date_begin" name="date_begin">
 			

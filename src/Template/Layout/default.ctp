@@ -30,8 +30,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	<?= $this->Html->css('jquery-ui.structure.min.css') ?>
 	<?= $this->Html->css('jquery-ui.theme.min.css') ?>
     <?= $this->Html->css('bootstrap.css') ?>
-    <?= $this->Html->css('dashboard.css') ?>
+    <?= $this->Html->css('bootstrap-datetimepicker.css') ?>
     <?= $this->Html->css('base.css') ?>
+    <?= $this->Html->css('style.css') ?>
     <?= $this->Html->css('style.css') ?>
 
     <?= $this->fetch('meta') ?>
@@ -40,6 +41,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<?php echo $this->Html->script('jquery-ui.min.js'); ?>
+	<?php echo $this->Html->script('bootstrap-datetimepicker.min.js'); ?>
 </head>
 <body>
 
