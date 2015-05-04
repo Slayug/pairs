@@ -280,3 +280,10 @@ td img{
 	border: 1px solid #e16244;
     border-radius: 3px;
 }
+.form_datetime_begin{
+	margin-bottom:12px;
+}
+.form_datetime_end{
+	margin-bottom:12px;
+
+}
