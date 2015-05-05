@@ -27,12 +27,14 @@
 				$(".form_datetime_begin").datetimepicker({
 					format: "dd MM yyyy - hh:ii",
 					autoclose: true,
-					todayBtn: true
+					todayBtn: true,
+					language: 'fr'
 				});
 				$(".form_datetime_end").datetimepicker({
 					format: "dd MM yyyy - hh:ii",
 					autoclose: true,
-					todayBtn: true
+					todayBtn: true,
+					language: 'fr'
 				});
 			</script>
 			
