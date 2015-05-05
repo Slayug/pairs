@@ -11,6 +11,9 @@ a:focus{
 	color: #e16040;
 
 }
+label{
+	width:30%;
+}
 .navbar{
 	background-image: url('../img/bg_vert.jpg');
 	position:relative;
@@ -185,13 +188,11 @@ button:hover,button:focus
     background-image: linear-gradient(top, #ffb94b, #fddb6f);
 }	
 
-button:active
-{		
+button:active{		
     outline: none;
-   
-     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
 }
 
 button::-moz-focus-inner
@@ -285,5 +286,25 @@ td img{
 }
 .form_datetime_end{
 	margin-bottom:12px;
-
+}
+.switch-question button{
+	width: 50px;
+	height:auto;
+	margin:auto;
+	margin-top: 20px;
+}
+.switch-question button:hover,button:focus{	
+    background-color: #eeeeee;
+    background-image: none;
+    outline: none;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) inset;	
+}
+.question{
+	border:#e16244 solid 1px;
+	border-radius:8px;
+	padding:6px;
+	background-color:#eeeeee;
+	margin-bottom:10px;
 }

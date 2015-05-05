@@ -5,7 +5,7 @@
 	$role = $currentUser['role_id'];
 
 ?>
-<div class="groups view large-10 medium-9 columns">
+<div class="groups view large-12 medium-12 columns">
 
 </div>
 <div class="related row">

@@ -12512,3 +12512,15 @@ Stack Trace:
 #1 {main}
 
 
+2015-05-05 21:39:23 Error: [RuntimeException] Table "App\Model\Table\QuestionnairesTable" is not associated with "Answers"
+Request URL: /pairs/questionnaires/add/3
+Stack Trace:
+#0 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(180): Cake\ORM\Table->__get('Answers')
+#1 [internal function]: App\Controller\QuestionnairesController->add('3')
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#5 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+

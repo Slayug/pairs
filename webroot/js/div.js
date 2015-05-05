@@ -1,3 +1,7 @@
+//On défini ces deux variables pour gérer l'ajout et réponse pour un questionnaire
+var questions_ = [];
+var answers_ = [];
+
 function spawnDivAndInnerUrl(divId, url){
 	var xhr = new XMLHttpRequest();
     xhr.open('GET', url);
@@ -39,4 +43,25 @@ function keyDown(event, div){
 }
 function submitDiv(div){
 	document.getElementById(div).submit();
+}
+function insertQuestion(title, type){
+
+}
+function insertAnswer(title){
+
+}
+function arrowRight(){
+	var elements = [];
+	$("#questions").find(":selected").each(function() {
+		elements.splice(elements.length, 0, $(this).text());
+    });
+	var divQuestions = $("#questions-questionnaires");
+	for(var i = 0; i < elements.length; i++){
+		divQuestions.append('<div class="question"><h5>'+elements[i]+'</h5><h6>Réponses:</h6></div>');
+		
+	}
+}
+function arrowLeft(){
+	console.log("coucouleft");
+
 }

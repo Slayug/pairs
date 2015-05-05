@@ -22,7 +22,7 @@ class AnswersTable extends Table
     public function initialize(array $config)
     {
         $this->table('answers');
-        $this->displayField('id');
+        $this->displayField('value');
         $this->primaryKey('id');
         $this->belongsToMany('Questions', [
             'foreignKey' => 'answer_id',

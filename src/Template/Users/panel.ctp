@@ -1,4 +1,4 @@
-<div id="pairs_panel" class="users view large-10 medium-9 columns">
+<div id="pairs_panel" class="users view large-12 medium-12 columns">
 
 <h2>Panel</h2>
 <p>

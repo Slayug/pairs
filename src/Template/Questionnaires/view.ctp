@@ -1,4 +1,4 @@
-<div class="questionnaires view large-10 medium-9 columns">
+<div class="questionnaires view large-12 medium-12 columns">
     <h2><?= h($questionnaire->id) ?></h2>
     <div class="row">
         <div class="large-5 columns strings">

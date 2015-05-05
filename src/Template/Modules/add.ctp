@@ -1,4 +1,4 @@
-<div class="actions columns large-2 medium-3">
+<div class="actions columns large-12 medium-12">
 </div>
 <div class="roles form large-10 medium-9 columns">
 	<?= $this->Flash->render() ?>

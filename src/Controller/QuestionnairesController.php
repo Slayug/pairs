@@ -136,29 +136,31 @@ class QuestionnairesController extends AppController
      *
      * @return void Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {
+    public function add($idModule = null){
         $questionnaire = $this->Questionnaires->newEntity();
         if ($this->request->is('post')) {
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
-			
+			debug($this->request->data);
 			$this->request->data['owners'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer qu'il est lier au groupe
 		
-            $questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
+           /* $questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
             if ($this->Questionnaires->save($questionnaire)) {
                 $this->Flash->success('Le questionnaire a été sauvegardé.');
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Users',
+										'action' => 'panel']);
             } else {
                 $this->Flash->error('The questionnaire could not be saved. Please, try again.');
-            }
+                return $this->redirect(['controller' => 'Users',
+										'action' => 'panel']);
+            }*/
         }
         //$groups = $this->Questionnaires->Modules->find('list', ['limit' => 200]);
 		
-		$modules = TableRegistry::get('Modules');
+		//$modules = TableRegistry::get('Modules');
 		
 		//permet de récupérer les modules de l'utilisateur
-		$query = $modules->find('list', array(
+		/*$query = $modules->find('list', array(
 								'fields' =>
 									array('Modules.name',
 										  'Modules.id')));
@@ -171,9 +173,14 @@ class QuestionnairesController extends AppController
 					->where(['Users.id' => $idUser]);
 		});
 		
-		$this->set('modules', $query->all());
-        $questions = $this->Questionnaires->Questions->find('list', ['limit' => 200]);
-        $this->set(compact('questionnaire', 'questions'));
+		$this->set('modules', $query->all());*/
+		
+		
+        $questions = TableRegistry::get('Questions');
+		$questions = $questions->find('list');
+		$answers = TableRegistry::get('Answers');
+		$answers = $answers->find('list');
+        $this->set(compact('questionnaire', 'questions', 'answers'));
         $this->set('_serialize', ['questionnaire']);
     }
 

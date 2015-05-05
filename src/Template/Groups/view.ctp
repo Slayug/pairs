@@ -57,7 +57,7 @@
 		</fieldset>
 		<?= $this->Form->button(__('Ajouter')) ?>
 		<?= $this->Form->end() ?>
-		<a style="float:right;"  href="" onClick="closeDiv('add_user_group');">Fermer</a>
+		<a href="" onClick="closeDiv('add_user_group');">Fermer</a>
 	</div>
 	
 	<?php } ?>
