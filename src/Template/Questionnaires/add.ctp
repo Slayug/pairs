@@ -28,6 +28,14 @@
 						echo $this->Form->input('questions._ids', ['options' => $questions,
 																	'label' => 'Questions:',
 																	'id' => 'questions']);
+																	
+						?>
+							<div class="input-append form_add">
+								<input id="add-question" size="16" type="text" placeholder="Nouvelle question ?">
+								<span onclick="addQuestion()" class="add-on"><i class="icon-add"></i></span>
+							</div>
+						<?php
+						
 						echo $this->Form->input('answers._ids', ['options' => $answers,
 																	'label' => 'Réponses:',
 																	'id' => 'answers']);

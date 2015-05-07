@@ -1,6 +1,6 @@
 //On défini ces deux variables pour gérer l'ajout et réponse pour un questionnaire
-var questions_ = [];
-var answers_ = [];
+var questions_ = new Map();
+var answers_ = new Map();
 
 function spawnDivAndInnerUrl(divId, url){
 	var xhr = new XMLHttpRequest();
@@ -36,11 +36,6 @@ function closeDiv(divName){
 	div.innerHTML = "";
 	div.style.height="auto";
 }
-function keyDown(event, div){
-	if(event.keyCode == 13){
-		document.getElementById(div).submit();
-	}
-}
 function submitDiv(div){
 	document.getElementById(div).submit();
 }
@@ -51,17 +46,39 @@ function insertAnswer(title){
 
 }
 function arrowRight(){
-	var elements = [];
+	var elements = new Map();
 	$("#questions").find(":selected").each(function() {
-		elements.splice(elements.length, 0, $(this).text());
+		elements.set($(this).val(), $(this).text());
+		questions_.set($(this).val(), $(this).text());
+		$(this).remove();
     });
-	var divQuestions = $("#questions-questionnaires");
-	for(var i = 0; i < elements.length; i++){
-		divQuestions.append('<div class="question"><h5>'+elements[i]+'</h5><h6>Réponses:</h6></div>');
-		
+	/*for(var key of questions_.keys()){
+		divQuestions.append('<div class="question question-id-'+key+'"><h5>'+questions_.get(key)+'</h5><h6>Réponses:</h6></div>');
+	}*/
+	var divQuestions = $("#questions-questionnaires");	
+	for(var key of elements.keys()){
+		var remove = '<button onclick="removeQuestion('+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
+		divQuestions.append('<div class="question" id="question-id-'+key+'">'+remove+'<h5>'+elements.get(key)+'</h5><h6>Réponses:</h6></div>');
 	}
+	console.log(questions_);
 }
 function arrowLeft(){
 	console.log("coucouleft");
 
+}
+/**
+*	supprime le bloc et le remet dans le select
+*/
+function removeQuestion(id){
+	$("#question-id-"+id).remove();
+	var strQuestion = questions_.get(id+"");
+	var select = $("#questions");
+	select.append('<option value="'+id+'">'+strQuestion+'</option>');
+	questions_.delete(id+"");
+}
+function addQuestion(){
+	var newQuestion = $("#add-question").val();
+	var newId = $('select#questions option').length + 1;
+	var select = $("#questions");
+	select.append('<option value="'+newId+'">'+newQuestion+'</option>');
 }

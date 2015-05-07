@@ -469,3 +469,9 @@ box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
 .icon-arrow-right {
   background-position: -264px -96px;
 }
+.icon-add {
+  background-position: 0px -96px;
+}
+.add-on{
+cursor: pointer;
+}

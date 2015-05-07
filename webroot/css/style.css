@@ -144,7 +144,7 @@ label{
     -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
     box-shadow: 0 0 0 1px #e8c291 inset;
 }
-button
+button[type=submit]
 {		
     background-color: #ffb94b;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f), to(#ffb94b));
@@ -177,7 +177,7 @@ button
 	margin-bottom:0px;
 }
 
-button:hover,button:focus
+button[type=submit]:hover,button[type=submit]:focus
 {		
     background-color: #fddb6f;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b), to(#fddb6f));
@@ -188,7 +188,7 @@ button:hover,button:focus
     background-image: linear-gradient(top, #ffb94b, #fddb6f);
 }	
 
-button:active{		
+button[type=submit]:active{		
     outline: none;
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
@@ -306,5 +306,8 @@ td img{
 	border-radius:8px;
 	padding:6px;
 	background-color:#eeeeee;
+	margin-bottom:10px;
+}
+.form_add{
 	margin-bottom:10px;
 }
