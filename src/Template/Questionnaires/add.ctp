@@ -50,9 +50,9 @@
 					<button onclick="arrowRight()" type="button" class="btn btn-default btn-lg arrow-right">
 						<span class="glyphicon glyphicon-circle-arrow-right" ></span>
 					</button>
-					<button onclick="arrowLeft()" type="button" class="btn btn-default btn-lg arrow-left">
+					<!-- <button onclick="arrowLeft()" type="button" class="btn btn-default btn-lg arrow-left">
 						<span class="glyphicon glyphicon-circle-arrow-left" ></span>
-					</button>
+					</button> -->
 				</div>
 			</div>
 			<div id="questions-questionnaires" class="col-md-6">
