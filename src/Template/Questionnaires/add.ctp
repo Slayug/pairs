@@ -32,14 +32,19 @@
 						?>
 							<div class="input-append form_add">
 								<input id="add-question" size="16" type="text" placeholder="Nouvelle question ?">
-								<span onclick="addQuestion()" class="add-on"><i class="icon-add"></i></span>
+								<span onclick="addElement('question')" class="add-on"><i class="icon-add"></i></span>
 							</div>
 						<?php
 						
 						echo $this->Form->input('answers._ids', ['options' => $answers,
 																	'label' => 'Réponses:',
 																	'id' => 'answers']);
-					?>
+																	
+						?>
+						<div class="input-append form_add">
+							<input id="add-answer" size="16" type="text" placeholder="Nouvelle réponse ?">
+							<span onclick="addElement('answer')" class="add-on"><i class="icon-add"></i></span>
+						</div>
 				</div>
 				<div class="col-md-1 switch-question">
 					<button onclick="arrowRight()" type="button" class="btn btn-default btn-lg arrow-right">

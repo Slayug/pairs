@@ -76,9 +76,14 @@ function removeQuestion(id){
 	select.append('<option value="'+id+'">'+strQuestion+'</option>');
 	questions_.delete(id+"");
 }
-function addQuestion(){
-	var newQuestion = $("#add-question").val();
-	var newId = $('select#questions option').length + 1;
-	var select = $("#questions");
-	select.append('<option value="'+newId+'">'+newQuestion+'</option>');
+/**
+*	Permet d'ajouter un élément dans un select depuis un input text
+*	DIV ID: elements
+*	INPUT ID: add-element
+*/
+function addElement(element){
+	var newElement = $("#add-"+element).val();
+	var newId = $('select#'+element+'s option').length + 1;
+	var select = $("#"+element+"s");
+	select.append('<option value="'+newId+'">'+newElement+'</option>');
 }
