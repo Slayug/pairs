@@ -22,8 +22,8 @@
 				<span class="add-on"><i class="icon-th"></i></span>
 			</div>
  
-			<div id="agent-question-answer">
-				<div class="col-md-5">
+			<div id="agent-question-answer" class="col-md-6">
+				<div class="col-md-10">
 					<?php
 						echo $this->Form->input('questions._ids', ['options' => $questions,
 																	'label' => 'Questions:',
@@ -48,7 +48,7 @@
 							<span onclick="addElement('answer')" class="add-on"><i class="icon-add"></i></span>
 						</div>
 				</div>
-				<div class="col-md-1 switch-question">
+				<div class="col-md-2 switch-question">
 					<button onclick="arrowRight()" type="button" class="btn btn-default btn-lg arrow-right">
 						<span class="glyphicon glyphicon-circle-arrow-right" ></span>
 					</button>
@@ -83,6 +83,6 @@
 			
 			
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+	<button onclick="submitQuestionnaireAdd()" type="button">Valider</button>
     <?= $this->Form->end() ?>
 </div>

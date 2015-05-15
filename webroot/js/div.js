@@ -134,8 +134,11 @@ function removeQuestion(id){
 *	INPUT DIV ID: add-element
 */
 function addElement(element){
-	var newElement = $("#add-"+element).val();
-	var newId = $('select#'+element+'s option').length + 1;
-	var select = $("#"+element+"s");
-	select.append('<option value="'+newId+'">'+newElement+'</option>');
+	var newElement = $("#add-"+element);
+	if(newElement.val().length > 0){
+		var newId = $('select#'+element+'s option').length + 1;
+		var select = $("#"+element+"s");
+		select.append('<option value="'+newId+'">'+newElement.val()+'</option>');
+		newElement.val('');
+	}
 }

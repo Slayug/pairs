@@ -330,3 +330,11 @@ cursor:move;
 .ui-sortable-helper{
 	color:#e16244;
 }
+#agent-question-answer{
+	position:fixed;
+	width:29.5%;
+}
+#questions-questionnaires{
+	margin-left:50%;
+	 min-height: 350px;
+}
