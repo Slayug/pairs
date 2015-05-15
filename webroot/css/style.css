@@ -302,12 +302,31 @@ td img{
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) inset;	
 }
 .question{
-	border:#e16244 solid 1px;
-	border-radius:8px;
-	padding:6px;
-	background-color:#eeeeee;
-	margin-bottom:10px;
+border: #23232 solid 1px;
+border-radius:8px;
+padding:6px;
+padding-left:9px;
+background-color:white;
+margin-bottom:10px;
+cursor:pointer;
+box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.question-selected{
+background-color:#fafafa;
+box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.question-selected h4{
+color:#e16244;
 }
 .form_add{
 	margin-bottom:10px;
+}
+.question ul{
+list-style-type: none;
+}
+.question li{
+cursor:move;
+}
+.ui-sortable-helper{
+	color:#e16244;
 }

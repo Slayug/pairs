@@ -65,7 +65,7 @@ function arrowRight(){
 		}*/
 		var divQuestions = $("#questions-questionnaires");
 		for(var key of elements.keys()){
-			var remove = '<button onclick="removeQuestion('+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
+			var remove = '<button style="float:right;margin-top:6px;" onclick="removeQuestion('+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
 			var click = ' onclick="selectQuestion('+key+')"'
 			var answers = '<ul class="sortable" id="answers-question-'+key+'"></ul>'
 			divQuestions.append('<div class="question" id="question-'+key+'" '+click+'>'+remove+'<h4>'+elements.get(key)+'</h4><h6>Réponses:</h6>'+answers+'</div>');
@@ -78,9 +78,9 @@ function arrowRight(){
 		answers_.set(questionSelected, elements);
 		var answersList = $('#answers-question-'+questionSelected);
 		for(var key of elements.keys()){
-			var remove = '<button onclick="removeAnswer('+questionSelected+','+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
+			var remove = '<button style="float:right;" onclick="removeAnswer('+questionSelected+','+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
 			var sortable = '<span class="add-on"><i class="icon-sortable"></i></span>'
-			answersList.append('<li class="ui-state-default" class="answer" id="answer-'+key+'">'+remove+' '+sortable+' '+elements.get(key)+'</li>');
+			answersList.append('<li class="ui-state-default" class="answer" id="answer-'+key+'"> '+sortable+' '+elements.get(key)+' '+remove+'</li>');
 		}
 		//$(function() {
 		$("#answers-question-"+questionSelected).sortable();
@@ -98,11 +98,11 @@ function selectQuestion(idQuestion){
 function updateQuestionSelected(){
 	for(var key of questions_.keys()){
 		var bloc = $("#question-"+key);
-		bloc.css("background-color", 'white');
+		bloc.removeClass('question-selected');
 	}
 	if(questionSelected != 0){
 		var bloc = $("#question-"+questionSelected);
-		bloc.css( "background-color", '#e16244');
+		bloc.addClass('question-selected');
 	}
 }
 /**
