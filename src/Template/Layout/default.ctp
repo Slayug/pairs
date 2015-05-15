@@ -35,7 +35,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<?php echo $this->Html->script('bootstrap-datetimepicker.min.js'); ?>
 	<?php echo $this->Html->script('bootstrap-datetimepicker.fr.js'); ?>
 	<?php echo $this->Html->script('div.js'); ?>
