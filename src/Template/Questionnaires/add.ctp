@@ -27,7 +27,8 @@
 					<?php
 						echo $this->Form->input('questions._ids', ['options' => $questions,
 																	'label' => 'Questions:',
-																	'id' => 'questions']);
+																	'id' => 'questions',
+																	'onclick' => 'changeSelectMode(0)']);
 																	
 						?>
 							<div class="input-append form_add">
@@ -38,7 +39,8 @@
 						
 						echo $this->Form->input('answers._ids', ['options' => $answers,
 																	'label' => 'Réponses:',
-																	'id' => 'answers']);
+																	'id' => 'answers',
+																	'onclick' => 'changeSelectMode(1)']);
 																	
 						?>
 						<div class="input-append form_add">

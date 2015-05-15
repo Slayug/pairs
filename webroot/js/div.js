@@ -2,6 +2,12 @@
 var questions_ = new Map();
 var answers_ = new Map();
 var questionSelected = 0;
+/**
+*	Permet de avoir quel select l'utilisateur a intéragi en dernier
+*	0 --> questions
+*	1 --> answers
+*/
+var selectSelected = -1;
 
 function spawnDivAndInnerUrl(divId, url){
 	var xhr = new XMLHttpRequest();
@@ -48,20 +54,33 @@ function insertAnswer(title){
 }
 function arrowRight(){
 	var elements = new Map();
-	$("#questions").find(":selected").each(function() {
-		elements.set($(this).val(), $(this).text());
-		questions_.set($(this).val(), $(this).text());
-		$(this).remove();
-    });
-	/*for(var key of questions_.keys()){
-		divQuestions.append('<div class="question question-id-'+key+'"><h5>'+questions_.get(key)+'</h5><h6>Réponses:</h6></div>');
-	}*/
-	var divQuestions = $("#questions-questionnaires");
-	for(var key of elements.keys()){
-		var remove = '<button onclick="removeQuestion('+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
-		var click = ' onclick="selectQuestion('+key+')"'
-		divQuestions.append('<div class="question" id="question-id-'+key+'" '+click+'>'+remove+'<h5>'+elements.get(key)+'</h5><h6>Réponses:</h6></div>');
-		questionSelected = key;
+	if(selectSelected == 0){
+		$("#questions").find(":selected").each(function() {
+			elements.set($(this).val(), $(this).text());
+			questions_.set($(this).val(), $(this).text());
+			$(this).remove();
+		});
+		/*for(var key of questions_.keys()){
+			divQuestions.append('<div class="question question-'+key+'"><h5>'+questions_.get(key)+'</h5><h6>Réponses:</h6></div>');
+		}*/
+		var divQuestions = $("#questions-questionnaires");
+		for(var key of elements.keys()){
+			var remove = '<button onclick="removeQuestion('+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
+			var click = ' onclick="selectQuestion('+key+')"'
+			var answers = '<ul id="answers-question-'+key+'"></ul>'
+			divQuestions.append('<div class="question" id="question-'+key+'" '+click+'>'+remove+'<h4>'+elements.get(key)+'</h4><h6>Réponses:</h6>'+answers+'</div>');
+			questionSelected = key;
+		}
+	}else if(selectSelected == 1){
+		$("#answers").find(":selected").each(function() {
+			elements.set($(this).val(), $(this).text());
+		});
+		answers_.set(questionSelected, elements);
+		var answersList = $('#answers-question-'+questionSelected);
+		for(var key of elements.keys()){
+			var remove = '<button onclick="removeAnswer('+questionSelected+','+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
+			answersList.append('<li class="answer" id="answer-'+key+'">'+remove+' '+elements.get(key)+'</li>');
+		}
 	}
 	updateQuestionSelected();
 }
@@ -72,20 +91,33 @@ function selectQuestion(idQuestion){
 	updateQuestionSelected();
 }
 function updateQuestionSelected(){
+	for(var key of questions_.keys()){
+		var bloc = $("#question-"+key);
+		bloc.css("background-color", 'white');
+	}
 	if(questionSelected != 0){
-		for(var key of questions_.keys()){
-			var bloc = $("#question-id-"+key);
-			bloc.css("background-color", 'white');
-		}
-		var bloc = $("#question-id-"+questionSelected);
+		var bloc = $("#question-"+questionSelected);
 		bloc.css( "background-color", '#e16244');
 	}
+}
+/**
+*	Permet de définir sur quel select l'utilisateur a intéragi en dernier
+*	0 --> questions
+*	1 --> answers
+*/
+function changeSelectMode(type){
+	if(type >= 0){
+		selectSelected = type;
+	}
+}
+function removeAnswer(idQuestion, idAnswer){
+	$('#question-'+idQuestion+' #answer-'+idAnswer).remove();
 }
 /**
 *	supprime le bloc et le remet dans le select
 */
 function removeQuestion(id){
-	$("#question-id-"+id).remove();
+	$("#question-"+id).remove();
 	var strQuestion = questions_.get(id+"");
 	var select = $("#questions");
 	select.append('<option value="'+id+'">'+strQuestion+'</option>');
