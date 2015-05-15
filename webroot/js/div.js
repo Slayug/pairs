@@ -142,3 +142,36 @@ function addElement(element){
 		newElement.val('');
 	}
 }
+$(window).scroll(function() {
+	if($("#questions-questionnaires").height() >= 400 || $("#questions-questionnaires-scroll").height() >= 400){
+		if(isVisibleAfterScroll("#agent-question-answer") == false){
+			$("#agent-question-answer").attr('id', 'agent-question-answer-scroll');
+			$("#questions-questionnaires").attr('id', 'questions-questionnaires-scroll');
+		}
+		if($(window).scrollTop() <= 390){
+			$("#agent-question-answer-scroll").attr('id', 'agent-question-answer');
+			$("#questions-questionnaires-scroll").attr('id', 'questions-questionnaires');
+		}
+	}else{
+		$("#agent-question-answer-scroll").attr('id', 'agent-question-answer');
+		$("#questions-questionnaires-scroll").attr('id', 'questions-questionnaires');	
+	}
+});
+/**
+*	Test si un element est visible après
+*	un scroll VERTICAL
+*/
+function isVisibleAfterScroll(elem)
+{
+    var $elem = $(elem);
+	if($elem.length){
+		var $window = $(window);
+
+		var docViewTop = $window.scrollTop();
+		var docViewBottom = docViewTop + $window.height();
+		var elemTop = $elem.offset().top;
+		var elemBottom = elemTop + $elem.height();
+
+		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	}
+}

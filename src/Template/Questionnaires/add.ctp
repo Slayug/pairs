@@ -22,7 +22,7 @@
 				<span class="add-on"><i class="icon-th"></i></span>
 			</div>
  
-			<div id="agent-question-answer" class="col-md-6">
+			<div id="agent-question-answer"class="col-md-6">
 				<div class="col-md-10">
 					<?php
 						echo $this->Form->input('questions._ids', ['options' => $questions,

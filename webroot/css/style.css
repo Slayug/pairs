@@ -331,10 +331,24 @@ cursor:move;
 	color:#e16244;
 }
 #agent-question-answer{
-	position:fixed;
-	width:29.5%;
+	position:static;
 }
-#questions-questionnaires{
+#agent-question-answer-scroll{
+	position:fixed;
+	width:35%;
+	margin-top:-200px;
+}
+#questions-questionnaires-scroll{
+min-height:350px;
 	margin-left:50%;
-	 min-height: 350px;
+}
+@media (min-height: 800px) {
+#agent-question-answer-scroll{
+	width:30%;
+}
+}
+@media (max-height: 800px) {
+#agent-question-answer-scroll{
+	width:45%;
+}
 }
