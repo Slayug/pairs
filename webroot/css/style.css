@@ -311,3 +311,6 @@ td img{
 .form_add{
 	margin-bottom:10px;
 }
+.question{
+	cursor:pointer;
+}
