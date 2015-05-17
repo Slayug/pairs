@@ -58,8 +58,8 @@ function arrowRight(){
 	var elements = new Map();
 	if(selectSelected == 0){
 		$("#questions").find(":selected").each(function() {
-			elements.set($(this).val(), $(this).text());
-			questions_.set($(this).val(), $(this).text());
+			elements.set($(this).val()+'', $(this).text());
+			questions_.set($(this).val()+'', $(this).text());
 			$(this).remove();
 		});
 		/*for(var key of questions_.keys()){
@@ -70,26 +70,27 @@ function arrowRight(){
 			var remove = '<button style="float:right;margin-top:6px;" onclick="removeQuestion('+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
 			var click = ' onclick="selectQuestion('+key+')"'
 			var answers = '<ul class="sortable" id="answers-question-'+key+'"></ul>'
-			divQuestions.append('<div class="question" id="question-'+key+'" '+click+'>'+remove+'<h4>'+elements.get(key)+'</h4><h6>Réponses:</h6>'+answers+'</div>');
+			divQuestions.append('<div class="question" id="question-'+key+'" '+click+'>'+remove+'<h4>'+elements.get(key+'')+'</h4><h6>Réponses:</h6>'+answers+'</div>');
 			questionSelected = key;
 		}
 	}else if(selectSelected == 1){
 		$("#answers").find(":selected").each(function() {
-			elements.set($(this).val(), $(this).text());
+			elements.set($(this).val()+'', $(this).text());
 		});	
 		var answersList = $('#answers-question-'+questionSelected);
-		if(answers_.get(questionSelected) == null){
-			answers_.set(questionSelected, new Map());
+		if(answers_.get(questionSelected+'') == null){
+			answers_.set(questionSelected+'', new Map());
 		}
 		for(var key of elements.keys()){
-			if(!answers_.get(questionSelected).has(key)){
+			if(!answers_.get(questionSelected+'').has(key+'')){
 				var remove = '<button style="float:right;" onclick="removeAnswer('+questionSelected+','+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
 				var sortable = '<span class="add-on"><i class="icon-sortable"></i></span>'
-				answersList.append('<li class="ui-state-default" class="answer" id="answer-'+key+'"> '+sortable+' '+elements.get(key)+' '+remove+'</li>');
-				answers_.get(questionSelected).set(key, elements.get(key));				
+				answersList.append('<li class="ui-state-default" class="answer" id="answer-'+key+'"> '+sortable+' '+elements.get(key+'')+' '+remove+'</li>');
+				answers_.get(questionSelected+'').set(key+'', elements.get(key+''));				
 			}
 		}
 		//$(function() {
+		
 		$("#answers-question-"+questionSelected).sortable();
 		$("#answers-question-"+questionSelected).disableSelection();
 		//});
@@ -125,17 +126,18 @@ function changeSelectMode(type){
 }
 function removeAnswer(idQuestion, idAnswer){
 	$('#question-'+idQuestion+' #answer-'+idAnswer).remove();
-	answers_.get(idQuestion).delete(idAnswer);
+	answers_.get(idQuestion+'').delete(idAnswer+'');
 }
 /**
 *	supprime le bloc et le remet dans le select
 */
 function removeQuestion(id){
 	$("#question-"+id).remove();
-	var strQuestion = questions_.get(id+"");
+	var strQuestion = questions_.get(id+'');
 	var select = $("#questions");
 	select.append('<option value="'+id+'">'+strQuestion+'</option>');
-	questions_.delete(id+"");
+	questions_.delete(id+'');
+	answers_.delete(id+'');
 }
 /**
 *	Permet d'ajouter un élément dans un select depuis un input text
@@ -188,5 +190,15 @@ function isVisibleAfterScroll(elem)
 	}
 }
 function submitQuestionnaireAdd(){
-
+	for(var key of questions_.keys()){
+		var input = '<div class="input select"><input type="hidden" name="'+questions_.get(key+'')+'[]" value><select id="question-'+key+'" name="'+questions_.get(key+'')+'[]" id="'+key+'" multiple="multiple">';
+		$('#question-'+key).find('li').each(function(){
+			var id = $(this).attr('id').split('-')[1];
+			var content = answers_.get(key+'').get(id+'');
+			input += '<option selected="selected" value="'+id+'#-#'+content+'"></option>';
+		});
+		input += '</div></input></select>';
+		$('#questions_submit').append(input);
+	}
+	document.getElementById('questionnaire_add').submit();
 }

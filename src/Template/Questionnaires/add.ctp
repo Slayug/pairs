@@ -1,5 +1,5 @@
 <div class="questionnaires form large-12 medium-12 columns">
-    <?= $this->Form->create($questionnaire); ?>
+    <?= $this->Form->create($questionnaire, ['id' => 'questionnaire_add']); ?>
     <fieldset>
         <legend><?= __('Ajouter un Questionnaire') ?></legend>
         <?php
@@ -61,11 +61,7 @@
 				<h3>Questions:<h3>
 			</div>
 			
-			<?php
-			echo $this->Form->input('questions_._ids', ['options' => $questions,
-																'label' => 'Questions:',
-																'type' => 'hidden']);
-			?>
+			<div id="questions_submit" style="display:none;"></div>
 			<script type="text/javascript">
 				$(".form_datetime_begin").datetimepicker({
 					format: "dd MM yyyy - hh:ii",
