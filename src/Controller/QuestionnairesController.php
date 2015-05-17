@@ -125,9 +125,7 @@ class QuestionnairesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function view($id = null){
-        $questionnaire = $this->Questionnaires->get($id, [
-            'contain' => ['Groups', 'Questions']
-        ]);
+        $questionnaire = $this->Questionnaires->get($id);
         $this->set('questionnaire', $questionnaire);
         $this->set('_serialize', ['questionnaire']);
     }
