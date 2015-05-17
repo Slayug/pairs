@@ -146,6 +146,9 @@ function addElement(element){
 	var newElement = $("#add-"+element);
 	if(newElement.val().length > 0){
 		var newId = $('select#'+element+'s option').length + 1;
+		if(element == 'question'){
+			newId += questions_.size;
+		}
 		var select = $("#"+element+"s");
 		select.append('<option value="'+newId+'">'+newElement.val()+'</option>');
 		newElement.val('');
