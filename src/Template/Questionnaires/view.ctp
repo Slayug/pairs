@@ -23,7 +23,7 @@
 			<div class="alert alert-warning" role="alert"><p><?= $this->Html->link(__('Répondre au questionnaire'), ['controller' => 'Questionnaires', 'action' => 'reply', $questionnaire->id]) ?>
 			</p></div>
 		<?php
-	}else{ // date passée pour répondre au questionnaire
+	}else{ // date dépassée pour répondre au questionnaire
 		?>
 			<div class="alert alert-danger" role="alert"><p>La date limite du questionnaire est dépassée.</p></div>
 		<?php

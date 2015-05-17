@@ -447,6 +447,25 @@ class ModulesController extends AppController
 									->where(['gu.user_id' => $currentUser['id']])
 									->andWhere(['mg.module_id' => $id]); // et on cible le module où on est
 			$this->set('questionnaires', $queryQuestionnaires);
+		}else{
+			$questionnaires = TableRegistry::get('Questionnaires');
+			$queryQuestionnaires = $questionnaires->find()->hydrate(false)
+									 ->join([
+										'qg' => [ // on join les groupes
+											'table' => 'questionnaires_groups',
+											'type' => 'INNER',
+											'conditions' => 'qg.questionnaire_id = questionnaires.id',
+										],
+										'mg' => [
+											'table' => 'modules_groups',
+											'type' => 'INNER',
+											'conditions' => 'mg.group_id = qg.group_id',
+										]
+									
+									])
+									->andWhere(['mg.module_id' => $id]); // et on cible le module où on est
+			$this->set('questionnaires', $queryQuestionnaires);
+		
 		}
 		$module = $this->Modules->get($id, [
 			'contain' => ['Owners', 'Users', 'Groups']

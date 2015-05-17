@@ -115,8 +115,7 @@
     <?php endif; ?>
     </div>
 </div>
-<?php }else{
-?>
+<?php } ?>
 
 	<div class="related row">
 		<div class="column large-12">
@@ -135,6 +134,3 @@
 	?>
 		</div>
 	</div>
-
-<?php
-} ?>

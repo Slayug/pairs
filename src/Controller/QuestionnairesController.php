@@ -82,7 +82,9 @@ class QuestionnairesController extends AppController
 	}
 	
 	public function reply($idQuestionnaire = null){
-	
+        $questionnaire = $this->Questionnaires->get($idQuestionnaire);
+        $this->set('questionnaire', $questionnaire);
+        $this->set('_serialize', ['questionnaire']);
 	}
 	
 	private function isOwner(){
