@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
+use Cake\Core\App;
+use Cake\Datasource\ConnectionManager;
 /**
  * Questionnaires Controller
  *
@@ -122,8 +124,7 @@ class QuestionnairesController extends AppController
      * @return void
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function view($id = null)
-    {
+    public function view($id = null){
         $questionnaire = $this->Questionnaires->get($id, [
             'contain' => ['Groups', 'Questions']
         ]);
@@ -131,6 +132,18 @@ class QuestionnairesController extends AppController
         $this->set('_serialize', ['questionnaire']);
     }
 
+	
+	private function dateTimePickerToDatetime($date){
+		$months = ['Jan' => '01','Fev' =>'02','Mar' =>'03','Avr' =>'04','Mai'=> '05','Jui' => '06','Jul' => '07','Aou' => '08','Sep' => '09','Oct' => '10','Nov' => '11','Dec' => '12'];
+		$tmp = explode(' - ', $date);
+		$date = $tmp[0];
+		$hour = $tmp[1] . ':00';
+		$month = substr($date, 3, 3);
+		$year = substr($date, 7, 4);
+		$day = substr($date, 0, 2);
+		return $year . '-' . $months[$month] . '-' . $day . ' ' . $hour;
+	}
+	
     /**
      * Add method
      *
@@ -138,44 +151,99 @@ class QuestionnairesController extends AppController
      */
     public function add($idModule = null){
         $questionnaire = $this->Questionnaires->newEntity();
-        if ($this->request->is('post')) {
+        if ($this->request->is('post')){
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
-			debug($this->request->data);
-			$this->request->data['owners'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer qu'il est lier au groupe
+			$success = true;
+			$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
+			$transaction->begin();
+			//on vide par les tableaux fournis par défault de cake
+			$this->request->data['answers'] = array();
+			$this->request->data['questions'] = array();
+			//on save le questionnaire en vérifiant que titre et description ne sont pas null et de même pour les dates
+			if(strlen($this->request->data['title']) > 0 && strlen($this->request->data['description']) > 0 &&
+				strlen($this->request->data['date_creation']) > 0 &&
+				strlen($this->request->data['date_limit']) > 0){
+			
+				$currentUser = $session->read('Auth.User');
+				
+				$this->request->data['date_creation'] = $this->dateTimePickerToDatetime($this->request->data['date_creation']);
+				$this->request->data['date_limit'] = $this->dateTimePickerToDatetime($this->request->data['date_limit']);
+				
+				$this->request->data['owners'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer qu'il est lier au questionnaire
+				
+				
+				$questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
+				$questionnaire = $this->Questionnaires->save($questionnaire);
+				if(!$questionnaire){
+					$transaction->rollback();
+					$this->Flash->error('Une erreur s\'est produite, merci de réessayer.');
+					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'add', $idModule]);
+				}
+			}else{
+                $this->Flash->error('Le questionnaire doit contenir au moins un titre & une description.');
+				return $this->redirect(['controller' => 'Questionnaires', 'action' => 'add', $idModule]);
+			}
+			
+			foreach($this->request->data as $key => $value){
+				if(strstr($key, '#-#')){
+					$keySplitted = explode('#-#', $key);
+					$idQuestion = $keySplitted[0];
+					$question = str_replace('_', ' ', $keySplitted[1]);
+					
+					//on test si la question existe déjà en BDD
+					$questionTable = TableRegistry::get('Questions');
+					$questionTuple = $questionTable->find()->where(['Questions.id' => $idQuestion]);
+					if($questionTuple->first() == null){
+						debug('INSERT');
+						$questionTuple = $questionTable->newEntity();
+						$questionTuple->content = $question;
+						$questionTuple->type = 0;
+						$questionTuple = $questionTable->save($questionTuple);
+						$success = $success AND $questionTuple;
+					}else{
+						$questionTuple->id = $idQuestion;
+					}
+					for($i = 1; $i < count($value); $i++){
+						$valueSplitted = explode('#-#', $value[$i]);
+						$idAnswer = $valueSplitted[0];
+						$answer = $valueSplitted[1];
+						//on test si la réponse existe déjà en BDD
+						$answerTable = TableRegistry::get('Answers');
+						$answerTuple = $answerTable->find()->where(['Answers.id' => $idAnswer]);
+						if($answerTuple->first() == null){
+							debug('insert answer ' . $idAnswer . ' '. $answer);
+							$answerTuple = $answerTable->newEntity();
+							$answerTuple->value = $answer;
+							$answerTuple = $answerTable->save($answerTuple);
+							$success = $success AND $answerTuple;
+						}else{
+							$answerTuple->id = $idAnswer;
+						}
+						
+						//on save ensuite l'association avec la position de la question & le questionnaire
+						$associationTable = TableRegistry::get('answers_questions_questionnaires');
+						$association = $associationTable->newEntity();
+						$association->question_id = $questionTuple->id;
+						$association->answer_id = $answerTuple->id;
+						$association->questionnaire_id = $questionnaire->id;
+						$association->position = $i - 1;
+						$success = $success AND $associationTable->save($association);
+					}
+				}
+			}
+			
+			if($success){
+				$transaction->commit();
+				$this->Flash->success('Le questionnaire a bien été ajouté.');
+				return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);
+			}else{
+				$transaction->rollback();
+				$this->Flash->success('Une erreur s\'est produite, merci de réessayer plus tard.');
+				return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);
+			}
 		
-           /* $questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
-            if ($this->Questionnaires->save($questionnaire)) {
-                $this->Flash->success('Le questionnaire a été sauvegardé.');
-                return $this->redirect(['controller' => 'Users',
-										'action' => 'panel']);
-            } else {
-                $this->Flash->error('The questionnaire could not be saved. Please, try again.');
-                return $this->redirect(['controller' => 'Users',
-										'action' => 'panel']);
-            }*/
-        }
-        //$groups = $this->Questionnaires->Modules->find('list', ['limit' => 200]);
-		
-		//$modules = TableRegistry::get('Modules');
-		
-		//permet de récupérer les modules de l'utilisateur
-		/*$query = $modules->find('list', array(
-								'fields' =>
-									array('Modules.name',
-										  'Modules.id')));
-		$query->matching('Users', function($q){
-			$session = $this->request->session();
-			$currentUser = $session->read('Auth.User');
-			$idUser = $currentUser['id'];
-			return $q
-					->select(['Users.id', 'Modules.name'])
-					->where(['Users.id' => $idUser]);
-		});
-		
-		$this->set('modules', $query->all());*/
-		
-		
+		}
         $questions = TableRegistry::get('Questions');
 		$questions = $questions->find('list');
 		$answers = TableRegistry::get('Answers');

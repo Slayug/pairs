@@ -280,10 +280,10 @@ td img{
 	border: 1px solid #e16244;
     border-radius: 3px;
 }
-.form_datetime_begin{
+.form_datetime_creation{
 	margin-bottom:12px;
 }
-.form_datetime_end{
+.form_datetime_limit{
 	margin-bottom:12px;
 }
 .switch-question button{

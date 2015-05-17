@@ -43,6 +43,7 @@ class AnswersTable extends Table
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create')
             ->requirePresence('value', 'create')
+			->add('value', ['unique' => ['rule' => 'validateUnique', 'provider' => 'table']])
             ->notEmpty('value');
 
         return $validator;

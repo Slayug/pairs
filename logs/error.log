@@ -12524,3 +12524,930 @@ Stack Trace:
 #6 {main}
 
 
+2015-05-17 13:51:30 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 151]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+explode - [internal], line ??
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 151
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 13:51:30 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 151]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+explode - [internal], line ??
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 151
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 13:51:30 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 151]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+explode - [internal], line ??
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 151
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 13:51:30 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 151]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+explode - [internal], line ??
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 151
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 13:51:30 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 151]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+explode - [internal], line ??
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 151
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 15:55:45 Error: Fatal Error (1): Call to a member function get() on a non-object in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 147]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-17 15:55:46 Error: [Cake\Error\FatalErrorException] Call to a member function get() on a non-object
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 147)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-17 16:08:31 Error: Fatal Error (1): Class 'App\Controller\ConnectionManager' not found in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 149]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-17 16:08:31 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\ConnectionManager' not found
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'D:\\wamp\\www\\pai...', 149)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-17 16:09:03 Error: [RuntimeException] Cannot insert row, some of the primary key values are missing. Got (1, , 0), expecting (question_id, answer_id, position)
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#4 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(193): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#5 [internal function]: App\Controller\QuestionnairesController->add('2')
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#9 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2015-05-17 16:38:53 Warning: Warning (2): Creating default object from empty value in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 159]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 159
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 16:38:54 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Association\BelongsToMany::replaceLinks() must be of the type array, integer given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php on line 443 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 717]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 717
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 161
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 16:38:54 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 873]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::_collectJointEntities() - CORE\src\ORM\Association\BelongsToMany.php, line 873
+Cake\ORM\Association\BelongsToMany::Cake\ORM\Association\{closure}() - CORE\src\ORM\Association\BelongsToMany.php, line 734
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 756
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 161
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 16:38:54 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 804]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::_diffLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 804
+Cake\ORM\Association\BelongsToMany::Cake\ORM\Association\{closure}() - CORE\src\ORM\Association\BelongsToMany.php, line 735
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 756
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 161
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 16:38:54 Error: [InvalidArgumentException] Could not save owners, it cannot be traversed
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(737): Cake\ORM\Association\BelongsToMany->_saveTarget(Object(App\Model\Entity\Questionnaire), 4, Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Association\BelongsToMany->Cake\ORM\Association\{closure}(Object(Cake\Database\Connection))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(756): Cake\Database\Connection->transactional(Object(Closure))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(443): Cake\ORM\Association\BelongsToMany->replaceLinks(Object(App\Model\Entity\Questionnaire), 4, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(248): Cake\ORM\Association\BelongsToMany->saveAssociated(Object(App\Model\Entity\Questionnaire), Array)
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(224): Cake\ORM\AssociationCollection->_save(Object(Cake\ORM\Association\BelongsToMany), Object(App\Model\Entity\Questionnaire), Array, Array)
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(189): Cake\ORM\AssociationCollection->_saveAssociations(Object(App\Model\Table\QuestionnairesTable), Object(App\Model\Entity\Questionnaire), Array, Array, true)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1445): Cake\ORM\AssociationCollection->saveChildren(Object(App\Model\Table\QuestionnairesTable), Object(App\Model\Entity\Questionnaire), Array, Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Questionnaire), Object(ArrayObject))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#11 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(161): Cake\ORM\Table->save(Object(App\Model\Entity\Questionnaire))
+#12 [internal function]: App\Controller\QuestionnairesController->add('2')
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-05-17 16:42:03 Warning: Warning (2): Creating default object from empty value in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 159]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 159
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 16:42:03 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Association\BelongsToMany::replaceLinks() must be of the type array, integer given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php on line 443 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 717]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 717
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 161
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 16:42:03 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 873]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::_collectJointEntities() - CORE\src\ORM\Association\BelongsToMany.php, line 873
+Cake\ORM\Association\BelongsToMany::Cake\ORM\Association\{closure}() - CORE\src\ORM\Association\BelongsToMany.php, line 734
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 756
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 161
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 16:42:03 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php, line 804]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Association\BelongsToMany::_diffLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 804
+Cake\ORM\Association\BelongsToMany::Cake\ORM\Association\{closure}() - CORE\src\ORM\Association\BelongsToMany.php, line 735
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Association\BelongsToMany::replaceLinks() - CORE\src\ORM\Association\BelongsToMany.php, line 756
+Cake\ORM\Association\BelongsToMany::saveAssociated() - CORE\src\ORM\Association\BelongsToMany.php, line 443
+Cake\ORM\AssociationCollection::_save() - CORE\src\ORM\AssociationCollection.php, line 248
+Cake\ORM\AssociationCollection::_saveAssociations() - CORE\src\ORM\AssociationCollection.php, line 224
+Cake\ORM\AssociationCollection::saveChildren() - CORE\src\ORM\AssociationCollection.php, line 189
+Cake\ORM\Table::_processSave() - CORE\src\ORM\Table.php, line 1445
+Cake\ORM\Table::Cake\ORM\{closure}() - CORE\src\ORM\Table.php, line 1365
+Cake\Database\Connection::transactional() - CORE\src\Database\Connection.php, line 561
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1366
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 161
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 16:42:04 Error: [InvalidArgumentException] Could not save owners, it cannot be traversed
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(737): Cake\ORM\Association\BelongsToMany->_saveTarget(Object(App\Model\Entity\Questionnaire), 4, Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Association\BelongsToMany->Cake\ORM\Association\{closure}(Object(Cake\Database\Connection))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(756): Cake\Database\Connection->transactional(Object(Closure))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(443): Cake\ORM\Association\BelongsToMany->replaceLinks(Object(App\Model\Entity\Questionnaire), 4, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(248): Cake\ORM\Association\BelongsToMany->saveAssociated(Object(App\Model\Entity\Questionnaire), Array)
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(224): Cake\ORM\AssociationCollection->_save(Object(Cake\ORM\Association\BelongsToMany), Object(App\Model\Entity\Questionnaire), Array, Array)
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(189): Cake\ORM\AssociationCollection->_saveAssociations(Object(App\Model\Table\QuestionnairesTable), Object(App\Model\Entity\Questionnaire), Array, Array, true)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1445): Cake\ORM\AssociationCollection->saveChildren(Object(App\Model\Table\QuestionnairesTable), Object(App\Model\Entity\Questionnaire), Array, Array)
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Questionnaire), Object(ArrayObject))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#11 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(161): Cake\ORM\Table->save(Object(App\Model\Entity\Questionnaire))
+#12 [internal function]: App\Controller\QuestionnairesController->add('2')
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#16 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2015-05-17 16:45:23 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must implement interface Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\src\Controller\QuestionnairesController.php on line 158 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 2024]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2024
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 158
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 16:45:23 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must implement interface Cake\Datasource\EntityInterface, null given, called in D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php on line 2030 and defined in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 361]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 361
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2030
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 158
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 16:45:23 Error: Fatal Error (1): Call to a member function isNew() on a non-object in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 366]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-17 16:45:23 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on a non-object
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 366)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-17 17:01:05 Error: [RuntimeException] Cannot insert row in "answers_questions_questionnaires" table, it has no primary key.
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#4 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(213): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#5 [internal function]: App\Controller\QuestionnairesController->add('2')
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#9 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2015-05-17 17:01:43 Error: [RuntimeException] Cannot insert row in "answers_questions_questionnaires" table, it has no primary key.
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#4 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(213): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#5 [internal function]: App\Controller\QuestionnairesController->add('2')
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#9 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2015-05-17 17:01:52 Error: [RuntimeException] Cannot insert row in "answers_questions_questionnaires" table, it has no primary key.
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#4 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(213): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#5 [internal function]: App\Controller\QuestionnairesController->add('2')
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#9 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2015-05-17 17:02:28 Error: [RuntimeException] Cannot insert row in "answers_questions_questionnaires" table, it has no primary key.
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#4 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(213): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#5 [internal function]: App\Controller\QuestionnairesController->add('2')
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#9 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2015-05-17 17:06:36 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "answers"
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1108): Cake\ORM\Query->firstOrFail()
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(198): Cake\ORM\Table->get('5')
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-17 17:17:50 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "answers"
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1108): Cake\ORM\Query->firstOrFail()
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(197): Cake\ORM\Table->get('5')
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-17 17:19:02 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_a` FOREIGN KEY (`answer_id`) REFERENCES `answers` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(213): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 17:21:52 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_a` FOREIGN KEY (`answer_id`) REFERENCES `answers` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(214): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 17:23:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_a` FOREIGN KEY (`answer_id`) REFERENCES `answers` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(214): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 17:42:44 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN) in [D:\wamp\www\pairs\src\Model\Table\QuestionnairesTable.php, line 69]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-17 17:42:44 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'return' (T_RETURN)
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 69)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-17 18:08:58 Error: Fatal Error (1): Call to undefined function App\Controller\dateTimePickerToDatetime() in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 169]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-17 18:08:58 Error: [Cake\Error\FatalErrorException] Call to undefined function App\Controller\dateTimePickerToDatetime()
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'D:\\wamp\\www\\pai...', 169)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-17 18:09:07 Warning: Warning (2): str_replace() expects at least 3 parameters, 2 given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 143]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+str_replace - [internal], line ??
+App\Controller\QuestionnairesController::dateTimePickerToDatetime() - APP/Controller\QuestionnairesController.php, line 143
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 169
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 18:09:07 Warning: Warning (2): str_replace() expects at least 3 parameters, 2 given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+str_replace - [internal], line ??
+App\Controller\QuestionnairesController::dateTimePickerToDatetime() - APP/Controller\QuestionnairesController.php, line 144
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 169
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 18:09:48 Warning: Warning (2): str_replace() expects at least 3 parameters, 2 given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 143]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+str_replace - [internal], line ??
+App\Controller\QuestionnairesController::dateTimePickerToDatetime() - APP/Controller\QuestionnairesController.php, line 143
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 169
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 18:09:48 Warning: Warning (2): str_replace() expects at least 3 parameters, 2 given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+str_replace - [internal], line ??
+App\Controller\QuestionnairesController::dateTimePickerToDatetime() - APP/Controller\QuestionnairesController.php, line 144
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 169
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 18:10:14 Warning: Warning (2): str_replace() expects at least 3 parameters, 2 given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 143]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+str_replace - [internal], line ??
+App\Controller\QuestionnairesController::dateTimePickerToDatetime() - APP/Controller\QuestionnairesController.php, line 143
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 169
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 18:10:14 Warning: Warning (2): str_replace() expects at least 3 parameters, 2 given in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+str_replace - [internal], line ??
+App\Controller\QuestionnairesController::dateTimePickerToDatetime() - APP/Controller\QuestionnairesController.php, line 144
+App\Controller\QuestionnairesController::add() - APP/Controller\QuestionnairesController.php, line 169
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-17 18:19:35 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "questions"
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1108): Cake\ORM\Query->firstOrFail()
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(200): Cake\ORM\Table->get('3')
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-17 18:20:17 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "questions"
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1108): Cake\ORM\Query->firstOrFail()
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(197): Cake\ORM\Table->get('3')
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-17 18:21:02 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(231): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:23:10 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(230): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:26:38 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:27:59 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Le champ 'answer_id' ne peut être vide (null)
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:29:08 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Le champ 'answer_id' ne peut être vide (null)
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:29:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:30:05 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:32:36 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:33:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:33:21 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:33:44 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:34:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-17 18:34:44 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_q` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`))
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1514): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1434): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1365): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1366): Cake\Database\Connection->transactional(Object(Closure))
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(235): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\QuestionnairesController->add('2')
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+

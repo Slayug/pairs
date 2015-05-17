@@ -1,4 +1,6 @@
 <div class="questionnaires form large-12 medium-12 columns">
+<?= $this->Flash->render() ?>
+	<?= $this->Flash->render('auth') ?>
     <?= $this->Form->create($questionnaire, ['id' => 'questionnaire_add']); ?>
     <fieldset>
         <legend><?= __('Ajouter un Questionnaire') ?></legend>
@@ -10,15 +12,15 @@
 			?>
 			
 			
-			<div class="input-append date form_datetime_begin">
-				<label for="date_begin">Date de début:</label>
-				<input size="16" type="text" value="" readonly id="date_begin" name="date_begin">
+			<div class="input-append date form_datetime_creation">
+				<label for="date_creation">Date de début:</label>
+				<input size="16" type="text" value="" readonly id="date_creation" name="date_creation">
 				<span class="add-on"><i class="icon-th"></i></span>
 			</div>
 			
-			<div class="input-append date form_datetime_end">
-				<label for="date_end">Date de fin:</label>
-				<input size="16" type="text" value="" readonly id="date_end" name="date_end">
+			<div class="input-append date form_datetime_limit">
+				<label for="date_limit">Date de fin:</label>
+				<input size="16" type="text" value="" readonly id="date_limit" name="date_limit">
 				<span class="add-on"><i class="icon-th"></i></span>
 			</div>
  
@@ -63,13 +65,13 @@
 			
 			<div id="questions_submit" style="display:none;"></div>
 			<script type="text/javascript">
-				$(".form_datetime_begin").datetimepicker({
+				$(".form_datetime_creation").datetimepicker({
 					format: "dd MM yyyy - hh:ii",
 					autoclose: true,
 					todayBtn: true,
 					language: 'fr'
 				});
-				$(".form_datetime_end").datetimepicker({
+				$(".form_datetime_limit").datetimepicker({
 					format: "dd MM yyyy - hh:ii",
 					autoclose: true,
 					todayBtn: true,

@@ -35,11 +35,6 @@ class QuestionsTable extends Table
             'targetForeignKey' => 'answer_id',
             'joinTable' => 'answers_questions'
         ]);
-        $this->belongsToMany('Questionnaires', [
-            'foreignKey' => 'question_id',
-            'targetForeignKey' => 'questionnaire_id',
-            'joinTable' => 'questionnaires_questions'
-        ]);
     }
 
     /**

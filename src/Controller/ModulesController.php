@@ -299,6 +299,7 @@ class ModulesController extends AppController
 		}
 		$success = true;
 		$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
+		$transaction->begin();
 		for($i = 0; $i < count($groups); $i++){
 			$success = $success AND $this->Modules->Groups->save($groups[$i]);
 		}

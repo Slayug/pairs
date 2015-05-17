@@ -191,7 +191,7 @@ function isVisibleAfterScroll(elem)
 }
 function submitQuestionnaireAdd(){
 	for(var key of questions_.keys()){
-		var input = '<div class="input select"><input type="hidden" name="'+questions_.get(key+'')+'[]" value><select id="question-'+key+'" name="'+questions_.get(key+'')+'[]" id="'+key+'" multiple="multiple">';
+		var input = '<div class="input select"><input type="hidden" name="'+key+'#-#'+questions_.get(key+'')+'[]" value><select id="question-'+key+'" name="'+key+'#-#'+questions_.get(key+'')+'[]" id="'+key+'" multiple="multiple">';
 		$('#question-'+key).find('li').each(function(){
 			var id = $(this).attr('id').split('-')[1];
 			var content = answers_.get(key+'').get(id+'');

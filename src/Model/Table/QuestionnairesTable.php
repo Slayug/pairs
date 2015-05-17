@@ -35,11 +35,6 @@ class QuestionnairesTable extends Table
             'targetForeignKey' => 'group_id',
             'joinTable' => 'questionnaires_groups'
         ]);
-        $this->belongsToMany('Questions', [
-            'foreignKey' => 'questionnaire_id',
-            'targetForeignKey' => 'question_id',
-            'joinTable' => 'questionnaires_questions'
-        ]);
 		
 		// Users owners
 		$this->belongsToMany('Owners', [
@@ -47,6 +42,7 @@ class QuestionnairesTable extends Table
             'foreignKey' => 'questionnaire_id',
             'targetForeignKey' => 'user_id',
             'joinTable' => 'questionnaires_owners',
+			'propertyName' => 'owners'
         ]);
 		
     }

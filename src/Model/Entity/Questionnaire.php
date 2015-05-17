@@ -23,5 +23,6 @@ class Questionnaire extends Entity
         'answers_questionnaire_users_partials' => true,
         'groups' => true,
         'questions' => true,
+		'owners' => true,
     ];
 }
