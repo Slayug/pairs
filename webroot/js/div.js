@@ -1,5 +1,13 @@
 //On défini ces deux variables pour gérer l'ajout et réponse pour un questionnaire
+/**
+*	key: idQuestion
+*	value: titre de la question (string)
+*/
 var questions_ = new Map();
+/**
+*	key: idQuestion
+*	value: Map de answers
+*/
 var answers_ = new Map();
 var questionSelected = 0;
 /**
@@ -46,12 +54,6 @@ function closeDiv(divName){
 function submitDiv(div){
 	document.getElementById(div).submit();
 }
-function insertQuestion(title, type){
-
-}
-function insertAnswer(title){
-
-}
 function arrowRight(){
 	var elements = new Map();
 	if(selectSelected == 0){
@@ -74,19 +76,25 @@ function arrowRight(){
 	}else if(selectSelected == 1){
 		$("#answers").find(":selected").each(function() {
 			elements.set($(this).val(), $(this).text());
-		});
-		answers_.set(questionSelected, elements);
+		});	
 		var answersList = $('#answers-question-'+questionSelected);
+		if(answers_.get(questionSelected) == null){
+			answers_.set(questionSelected, new Map());
+		}
 		for(var key of elements.keys()){
-			var remove = '<button style="float:right;" onclick="removeAnswer('+questionSelected+','+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
-			var sortable = '<span class="add-on"><i class="icon-sortable"></i></span>'
-			answersList.append('<li class="ui-state-default" class="answer" id="answer-'+key+'"> '+sortable+' '+elements.get(key)+' '+remove+'</li>');
+			if(!answers_.get(questionSelected).has(key)){
+				var remove = '<button style="float:right;" onclick="removeAnswer('+questionSelected+','+key+')" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-remove" ></span></button>'
+				var sortable = '<span class="add-on"><i class="icon-sortable"></i></span>'
+				answersList.append('<li class="ui-state-default" class="answer" id="answer-'+key+'"> '+sortable+' '+elements.get(key)+' '+remove+'</li>');
+				answers_.get(questionSelected).set(key, elements.get(key));				
+			}
 		}
 		//$(function() {
 		$("#answers-question-"+questionSelected).sortable();
 		$("#answers-question-"+questionSelected).disableSelection();
 		//});
 	}
+	console.log(answers_);
 	updateQuestionSelected();
 }
 function arrowLeft(){
@@ -117,6 +125,7 @@ function changeSelectMode(type){
 }
 function removeAnswer(idQuestion, idAnswer){
 	$('#question-'+idQuestion+' #answer-'+idAnswer).remove();
+	answers_.get(idQuestion).delete(idAnswer);
 }
 /**
 *	supprime le bloc et le remet dans le select
@@ -174,4 +183,7 @@ function isVisibleAfterScroll(elem)
 
 		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	}
+}
+function submitQuestionnaireAdd(){
+
 }

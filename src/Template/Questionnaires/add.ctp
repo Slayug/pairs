@@ -83,6 +83,7 @@
 			
 			
     </fieldset>
-	<button onclick="submitQuestionnaireAdd()" type="button">Valider</button>
     <?= $this->Form->end() ?>
+	
+	<button type="submit" onclick="submitQuestionnaireAdd()" type="button">Valider</button>
 </div>
