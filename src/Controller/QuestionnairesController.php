@@ -172,6 +172,18 @@ class QuestionnairesController extends AppController
 				
 				$this->request->data['owners'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer qu'il est lier au questionnaire
 				
+				$groups = TableRegistry::get('Groups');
+				$queryGroups = $groups->find()->hydrate(false)
+									 ->join([
+										'gm' => [ // on join les modules
+											'table' => 'modules_groups',
+											'type' => 'INNER',
+											'conditions' => 'gm.group_id = groups.id',
+										]
+									
+									])
+									->where(['gm.module_id' => $idModule]); // et on cible le module où on est
+				$this->request->data['groups'] = $queryGroups->toArray();
 				
 				$questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
 				$questionnaire = $this->Questionnaires->save($questionnaire);

@@ -13451,3 +13451,42 @@ Stack Trace:
 #16 {main}
 
 
+2015-05-17 18:50:41 Error: [InvalidArgumentException] Questionnaires is not associated with Questions
+Request URL: /pairs/questionnaires/view/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(232): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\QuestionnairesTable), 'Questions', Array, Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(337): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\QuestionnairesTable))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(316): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\QuestionnairesTable))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(669): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\QuestionnairesTable), true)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(625): Cake\ORM\Query->_transformQuery()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(116): Cake\ORM\Query->sql()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(220): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(340): Cake\ORM\Query->all()
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(351): Cake\ORM\Query->first()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1108): Cake\ORM\Query->firstOrFail()
+#15 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(130): Cake\ORM\Table->get('1', Array)
+#16 [internal function]: App\Controller\QuestionnairesController->view('1')
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#19 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#20 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 {main}
+
+
+2015-05-17 18:55:41 Error: [RuntimeException] Table "App\Model\Table\QuestionnairesTable" is not associated with "Modules"
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(175): Cake\ORM\Table->__get('Modules')
+#1 [internal function]: App\Controller\QuestionnairesController->add('2')
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#5 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
