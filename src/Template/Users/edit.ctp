@@ -29,6 +29,6 @@
             echo $this->Form->input('groups._ids', ['options' => $groups]);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Valider')) ?>
     <?= $this->Form->end() ?>
 </div>

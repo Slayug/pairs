@@ -167,9 +167,10 @@ button[type=submit]{
     border-style: solid;
     border-color: #d69e31 #e3a037 #d5982d #e3a037;
 
+	padding: 8px;
+	
     height: 35px;
-    padding: 0;
-    width: 120px;
+    width: auto;
     cursor: pointer;
     font: bold 15px Arial, Helvetica;
     color: #8f5a0a;

@@ -14,6 +14,6 @@
             echo $this->Form->input('description', ['label' => 'Description:']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Valider')) ?>
     <?= $this->Form->end() ?>
 </div>

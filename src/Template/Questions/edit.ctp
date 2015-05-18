@@ -33,6 +33,6 @@
             echo $this->Form->input('questionnaires._ids', ['options' => $questionnaires]);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Valider')) ?>
     <?= $this->Form->end() ?>
 </div>
