@@ -120,17 +120,30 @@
 	<div class="related row">
 		<div class="column large-12">
 		<h4 class="subheader"><?= __('Questionnaires') ?></h4>
-
+	<table>
 	<?php
-
 	if(!empty($questionnaires)){
 		foreach ($questionnaires as $questionnaire): ?>
 			<tr>
 				<td class="td_link"><?= $this->Html->link(__($questionnaire['title']), ['controller' => 'Questionnaires', 'action' => 'view', $questionnaire['id']]);?></td>
+				<td>
+				<?php if($isOwner){ ?>
+				<?= $this->Form->postLink(
+					$this->Html->image('delete.png',
+						array('alt' => __('Supprimer'),
+							  'title' => __('Supprimer'))),
+						array('controller' => 'Questionnaires',
+							  'action' => 'delete', $questionnaire['id']),
+						array('escape' => false,
+							  'confirm' => __('Êtes vous sûr de supprimer le questionnaire #{0}# ?', $questionnaire['title']))); ?>
+				</td>
+				<?php
+				}?>
 			</tr>
 		<?php
 		endforeach;
 	}
 	?>
+	</table>
 		</div>
 	</div>

@@ -14156,3 +14156,40 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2015-05-18 13:27:30 Error: Fatal Error (4): syntax error, unexpected 'endforeach' (T_ENDFOREACH) in [D:\wamp\www\pairs\src\Template\Modules\view.ctp, line 142]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-18 13:27:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'endforeach' (T_ENDFOREACH)
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 142)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-18 13:29:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`cake_pairs`.`answers_questions_questionnaires`, CONSTRAINT `fk_answers_q_qu` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaires` (`id`))
+Request URL: /pairs/questionnaires/delete/38
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1697): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1629): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Questionnaire), Object(ArrayObject))
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1634): Cake\Database\Connection->transactional(Object(Closure))
+#9 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(365): Cake\ORM\Table->delete(Object(App\Model\Entity\Questionnaire))
+#10 [internal function]: App\Controller\QuestionnairesController->delete('38')
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#14 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
