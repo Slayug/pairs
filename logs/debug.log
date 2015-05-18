@@ -7286,3 +7286,192 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2015-05-18 09:32:18 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1740]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1740
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:32:18 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1750]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+sprintf - [internal], line ??
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1750
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:32:35 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1740]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1740
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:32:35 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1750]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+sprintf - [internal], line ??
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1750
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:33:24 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1740]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1740
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:33:24 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1750]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+sprintf - [internal], line ??
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1750
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:34:50 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1740]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1740
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:34:50 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1750]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+sprintf - [internal], line ??
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1750
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:35:43 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1740]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1740
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:35:43 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1750]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+sprintf - [internal], line ??
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1750
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:35:47 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1740]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1740
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:35:47 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1750]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+sprintf - [internal], line ??
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1750
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:36:16 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1740]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1740
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:36:16 Notice: Notice (8): Array to string conversion in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php, line 1750]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+sprintf - [internal], line ??
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1750
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

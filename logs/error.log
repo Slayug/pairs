@@ -13530,3 +13530,215 @@ Stack Trace:
 #1 {main}
 
 
+2015-05-18 09:32:18 Warning: Warning (2): strtolower() expects parameter 1 to be string, array given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\BehaviorRegistry.php, line 203]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+strtolower - [internal], line ??
+Cake\ORM\BehaviorRegistry::hasFinder() - CORE\src\ORM\BehaviorRegistry.php, line 203
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1745
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:32:18 Error: [BadMethodCallException] Unknown finder method "Array"
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(882): Cake\ORM\Table->callFinder(Array, Object(Cake\ORM\Query), Array)
+#1 D:\wamp\www\pairs\src\Controller\ModulesController.php(452): Cake\ORM\Table->find(Array)
+#2 [internal function]: App\Controller\ModulesController->view('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-18 09:32:35 Warning: Warning (2): strtolower() expects parameter 1 to be string, array given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\BehaviorRegistry.php, line 203]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+strtolower - [internal], line ??
+Cake\ORM\BehaviorRegistry::hasFinder() - CORE\src\ORM\BehaviorRegistry.php, line 203
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1745
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:32:35 Error: [BadMethodCallException] Unknown finder method "Array"
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(882): Cake\ORM\Table->callFinder(Array, Object(Cake\ORM\Query), Array)
+#1 D:\wamp\www\pairs\src\Controller\ModulesController.php(452): Cake\ORM\Table->find(Array)
+#2 [internal function]: App\Controller\ModulesController->view('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-18 09:33:24 Warning: Warning (2): strtolower() expects parameter 1 to be string, array given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\BehaviorRegistry.php, line 203]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+strtolower - [internal], line ??
+Cake\ORM\BehaviorRegistry::hasFinder() - CORE\src\ORM\BehaviorRegistry.php, line 203
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1745
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:33:25 Error: [BadMethodCallException] Unknown finder method "Array"
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(882): Cake\ORM\Table->callFinder(Array, Object(Cake\ORM\Query), Array)
+#1 D:\wamp\www\pairs\src\Controller\ModulesController.php(452): Cake\ORM\Table->find(Array)
+#2 [internal function]: App\Controller\ModulesController->view('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-18 09:34:50 Warning: Warning (2): strtolower() expects parameter 1 to be string, array given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\BehaviorRegistry.php, line 203]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+strtolower - [internal], line ??
+Cake\ORM\BehaviorRegistry::hasFinder() - CORE\src\ORM\BehaviorRegistry.php, line 203
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1745
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:34:51 Error: [BadMethodCallException] Unknown finder method "Array"
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(882): Cake\ORM\Table->callFinder(Array, Object(Cake\ORM\Query), Array)
+#1 D:\wamp\www\pairs\src\Controller\ModulesController.php(452): Cake\ORM\Table->find(Array)
+#2 [internal function]: App\Controller\ModulesController->view('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-18 09:35:43 Warning: Warning (2): strtolower() expects parameter 1 to be string, array given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\BehaviorRegistry.php, line 203]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+strtolower - [internal], line ??
+Cake\ORM\BehaviorRegistry::hasFinder() - CORE\src\ORM\BehaviorRegistry.php, line 203
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1745
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:35:43 Error: [BadMethodCallException] Unknown finder method "Array"
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(882): Cake\ORM\Table->callFinder(Array, Object(Cake\ORM\Query), Array)
+#1 D:\wamp\www\pairs\src\Controller\ModulesController.php(452): Cake\ORM\Table->find(Array)
+#2 [internal function]: App\Controller\ModulesController->view('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-18 09:35:47 Warning: Warning (2): strtolower() expects parameter 1 to be string, array given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\BehaviorRegistry.php, line 203]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+strtolower - [internal], line ??
+Cake\ORM\BehaviorRegistry::hasFinder() - CORE\src\ORM\BehaviorRegistry.php, line 203
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1745
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:35:48 Error: [BadMethodCallException] Unknown finder method "Array"
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(882): Cake\ORM\Table->callFinder(Array, Object(Cake\ORM\Query), Array)
+#1 D:\wamp\www\pairs\src\Controller\ModulesController.php(452): Cake\ORM\Table->find(Array)
+#2 [internal function]: App\Controller\ModulesController->view('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-18 09:36:06 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [D:\wamp\www\pairs\src\Controller\ModulesController.php, line 452]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-18 09:36:06 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 452)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-18 09:36:16 Warning: Warning (2): strtolower() expects parameter 1 to be string, array given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\BehaviorRegistry.php, line 203]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+strtolower - [internal], line ??
+Cake\ORM\BehaviorRegistry::hasFinder() - CORE\src\ORM\BehaviorRegistry.php, line 203
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1745
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 882
+App\Controller\ModulesController::view() - APP/Controller\ModulesController.php, line 452
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-18 09:36:16 Error: [BadMethodCallException] Unknown finder method "Array"
+Request URL: /pairs/modules/view/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(882): Cake\ORM\Table->callFinder(Array, Object(Cake\ORM\Query), Array)
+#1 D:\wamp\www\pairs\src\Controller\ModulesController.php(452): Cake\ORM\Table->find(Array)
+#2 [internal function]: App\Controller\ModulesController->view('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ModulesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+

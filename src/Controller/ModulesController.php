@@ -463,7 +463,8 @@ class ModulesController extends AppController
 										]
 									
 									])
-									->andWhere(['mg.module_id' => $id]); // et on cible le module où on est
+									->andWhere(['mg.module_id' => $id])
+									->distinct(['id']); // et on cible le module où on est
 			$this->set('questionnaires', $queryQuestionnaires);
 		
 		}
