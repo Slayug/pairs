@@ -351,3 +351,12 @@ min-height:350px;
 	width:45%;
 }
 }
+.questionnaires_reply label{
+display:inline-block;
+}
+.questions_reply{
+margin-left:20px;
+}
+.answers_reply{
+	margin-left: 20px;
+}

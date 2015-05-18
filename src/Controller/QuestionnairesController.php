@@ -66,9 +66,9 @@ class QuestionnairesController extends AppController
 				}
 			}
 		}else if(in_array($action, ['view'])){
-			//un étudiant peut voir un module pour consulter son/ses groupes dedans
-			//on doit aussi tester si l'étudiant est bien dans ce module de même pour le professeur
-			if($role >= 2){
+			if($role == 2){
+				return true;
+			}else if($role == 3 && $canReply){
 				return true;
 			}
 		}else if(in_array($action, ['reply'])){
@@ -82,6 +82,62 @@ class QuestionnairesController extends AppController
 	}
 	
 	public function reply($idQuestionnaire = null){
+		$session = $this->request->session();
+		$currentUser = $session->read('Auth.User');
+		$idUser = $currentUser['id'];
+		
+		$groups = TableRegistry::get('Groups');
+		$groupsQuery = $groups->find()->hydrate(false)
+									->join([
+										'gu' => [ // on join les groupes associés à l'étudiant
+											'table' => 'groups_users',
+											'type' => 'INNER',
+											'conditions' => 'gu.group_id = groups.id',
+										],
+										'qg' => [ // on join les groupes de l'étudiant à celui des questionnaires
+											'table' => 'questionnaires_groups',
+											'type' => 'INNER',
+											'conditions' => 'qg.group_id = gu.group_id',
+										]
+									
+									])
+									->where(['qg.questionnaire_id' => $idQuestionnaire]) // où l'id questionnaire
+									->andWhere(['gu.user_id' => $idUser]); // et on cible où c'est l'user actuel
+		$users = TableRegistry::get('Users');
+		$usersQuery = $users->find()->hydrate(false)
+									->join([
+										'gu' =>[
+											'table' => 'groups_users',
+											'type' => 'INNER',
+											'conditions' => 'gu.user_id = users.id',
+										]
+									])
+									->where(['gu.group_id' => $groupsQuery->first()['id']]);
+									
+		//chargement des associations contenu par ce questionnaire
+		$associationTable = TableRegistry::get('answers_questions_questionnaires');
+		$associations = $associationTable->find()->where(['questionnaire_id' => $idQuestionnaire]);
+		//debug($associations->toArray());
+		
+		// on charge ensuite chaque questions et ses réponses.
+		$questions = array();
+		$associations = $associations->toArray();
+		$questionTable = TableRegistry::get('Questions');
+		$answerTable = TableRegistry::get('Answers');
+		for($p = 0; $p < count($associations); $p++){
+			$question = $questionTable->get($associations[$p]['question_id']);
+			$answers = $answerTable->get($associations[$p]['answer_id']);
+			if(!array_key_exists($question['id'], $questions)){
+				$questions[$question['id']]['answers'] = array();
+			}
+			//on met les infos de la question (id, content)
+			$questions[$question['id']]['content'] = $question['content'];
+			$questions[$question['id']]['id'] = $question['id']; // plus simple d'y accéder comme ceci que par un index pour un for.
+			// on place la question à la bonne position
+			$questions[$question['id']]['answers'][$associations[$p]['position']] = $answers;
+		}	
+		$this->set('users', $usersQuery->toArray());
+		$this->set('questions', $questions);
         $questionnaire = $this->Questionnaires->get($idQuestionnaire);
         $this->set('questionnaire', $questionnaire);
         $this->set('_serialize', ['questionnaire']);
@@ -127,6 +183,10 @@ class QuestionnairesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function view($id = null){
+		
+		$isOwner = $this->isOwner();
+	
+		$this->set('isOwner', $isOwner);
         $questionnaire = $this->Questionnaires->get($id);
         $this->set('questionnaire', $questionnaire);
         $this->set('_serialize', ['questionnaire']);

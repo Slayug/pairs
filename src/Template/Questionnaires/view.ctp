@@ -14,19 +14,25 @@
             <p><?= h($questionnaire->date_limit) ?></p>
         </div>
     </div>
-	<p><?php 
-		$currentDate = date('Y/m/d h:i:s', time());
-		echo $currentDate;
-	
-	if($currentDate < $questionnaire->date_limit){
+	<?php
+	if(!$isOwner){
 		?>
-			<div class="alert alert-warning" role="alert"><p><?= $this->Html->link(__('Répondre au questionnaire'), ['controller' => 'Questionnaires', 'action' => 'reply', $questionnaire->id]) ?>
-			</p></div>
-		<?php
-	}else{ // date dépassée pour répondre au questionnaire
-		?>
-			<div class="alert alert-danger" role="alert"><p>La date limite du questionnaire est dépassée.</p></div>
+		<p><?php 
+			$currentDate = date('Y/m/d h:i:s', time());
+			echo $currentDate;
+		
+		if($currentDate < $questionnaire->date_limit){
+			?>
+				<div class="alert alert-warning" role="alert"><p><?= $this->Html->link(__('Répondre au questionnaire'), ['controller' => 'Questionnaires', 'action' => 'reply', $questionnaire->id]) ?>
+				</p></div>
+			<?php
+		}else{ // date dépassée pour répondre au questionnaire
+			?>
+				<div class="alert alert-danger" role="alert"><p>La date limite du questionnaire est dépassée.</p></div>
+			<?php
+		}
+		?></p>
 		<?php
 	}
-	?></p>
+	?>
 </div>
