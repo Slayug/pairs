@@ -57,6 +57,22 @@
 			?></p>
 			<?php
 		}
+	}else{
+		if (!empty($usersValidated)){
+			?>
+			<h3>Membres ayant validés le questionnaire.</h3>
+			<table style="width:375px;">
+			<?php
+			for($i = 0; $i < count($usersValidated); $i++){?>
+				<tr>
+					<td class="td_link"><?= h($usersValidated[$i]['first_name']) ?></td>
+					<td class="td_link"><?= h($usersValidated[$i]['last_name']) ?></td>
+				</tr>
+			<?php
+			} ?>
+			</table>
+			<?php
+		}
 	}
 	?>
 </div>

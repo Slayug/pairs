@@ -310,24 +310,42 @@ class QuestionnairesController extends AppController
 		$currentUser = $session->read('Auth.User');
 		$idUser = $currentUser['id'];
 		$isOwner = $this->isOwner();
-		$hasPartialAnswer = false;
-		$isValidated = false;
-		
-		$answersTable = TableRegistry::get('answers_questionnaires_users_partials');
-		$answersPartials = $answersTable->find()->where(['questionnaire_id' => $id,
-															'user_id' => $idUser]);
-		if($answersPartials->count()){
-			$hasPartialAnswer = true;
-		}else{
-			$answersTable = TableRegistry::get('answers_questionnaires_users');
-			$answers = $answersTable->find()->where(['questionnaire_id' => $id,
-															'user_id' => $idUser]);
-			if($answers->count()){
-				$isValidated = true;
+		if(!$isOwner){
+			$hasPartialAnswer = false;
+			$isValidated = false;
+			
+			$answersTable = TableRegistry::get('answers_questionnaires_users_partials');
+			$answersPartials = $answersTable->find()->where(['questionnaire_id' => $id,
+																'user_id' => $idUser]);
+			if($answersPartials->count()){
+				$hasPartialAnswer = true;
+			}else{
+				$answersTable = TableRegistry::get('answers_questionnaires_users');
+				$answers = $answersTable->find()->where(['questionnaire_id' => $id,
+																'user_id' => $idUser]);
+				if($answers->count()){
+					$isValidated = true;
+				}
 			}
+			$this->set('isValidated', $isValidated);
+			$this->set('hasPartialAnswer', $hasPartialAnswer);
+		}else{
+			$users = TableRegistry::get('Users');
+			$usersQuery = $users->find()
+									->hydrate(false)
+									->join([
+										'aqu' => [ // on join associations avec les réponses validées
+											'table' => 'answers_questionnaires_users',
+											'type' => 'INNER',
+											'conditions' => 'aqu.user_id = users.id',
+										]
+									
+									])
+									->where(['aqu.questionnaire_id' => $id]) // et on cible le questionnaire où on est
+									->distinct(['user_id']);
+				//$this->request->data['groups'] = $usersQuery->toArray();
+				$this->set('usersValidated', $usersQuery->toArray());
 		}
-		$this->set('isValidated', $isValidated);
-		$this->set('hasPartialAnswer', $hasPartialAnswer);
 		$this->set('isOwner', $isOwner);
         $questionnaire = $this->Questionnaires->get($id);
         $this->set('questionnaire', $questionnaire);
