@@ -190,6 +190,19 @@ function isVisibleAfterScroll(elem)
 	}
 }
 function submitQuestionnaireAdd(){
+	$("#error_questionnaire_add").empty();
+	var months = {Jan:'01',Fev:'02',Mar:'03',Avr:'04',Mai:'05',Jui: '06',Jul: '07',Aou: '08',Sep: '09',Oct: '10',Nov: '11',Dec: '12'};
+	var dateLimit = $('#date_limit').val();
+	var dateCreation = $('#date_creation').val();
+	dateCreation = new Date(dateCreation.substr(7, 4), months[dateCreation.substr(3, 3)], dateCreation.substr(0, 2), dateCreation.substr(14, 2), dateCreation.substr(17, 2));
+	dateLimit = new Date(dateLimit.substr(7, 4), months[dateLimit.substr(3, 3)], dateLimit.substr(0, 2), dateLimit.substr(14, 2), dateLimit.substr(17, 2));
+	
+	if(dateCreation >= dateLimit){
+		$("#error_questionnaire_add").append('<p class="message_error">La date de création doit être strictement inférieur à celle limite.</p>');
+		return;
+	}
+	
+	
 	for(var key of questions_.keys()){
 		var input = '<div class="input select"><input type="hidden" name="'+key+'#-#'+questions_.get(key+'')+'[]" value><select id="question-'+key+'" name="'+key+'#-#'+questions_.get(key+'')+'[]" id="'+key+'" multiple="multiple">';
 		$('#question-'+key).find('li').each(function(){

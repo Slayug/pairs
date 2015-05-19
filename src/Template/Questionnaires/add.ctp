@@ -3,6 +3,8 @@
     <?= $this->Form->create($questionnaire, ['id' => 'questionnaire_add']); ?>
     <fieldset>
         <legend><?= __('Ajouter un Questionnaire') ?></legend>
+		<div id="error_questionnaire_add">
+		</div>
         <?php
             echo $this->Form->input('title', ['label' => 'Titre:']);
             echo $this->Form->input('description', ['label' => 'Description:']);
