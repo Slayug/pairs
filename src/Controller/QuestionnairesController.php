@@ -104,8 +104,7 @@ class QuestionnairesController extends AppController
 			return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);			
 		}else if($currentDate < $dateCreation){
 			$this->Flash->error('Vous ne pouvez pas encore accéder à ce questionnaire.');
-			return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);		
-		
+			return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);
 		}
 		
 		$answersTable = TableRegistry::get('answers_questionnaires_users');
@@ -160,7 +159,7 @@ class QuestionnairesController extends AppController
 					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);
 				}
 				
-			}else{	
+			}else{
 				$transaction->begin();
 				$associationsPartials = TableRegistry::get('answers_questionnaires_users_partials');
 				$associations = TableRegistry::get('answers_questionnaires_users');
@@ -170,21 +169,30 @@ class QuestionnairesController extends AppController
 						$idForWho = $keySplitted[0];
 						$idQuestion = $keySplitted[1];
 						$idAnswer = $value;
+						
+						$success = $success AND $associationsPartials->deleteAll(['questionnaire_id' => $idQuestionnaire,
+																				'user_id' => $idUser]);
+																				
+						$association = $associations->newEntity();
+						$association->question_id = $idQuestion;
+						$association->questionnaire_id = $idQuestionnaire;
+						$association->user_id = $idUser;
+						$association->for_who = $idForWho;
+						$association->answer_id = $idAnswer;
+						$success = $success AND $associations->save($association);
 					}
 				}
-				debug();
 				//sauvegarder les réponses
 				if($success){
 					$transaction->commit();
-					$this->Flash->success('Vos réponses ont bien étées sauvegarder.');
+					$this->Flash->success('Le questionnaire a bien été validé !');
 					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);				
 				}else{
 					$transaction->rollback();
 					$this->Flash->error('Une erreur s\'est produite, merci de réessayer.');
 					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);
 				}
-			}
-		
+			}		
 		}
 		
 		$groups = TableRegistry::get('Groups');
