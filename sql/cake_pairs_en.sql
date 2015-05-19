@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 19 Mai 2015 à 14:54
+-- Généré le :  Mar 19 Mai 2015 à 15:06
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `answers_questionnaires_users` (
   `answer_id` int(10) unsigned NOT NULL,
   `questionnaire_id` int(10) unsigned NOT NULL,
   `for_who` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`question_id`,`user_id`,`answer_id`,`questionnaire_id`,`for_who`),
+  PRIMARY KEY (`question_id`,`user_id`,`questionnaire_id`,`for_who`),
   KEY `answers_users_user` (`user_id`),
   KEY `answers_users_reponse` (`answer_id`),
   KEY `answers_users_questionnaire` (`questionnaire_id`),
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `answers_questionnaires_users_partials` (
   `answer_id` int(10) unsigned NOT NULL,
   `questionnaire_id` int(10) unsigned NOT NULL,
   `for_who` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`question_id`,`user_id`,`answer_id`,`questionnaire_id`,`for_who`),
+  PRIMARY KEY (`question_id`,`user_id`,`questionnaire_id`,`for_who`),
   KEY `answers_users_user` (`user_id`),
   KEY `answers_users_reponse` (`answer_id`),
   KEY `answers_users_questionnaire` (`questionnaire_id`),

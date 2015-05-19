@@ -83,7 +83,7 @@ class QuestionnairesController extends AppController
 	
 	/**
 	*	Lors d'une requête PUT
-	*	tableau key: idUser - idQuestion
+	*	tableau key: idUser(for_who) - idQuestion
 	*	tableau value: idAnswer
 	*	exemple:
 	*	1-5 => 6,
@@ -96,13 +96,39 @@ class QuestionnairesController extends AppController
 		
         $questionnaire = $this->Questionnaires->newEntity();
         if ($this->request->is('put')){
-			$questions = array();
 			debug($this->request->data);
 			if(array_key_exists('save', $this->request->data)){
 				//juste sauvegarder les réponses présentes
-				debug('save');
+				$assocations = TableRegistry::get('answers_questionnaires_users_partials');
+				foreach($this->request->data as $key => $value){
+					if(strstr('-', $key){
+						$keySplitted = explode('-', $key);
+						$idForWho = $keySplitted[0];
+						$idQuestion = $keySplitted[1];
+						$idAnswer = $value;
+						$associationTuple = $assocations->find()->where(['question_id' => $idQuestion,
+																		'questionnaire_id' => $idQuestionnaire,
+																		'id_user' => $idUser,
+																		'for_who' => $idForWho]);
+						if($associationTuple->first() == null){
+						}
+						
+					}
+				}
 			}else{
-				debug('valider');
+				$assocationsPartials = TableRegistry::get('answers_questionnaires_users_partials');
+				$assocations = TableRegistry::get('answers_questionnaires_users_partials');
+				foreach($this->request->data as $key => $value){
+					if(strstr('-', $key){
+						$keySplitted = explode('-', $key);
+						$idUser = $keySplitted[0];
+						$idQuestion = $keySplitted[1];
+						$idAnswer = $value;
+						
+						
+					}
+				}
+				
 				//sauvegarder les réponses
 			}
 		
@@ -191,8 +217,7 @@ class QuestionnairesController extends AppController
      *
      * @return void
      */
-    public function index()
-    {
+    public function index(){
         $this->set('questionnaires', $this->paginate($this->Questionnaires));
         $this->set('_serialize', ['questionnaires']);
     }
