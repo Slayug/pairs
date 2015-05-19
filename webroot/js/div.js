@@ -204,6 +204,6 @@ function submitQuestionnaireAdd(){
 }
 function saveSubmit(){
 	var optionSave = '<input type="hidden" id="save" name="save" value></input>';
-	$('#questionnaires_reply').append(optionSave);
+	$('#save-or-not').append(optionSave);
 	//$('#questionnaires_reply').submit();
 }

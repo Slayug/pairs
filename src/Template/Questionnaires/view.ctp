@@ -14,6 +14,8 @@
             <p><?= h($questionnaire->date_limit) ?></p>
         </div>
     </div>
+	
+	<?= $this->Flash->render() ?>
 	<?php
 	if(!$isOwner){
 		?>

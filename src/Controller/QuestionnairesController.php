@@ -97,29 +97,51 @@ class QuestionnairesController extends AppController
         $questionnaire = $this->Questionnaires->newEntity();
         if ($this->request->is('put')){
 			debug($this->request->data);
+			
+			$success = true;
+			$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
+			
 			if(array_key_exists('save', $this->request->data)){
+				$transaction->begin();
 				//juste sauvegarder les réponses présentes
-				$assocations = TableRegistry::get('answers_questionnaires_users_partials');
+				$associations = TableRegistry::get('answers_questionnaires_users_partials');
 				foreach($this->request->data as $key => $value){
-					if(strstr('-', $key){
+					if(strstr($key, '-')){
 						$keySplitted = explode('-', $key);
 						$idForWho = $keySplitted[0];
 						$idQuestion = $keySplitted[1];
 						$idAnswer = $value;
-						$associationTuple = $assocations->find()->where(['question_id' => $idQuestion,
+						/*$associationTuple = $associations->find()->where(['question_id' => $idQuestion,
 																		'questionnaire_id' => $idQuestionnaire,
 																		'id_user' => $idUser,
 																		'for_who' => $idForWho]);
-						if($associationTuple->first() == null){
-						}
-						
+																		*/
+						$association = $associations->newEntity();
+						$association->question_id = $idQuestion;
+						$association->questionnaire_id = $idQuestionnaire;
+						$association->user_id = $idUser;
+						$association->for_who = $idForWho;
+						$association->answer_id = $idAnswer;
+						debug($association);
+						$success = $success AND $associations->save($association);
 					}
 				}
+				if($success){
+					$transaction->commit();
+					$this->Flash->success('Vos réponses ont bien étées sauvegarder.');
+					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);				
+				}else{
+					$transaction->rollback();
+					$this->Flash->error('Une erreur s\'est produite, merci de réessayer.');
+					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);
+				}
+				
 			}else{
-				$assocationsPartials = TableRegistry::get('answers_questionnaires_users_partials');
-				$assocations = TableRegistry::get('answers_questionnaires_users_partials');
+				$transaction->begin();
+				$associationsPartials = TableRegistry::get('answers_questionnaires_users_partials');
+				$associations = TableRegistry::get('answers_questionnaires_users');
 				foreach($this->request->data as $key => $value){
-					if(strstr('-', $key){
+					if(strstr($key, '-')){
 						$keySplitted = explode('-', $key);
 						$idUser = $keySplitted[0];
 						$idQuestion = $keySplitted[1];
@@ -318,7 +340,6 @@ class QuestionnairesController extends AppController
 					$questionTable = TableRegistry::get('Questions');
 					$questionTuple = $questionTable->find()->where(['Questions.id' => $idQuestion]);
 					if($questionTuple->first() == null){
-						debug('INSERT');
 						$questionTuple = $questionTable->newEntity();
 						$questionTuple->content = $question;
 						$questionTuple->type = 0;

@@ -1,7 +1,6 @@
 <div class="questionnaires view large-12 medium-12 columns">
 	
-    
-	<?= $this->Flash->render() ?>
+	
     <?= $this->Form->create($questionnaire, ['id' => 'questionnaire_reply']); ?>
 		<fieldset>
 		<legend><h2><?= h($questionnaire->title) ?></h2></legend>
@@ -27,6 +26,7 @@
 			</div>
 			</fieldset>
 		<?php endforeach; ?>
+		<div id="save-or-not"></div>
 		</fieldset>
 		<button type="submit">Valider</button>
 		<button onclick="saveSubmit()" type="submit">Sauvegarder & Continuer</button>
