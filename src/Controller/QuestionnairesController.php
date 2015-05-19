@@ -358,15 +358,52 @@ class QuestionnairesController extends AppController
      * @return void Redirects to index.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
+    public function delete($id = null){
+	
+		
+		$success = true;
+		$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
+		$transaction->begin();
+	
+		//supprimer les associations dans answers_questions_questionnaires
+		$associations = TableRegistry::get('answers_questions_questionnaires');
+		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		
+		//supprimer les associations dans answers_questionnaires_users
+		$associations = TableRegistry::get('answers_questionnaires_users_partials');
+		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		
+		//supprimer les associations dans questionnaires_groups
+		$associations = TableRegistry::get('questionnaires_groups');
+		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		
+		//supprimer les associations dans answers_questionnaires_users
+		$associations = TableRegistry::get('answers_questionnaires_users');
+		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		
+		//supprimer l'association avec le proprio du questionnaire
+		$associations = TableRegistry::get('questionnaires_owners');
+		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		
+		//supprimer le questionnaire dans questionnaires
+		$associations = TableRegistry::get('Questionnaires');
+		$success = $success AND $associations->deleteAll(['id' => $id]);
+		
+		if($success){
+			$transaction->commit();
+			$this->Flash->success('Le questionnaire a bien été supprimé.');
+		}else{
+			$transaction->rollback();
+			$this->Flash->success('Une erreur s\'est produite lors de la suppression du questionnaire.');		
+		}
+		$this->redirect($this->referer());
+        /*$this->request->allowMethod(['post', 'delete']);
         $questionnaire = $this->Questionnaires->get($id);
         if ($this->Questionnaires->delete($questionnaire)) {
             $this->Flash->success('The questionnaire has been deleted.');
         } else {
             $this->Flash->error('The questionnaire could not be deleted. Please, try again.');
         }
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect(['action' => 'index']);*/
     }
 }

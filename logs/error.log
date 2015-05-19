@@ -14193,3 +14193,59 @@ Stack Trace:
 #15 {main}
 
 
+2015-05-19 10:13:34 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 La table 'cake_pairs.answers_questionnaires_users' n'existe pas
+Request URL: /pairs/questionnaires/delete/39
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'answers_questio...', Array, Object(Cake\Database\Schema\Table))
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(65): Cake\Database\Schema\Collection->describe('answers_questio...', Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(422): Cake\Database\Schema\CachedCollection->describe('answers_questio...')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(140): Cake\ORM\Table->schema()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1238): Cake\ORM\Table->query()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(376): Cake\ORM\Table->deleteAll(Array)
+#8 [internal function]: App\Controller\QuestionnairesController->delete('39')
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#12 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2015-05-19 10:14:08 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`cake_pairs`.`questionnaires_owners`, CONSTRAINT `questionnaires_owners_quest` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaires` (`id`))
+Request URL: /pairs/questionnaires/delete/39
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1241): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(379): Cake\ORM\Table->deleteAll(Array)
+#7 [internal function]: App\Controller\QuestionnairesController->delete('39')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-19 10:16:34 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 La table 'cake_pairs.answers_questions_questionnaires_partials' n'existe pas
+Request URL: /pairs/questionnaires/delete/38
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'answers_questio...', Array, Object(Cake\Database\Schema\Table))
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(65): Cake\Database\Schema\Collection->describe('answers_questio...', Array)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(422): Cake\Database\Schema\CachedCollection->describe('answers_questio...')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(140): Cake\ORM\Table->schema()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1238): Cake\ORM\Table->query()
+#7 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(374): Cake\ORM\Table->deleteAll(Array)
+#8 [internal function]: App\Controller\QuestionnairesController->delete('38')
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#12 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
