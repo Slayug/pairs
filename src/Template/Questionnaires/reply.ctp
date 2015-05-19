@@ -1,10 +1,10 @@
-<div class="questionnaires questionnaires_reply view large-12 medium-12 columns">
+<div class="questionnaires view large-12 medium-12 columns">
 	
-    <h2><?= h($questionnaire->title) ?></h2>
+    
 	<?= $this->Flash->render() ?>
-    <?= $this->Form->create($questionnaire, ['id' => 'questionnaire_add']); ?>
-    <form method="post" action="pairs/questionnaires/reply/<?php echo h($questionnaire->id); ?>">
+    <?= $this->Form->create($questionnaire, ['id' => 'questionnaire_reply']); ?>
 		<fieldset>
+		<legend><h2><?= h($questionnaire->title) ?></h2></legend>
 		<?php
 		foreach ($users as $user): ?>
 			<h3>Évaluation pour l'étudiant(e): <?php echo h(ucfirst($user['first_name']) . ' ' . ucfirst($user['last_name'])); ?></h3>
@@ -27,8 +27,8 @@
 			</div>
 			</fieldset>
 		<?php endforeach; ?>
-		<button type="submit">Valider</button>
-		<button type="submit">Sauvegarder & Valider plus tard</button>
 		</fieldset>
-	</form>
+		<button type="submit">Valider</button>
+		<button onclick="saveSubmit()" type="submit">Sauvegarder & Continuer</button>
+    <?= $this->Form->end() ?>
 </div>

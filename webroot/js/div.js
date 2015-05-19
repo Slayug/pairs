@@ -202,3 +202,8 @@ function submitQuestionnaireAdd(){
 	}
 	document.getElementById('questionnaire_add').submit();
 }
+function saveSubmit(){
+	var optionSave = '<input type="hidden" id="save" name="save" value></input>';
+	$('#questionnaires_reply').append(optionSave);
+	//$('#questionnaires_reply').submit();
+}

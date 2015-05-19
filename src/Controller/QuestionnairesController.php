@@ -86,6 +86,20 @@ class QuestionnairesController extends AppController
 		$currentUser = $session->read('Auth.User');
 		$idUser = $currentUser['id'];
 		
+        $questionnaire = $this->Questionnaires->newEntity();
+		
+        if ($this->request->is('put')){
+			debug($this->request->data);
+			if(array_key_exists('save', $this->request->data)){
+				//juste sauvegarder les réponses présentes
+				debug('save');
+			}else{
+				debug('valider');
+				//sauvegarder les réponses
+			}
+		
+		}
+		
 		$groups = TableRegistry::get('Groups');
 		$groupsQuery = $groups->find()->hydrate(false)
 									->join([
@@ -259,6 +273,10 @@ class QuestionnairesController extends AppController
 			
 			foreach($this->request->data as $key => $value){
 				if(strstr($key, '#-#')){
+					/**
+					*	Question:
+					*	idQuestion#-#question
+					*/
 					$keySplitted = explode('#-#', $key);
 					$idQuestion = $keySplitted[0];
 					$question = str_replace('_', ' ', $keySplitted[1]);
@@ -278,6 +296,10 @@ class QuestionnairesController extends AppController
 					}
 					for($i = 1; $i < count($value); $i++){
 						$valueSplitted = explode('#-#', $value[$i]);
+						/**
+						*	Answer:
+						*	idAnswer#-#answer
+						*/
 						$idAnswer = $valueSplitted[0];
 						$answer = $valueSplitted[1];
 						//on test si la réponse existe déjà en BDD
