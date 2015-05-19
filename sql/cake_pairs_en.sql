@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 19 Mai 2015 à 12:17
+-- Généré le :  Mar 19 Mai 2015 à 14:54
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -56,10 +56,12 @@ CREATE TABLE IF NOT EXISTS `answers_questionnaires_users` (
   `user_id` int(10) unsigned NOT NULL,
   `answer_id` int(10) unsigned NOT NULL,
   `questionnaire_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`question_id`,`user_id`,`answer_id`,`questionnaire_id`),
+  `for_who` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`question_id`,`user_id`,`answer_id`,`questionnaire_id`,`for_who`),
   KEY `answers_users_user` (`user_id`),
   KEY `answers_users_reponse` (`answer_id`),
-  KEY `answers_users_questionnaire` (`questionnaire_id`)
+  KEY `answers_users_questionnaire` (`questionnaire_id`),
+  KEY `fk_q_u_f` (`for_who`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -73,10 +75,12 @@ CREATE TABLE IF NOT EXISTS `answers_questionnaires_users_partials` (
   `user_id` int(10) unsigned NOT NULL,
   `answer_id` int(10) unsigned NOT NULL,
   `questionnaire_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`question_id`,`user_id`,`answer_id`,`questionnaire_id`),
+  `for_who` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`question_id`,`user_id`,`answer_id`,`questionnaire_id`,`for_who`),
   KEY `answers_users_user` (`user_id`),
   KEY `answers_users_reponse` (`answer_id`),
-  KEY `answers_users_questionnaire` (`questionnaire_id`)
+  KEY `answers_users_questionnaire` (`questionnaire_id`),
+  KEY `fk_q_u_p_f` (`for_who`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -493,7 +497,8 @@ ALTER TABLE `answers_questionnaires_users`
   ADD CONSTRAINT `answers_questionnaires_users_ibfk_1` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`),
   ADD CONSTRAINT `answers_questionnaires_users_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `answers_questionnaires_users_ibfk_3` FOREIGN KEY (`answer_id`) REFERENCES `answers` (`id`),
-  ADD CONSTRAINT `answers_questionnaires_users_ibfk_4` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaires` (`id`);
+  ADD CONSTRAINT `answers_questionnaires_users_ibfk_4` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaires` (`id`),
+  ADD CONSTRAINT `fk_q_u_f` FOREIGN KEY (`for_who`) REFERENCES `users` (`id`);
 
 --
 -- Contraintes pour la table `answers_questionnaires_users_partials`
@@ -502,7 +507,8 @@ ALTER TABLE `answers_questionnaires_users_partials`
   ADD CONSTRAINT `answers_questionnaires_users_partials_ibfk_1` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`),
   ADD CONSTRAINT `answers_questionnaires_users_partials_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `answers_questionnaires_users_partials_ibfk_3` FOREIGN KEY (`answer_id`) REFERENCES `answers` (`id`),
-  ADD CONSTRAINT `answers_questionnaires_users_partials_ibfk_4` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaires` (`id`);
+  ADD CONSTRAINT `answers_questionnaires_users_partials_ibfk_4` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaires` (`id`),
+  ADD CONSTRAINT `fk_q_u_p_f` FOREIGN KEY (`for_who`) REFERENCES `users` (`id`);
 
 --
 -- Contraintes pour la table `answers_questions_questionnaires`

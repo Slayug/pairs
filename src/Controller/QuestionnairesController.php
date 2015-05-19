@@ -81,14 +81,22 @@ class QuestionnairesController extends AppController
 		
 	}
 	
+	/**
+	*	Lors d'une requête PUT
+	*	tableau key: idUser - idQuestion
+	*	tableau value: idAnswer
+	*	exemple:
+	*	1-5 => 6,
+	*	25-5 => 5
+	*/
 	public function reply($idQuestionnaire = null){
 		$session = $this->request->session();
 		$currentUser = $session->read('Auth.User');
 		$idUser = $currentUser['id'];
 		
         $questionnaire = $this->Questionnaires->newEntity();
-		
         if ($this->request->is('put')){
+			$questions = array();
 			debug($this->request->data);
 			if(array_key_exists('save', $this->request->data)){
 				//juste sauvegarder les réponses présentes

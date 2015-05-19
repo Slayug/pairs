@@ -20,7 +20,7 @@
 					<input	type="radio"
 							name="<?php echo h($user['id'] . '-' . $question['id']); ?>"
 							id="<?php echo h($user['id'] . '-' . $question['id'] . '-' . $answer['id']); ?>"
-							value="<?php echo h($user['id'] . '-' . $question['id'] . '-' . $answer['id']); ?>"></input><br/>
+							value="<?php echo h($answer['id']); ?>"></input><br/>
 				<?php endforeach; ?>
 				</div>
 			<?php endforeach; ?>
