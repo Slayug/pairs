@@ -361,3 +361,9 @@ margin-left:15px;
 .answers_reply{
 	margin-left: 22px;
 }
+#date_creation{
+	width:155px;
+}
+#date_limit{
+	width:155px;
+}
