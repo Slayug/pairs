@@ -48,7 +48,7 @@ class AppController extends Controller
                     ]
                 ]
             ],
-			'authError' => 'Vous ne pouvez pas accèder à ce contenu.',
+			'authError' => 'Vous ne pouvez pas accéder à ce contenu.',
             'loginAction' => [
                 'controller' => 'Users',
                 'action' => 'login'
@@ -59,7 +59,7 @@ class AppController extends Controller
         // Autorise l'action display pour que notre controller de pages
         // continue de fonctionner.
         $this->Auth->allow(['display']);
-		$this->Auth->AuthError = "Vous ne pouvez pas accèder à cette page.";
+		$this->Auth->AuthError = "Vous ne pouvez pas accéder à cette page.";
 		
 		
     }

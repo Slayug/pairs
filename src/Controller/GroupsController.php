@@ -168,7 +168,7 @@ class GroupsController extends AppController
 			$user->role_id = 3;
 			$user->password = null;
 			if($this->Groups->Users->save($user)){
-                $this->Flash->success('L\'étudiant a été ajouté avec succès.');
+                $this->Flash->success('L\'étudiant(e) a été ajouté avec succès.');
 				return $this->redirect(['controller' => 'Groups', 'action' => 'view', $idGroup]);
 			}
 			// l'utilisateur existe déjà

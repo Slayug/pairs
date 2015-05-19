@@ -83,7 +83,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 							echo $this->Html->link(__('Panel'), ['controller' => 'Users', 'action' => 'panel']);
 							echo '</li>';
 							echo '<li>';
-							echo $this->Html->link(__('Deconnexion'), ['controller' => 'Users', 'action' => 'logout']);
+							echo $this->Html->link(__('Déconnexion'), ['controller' => 'Users', 'action' => 'logout']);
 							echo '</li>';					
 						}else{
 							if(strstr($current_page, 'login')){

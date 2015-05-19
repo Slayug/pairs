@@ -50,9 +50,9 @@
     <?= $this->Form->create($group, ['action' => 'addUser']); ?>
 		<fieldset>
 			<legend><?= __('Ajouter un étudiant') ?></legend>
-			<?php			
-				echo $this->Form->input('first_name', ['label' => 'Prénom:']);
+			<?php
 				echo $this->Form->input('last_name', ['label' => 'Nom:']);
+				echo $this->Form->input('first_name', ['label' => 'Prénom:']);
 			?>
 		</fieldset>
 		<?= $this->Form->button(__('Ajouter')) ?>

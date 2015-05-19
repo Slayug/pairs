@@ -43,7 +43,7 @@
 					<?php
 						if($hasPartialAnswer){
 							?>
-								<p>Vous avez commencé(e) ce formulaire, vous devez le valider avec toutes les réponses avant la <strong>date limite !</strong></p>
+								<p>Vous avez commencé ce formulaire, vous devez le valider avec toutes les réponses avant la <strong>date limite !</strong></p>
 							<?php
 						}
 					?>
@@ -65,8 +65,8 @@
 			<?php
 			for($i = 0; $i < count($usersValidated); $i++){?>
 				<tr>
-					<td class="td_link"><?= h($usersValidated[$i]['first_name']) ?></td>
-					<td class="td_link"><?= h($usersValidated[$i]['last_name']) ?></td>
+					<td class="td_link"><?= h(ucfirst($usersValidated[$i]['last_name'])) ?></td>
+					<td class="td_link"><?= h(ucfirst($usersValidated[$i]['first_name'])) ?></td>
 				</tr>
 			<?php
 			} ?>
