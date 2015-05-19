@@ -14377,3 +14377,87 @@ Stack Trace:
 #10 {main}
 
 
+2015-05-19 13:37:09 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 213]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-19 13:37:09 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /pairs/questionnaires/view/40
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 213)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-19 13:37:40 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 212]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-19 13:37:41 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /pairs/questionnaires/view/40
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 212)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-19 13:37:48 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 267]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-19 13:37:48 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /pairs/questionnaires/view/40
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 267)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-19 13:38:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'id_user' inconnu dans where clause
+Request URL: /pairs/questionnaires/view/40
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(268): Cake\ORM\Query->count()
+#7 [internal function]: App\Controller\QuestionnairesController->view('40')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2015-05-19 13:38:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'id_user' inconnu dans where clause
+Request URL: /pairs/questionnaires/view/40
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(515): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(272): Cake\ORM\Query->count()
+#7 [internal function]: App\Controller\QuestionnairesController->view('40')
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#11 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+

@@ -25,8 +25,19 @@
 		
 		if($currentDate < $questionnaire->date_limit){
 			?>
-				<div class="alert alert-warning" role="alert"><p><?= $this->Html->link(__('Répondre au questionnaire'), ['controller' => 'Questionnaires', 'action' => 'reply', $questionnaire->id]) ?>
-				</p></div>
+				<div class="alert alert-warning"
+					role="alert">
+				<p><?= $this->Html->link(__('Répondre au questionnaire'),
+										['controller' => 'Questionnaires', 'action' => 'reply', $questionnaire->id]) ?>
+				</p>
+				<?php
+					if($hasPartialAnswer){
+						?>
+							<p>Vous avez commencez ce formulaire, vous devez le valider avec toutes les réponses avant la date limite !</p>
+						<?php
+					}
+				?>
+				</div>
 			<?php
 		}else{ // date dépassée pour répondre au questionnaire
 			?>

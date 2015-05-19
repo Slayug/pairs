@@ -19,7 +19,15 @@
 					<input	type="radio"
 							name="<?php echo h($user['id'] . '-' . $question['id']); ?>"
 							id="<?php echo h($user['id'] . '-' . $question['id'] . '-' . $answer['id']); ?>"
-							value="<?php echo h($answer['id']); ?>"></input><br/>
+							value="<?php echo h($answer['id']); ?>"
+							<?php
+								if(array_key_exists($user['id'] . '-' . $question['id'], $answersPartials)){
+									if($answersPartials[$user['id'] . '-' . $question['id']] == $answer['id']){
+										echo 'checked="checked"';
+									}
+								}
+							?>
+							></input><br/>
 				<?php endforeach; ?>
 				</div>
 			<?php endforeach; ?>

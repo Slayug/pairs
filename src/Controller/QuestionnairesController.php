@@ -113,7 +113,7 @@ class QuestionnairesController extends AppController
 						$idAnswer = $value;
 						/*$associationTuple = $associations->find()->where(['question_id' => $idQuestion,
 																		'questionnaire_id' => $idQuestionnaire,
-																		'id_user' => $idUser,
+																		'user_id' => $idUser,
 																		'for_who' => $idForWho]);
 																		*/
 						$association = $associations->newEntity();
@@ -143,7 +143,7 @@ class QuestionnairesController extends AppController
 				foreach($this->request->data as $key => $value){
 					if(strstr($key, '-')){
 						$keySplitted = explode('-', $key);
-						$idUser = $keySplitted[0];
+						$idForWho = $keySplitted[0];
 						$idQuestion = $keySplitted[1];
 						$idAnswer = $value;
 						
@@ -205,15 +205,31 @@ class QuestionnairesController extends AppController
 			$questions[$question['id']]['id'] = $question['id']; // plus simple d'y accéder comme ceci que par un index pour un for.
 			// on place la question à la bonne position
 			$questions[$question['id']]['answers'][$associations[$p]['position']] = $answers;
-		}	
+		}
+		
+		//chargement des réponses partielles pour l'user
+		$answersTable = TableRegistry::get('answers_questionnaires_users_partials');
+		$answersPartialsQuery = $answersTable->find()->where(['questionnaire_id' => $idQuestionnaire,
+															'user_id' => $idUser]);
+		$answersPartials = array();
+		$queryArray = $answersPartialsQuery->toArray();
+		for($i = 0; $i < count($queryArray); $i++){
+			$answersPartials[$queryArray[$i]['for_who'] . '-' . $queryArray[$i]['question_id']] = $queryArray[$i]['answer_id'];
+		}		
+		
 		$this->set('users', $usersQuery->toArray());
 		$this->set('questions', $questions);
+		$this->set('answersPartials', $answersPartials);
         $questionnaire = $this->Questionnaires->get($idQuestionnaire);
         $this->set('questionnaire', $questionnaire);
         $this->set('_serialize', ['questionnaire']);
 	}
 	
 	private function isOwner(){
+	
+		$session = $this->request->session();
+		$currentUser = $session->read('Auth.User');
+		$idUser = $currentUser['id'];
 		$questionnaires = TableRegistry::get('Questionnaires');
 		$queryOwner = $questionnaires->find()->matching('Owners',
 			function($q){
@@ -252,9 +268,20 @@ class QuestionnairesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function view($id = null){
-		
+		$session = $this->request->session();
+		$currentUser = $session->read('Auth.User');
+		$idUser = $currentUser['id'];
 		$isOwner = $this->isOwner();
+		$hasPartialAnswer = false;
+		
+		$answersTable = TableRegistry::get('answers_questionnaires_users_partials');
+		$answersPartials = $answersTable->find()->where(['questionnaire_id' => $id,
+															'user_id' => $idUser]);
+		if($answersPartials->count()){
+			$hasPartialAnswer = true;
+		}		
 	
+		$this->set('hasPartialAnswer', $hasPartialAnswer);
 		$this->set('isOwner', $isOwner);
         $questionnaire = $this->Questionnaires->get($id);
         $this->set('questionnaire', $questionnaire);

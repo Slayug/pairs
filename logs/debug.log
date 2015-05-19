@@ -8206,3 +8206,344 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2015-05-19 13:38:00 Notice: Notice (8): Undefined variable: idQuestionnaire in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 266]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 266
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:38:00 Notice: Notice (8): Undefined variable: idUser in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 267]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 267
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:38:27 Notice: Notice (8): Undefined variable: idUser in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 271]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:38:48 Notice: Notice (8): Undefined variable: idUser in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 271]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 271
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:20 Notice: Notice (8): Undefined index: for_who in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:20 Notice: Notice (8): Undefined index: idQuestion in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:20 Notice: Notice (8): Undefined index: idAnswer in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:20 Notice: Notice (8): Undefined index: for_who in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:20 Notice: Notice (8): Undefined index: idQuestion in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:20 Notice: Notice (8): Undefined index: idAnswer in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:20 Notice: Notice (8): Undefined index: for_who in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:20 Notice: Notice (8): Undefined index: idQuestion in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:20 Notice: Notice (8): Undefined index: idAnswer in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:26 Notice: Notice (8): Undefined index: for_who in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:26 Notice: Notice (8): Undefined index: idQuestion in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:26 Notice: Notice (8): Undefined index: idAnswer in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:26 Notice: Notice (8): Undefined index: for_who in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:26 Notice: Notice (8): Undefined index: idQuestion in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:26 Notice: Notice (8): Undefined index: idAnswer in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:26 Notice: Notice (8): Undefined index: for_who in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:26 Notice: Notice (8): Undefined index: idQuestion in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:26 Notice: Notice (8): Undefined index: idAnswer in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 217
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:42 Notice: Notice (8): Undefined index: for_who in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 218]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 218
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:42 Notice: Notice (8): Undefined index: idQuestion in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 218]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 218
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:42 Notice: Notice (8): Undefined index: idAnswer in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 218]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 218
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:42 Notice: Notice (8): Undefined index: for_who in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 218]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 218
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:42 Notice: Notice (8): Undefined index: idQuestion in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 218]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 218
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:42 Notice: Notice (8): Undefined index: idAnswer in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 218]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 218
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:42 Notice: Notice (8): Undefined index: for_who in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 218]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 218
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:42 Notice: Notice (8): Undefined index: idQuestion in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 218]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 218
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 13:47:42 Notice: Notice (8): Undefined index: idAnswer in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 218]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 218
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
