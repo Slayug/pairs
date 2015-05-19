@@ -8547,3 +8547,80 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2015-05-19 14:17:54 Notice: Notice (8): Undefined index: nbre-question in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 158]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 158
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 14:18:58 Notice: Notice (8): Undefined index: nbre-question in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 158]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 158
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 14:19:47 Notice: Notice (8): Undefined index: nbre-question in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 158]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 158
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 14:20:20 Notice: Notice (8): Undefined index: nbre-question in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 158]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 158
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 14:20:52 Notice: Notice (8): Undefined index: nbre-question in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 159]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 159
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 14:21:29 Notice: Notice (8): Undefined index: nbre-question in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 159]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 159
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-19 14:22:52 Notice: Notice (8): Undefined index: nbre-question in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 159]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::reply() - APP/Controller\QuestionnairesController.php, line 159
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

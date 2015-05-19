@@ -94,14 +94,34 @@ class QuestionnairesController extends AppController
 		$currentUser = $session->read('Auth.User');
 		$idUser = $currentUser['id'];
 		
+		$questionnaire = $this->Questionnaires->get($idQuestionnaire);
+		$dateLimit = new \DateTime($questionnaire->date_limit);
+		$dateCreation = new \DateTime($questionnaire->date_creation);
+		$currentDate = new \DateTime('now');
+		
+		if($currentDate > $dateLimit){
+			$this->Flash->error('La date limite pour ce questionnaire est passée.');
+			return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);			
+		}else if($currentDate < $dateCreation){
+			$this->Flash->error('Vous ne pouvez pas encore accéder à ce questionnaire.');
+			return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);		
+		
+		}
+		
+		$answersTable = TableRegistry::get('answers_questionnaires_users');
+		$answers = $answersTable->find()->where(['questionnaire_id' => $idQuestionnaire,
+															'user_id' => $idUser]);
+		if($answers->count()){
+			$this->Flash->error('Vous avez déjà répondu(e) à ce formulaire.');
+			return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);	
+		}
+		
         $questionnaire = $this->Questionnaires->newEntity();
         if ($this->request->is('put')){
-			debug($this->request->data);
-			
 			$success = true;
 			$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
 			
-			if(array_key_exists('save', $this->request->data)){
+			if(array_key_exists('save', $this->request->data) OR ($this->request->session()->read('nbreQuestion') != count($this->request->data))){
 				$transaction->begin();
 				//juste sauvegarder les réponses présentes
 				$associations = TableRegistry::get('answers_questionnaires_users_partials');
@@ -122,13 +142,17 @@ class QuestionnairesController extends AppController
 						$association->user_id = $idUser;
 						$association->for_who = $idForWho;
 						$association->answer_id = $idAnswer;
-						debug($association);
 						$success = $success AND $associations->save($association);
 					}
 				}
 				if($success){
 					$transaction->commit();
-					$this->Flash->success('Vos réponses ont bien étées sauvegarder.');
+					if(!array_key_exists('save', $this->request->data)){
+						$this->Flash->error('Vos réponses ont bien été sauvegardées. Mais vous devez répondre à toutes les questions pour valider ce questionnaire.');
+					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'reply', $idQuestionnaire]);	
+					}else{
+						$this->Flash->success('Vos réponses ont bien été sauvegardées.');
+					}
 					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);				
 				}else{
 					$transaction->rollback();
@@ -136,7 +160,7 @@ class QuestionnairesController extends AppController
 					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);
 				}
 				
-			}else{
+			}else{	
 				$transaction->begin();
 				$associationsPartials = TableRegistry::get('answers_questionnaires_users_partials');
 				$associations = TableRegistry::get('answers_questionnaires_users');
@@ -146,12 +170,19 @@ class QuestionnairesController extends AppController
 						$idForWho = $keySplitted[0];
 						$idQuestion = $keySplitted[1];
 						$idAnswer = $value;
-						
-						
 					}
 				}
-				
+				debug();
 				//sauvegarder les réponses
+				if($success){
+					$transaction->commit();
+					$this->Flash->success('Vos réponses ont bien étées sauvegarder.');
+					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);				
+				}else{
+					$transaction->rollback();
+					$this->Flash->error('Une erreur s\'est produite, merci de réessayer.');
+					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);
+				}
 			}
 		
 		}
@@ -226,7 +257,6 @@ class QuestionnairesController extends AppController
 	}
 	
 	private function isOwner(){
-	
 		$session = $this->request->session();
 		$currentUser = $session->read('Auth.User');
 		$idUser = $currentUser['id'];
@@ -273,14 +303,22 @@ class QuestionnairesController extends AppController
 		$idUser = $currentUser['id'];
 		$isOwner = $this->isOwner();
 		$hasPartialAnswer = false;
+		$isValidated = false;
 		
 		$answersTable = TableRegistry::get('answers_questionnaires_users_partials');
 		$answersPartials = $answersTable->find()->where(['questionnaire_id' => $id,
 															'user_id' => $idUser]);
 		if($answersPartials->count()){
 			$hasPartialAnswer = true;
-		}		
-	
+		}else{
+			$answersTable = TableRegistry::get('answers_questionnaires_users');
+			$answers = $answersTable->find()->where(['questionnaire_id' => $id,
+															'user_id' => $idUser]);
+			if($answers->count()){
+				$isValidated = true;
+			}
+		}
+		$this->set('isValidated', $isValidated);
 		$this->set('hasPartialAnswer', $hasPartialAnswer);
 		$this->set('isOwner', $isOwner);
         $questionnaire = $this->Questionnaires->get($id);

@@ -7,11 +7,15 @@
             <h6 class="subheader"><?= __('Description') ?></h6>
             <p><?= h($questionnaire->description) ?></p>
         </div>
+		<?php
+			$dateLimit = new DateTime($questionnaire->date_limit);
+			$dateCreation = new DateTime($questionnaire->date_creation);
+		?>
         <div class="large-2 columns dates end">
             <h6 class="subheader"><?= __('Date Creation') ?></h6>
-            <p><?= h($questionnaire->date_creation) ?></p>
+            <p><?= h($dateCreation->format('d-m-Y H:i:s')) ?></p>
             <h6 class="subheader"><?= __('Date Limite') ?></h6>
-            <p><?= h($questionnaire->date_limit) ?></p>
+            <p><?= h($dateLimit->format('d-m-Y H:i:s')) ?></p>
         </div>
     </div>
 	
@@ -20,32 +24,39 @@
 	if(!$isOwner){
 		?>
 		<p><?php 
-			$currentDate = date('Y/m/d h:i:s', time());
-			echo $currentDate;
-		
-		if($currentDate < $questionnaire->date_limit){
-			?>
-				<div class="alert alert-warning"
-					role="alert">
-				<p><?= $this->Html->link(__('Répondre au questionnaire'),
-										['controller' => 'Questionnaires', 'action' => 'reply', $questionnaire->id]) ?>
-				</p>
-				<?php
-					if($hasPartialAnswer){
-						?>
-							<p>Vous avez commencez ce formulaire, vous devez le valider avec toutes les réponses avant la date limite !</p>
-						<?php
-					}
+			
+			$currentDate = new DateTime('now');
+			echo $currentDate->format('d-m-Y H:i:s');
+		if($isValidated){?>
+			<div class="alert alert-success">
+				<p>Vous avez valider le formulaire ! <strong>Merci !</strong></p>
+			</div>
+		<?php
+		}else{
+			if($currentDate < $dateLimit){
 				?>
-				</div>
-			<?php
-		}else{ // date dépassée pour répondre au questionnaire
-			?>
-				<div class="alert alert-danger" role="alert"><p>La date limite du questionnaire est dépassée.</p></div>
+					<div class="alert alert-warning"
+						role="alert">
+					<p><?= $this->Html->link(__('Répondre au questionnaire'),
+											['controller' => 'Questionnaires', 'action' => 'reply', $questionnaire->id]) ?>
+					</p>
+					<?php
+						if($hasPartialAnswer){
+							?>
+								<p>Vous avez commencé(e) ce formulaire, vous devez le valider avec toutes les réponses avant la <strong>date limite !</strong></p>
+							<?php
+						}
+					?>
+					</div>
+				<?php
+			}else{ // date dépassée pour répondre au questionnaire
+				?>
+					<div class="alert alert-danger" role="alert"><p><strong>La date limite du questionnaire est dépassée.</strong></p></div>
+				<?php
+			}
+			?></p>
 			<?php
 		}
-		?></p>
-		<?php
 	}
 	?>
 </div>
