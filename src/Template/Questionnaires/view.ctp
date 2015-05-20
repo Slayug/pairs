@@ -101,16 +101,30 @@
 					<?php
 					// permettant d'associer des couleurs aux questions
 					$colors =	[
-								0 =>	',color:"#e16244",
-										highlight: "#dd735a",',
-								1 =>	',color: "#46BFBD",
-											highlight: "#5AD3D1",',
-								2 =>	',color: "#FDB45C",
-											highlight: "#FFC870",',
-								3 =>	',color: "#F7464A",
-											highlight: "#FF5A5E",',
-								4 =>	',color: "#4af146",
-											highlight: "#6feb6c",'
+								0 => [
+									'color'=>'#e16244',
+									'highlight'=>'#dd735a'
+									],
+								1 => [
+									'color'=>'#46BFBD',
+									'highlight'=>'#5AD3D1'
+									],
+								2 => [
+									'color'=>'#FDB45C',
+									'highlight'=>'#FFC870'
+									],
+								3 => [
+									'color'=>'#F7464A',
+									'highlight'=>'#FF5A5E'
+									],
+								4 => [
+									'color'=>'#4af146',
+									'highlight'=>'#6feb6c'
+									],
+								5 => [
+									'color'=>'#ec43c2',
+									'highlight'=>'#e55cc3'
+									]
 								];
 					$idDonut = 0;
 					for($i = 0; $i < count($usersStats); $i++){
@@ -119,33 +133,46 @@
 						<fieldset>
 						<?php
 						foreach($usersStats[$i]['questions'] as $question){
+							$legend = array();
 						?>
-							<h6><?= $question['content'] ?></h6>
-							<canvas id="<?php echo 'ctx_' . $idDonut; ?>" width="225" height="225"></canvas>
-							<script type="text/javascript">
-								var dataDoughnut_<?php echo $idDonut; ?> = [
+							<div class="chart-questionnaire col-md-3">
+								<h6 style="height:45px;"><?= $question['content'] ?></h6>
+								<canvas id="<?php echo 'ctx_' . $idDonut; ?>" width="200" height="200"></canvas>
+								<script type="text/javascript">
+									var dataDoughnut_<?php echo $idDonut; ?> = [
+										<?php
+										for($a = 0; $a < count($question['answers']); $a++){
+											?>
+											{
+											<?php
+												echo 'value:' . count($question['answers'][$a]['users']);
+												echo ',color:"' . $colors[$a]['color'];
+												echo '",highlight:"' . $colors[$a]['highlight'] . '",';
+											?>
+												label: "<?= $question['answers'][$a]['value'] ?>"
+											}
+											<?php
+											if($a < count($question['answers']) - 1){
+												echo ',';
+											}
+										}
+										?>
+										];
+									var ctx_<?php echo $idDonut; ?> = document.getElementById("ctx_<?php echo $idDonut; ?>").getContext("2d");
+									var doughnut_<?php echo $idDonut; ?> = new Chart(ctx_<?php echo $idDonut; ?>).Doughnut(dataDoughnut_<?php echo $idDonut; ?>,options);
+								</script>
+								<ul>
 									<?php
 									for($a = 0; $a < count($question['answers']); $a++){
-										?>
-										{
-										<?php
-											echo 'value:' . count($question['answers'][$a]['users']);
-											echo $colors[$a];
-										?>
-											label: "<?= $question['answers'][$a]['value'] ?>"
-										}
-										<?php
-										if($a < count($question['answers']) - 1){
-											echo ',';
-										}
-									}
 									?>
-									];
-								var ctx_<?php echo $idDonut; ?> = document.getElementById("ctx_<?php echo $idDonut; ?>").getContext("2d");
-								var doughnut_<?php echo $idDonut; ?> = new Chart(ctx_<?php echo $idDonut; ?>).Doughnut(dataDoughnut_<?php echo $idDonut; ?>,options);
-								<?php $idDonut++; ?>
-							</script>
-							
+										<li><div class="cube" style="background-color:<?= $colors[$a]['color'] ?>"></div>
+										<span class="chart-li"><?= $question['answers'][$a]['value'] . '(' . count($question['answers'][$a]['users']) . ')' ?></span>
+										</li>
+									<?php
+									}
+									$idDonut++; ?>
+								</ul>
+							</div>
 							
 						<?php
 						}

@@ -407,10 +407,11 @@ class QuestionnairesController extends AppController
 						$answer = $this->getValueFromId($answersArray, $answersQuestionsQuestionnairesArray[$p]['answer_id']);
 						$usersStats[$i]['questions'][$question['id']]['answers'][$answersQuestionsQuestionnairesArray[$p]['position']] = $answer;
 						// et ensuite on ajoute le nombre de réponse des autres utilisateurs associés à chaque réponse
+						
+						if(!array_key_exists('users', $usersStats[$i]['questions'][$question['id']]['answers'][$answersQuestionsQuestionnairesArray[$p]['position']])){
+							$usersStats[$i]['questions'][$question['id']]['answers'][$answersQuestionsQuestionnairesArray[$p]['position']]['users'] = array();
+						}
 						for($d = 0; $d < count($answersAssociationsArray); $d++){
-							if(!array_key_exists('users', $usersStats[$i]['questions'][$question['id']]['answers'][$answersQuestionsQuestionnairesArray[$p]['position']])){
-								$usersStats[$i]['questions'][$question['id']]['answers'][$answersQuestionsQuestionnairesArray[$p]['position']]['users'] = array();
-							}
 							if($answersAssociationsArray[$d]['answer_id'] == $answersQuestionsQuestionnairesArray[$p]['answer_id'] &&
 								$answersAssociationsArray[$d]['question_id'] == $answersQuestionsQuestionnairesArray[$p]['question_id']){
 								$user = $this->getValueFromId($usersArray, $answersAssociationsArray[$d]['user_id']);
@@ -422,7 +423,6 @@ class QuestionnairesController extends AppController
 					}
 				}				
 			}
-			//debug($usersStats);
 			
 			$this->set('usersStats', $usersStats);
 			

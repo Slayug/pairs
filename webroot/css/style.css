@@ -373,3 +373,26 @@ margin-left:15px;
 #add-answer{
 	width:200px;
 }
+.chart-questionnaire ul{
+list-style-type: none;
+margin-top:15px;
+}
+.chart-questionnaire li{
+	height:20px;
+	margin-bottom:5px;
+	font-size:14px;
+}
+.cube{
+	width:20px;
+	height:20px;
+	border: 1px solid #e3e3e3;
+	display:inline-block;
+	border-radius: 4px  4px  4px  4px;
+}
+.chart-li{
+	display:inline-block;
+}
+.chart-users{
+	display:inline-block;
+	font-size:10px;
+}
