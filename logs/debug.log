@@ -8704,3 +8704,894 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2015-05-20 10:56:05 Notice: Notice (8): Undefined variable: usersQuery in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 363]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 363
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 10:56:36 Notice: Notice (8): Undefined variable: users in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 365]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 365
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 10:57:29 Notice: Notice (8): Undefined offset: 2 in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 391]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 391
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 10:57:29 Notice: Notice (8): Undefined offset: 3 in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 391]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 391
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 10:57:29 Notice: Notice (8): Undefined offset: 2 in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 391]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 391
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 10:57:29 Notice: Notice (8): Undefined offset: 3 in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 391]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 391
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 11:35:34 Notice: Notice (8): Undefined variable: answersQuestionsQuestionnairesTupe in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 406]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 406
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 11:45:48 Notice: Notice (8): Undefined variable: usersStates in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 397]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 397
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 11:45:48 Notice: Notice (8): Undefined variable: usersStates in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 397]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 397
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 11:45:48 Notice: Notice (8): Undefined variable: usersStates in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 397]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 397
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 11:45:48 Notice: Notice (8): Undefined variable: usersStates in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 397]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 397
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 11:45:48 Notice: Notice (8): Undefined variable: usersStates in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 397]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 397
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 11:45:48 Notice: Notice (8): Undefined variable: usersStates in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 397]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 397
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 11:45:48 Notice: Notice (8): Undefined variable: usersStates in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 397]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 397
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 11:45:48 Notice: Notice (8): Undefined variable: usersStates in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 397]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 397
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:18:16 Notice: Notice (8): Undefined variable: idQuestionnaire in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 384]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 384
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:18:24 Notice: Notice (8): Undefined variable: idQuestionnaire in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 384]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 384
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:19 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:20 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:20 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:20 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:20 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:20 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:20 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:20 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:20 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 12:34:20 Notice: Notice (8): Undefined index: user_id in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\QuestionnairesController::view() - APP/Controller\QuestionnairesController.php, line 414
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

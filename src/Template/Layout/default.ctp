@@ -40,6 +40,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<?php echo $this->Html->script('bootstrap-datetimepicker.min.js'); ?>
 	<?php echo $this->Html->script('bootstrap-datetimepicker.fr.js'); ?>
+	<?php echo $this->Html->script('chart.min.js'); ?>
 	<?php echo $this->Html->script('div.js'); ?>
 </head>
 <body>

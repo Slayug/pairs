@@ -330,21 +330,114 @@ class QuestionnairesController extends AppController
 			$this->set('isValidated', $isValidated);
 			$this->set('hasPartialAnswer', $hasPartialAnswer);
 		}else{
-			$users = TableRegistry::get('Users');
-			$usersQuery = $users->find()
+			$questions = TableRegistry::get('Questions');
+			$questionsQuery = $questions->find()
 									->hydrate(false)
 									->join([
-										'aqu' => [ // on join associations avec les réponses validées
-											'table' => 'answers_questionnaires_users',
+										'aqq' => [ // on join associations avec les questions du questionnaires
+											'table' => 'answers_questions_questionnaires',
 											'type' => 'INNER',
-											'conditions' => 'aqu.user_id = users.id',
+											'conditions' => 'aqq.question_id = questions.id',
 										]
 									
 									])
-									->where(['aqu.questionnaire_id' => $id]) // et on cible le questionnaire où on est
-									->distinct(['user_id']);
-				//$this->request->data['groups'] = $usersQuery->toArray();
-				$this->set('usersValidated', $usersQuery->toArray());
+									->where(['aqq.questionnaire_id' => $id]) // et on cible le questionnaire où on est
+									->distinct(['question_id']);
+			$answers = TableRegistry::get('Answers');						
+			$answersQuery = $answers->find()
+									->hydrate(false)
+									->join([
+										'aqq' => [ // on join associations avec les réponses du questionnaires
+											'table' => 'answers_questions_questionnaires',
+											'type' => 'INNER',
+											'conditions' => 'aqq.answer_id = answers.id',
+										]
+									
+									])
+									->where(['aqq.questionnaire_id' => $id]) // et on cible le questionnaire où on est
+									->distinct(['answer_id']);
+									
+			//$answersTable = TableRegistry::get('answers_questionnaires_users');
+			//$answers = $answersTable->find()->where(['questionnaire_id' => $id]); //association des réponses par users pour le questionnaire
+				
+			
+			//requête contenant tous les utilisateurs associés au questionnaire			
+			$users = TableRegistry::get('Users');
+			$usersQuery = $users->find()->hydrate(false)
+									->join([
+										'gu' => [ // on join les groupes associés aux étudiant
+											'table' => 'groups_users',
+											'type' => 'INNER',
+											'conditions' => 'gu.user_id = users.id',
+										],
+										'qg' => [ // on join les groupes à celui du questionnaire et du join précédent
+											'table' => 'questionnaires_groups',
+											'type' => 'INNER',
+											'conditions' => 'qg.group_id = gu.group_id',
+										]
+									
+									])
+									->where(['qg.questionnaire_id' => $id]); // on cible le questionnaire
+				
+				
+			$usersStats = array();
+			$questionsArray = $questionsQuery->toArray();
+			$answersArray = $answersQuery->toArray();
+			$answersTable = TableRegistry::get('answers_questionnaires_users');
+			$answersQuestionsQuestionnaires = TableRegistry::get('answers_questions_questionnaires');
+			$answersQuestionsQuestionnairesQuery = $answersQuestionsQuestionnaires->find()->where(['questionnaire_id' => $id]);
+			$answersQuestionsQuestionnairesArray = $answersQuestionsQuestionnairesQuery->toArray();
+			$usersArray = $usersQuery->toArray();
+			// on parcours chaque étudiant contenu dans le questionnaire
+			for($i = 0; $i < count($usersArray); $i++){
+				$usersStats[$i] = array();
+				$usersStats[$i]['user'] = $usersArray[$i];
+				$answersAssociations = $answersTable->find()->where(['questionnaire_id' => $id,
+														'for_who' => $usersArray[$i]['id']]);
+				$answersAssociationsArray = $answersAssociations->toArray();
+				$usersStats[$i]['questions'] = array();
+				//ensuite chaque question du questionnaire pour lui ajouter
+				for($p = 0; $p < count($answersQuestionsQuestionnairesArray); $p++){
+					$question = $this->getValueFromId($questionsArray, $answersQuestionsQuestionnairesArray[$p]['question_id']);
+					if($question != null){
+						if(!array_key_exists($question['id'], $usersStats[$i]['questions'])){
+							$usersStats[$i]['questions'][$question['id']] = $question;
+						}
+						// et on associe chaque réponse
+						$answer = $this->getValueFromId($answersArray, $answersQuestionsQuestionnairesArray[$p]['answer_id']);
+						$usersStats[$i]['questions'][$question['id']][$answersQuestionsQuestionnairesArray[$p]['position']] = $answer;
+						// et ensuite on ajoute le nombre de réponse des autres utilisateurs associés à chaque réponse
+						for($d = 0; $d < count($answersAssociationsArray); $d++){
+							if(!array_key_exists('users', $usersStats[$i]['questions'][$question['id']][$answersQuestionsQuestionnairesArray[$p]['position']])){
+								$usersStats[$i]['questions'][$question['id']][$answersQuestionsQuestionnairesArray[$p]['position']]['users'] = array();
+							}
+							if($answersAssociationsArray[$d]['answer_id'] == $answersQuestionsQuestionnairesArray[$p]['answer_id'] &&
+								$answersAssociationsArray[$d]['question_id'] == $answersQuestionsQuestionnairesArray[$p]['question_id']){
+								$user = $this->getValueFromId($usersArray, $answersAssociationsArray[$d]['user_id']);
+								if($user != null){
+									$usersStats[$i]['questions'][$question['id']][$answersQuestionsQuestionnairesArray[$p]['position']]['users'][$user['id']] = $user;
+								}
+							}
+						}
+					}
+				}				
+			}
+			//debug($usersStats);
+			$this->set('usersStats', $usersStats);
+			
+			$users = TableRegistry::get('Users');
+			$usersQuery = $users->find()
+								->hydrate(false)
+								->join([
+									'aqu' => [ // on join associations avec les réponses validées
+									'table' => 'answers_questionnaires_users',
+									'type' => 'INNER',
+									'conditions' => 'aqu.user_id = users.id',
+								]])
+								->where(['aqu.questionnaire_id' => $id]) // et on cible le questionnaire où on est
+								->distinct(['user_id']);
+			
+			$this->set('usersValidated', $usersQuery->toArray());
 		}
 		$this->set('isOwner', $isOwner);
         $questionnaire = $this->Questionnaires->get($id);
@@ -352,7 +445,24 @@ class QuestionnairesController extends AppController
         $this->set('_serialize', ['questionnaire']);
     }
 
+	/**
+	*	Permet de récupérer un tuple (en se basant sur son id) provenant d'un tableau
+	*	qui lui même a été acquis depuis une requête sql
+	*	si return null c'est que le tuple avec cet id n'est pas dans le tableau
+	*/
+	private function getValueFromId($array, $id){
+		for($i = 0; $i < count($array); $i++){
+			if($array[$i]['id'] == $id){
+				return $array[$i];
+			}
+		}
+		return null;
+	}
 	
+	/**
+	*	Convertie une date provenant d'un datetimepicker de bootstrap
+	*	vers un DateTime de php
+	*/
 	private function dateTimePickerToDatetime($date){
 		$months = ['Jan' => '01','Fev' =>'02','Mar' =>'03','Avr' =>'04','Mai'=> '05','Jui' => '06','Jul' => '07','Aou' => '08','Sep' => '09','Oct' => '10','Nov' => '11','Dec' => '12'];
 		$tmp = explode(' - ', $date);
