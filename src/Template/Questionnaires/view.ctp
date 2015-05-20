@@ -74,7 +74,7 @@
 			
 			<h3>Stats du Module:</h3>
 			<?php
-				if(!empty($usersStats)){?>
+				if(!empty($groupsStats)){?>
 					<script type="text/javascript">
 						var options = {
 							//Boolean - Whether we should show a stroke on each segment
@@ -86,7 +86,7 @@
 							//Number - The percentage of the chart that we cut out of the middle
 							percentageInnerCutout : 50, // This is 0 for Pie charts
 							//Number - Amount of animation steps
-							animationSteps : 150,
+							animationSteps : 1,
 							//String - Animation easing effect
 							animationEasing : "easeOutBounce",
 							//Boolean - Whether we animate the rotation of the Doughnut
@@ -127,6 +127,9 @@
 									]
 								];
 					$idDonut = 0;
+					foreach($groupsStats as $group){
+					$usersStats = $group['usersStats'];
+					echo '<h4>' . $group['name'] . '</h4>';
 					for($i = 0; $i < count($usersStats); $i++){
 						?>
 						<h5><?= ucfirst($usersStats[$i]['user']['first_name']) . ' ' . ucfirst($usersStats[$i]['user']['last_name']) ?></h5>
@@ -179,7 +182,8 @@
 						?>
 						</fieldset>
 						<?php
-					}
+					}//usersStats end
+					}//groupsStats end
 				}
 			?>
 			<?php

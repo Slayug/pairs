@@ -377,10 +377,11 @@ class QuestionnairesController extends AppController
 										]
 									
 									])
-									->where(['qg.questionnaire_id' => $id]); // on cible le questionnaire
-				
+									->where(['qg.questionnaire_id' => $id]);
+									// on cible le questionnaire
 				
 			$usersStats = array();
+			$groupsStats = array();
 			$questionsArray = $questionsQuery->toArray();
 			$answersArray = $answersQuery->toArray();
 			$answersTable = TableRegistry::get('answers_questionnaires_users');
@@ -388,6 +389,7 @@ class QuestionnairesController extends AppController
 			$answersQuestionsQuestionnairesQuery = $answersQuestionsQuestionnaires->find()->where(['questionnaire_id' => $id]);
 			$answersQuestionsQuestionnairesArray = $answersQuestionsQuestionnairesQuery->toArray();
 			$usersArray = $usersQuery->toArray();
+			
 			// on parcours chaque étudiant contenu dans le questionnaire
 			for($i = 0; $i < count($usersArray); $i++){
 				$usersStats[$i] = array();
@@ -396,6 +398,7 @@ class QuestionnairesController extends AppController
 														'for_who' => $usersArray[$i]['id']]);
 				$answersAssociationsArray = $answersAssociations->toArray();
 				$usersStats[$i]['questions'] = array();
+				
 				//ensuite chaque question du questionnaire pour lui ajouter
 				for($p = 0; $p < count($answersQuestionsQuestionnairesArray); $p++){
 					$question = $this->getValueFromId($questionsArray, $answersQuestionsQuestionnairesArray[$p]['question_id']);
@@ -421,10 +424,39 @@ class QuestionnairesController extends AppController
 							}
 						}
 					}
-				}				
+				}
+				if(!empty($usersStats[$i])){
+					$groups = TableRegistry::get('Groups');
+					$groupsQuery = $groups->find()->hydrate(false)
+									->join([
+										'gu' => [ // on join les groupes associés à l'étudiant
+											'table' => 'groups_users',
+											'type' => 'INNER',
+											'conditions' => 'gu.group_id = groups.id',
+										],
+										'qg' => [ // on join les groupes de l'étudiant à celui des questionnaires
+											'table' => 'questionnaires_groups',
+											'type' => 'INNER',
+											'conditions' => 'qg.group_id = gu.group_id',
+										]
+									
+									])
+									->where(['qg.questionnaire_id' => $id]) // où l'id questionnaire
+									->andWhere(['gu.user_id' => $usersStats[$i]['user']['id']]); // et on cible où c'est l'user
+					$groupArray = $groupsQuery->first();
+					if($groupArray != null){
+						if(!array_key_exists($groupArray['id'], $groupsStats)){
+							$groupsStats[$groupArray['id']] = array();
+							$groupsStats[$groupArray['id']] = $groupArray;
+							$groupsStats[$groupArray['id']]['usersStats'] = array();
+						}
+						array_push($groupsStats[$groupArray['id']]['usersStats'], $usersStats[$i]);
+					}
+				}
 			}
-			
-			$this->set('usersStats', $usersStats);
+			//debug($groupsStats);
+			$this->set('groupsStats', $groupsStats);
+			//$this->set('usersStats', $usersStats);
 			
 			$users = TableRegistry::get('Users');
 			$usersQuery = $users->find()
