@@ -23,8 +23,7 @@
 	<?php
 	if(!$isOwner){
 		?>
-		<p><?php 
-			
+		<p><?php
 			$currentDate = new DateTime('now');
 			echo $currentDate->format('d-m-Y H:i:s');
 		if($isValidated){?>

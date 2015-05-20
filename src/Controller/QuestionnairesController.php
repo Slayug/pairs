@@ -75,6 +75,10 @@ class QuestionnairesController extends AppController
 			if($canReply){
 				return true;
 			}
+		}else if(in_array($action, ['index'])){
+			if($role == 2){
+				return true;
+			}
 		}
 		
 		return parent::isAuthorized($user);
@@ -294,7 +298,13 @@ class QuestionnairesController extends AppController
      * @return void
      */
     public function index(){
-        $this->set('questionnaires', $this->paginate($this->Questionnaires));
+	
+		$questionnaires = TableRegistry::get('questionnaires');
+		$questionnairesQuery = $questionnaires->find()->matching('Owners');
+		
+		$questionnairesArray = $questionnairesQuery->toArray();
+		
+        $this->set('questionnaires', $this->paginate($questionnairesQuery));
         $this->set('_serialize', ['questionnaires']);
     }
 
@@ -676,8 +686,8 @@ class QuestionnairesController extends AppController
 		$transaction->begin();
 	
 		//supprimer les associations dans answers_questions_questionnaires
-		$associations = TableRegistry::get('answers_questions_questionnaires');
-		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		//$associations = TableRegistry::get('answers_questions_questionnaires');
+		//$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
 		
 		//supprimer les associations dans answers_questionnaires_users
 		$associations = TableRegistry::get('answers_questionnaires_users_partials');
@@ -696,8 +706,8 @@ class QuestionnairesController extends AppController
 		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
 		
 		//supprimer le questionnaire dans questionnaires
-		$associations = TableRegistry::get('Questionnaires');
-		$success = $success AND $associations->deleteAll(['id' => $id]);
+		//$associations = TableRegistry::get('Questionnaires');
+		//$success = $success AND $associations->deleteAll(['id' => $id]);
 		
 		if($success){
 			$transaction->commit();

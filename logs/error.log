@@ -16552,3 +16552,375 @@ Stack Trace:
 #1 {main}
 
 
+2015-05-20 17:14:10 Error: [BadMethodCallException] Unknown method "matching"
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(303): Cake\ORM\Table->__call('matching', Array)
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(303): App\Model\Table\QuestionnairesTable->matching('Owners')
+#2 [internal function]: App\Controller\QuestionnairesController->index()
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-20 17:17:14 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 303]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-20 17:17:14 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 303)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-20 17:17:24 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(314): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\QuestionnairesController->index()
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#5 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2015-05-20 17:17:33 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\wamp\www\pairs\src\Template\Questionnaires\index.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Questionnaires\index.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 815
+Cake\View\View::_render() - CORE\src\View\View.php, line 775
+Cake\View\View::render() - CORE\src\View\View.php, line 463
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 576
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 17:19:54 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 304]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-20 17:19:54 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 304)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-20 17:25:17 Error: Fatal Error (4): syntax error, unexpected '<' in [D:\wamp\www\pairs\src\Template\Questionnaires\index.ctp, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-20 17:25:17 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '<'
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-20 17:25:36 Error: Fatal Error (1): Call to a member function read() on a non-object in [D:\wamp\www\pairs\src\Template\Questionnaires\index.ctp, line 2]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-20 17:25:36 Error: [Cake\Error\FatalErrorException] Call to a member function read() on a non-object
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 2)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-20 17:27:46 Error: [InvalidArgumentException] Questionnaires is not associated with Questions
+Request URL: /pairs/questionnaires/edit/1
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(232): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\QuestionnairesTable), 'Questions', Array, Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(337): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\QuestionnairesTable))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(316): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\QuestionnairesTable))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(669): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\QuestionnairesTable), true)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(625): Cake\ORM\Query->_transformQuery()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(116): Cake\ORM\Query->sql()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(220): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(340): Cake\ORM\Query->all()
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(351): Cake\ORM\Query->first()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(1108): Cake\ORM\Query->firstOrFail()
+#15 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(655): Cake\ORM\Table->get('1', Array)
+#16 [internal function]: App\Controller\QuestionnairesController->edit('1')
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#19 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#20 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 {main}
+
+
+2015-05-20 17:39:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/css/images/ui-bg_glass_100_f6f6f6_1x400.png
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 17:39:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 17:39:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/css/images/ui-icons_ef8c08_256x240.png
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 17:39:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/css/images/ui-bg_glass_65_ffffff_1x400.png
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 17:39:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/css/images/ui-bg_glass_100_fdf5ce_1x400.png
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 17:55:17 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php, line 185]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+explode - [internal], line ??
+Cake\ORM\EagerLoader::matching() - CORE\src\ORM\EagerLoader.php, line 185
+Cake\ORM\Query::matching() - CORE\src\ORM\Query.php, line 334
+App\Controller\QuestionnairesController::index() - APP/Controller\QuestionnairesController.php, line 303
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 17:55:17 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php, line 186]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+array_pop - [internal], line ??
+Cake\ORM\EagerLoader::matching() - CORE\src\ORM\EagerLoader.php, line 186
+Cake\ORM\Query::matching() - CORE\src\ORM\Query.php, line 334
+App\Controller\QuestionnairesController::index() - APP/Controller\QuestionnairesController.php, line 303
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 17:55:17 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php, line 190]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\ORM\EagerLoader::matching() - CORE\src\ORM\EagerLoader.php, line 190
+Cake\ORM\Query::matching() - CORE\src\ORM\Query.php, line 334
+App\Controller\QuestionnairesController::index() - APP/Controller\QuestionnairesController.php, line 303
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-05-20 17:55:18 Error: [InvalidArgumentException] questionnaires is not associated with 
+Request URL: /pairs/questionnaires
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(232): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\QuestionnairesTable), '', Array, Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(338): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\QuestionnairesTable))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(316): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\QuestionnairesTable))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(669): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\QuestionnairesTable), true)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(625): Cake\ORM\Query->_transformQuery()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(116): Cake\ORM\Query->sql()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(220): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(169): Cake\ORM\Query->all()
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(635): Cake\Controller\Component\PaginatorComponent->paginate(Object(Cake\ORM\Query), Array)
+#14 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(304): Cake\Controller\Controller->paginate(Object(Cake\ORM\Query))
+#15 [internal function]: App\Controller\QuestionnairesController->index()
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#19 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2015-05-20 17:59:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'question.id' inconnu dans on clause
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(169): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(635): Cake\Controller\Component\PaginatorComponent->paginate(Object(Cake\ORM\Query), Array)
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(317): Cake\Controller\Controller->paginate(Object(Cake\ORM\Query))
+#11 [internal function]: App\Controller\QuestionnairesController->index()
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-20 18:00:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'questions.id' inconnu dans on clause
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(169): Cake\ORM\Query->all()
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(635): Cake\Controller\Component\PaginatorComponent->paginate(Object(Cake\ORM\Query), Array)
+#10 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(317): Cake\Controller\Controller->paginate(Object(Cake\ORM\Query))
+#11 [internal function]: App\Controller\QuestionnairesController->index()
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#15 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-05-20 18:02:13 Error: [InvalidArgumentException] questionnaires is not associated with Questions
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(232): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\QuestionnairesTable), 'Questions', Array, Array)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(338): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\QuestionnairesTable))
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(316): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\QuestionnairesTable))
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(669): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\QuestionnairesTable), true)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(625): Cake\ORM\Query->_transformQuery()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(116): Cake\ORM\Query->sql()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(220): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(272): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(169): Cake\ORM\Query->all()
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(635): Cake\Controller\Component\PaginatorComponent->paginate(Object(Cake\ORM\Query), Array)
+#14 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(304): Cake\Controller\Controller->paginate(Object(Cake\ORM\Query))
+#15 [internal function]: App\Controller\QuestionnairesController->index()
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#19 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2015-05-20 18:17:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'questionnaire.title' inconnu dans field list
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(317): Cake\ORM\Query->all()
+#9 [internal function]: App\Controller\QuestionnairesController->index()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#13 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2015-05-20 18:17:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Champ 'questions.content' inconnu dans field list
+Request URL: /pairs/questionnaires?sort=titre&direction=asc
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(317): Cake\ORM\Query->all()
+#9 [internal function]: App\Controller\QuestionnairesController->index()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#13 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+

@@ -396,3 +396,20 @@ margin-bottom:0px;
 	display:inline-block;
 	font-size:10px;
 }
+.ui-accordion-header{
+	border: 2px #afafaf solid;
+	border-radius: 4px  4px  4px  4px;
+	background-color:#e16244;
+	padding:7px;
+	cursor:pointer;
+	margin-bottom:2px;
+	font-size: 20px;
+}
+.ui-accordion-content{
+	margin-top:-10px;
+	width:95%;
+	margin-left:2.5%;
+	border:2px solid #e16244;
+	padding:10px;
+	border-radius: 0px  0px  15px  15px;
+}
