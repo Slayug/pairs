@@ -57,10 +57,10 @@
 			?></p>
 			<?php
 		}
-	}else{
+	}else{ // !isOwner
 		if (!empty($usersValidated)){
 			?>
-			<h3>Membres ayant validés le questionnaire.</h3>
+			<h3>Membres ayant validés le questionnaire:</h3>
 			<table style="width:375px;">
 			<?php
 			for($i = 0; $i < count($usersValidated); $i++){?>
@@ -71,6 +71,90 @@
 			<?php
 			} ?>
 			</table>
+			
+			<h3>Stats du Module:</h3>
+			<?php
+				if(!empty($usersStats)){?>
+					<script type="text/javascript">
+						var options = {
+							//Boolean - Whether we should show a stroke on each segment
+							segmentShowStroke : true,
+							//String - The colour of each segment stroke
+							segmentStrokeColor : "#fff",
+							//Number - The width of each segment stroke
+							segmentStrokeWidth : 2,
+							//Number - The percentage of the chart that we cut out of the middle
+							percentageInnerCutout : 50, // This is 0 for Pie charts
+							//Number - Amount of animation steps
+							animationSteps : 150,
+							//String - Animation easing effect
+							animationEasing : "easeOutBounce",
+							//Boolean - Whether we animate the rotation of the Doughnut
+							animateRotate : true,
+							//Boolean - Whether we animate scaling the Doughnut from the centre
+							animateScale : false,
+							//String - A legend template
+							legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+
+						};
+					</script>
+					<?php
+					// permettant d'associer des couleurs aux questions
+					$colors =	[
+								0 =>	',color:"#e16244",
+										highlight: "#dd735a",',
+								1 =>	',color: "#46BFBD",
+											highlight: "#5AD3D1",',
+								2 =>	',color: "#FDB45C",
+											highlight: "#FFC870",',
+								3 =>	',color: "#F7464A",
+											highlight: "#FF5A5E",',
+								4 =>	',color: "#4af146",
+											highlight: "#6feb6c",'
+								];
+					$idDonut = 0;
+					for($i = 0; $i < count($usersStats); $i++){
+						?>
+						<h5><?= ucfirst($usersStats[$i]['user']['first_name']) . ' ' . ucfirst($usersStats[$i]['user']['last_name']) ?></h5>
+						<fieldset>
+						<?php
+						foreach($usersStats[$i]['questions'] as $question){
+						?>
+							<h6><?= $question['content'] ?></h6>
+							<canvas id="<?php echo 'ctx_' . $idDonut; ?>" width="225" height="225"></canvas>
+							<script type="text/javascript">
+								var dataDoughnut_<?php echo $idDonut; ?> = [
+									<?php
+									for($a = 0; $a < count($question['answers']); $a++){
+										?>
+										{
+										<?php
+											echo 'value:' . count($question['answers'][$a]['users']);
+											echo $colors[$a];
+										?>
+											label: "<?= $question['answers'][$a]['value'] ?>"
+										}
+										<?php
+										if($a < count($question['answers']) - 1){
+											echo ',';
+										}
+									}
+									?>
+									];
+								var ctx_<?php echo $idDonut; ?> = document.getElementById("ctx_<?php echo $idDonut; ?>").getContext("2d");
+								var doughnut_<?php echo $idDonut; ?> = new Chart(ctx_<?php echo $idDonut; ?>).Doughnut(dataDoughnut_<?php echo $idDonut; ?>,options);
+								<?php $idDonut++; ?>
+							</script>
+							
+							
+						<?php
+						}
+						?>
+						</fieldset>
+						<?php
+					}
+				}
+			?>
 			<?php
 		}
 	}

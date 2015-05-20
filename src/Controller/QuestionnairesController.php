@@ -405,17 +405,17 @@ class QuestionnairesController extends AppController
 						}
 						// et on associe chaque réponse
 						$answer = $this->getValueFromId($answersArray, $answersQuestionsQuestionnairesArray[$p]['answer_id']);
-						$usersStats[$i]['questions'][$question['id']][$answersQuestionsQuestionnairesArray[$p]['position']] = $answer;
+						$usersStats[$i]['questions'][$question['id']]['answers'][$answersQuestionsQuestionnairesArray[$p]['position']] = $answer;
 						// et ensuite on ajoute le nombre de réponse des autres utilisateurs associés à chaque réponse
 						for($d = 0; $d < count($answersAssociationsArray); $d++){
-							if(!array_key_exists('users', $usersStats[$i]['questions'][$question['id']][$answersQuestionsQuestionnairesArray[$p]['position']])){
-								$usersStats[$i]['questions'][$question['id']][$answersQuestionsQuestionnairesArray[$p]['position']]['users'] = array();
+							if(!array_key_exists('users', $usersStats[$i]['questions'][$question['id']]['answers'][$answersQuestionsQuestionnairesArray[$p]['position']])){
+								$usersStats[$i]['questions'][$question['id']]['answers'][$answersQuestionsQuestionnairesArray[$p]['position']]['users'] = array();
 							}
 							if($answersAssociationsArray[$d]['answer_id'] == $answersQuestionsQuestionnairesArray[$p]['answer_id'] &&
 								$answersAssociationsArray[$d]['question_id'] == $answersQuestionsQuestionnairesArray[$p]['question_id']){
 								$user = $this->getValueFromId($usersArray, $answersAssociationsArray[$d]['user_id']);
 								if($user != null){
-									$usersStats[$i]['questions'][$question['id']][$answersQuestionsQuestionnairesArray[$p]['position']]['users'][$user['id']] = $user;
+									$usersStats[$i]['questions'][$question['id']]['answers'][$answersQuestionsQuestionnairesArray[$p]['position']]['users'][$user['id']] = $user;
 								}
 							}
 						}
@@ -423,6 +423,7 @@ class QuestionnairesController extends AppController
 				}				
 			}
 			//debug($usersStats);
+			
 			$this->set('usersStats', $usersStats);
 			
 			$users = TableRegistry::get('Users');
