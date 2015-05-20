@@ -16435,3 +16435,120 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2015-05-20 16:58:22 Error: [Cake\Routing\Exception\MissingControllerException] Controller class ImgChania.jpg could not be found.
+Exception Attributes: array (
+  'class' => 'ImgChania.jpg',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/img_chania.jpg
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 16:58:22 Error: [Cake\Routing\Exception\MissingControllerException] Controller class ImgFlower2.jpg could not be found.
+Exception Attributes: array (
+  'class' => 'ImgFlower2.jpg',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/img_flower2.jpg
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 16:58:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class ImgChania2.jpg could not be found.
+Exception Attributes: array (
+  'class' => 'ImgChania2.jpg',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/img_chania2.jpg
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 16:58:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class ImgFlower.jpg could not be found.
+Exception Attributes: array (
+  'class' => 'ImgFlower.jpg',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/img_flower.jpg
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 16:58:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class ImgChania.jpg could not be found.
+Exception Attributes: array (
+  'class' => 'ImgChania.jpg',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/img_chania.jpg
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 16:58:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class ImgChania2.jpg could not be found.
+Exception Attributes: array (
+  'class' => 'ImgChania2.jpg',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/img_chania2.jpg
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 16:58:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class ImgFlower.jpg could not be found.
+Exception Attributes: array (
+  'class' => 'ImgFlower.jpg',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/img_flower.jpg
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 16:58:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class ImgFlower2.jpg could not be found.
+Exception Attributes: array (
+  'class' => 'ImgFlower2.jpg',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/img_flower2.jpg
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-05-20 17:01:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Edit could not be found.
+Exception Attributes: array (
+  'class' => 'Edit',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /pairs/edit/1
+Stack Trace:
+#0 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

@@ -69,7 +69,7 @@ class UsersController extends AppController
 	}
 	
 	public function logout(){
-		$this->Flash->success('Vous êtes maintenant déconnecté.');
+		$this->Flash->success('Vous êtes maintenant déconnecté(e).');
 		return $this->redirect($this->Auth->logout());
 	}
 	

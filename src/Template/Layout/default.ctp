@@ -66,13 +66,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 						$current_page = $this->request->here();
 						$current_page_class = '<li class ="li_current_page">';
 					
-						if($current_page == '/pairs/'){
+						/**if($current_page == '/pairs/'){
 							echo $current_page_class;
 						}else{
 							echo '<li>';
 						}
 						echo $this->Html->link(__('Accueil'), ['controller' => 'Pages', 'action' => 'index']);
-						echo '</li>';
+						echo '</li>';**/
 					
 						
 						if($user != null){

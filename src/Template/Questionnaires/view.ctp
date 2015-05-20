@@ -12,7 +12,7 @@
 			$dateCreation = new DateTime($questionnaire->date_creation);
 		?>
         <div class="large-2 columns dates end">
-            <h6 class="subheader"><?= __('Date Creation') ?></h6>
+            <h6 class="subheader"><?= __('Date Création') ?></h6>
             <p><?= h($dateCreation->format('d-m-Y H:i:s')) ?></p>
             <h6 class="subheader"><?= __('Date Limite') ?></h6>
             <p><?= h($dateLimit->format('d-m-Y H:i:s')) ?></p>
@@ -29,7 +29,7 @@
 			echo $currentDate->format('d-m-Y H:i:s');
 		if($isValidated){?>
 			<div class="alert alert-success">
-				<p>Vous avez valider le formulaire ! <strong>Merci !</strong></p>
+				<p>Vous avez validé le formulaire ! <strong>Merci !</strong></p>
 			</div>
 		<?php
 		}else{

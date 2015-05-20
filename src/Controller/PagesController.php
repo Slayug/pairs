@@ -39,6 +39,7 @@ class PagesController extends AppController
      * @return void
      */
     public function index(){
+		return $this->redirect(['controller' => 'Users', 'action' => 'panel']);
     }
     /**
      * Displays a view
