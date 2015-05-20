@@ -127,9 +127,13 @@
 									]
 								];
 					$idDonut = 0;
+					foreach($groupsStats as $group){?>
+						<a href="#<?= $group['name']; ?>">> <?= $group['name']; ?></a><br>
+					<?php
+					}
 					foreach($groupsStats as $group){
 					$usersStats = $group['usersStats'];
-					echo '<h4>' . $group['name'] . '</h4>';
+					echo '<a name="' . $group['name'] . '"><h4>' . $group['name'] . '</h4></a><fieldset>';
 					for($i = 0; $i < count($usersStats); $i++){
 						?>
 						<h5><?= ucfirst($usersStats[$i]['user']['first_name']) . ' ' . ucfirst($usersStats[$i]['user']['last_name']) ?></h5>
@@ -183,6 +187,9 @@
 						</fieldset>
 						<?php
 					}//usersStats end
+					?>
+					</fieldset>
+					<?php
 					}//groupsStats end
 				}
 			?>
