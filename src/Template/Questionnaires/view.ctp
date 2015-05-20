@@ -61,7 +61,7 @@
 		if (!empty($usersValidated)){
 			?>
 			<h3>Membres ayant validés le questionnaire:</h3>
-			<table style="width:375px;">
+			<table style="width:320px;">
 			<?php
 			for($i = 0; $i < count($usersValidated); $i++){?>
 				<tr>
@@ -166,7 +166,7 @@
 									for($a = 0; $a < count($question['answers']); $a++){
 									?>
 										<li><div class="cube" style="background-color:<?= $colors[$a]['color'] ?>"></div>
-										<span class="chart-li"><?= $question['answers'][$a]['value'] . '(' . count($question['answers'][$a]['users']) . ')' ?></span>
+										<span class="chart-li"><?= $question['answers'][$a]['value'] . ' (' . count($question['answers'][$a]['users']) . ')' ?></span>
 										</li>
 									<?php
 									}
