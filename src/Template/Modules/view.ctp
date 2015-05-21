@@ -134,7 +134,7 @@
 						array('alt' => __('Supprimer'),
 							  'title' => __('Supprimer'))),
 						array('controller' => 'Questionnaires',
-							  'action' => 'delete', $questionnaire['id']),
+							  'action' => 'deleteAssociation', $questionnaire['id']),
 						array('escape' => false,
 							  'confirm' => __('Êtes vous sûr de supprimer le questionnaire #{0}# ?', $questionnaire['title']))); ?>
 				</td>
