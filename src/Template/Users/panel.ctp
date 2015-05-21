@@ -9,8 +9,9 @@
 	?>
 		
 		<h4 style="color:#404040;">Bonjour <?php echo h(ucfirst($currentUser['first_name']) . ' ' . ucfirst($currentUser['last_name'])); ?>.</h4>
-		<br>
 		<?= $this->Flash->render('auth') ?>
+		<?= $this->Flash->render() ?>
+		<br>
 	<?php
 	
 	if($role == 1){ //admin

@@ -44,7 +44,6 @@ class UsersController extends AppController
      */
     public function index()
     {
-		
         $this->paginate = [
             'contain' => ['Roles']
         ];
@@ -111,7 +110,6 @@ class UsersController extends AppController
 			$this->set('modulesUser', $modulesUser);
 			$this->set('_serialize', ['user']);
 		}
-		
 	}
 	
     /**
