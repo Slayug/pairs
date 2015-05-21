@@ -1,8 +1,9 @@
-<div class="questionnaires view large-12 medium-12 columns">
+<div class="panel panel-default questionnaires index large-12 medium-12 columns">
+	<div class="panel-heading"><h2 class="panel-title"><?= h($questionnaire->title) ?></h2></div>
+	<div class="panel-body">
 	
     <?= $this->Form->create($questionnaire, ['id' => 'questionnaire_reply']); ?>
-		<fieldset><?= $this->Flash->render() ?>
-		<legend><h2><?= h($questionnaire->title) ?></h2></legend>
+		<?= $this->Flash->render() ?>
 		<?php
 		$nbreQuestion = 0;
 		foreach ($users as $user): ?>
@@ -39,7 +40,6 @@
 		
 		?>
 		<div id="save-or-not"></div>
-		</fieldset>
 		<button type="submit">Valider</button>
 		<button onclick="saveSubmit()" type="submit">Sauvegarder & Continuer</button>
     <?= $this->Form->end() ?>

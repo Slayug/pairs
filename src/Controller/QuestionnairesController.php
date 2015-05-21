@@ -690,9 +690,7 @@ class QuestionnairesController extends AppController
      */
     public function edit($id = null)
     {
-        $questionnaire = $this->Questionnaires->get($id, [
-            'contain' => ['Groups', 'Questions']
-        ]);
+        $questionnaire = $this->Questionnaires->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
             if ($this->Questionnaires->save($questionnaire)) {
