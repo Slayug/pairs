@@ -7,6 +7,8 @@
 	$currentUser = $session->read('Auth.User');
 	$role = $currentUser['role_id'];
 	?>
+	
+		<?= $this->Flash->render('auth') ?>
 		<p>Bonjour <?php echo h(ucfirst($currentUser['first_name']) . ' ' . ucfirst($currentUser['last_name'])); ?>.
 		<?= $this->Flash->render() ?></p>
 	<?php

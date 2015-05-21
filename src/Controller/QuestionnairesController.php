@@ -55,9 +55,9 @@ class QuestionnairesController extends AppController
 			$canReply = $queryReply->count();
 		}
 		$isOwner = $this->isOwner();
-		if(in_array($action, ['edit', 'delete', 'add'])){
+		if(in_array($action, ['edit', 'delete', 'add', 'copy'])){
 			if($role == 2){ // professeur
-				if(in_array($action, ['add'])){
+				if(in_array($action, ['add', 'copy'])){
 					return true;
 				}
 				// on vérifie si le questionnaire est bien à  l'utilisateur
@@ -145,7 +145,7 @@ class QuestionnairesController extends AppController
 						$association->user_id = $idUser;
 						$association->for_who = $idForWho;
 						$association->answer_id = $idAnswer;
-						$success = $success AND $associations->save($association);
+						$success = $success && $associations->save($association);
 					}
 				}
 				if($success){
@@ -174,7 +174,7 @@ class QuestionnairesController extends AppController
 						$idQuestion = $keySplitted[1];
 						$idAnswer = $value;
 						
-						$success = $success AND $associationsPartials->deleteAll(['questionnaire_id' => $idQuestionnaire,
+						$success = $success && $associationsPartials->deleteAll(['questionnaire_id' => $idQuestionnaire,
 																				'user_id' => $idUser]);
 																				
 						$association = $associations->newEntity();
@@ -183,7 +183,7 @@ class QuestionnairesController extends AppController
 						$association->user_id = $idUser;
 						$association->for_who = $idForWho;
 						$association->answer_id = $idAnswer;
-						$success = $success AND $associations->save($association);
+						$success = $success && $associations->save($association);
 					}
 				}
 				//sauvegarder les réponses
@@ -607,7 +607,7 @@ class QuestionnairesController extends AppController
 							$questionTuple->content = $question;
 							$questionTuple->type = 0;
 							$questionTuple = $questionTable->save($questionTuple);
-							$success = $success AND $questionTuple;
+							$success = $success && $questionTuple;
 						}else{
 							$questionTuple->id = $idQuestion;
 						}
@@ -627,7 +627,7 @@ class QuestionnairesController extends AppController
 								$answerTuple = $answerTable->newEntity();
 								$answerTuple->value = $answer;
 								$answerTuple = $answerTable->save($answerTuple);
-								$success = $success AND $answerTuple;
+								$success = $success && $answerTuple;
 							}else{
 								$answerTuple->id = $idAnswer;
 							}
@@ -639,7 +639,7 @@ class QuestionnairesController extends AppController
 							$association->answer_id = $answerTuple->id;
 							$association->questionnaire_id = $questionnaire->id;
 							$association->position = $i - 1;
-							$success = $success AND $associationTable->save($association);
+							$success = $success && $associationTable->save($association);
 						}
 					}
 				}
@@ -715,7 +715,7 @@ class QuestionnairesController extends AppController
 			$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
 			$transaction->begin();
 			$associations = TableRegistry::get('answers_questions_questionnaires');
-			$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+			$success = $success && $associations->deleteAll(['questionnaire_id' => $id]);
 			
 			//on vide par les tableaux fournis par défault de cake
 			$this->request->data['answers'] = array();
@@ -762,7 +762,7 @@ class QuestionnairesController extends AppController
 							$questionTuple->content = $question;
 							$questionTuple->type = 0;
 							$questionTuple = $questionTable->save($questionTuple);
-							$success = $success AND $questionTuple;
+							$success = $success && $questionTuple;
 						}else{
 							$questionTuple->id = $idQuestion;
 						}
@@ -782,7 +782,7 @@ class QuestionnairesController extends AppController
 								$answerTuple = $answerTable->newEntity();
 								$answerTuple->value = $answer;
 								$answerTuple = $answerTable->save($answerTuple);
-								$success = $success AND $answerTuple;
+								$success = $success && $answerTuple;
 							}else{
 								$answerTuple->id = $idAnswer;
 							}
@@ -794,7 +794,7 @@ class QuestionnairesController extends AppController
 							$association->answer_id = $answerTuple->id;
 							$association->questionnaire_id = $questionnaire->id;
 							$association->position = $i - 1;
-							$success = $success AND $associationTable->save($association);
+							$success = $success && $associationTable->save($association);
 						}
 					}
 				}
@@ -857,34 +857,33 @@ class QuestionnairesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function delete($id = null){
-		
 		$success = true;
 		$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
 		$transaction->begin();
 	
 		//supprimer les associations dans answers_questions_questionnaires
 		//$associations = TableRegistry::get('answers_questions_questionnaires');
-		//$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		//$success = $success && $associations->deleteAll(['questionnaire_id' => $id]);
 		
 		//supprimer les associations dans answers_questionnaires_users
 		$associations = TableRegistry::get('answers_questionnaires_users_partials');
-		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		$success = $success && $associations->deleteAll(['questionnaire_id' => $id]);
 		
 		//supprimer les associations dans questionnaires_groups
 		$associations = TableRegistry::get('questionnaires_groups');
-		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		$success = $success && $associations->deleteAll(['questionnaire_id' => $id]);
 		
 		//supprimer les associations dans answers_questionnaires_users
 		$associations = TableRegistry::get('answers_questionnaires_users');
-		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		$success = $success && $associations->deleteAll(['questionnaire_id' => $id]);
 		
 		//supprimer l'association avec le proprio du questionnaire
 		$associations = TableRegistry::get('questionnaires_owners');
-		$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+		$success = $success && $associations->deleteAll(['questionnaire_id' => $id]);
 		
 		//supprimer le questionnaire dans questionnaires
 		//$associations = TableRegistry::get('Questionnaires');
-		//$success = $success AND $associations->deleteAll(['id' => $id]);
+		//$success = $success && $associations->deleteAll(['id' => $id]);
 		
 		if($success){
 			$transaction->commit();
@@ -903,4 +902,95 @@ class QuestionnairesController extends AppController
         }
         return $this->redirect(['action' => 'index']);*/
     }
+	
+	
+	public function copy($idQuestionnaire = null){
+		if($idQuestionnaire != null){
+		
+			$questionnaire = $this->Questionnaires->get($idQuestionnaire);
+			if ($this->request->is(['post', 'put'])) {				
+				
+				$session = $this->request->session();
+				$currentUser = $session->read('Auth.User');
+				$success = true;
+				$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
+				$transaction->begin();
+				
+				//on copie chaque élément du questionnaire à copier SAUF son ID
+				$questionnaireCopy = $this->Questionnaires->newEntity();
+				$questionnaireCopy->title = $questionnaire->title;
+				$this->request->data['title'] = $questionnaire->title;
+				$questionnaireCopy->description = $questionnaire->description;
+				$this->request->data['description'] = $questionnaire->description;
+				$questionnaireCopy->date_creation = $questionnaire->date_creation;
+				$questionnaireCopy->date_limit = $questionnaire->date_limit;
+				
+				$this->request->data['owners'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer qu'il est lier au questionnaire		
+				//$questionnaireCopy = $this->Questionnaires->patchEntity($questionnaireCopy, $this->request->data);
+				
+				$this->request->data['groups'] = array();
+				$countGroup = 0;
+				for($m = 0; $m < count($this->request->data['modules']['ids']); $m++){
+					//on associe le questionnaire avec le ou les modules voulus
+					$groups = TableRegistry::get('Groups');
+					$idModule = $this->request->data['modules']['ids'][$m];
+					$queryGroups = $groups->find()->hydrate(false)
+										 ->join([
+											'gm' => [ // on join les modules
+												'table' => 'modules_groups',
+												'type' => 'INNER',
+												'conditions' => 'gm.group_id = groups.id',
+											]])
+										->where(['gm.module_id' => $idModule]); // et on cible le module où on est
+					$groupsArray = $queryGroups->toArray();
+					for($g = 0; $g < count($groupsArray); $g++){
+						$this->request->data['groups'][$countGroup++] = $groupsArray[$g];
+					}
+				}
+				//debug($this->request->data);
+				$questionnaireCopy = $this->Questionnaires->patchEntity($questionnaireCopy, $this->request->data);
+				
+				$questionnaireCopy = $this->Questionnaires->save($questionnaireCopy);
+				$success = $success && $questionnaireCopy;
+				if($success){
+					//chargement des associations du questionnaire à copier
+					$associationTable = TableRegistry::get('answers_questions_questionnaires');
+					$associations = $associationTable->find()->where(['questionnaire_id' => $idQuestionnaire]);
+					//on copie les associations avec le nouvel id du questionnaire copié
+					$associationsArray = $associations->toArray();
+					for($i = 0; $i < count($associationsArray); $i++){
+						$associationCopy = $associationTable->newEntity();
+						$associationCopy['questionnaire_id'] = $questionnaireCopy->id;
+						$associationCopy['position'] = $associationsArray[$i]['position'];
+						$associationCopy['question_id'] = $associationsArray[$i]['question_id'];
+						$associationCopy['answer_id'] = $associationsArray[$i]['answer_id'];
+						$success = $success && $associationTable->save($associationCopy);
+					}
+				}
+				if($success){
+					$transaction->commit();
+					$this->Flash->success('Le questionnaire a bien été copié !');
+					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'edit', $questionnaireCopy->id]);
+				}else{
+					$transaction->rollback();
+					$this->Flash->error('Une erreur s\'est produite, merci de réessayer plus tard.');
+				}
+			}
+			
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			$role = $currentUser['role_id'];
+			$usersTable = $associations = TableRegistry::get('users');
+			$user = $usersTable->get($currentUser['id'], [
+				'contain' => ['ModuleOwner']
+			]);
+			
+			
+			$questionnaire = $this->Questionnaires->get($idQuestionnaire);
+			$modulesUser = $user->module_owner;
+			$this->set(compact('modulesUser'));
+			$this->set('questionnaire', $questionnaire);
+		}
+		//$this->redirect($this->referer());
+	}
 }

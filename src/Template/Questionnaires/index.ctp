@@ -13,6 +13,7 @@ $currentUser = $session->read('Auth.User');
 		<div>
         <p>Description: <?= h($questionnaire->description) ?></p>
         <ul	class="actions">
+				<li><?= $this->Html->link(__('Copier'), ['action' => 'copy', $questionnaire->id]) ?></li>
 				<?php
 				if($questionnaire->_matchingData['Owners']->id == $currentUser['id']){?>
 					<li><?= $this->Html->link(__('Editer'), ['action' => 'edit', $questionnaire->id]) ?></li>
@@ -20,7 +21,6 @@ $currentUser = $session->read('Auth.User');
 				<?php
 				}
 				?>
-				<li><?= $this->Html->link(__('Copier'), ['action' => 'copy', $questionnaire->id]) ?></li>
         </ul>
 		</div>
     <?php endforeach; ?>
