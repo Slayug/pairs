@@ -129,14 +129,15 @@
 				<td class="td_link"><?= $this->Html->link(__($questionnaire['title']), ['controller' => 'Questionnaires', 'action' => 'view', $questionnaire['id']]);?></td>
 				<td>
 				<?php if($isOwner){ ?>
-				<?= $this->Form->postLink(
-					$this->Html->image('delete.png',
-						array('alt' => __('Supprimer'),
-							  'title' => __('Supprimer'))),
-						array('controller' => 'Questionnaires',
-							  'action' => 'deleteAssociation', $questionnaire['id']),
-						array('escape' => false,
-							  'confirm' => __('Êtes vous sûr de supprimer le questionnaire #{0}# ?', $questionnaire['title']))); ?>
+					<?= $this->Html->link($this->Html->image('edit.png'), array('controller'=>'Questionnaires', 'action' => 'edit', $questionnaire['id']), array('escape' => false));?>
+					<?= $this->Form->postLink(
+						$this->Html->image('delete.png',
+							array('alt' => __('Supprimer'),
+								  'title' => __('Supprimer'))),
+							array('controller' => 'Questionnaires',
+								  'action' => 'deleteAssociation', $questionnaire['id']),
+							array('escape' => false,
+								  'confirm' => __('Êtes vous sûr de supprimer le questionnaire #{0}# ?', $questionnaire['title']))); ?>
 				</td>
 				<?php
 				}?>

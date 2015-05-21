@@ -20,7 +20,7 @@
 			<ul>
 		<?php
 			echo '<li>';
-			echo $this->Html->link(__('Lister les utilisateurs'), ['controller' => 'Users', 'action' => 'index']);
+			echo $this->Html->link(__('Liste des utilisateurs'), ['controller' => 'Users', 'action' => 'index']);
 			echo '</li>';
 			echo '<li>';
 			echo $this->Html->link(__('Ajouter un utilisateur'), ['controller' => 'Users', 'action' => 'add']);
@@ -33,22 +33,12 @@
 	
 	if($role == 2){ // professeur
 		?>
-			<h4>Gestion</h4>
-			<ul>
-			<?php
-				echo '<li>';
-				echo $this->Html->link(__('Créer un module'), ['controller' => 'Modules', 'action' => 'add']);
-				echo '</li>';
-			?>
-			</ul>
-			<h4>Gestion des questionnaires</h4>
-			<ul>			
-				<?php
-					echo '<li>';
-					echo $this->Html->link(__('Lister les questionnaires'), ['controller' => 'Questionnaires', 'action' => 'index']);
-					echo '</li>';
-				?>
-			</ul>
+			<div class="panel-option col-md-6">
+				<a href="/pairs/modules/add"><span class="panel-option-glyphicon add-on"><i class=" glyphicon glyphicon-plus"></i></span> Créer un module</a>
+			</div>
+			<div class="panel-option col-md-6">
+				<a href="/pairs/questionnaires"><span class="panel-option-glyphicon add-on"><i class="panel-option-glyphicon glyphicon glyphicon-list"></i></span> Liste des questionnaires</a>
+			</div>
 		<?php
 	}
 ?>

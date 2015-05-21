@@ -1,15 +1,16 @@
 <div class="panel panel-default questionnaires form large-12 medium-12 columns">
-	<?= $this->Flash->render() ?>
 	<div class="panel-heading"><h2 class="panel-title">Editer un questionnaire: <?= h($questionnaire->title) ?></h2></div>
 <div class="panel-body">
 		<?= $this->Form->create($questionnaire, ['id' => 'questionnaire_add']); ?>
 		<div id="error_questionnaire_add">
 		</div>
+		
+	<?= $this->Flash->render() ?>
         <?php
 		
 			if($dangerUserHasAnswer){
 			?>
-				<div class="alert alert-danger" role="alert"><strong>Attention</strong> Un ou plusieurs utilisateur(s) a répondu à ce questionnaire,
+				<div class="alert alert-danger" role="alert"><strong>Attention !</strong> Un ou plusieurs utilisateur(s) a répondu à ce questionnaire,
 				si vous modifiez une question le questionnaire sera faussé.<br>
 				Vous pouvez toujours copier le questionnaire pour en faire un nouveau sans réponse d'utilisateur.
 				</div>

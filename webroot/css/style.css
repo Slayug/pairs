@@ -435,3 +435,10 @@ margin-bottom:0px;
 	padding:10px;
 	border-radius: 0px  0px  15px  15px;
 }
+.panel-option{
+	margin-bottom:20px;
+	font-size:22px;
+}
+.panel-option-glyphicon{
+	color:#404040;
+}

@@ -103,6 +103,9 @@ class UsersController extends AppController
 									
 									])
 									->where(['gu.user_id' => $id]); // où l'id de l'user est le même que celui qui est connecté
+			if(!$modulesUser->count()){
+				$modulesUser = array();
+			}
 			// $this->set('modules', $modulesUser);
 			$this->set('user', $user);
 			$this->set('modulesUser', $modulesUser);
