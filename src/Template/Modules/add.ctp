@@ -4,7 +4,7 @@
 		
 	<?= $this->Flash->render() ?>
     <?= $this->Form->create($module); ?>
-		<p class="alert alert-warning">Pour le nom de votre Module, vous pouvez par exemple mettre L2-VotreMatière</p>
+		<div class="alert alert-warning"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Pour le nom de votre Module, vous pouvez par exemple mettre L2-VotreMatière</div>
         <?php
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');

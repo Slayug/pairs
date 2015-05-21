@@ -77,7 +77,7 @@
 			]); ?>
 			<?= $this->Form->button(__('Importer')) ?>
 			<?= $this->Form->end() ?>
-			<div class="alert alert-warning">Pour pouvoir utiliser cette fonctionnalité, votre fichier doit être organisé comme l'un des exemples suivants:
+			<div class="alert alert-warning"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Pour pouvoir utiliser cette fonctionnalité, votre fichier doit être organisé comme l'un des exemples suivants:
 				<ul>
 					<li>Exemple 1 <?php echo $this->Html->link('.xlsx', '/files/exemple_1.xlsx'); ?> | <?php echo $this->Html->link('.ods', '/files/exemple_1.ods'); ?></li>
 					<li>Exemple 2 <?php echo $this->Html->link('.xlsx', '/files/exemple_2.xlsx'); ?> | <?php echo $this->Html->link('.ods', '/files/exemple_2.ods'); ?></li>

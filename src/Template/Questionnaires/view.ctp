@@ -38,8 +38,7 @@
 			if($currentDate < $dateLimit){
 				?>
 					<div class="alert alert-warning"
-						role="alert">
-					<p><?= $this->Html->link(__('Répondre au questionnaire'),
+						role="alert"><p><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <?= $this->Html->link(__('Répondre au questionnaire'),
 											['controller' => 'Questionnaires', 'action' => 'reply', $questionnaire->id]) ?>
 					</p>
 					<?php

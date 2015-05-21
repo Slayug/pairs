@@ -2,7 +2,7 @@
 	<div class="panel-heading"><h2 class="panel-title">Ajouter un questionnaire</h2></div>
 <div class="panel-body">
 		<?= $this->Form->create($questionnaire, ['id' => 'questionnaire_add']); ?>
-		<div id="error_questionnaire_add">
+		<div style="display:none;" class="alert alert-danger" id="error_questionnaire_add">
 		</div>
 		
 		<?= $this->Flash->render() ?>

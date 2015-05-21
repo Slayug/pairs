@@ -7,10 +7,10 @@
 	$currentUser = $session->read('Auth.User');
 	$role = $currentUser['role_id'];
 	?>
-	
-		<?= $this->Flash->render('auth') ?>
+		
 		<h4 style="color:#404040;">Bonjour <?php echo h(ucfirst($currentUser['first_name']) . ' ' . ucfirst($currentUser['last_name'])); ?>.</h4>
 		<br>
+		<?= $this->Flash->render('auth') ?>
 	<?php
 	
 	if($role == 1){ //admin

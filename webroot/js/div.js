@@ -258,15 +258,35 @@ function dateTimePickerToDatetime(date){
 
 function submitQuestionnaireAdd(){
 	$("#error_questionnaire_add").empty();
-	
 	var dateLimit = $('#date_limit').val();
 	var dateCreation = $('#date_creation').val();
 	
-	dateCreation = dateTimePickerToDatetime(dateCreation);
-	dateLimit = dateTimePickerToDatetime(dateLimit);
-	
-	if(dateCreation >= dateLimit){
-		$("#error_questionnaire_add").append('<p class="message_error">La date de création doit être strictement inférieur à celle limite.</p>');
+	var error = false;
+	var msgError = '';
+	if($("#title").val().length == 0){
+		msgError += 'Le questionnaire doit contenir un titre !<br>';
+		error = true;
+	}
+	if($("#description").val().length == 0){
+		msgError += 'Le questionnaire doit contenir une description !<br>';
+		error = true;
+	}
+	if(dateCreation.length == 0 || dateLimit.length == 0){
+		msgError += 'Les champs de date sont obligatoires !<br>';
+		error = true;
+	}
+	if(!error){
+		dateCreation = dateTimePickerToDatetime(dateCreation);
+		dateLimit = dateTimePickerToDatetime(dateLimit);
+		if(dateCreation >= dateLimit){
+			msgError += 'La date de création doit être strictement inférieur à celle limite.';
+			error = true;
+		}
+	}
+	if(error){
+		$("#error_questionnaire_add").append('<p><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> ');
+		$("#error_questionnaire_add").append(msgError+'</p>');
+			$("#error_questionnaire_add").css('display', 'block');
 		return;
 	}
 	

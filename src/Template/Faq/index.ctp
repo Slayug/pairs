@@ -1,8 +1,5 @@
 <div id="faq">
 <h1>Bienvenue sur notre FAQ</h1>
-
-
-
 <ul>
     <li><a href="#compte">Comment accéder à mon compte?</a></li>
     <li><a href="#module">Qu'est ce qu'un module ?</a></li>
