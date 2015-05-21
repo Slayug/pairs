@@ -16924,3 +16924,249 @@ Stack Trace:
 #14 {main}
 
 
+2015-05-21 12:04:40 Error: Fatal Error (4): syntax error, unexpected '{' in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 633]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-21 12:04:40 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '{'
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 633)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-21 12:05:07 Error: Fatal Error (4): syntax error, unexpected '$subject' (T_VARIABLE) in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 655]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-21 12:05:07 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$subject' (T_VARIABLE)
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 655)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-21 12:05:29 Error: Fatal Error (4): syntax error, unexpected '.' in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 657]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-21 12:05:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '.'
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\pai...', 657)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-21 12:06:39 Error: [BadMethodCallException] Cannot send email, transport was not defined. Did you call transport() or define  a transport in the set profile?
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1363): Cake\Network\Email\Email->send('Bonjour  \\nUn q...')
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(660): Cake\Network\Email\Email::deliver('alexis.puret@et...', '\xC3\xA9valuation par...', 'Bonjour  \\nUn q...', Array)
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 12:07:08 Error: [BadMethodCallException] Cannot send email, transport was not defined. Did you call transport() or define  a transport in the set profile?
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1363): Cake\Network\Email\Email->send('Bonjour PURET A...')
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(660): Cake\Network\Email\Email::deliver('alexis.puret@et...', '\xC3\xA9valuation par...', 'Bonjour PURET A...', Array)
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 12:07:36 Error: [BadMethodCallException] Cannot send email, transport was not defined. Did you call transport() or define  a transport in the set profile?
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1363): Cake\Network\Email\Email->send('Bonjour PURET A...')
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(660): Cake\Network\Email\Email::deliver('alexis.puret@et...', '\xC3\xA9valuation par...', 'Bonjour PURET A...', Array)
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 12:11:43 Error: [BadMethodCallException] Cannot modify an existing config "default"
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(662): Cake\Network\Email\Email::configTransport('default', Array)
+#1 [internal function]: App\Controller\QuestionnairesController->add('2')
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#5 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2015-05-21 12:11:55 Error: [BadMethodCallException] Cannot send email, transport was not defined. Did you call transport() or define  a transport in the set profile?
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1363): Cake\Network\Email\Email->send('Bonjour PURET A...')
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(661): Cake\Network\Email\Email::deliver('alexis.puret@et...', '\xC3\xA9valuation par...', 'Bonjour PURET A...', Array)
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 12:14:24 Error: [BadMethodCallException] Cannot send email, transport was not defined. Did you call transport() or define  a transport in the set profile?
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1363): Cake\Network\Email\Email->send('Bonjour PURET A...')
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(667): Cake\Network\Email\Email::deliver('alexis.puret@et...', '\xC3\xA9valuation par...', 'Bonjour PURET A...', Array)
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 12:16:11 Error: [BadMethodCallException] Cannot send email, transport was not defined. Did you call transport() or define  a transport in the set profile?
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1363): Cake\Network\Email\Email->send('Bonjour PURET A...')
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(661): Cake\Network\Email\Email::deliver('alexis.puret@et...', '\xC3\xA9valuation par...', 'Bonjour PURET A...', Array)
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 12:16:34 Error: [BadMethodCallException] Cannot send email, transport was not defined. Did you call transport() or define  a transport in the set profile?
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1363): Cake\Network\Email\Email->send('Bonjour PURET A...')
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(662): Cake\Network\Email\Email::deliver('alexis.puret@et...', '\xC3\xA9valuation par...', 'Bonjour PURET A...', Array)
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 12:16:38 Error: [BadMethodCallException] Cannot send email, transport was not defined. Did you call transport() or define  a transport in the set profile?
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1363): Cake\Network\Email\Email->send('Bonjour PURET A...')
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(662): Cake\Network\Email\Email::deliver('alexis.puret@et...', '\xC3\xA9valuation par...', 'Bonjour PURET A...', Array)
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 12:17:45 Error: [BadMethodCallException] Cannot send email, transport was not defined. Did you call transport() or define  a transport in the set profile?
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1363): Cake\Network\Email\Email->send('Bonjour PURET A...')
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(661): Cake\Network\Email\Email::deliver('alexis.puret@et...', '\xC3\xA9valuation par...', 'Bonjour PURET A...', Array)
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 12:18:55 Error: [BadMethodCallException] Cannot send email, transport was not defined. Did you call transport() or define  a transport in the set profile?
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1363): Cake\Network\Email\Email->send('Bonjour PURET A...')
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(661): Cake\Network\Email\Email::deliver('alexis.puret@et...', '\xC3\xA9valuation par...', 'Bonjour PURET A...', Array)
+#2 [internal function]: App\Controller\QuestionnairesController->add('2')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 12:20:18 Error: [Cake\Network\Exception\SocketException] Could not send email: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\MailTransport.php(53): Cake\Network\Email\MailTransport->_mail('alexis.puret@et...', 'toast', '\r\n', 'From: Hello <al...', NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1301): Cake\Network\Email\MailTransport->send(Object(Cake\Network\Email\Email))
+#2 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(663): Cake\Network\Email\Email->send()
+#3 [internal function]: App\Controller\QuestionnairesController->add('2')
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#7 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2015-05-21 12:24:30 Error: [Cake\Network\Exception\SocketException] Could not send email: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\MailTransport.php(53): Cake\Network\Email\MailTransport->_mail('alexis.puret@et...', 'toast', '\r\n', 'From: Hello <al...', NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1301): Cake\Network\Email\MailTransport->send(Object(Cake\Network\Email\Email))
+#2 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(671): Cake\Network\Email\Email->send()
+#3 [internal function]: App\Controller\QuestionnairesController->add('2')
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#7 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2015-05-21 12:25:44 Error: [Cake\Network\Exception\SocketException] Could not send email: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\MailTransport.php(53): Cake\Network\Email\MailTransport->_mail('alexis.puret@et...', 'toast', '\r\n', 'From: Hello <al...', NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1301): Cake\Network\Email\MailTransport->send(Object(Cake\Network\Email\Email))
+#2 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(671): Cake\Network\Email\Email->send()
+#3 [internal function]: App\Controller\QuestionnairesController->add('2')
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#7 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2015-05-21 12:28:54 Error: [Cake\Network\Exception\SocketException] Could not send email: mail(): Failed to connect to mailserver at &quot;smtp.numericable.fr&quot; port 587, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+Request URL: /pairs/questionnaires/add/2
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\MailTransport.php(53): Cake\Network\Email\MailTransport->_mail('alexis.puret@et...', 'toast', '\r\n', 'From: Hello <al...', NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Network\Email\Email.php(1301): Cake\Network\Email\MailTransport->send(Object(Cake\Network\Email\Email))
+#2 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(663): Cake\Network\Email\Email->send()
+#3 [internal function]: App\Controller\QuestionnairesController->add('2')
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#7 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+

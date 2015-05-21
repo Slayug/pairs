@@ -63,8 +63,8 @@
 			<div id="questions-questionnaires" class="col-md-6">
 				<h3>Questions:<h3>
 			</div>
-			
 			<div id="questions_submit" style="display:none;"></div>
+			
 			<script type="text/javascript">
 				$(".form_datetime_creation").datetimepicker({
 					format: "dd MM yyyy - hh:ii",
@@ -79,7 +79,9 @@
 					language: 'fr'
 				});
 			</script>
-			
+			<div class="col-md-12">
+				<input type="checkbox" name="sendEmail" id="sendEmail" checked /><label for="sendEmail">Notifier les membres par email</label>
+			</div>
 			
     </fieldset>
     <?= $this->Form->end() ?>

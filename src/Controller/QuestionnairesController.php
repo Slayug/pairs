@@ -5,6 +5,7 @@ use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 use Cake\Core\App;
 use Cake\Datasource\ConnectionManager;
+use Cake\Network\Email\Email;
 /**
  * Questionnaires Controller
  *
@@ -627,6 +628,42 @@ class QuestionnairesController extends AppController
 			
 			if($success){
 				$transaction->commit();
+				
+				// on envoi les mails si demandé
+				/**if(array_key_exists('sendEmail', $this->request->data)){
+					//tous les utilisateurs à notifier
+					$users = TableRegistry::get('Users');
+					$usersQuery = $users->find()->hydrate(false)
+									->join([
+										'gu' => [ // on join les groupes associés aux étudiant
+											'table' => 'groups_users',
+											'type' => 'INNER',
+											'conditions' => 'gu.user_id = users.id',
+										],
+										'qg' => [ // on join les groupes à celui du questionnaire et du join précédent
+											'table' => 'questionnaires_groups',
+											'type' => 'INNER',
+											'conditions' => 'qg.group_id = gu.group_id',
+										]
+									
+									])
+									->where(['qg.questionnaire_id' => $questionnaire->id]);
+					$usersArray = $usersQuery->toArray();
+					for($i = 0;$i < count($usersArray); $i++){
+						$to = $usersArray[$i]['email'];
+						$from = 'alexis.puret@etu.univ-tours.fr';
+						$subject = 'évaluation par les pairs.';
+						$msg = 'Bonjour ' . $usersArray[$i]['last_name'] . ' ' . $usersArray[$i]['first_name']
+						. '\nUn questionnaire a été crée pour votre groupe dans le module TODO et vous devait y répondre avant le '. $questionnaire->data_limit .'.\n\n'
+						. $currentUser['last_name'] . ' ' . $currentUser['first_name'];
+						$email = new Email('default');
+						$email->to($to)
+							->from([$from => 'Hello'])
+							->subject('toast')
+								->send();
+					}
+				}**/
+				
 				$this->Flash->success('Le questionnaire a bien été ajouté.');
 				return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);
 			}else{
