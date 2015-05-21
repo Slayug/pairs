@@ -64,9 +64,12 @@ function updateEditQuestionnaire(questions){
 		arrowRight();
 		selectSelected = 1;
 		for(var answer in questions[key]['answers']){
+			for(var subAnswer in questions[key]['answers']){
+				$('#answers option[value="'+questions[key]['answers'][subAnswer]['id']+'"]').prop('selected', false);
+			}
 			$('#answers option[value="'+questions[key]['answers'][answer]['id']+'"]').prop('selected', true);
+			arrowRight();
 		}
-		arrowRight();
 	}
 	selectSelected = -1;
 	$("#questions_submit").empty();
