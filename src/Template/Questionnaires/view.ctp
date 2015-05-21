@@ -2,6 +2,7 @@
     <div class="panel-heading"><h2 class="panel-title"><?= h($questionnaire->title) ?></h2></div>
 <div class="panel-body">
     <div class="row">
+		<fieldset>
         <div class="large-5 columns strings">
             <h6 class="subheader"><?= __('Titre') ?></h6>
             <p><?= h($questionnaire->title) ?></p>
@@ -18,6 +19,7 @@
             <h6 class="subheader"><?= __('Date Limite') ?></h6>
             <p><?= h($dateLimit->format('d-m-Y H:i:s')) ?></p>
         </div>
+		</fieldset>
     </div>
 	
 	<?= $this->Flash->render() ?>
