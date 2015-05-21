@@ -17320,3 +17320,165 @@ Stack Trace:
 #2 {main}
 
 
+2015-05-21 15:06:03 Error: Fatal Error (1): Call to undefined method App\Model\Entity\Questionnaire::mactching() in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 714]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-21 15:06:04 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Model\Entity\Questionnaire::mactching()
+Request URL: /pairs/questionnaires/edit/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'D:\\wamp\\www\\pai...', 714)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-21 15:06:12 Error: Fatal Error (1): Call to undefined method App\Model\Entity\Questionnaire::matching() in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 714]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-21 15:06:12 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Model\Entity\Questionnaire::matching()
+Request URL: /pairs/questionnaires/edit/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'D:\\wamp\\www\\pai...', 714)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-21 15:06:36 Error: Fatal Error (1): Call to undefined method App\Model\Entity\Questionnaire::matching() in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 714]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-21 15:06:36 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Model\Entity\Questionnaire::matching()
+Request URL: /pairs/questionnaires/edit/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'D:\\wamp\\www\\pai...', 714)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-21 15:07:06 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Champ: 'id' dans where clause est ambigu
+Request URL: /pairs/questionnaires/edit/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(132): Cake\ORM\Query->all()
+#9 [internal function]: Cake\ORM\Query->getIterator()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Collection\Collection.php(50): IteratorIterator->__construct(Object(Cake\ORM\Query))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(260): Cake\Collection\Collection->__construct(Object(Cake\ORM\Query))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2459): Cake\View\Helper\FormHelper->Cake\View\Helper\{closure}(Object(Cake\Network\Request), Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(341): Cake\View\Helper\FormHelper->_getContext(Array)
+#14 D:\wamp\www\pairs\src\Template\Questionnaires\edit.ctp(5): Cake\View\Helper\FormHelper->create(Object(Cake\ORM\Query), Array)
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\View.php(815): include('D:\\wamp\\www\\pai...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\View.php(775): Cake\View\View->_evaluate('D:\\wamp\\www\\pai...', Array)
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\View.php(463): Cake\View\View->_render('D:\\wamp\\www\\pai...')
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(576): Cake\View\View->render(NULL, NULL)
+#19 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#20 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#21 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2015-05-21 15:07:27 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Champ: 'id' dans where clause est ambigu
+Request URL: /pairs/questionnaires/edit/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(644): Cake\Database\Query->execute()
+#6 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Query.php(595): Cake\ORM\Query->_all()
+#8 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(132): Cake\ORM\Query->all()
+#9 [internal function]: Cake\ORM\Query->getIterator()
+#10 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Collection\Collection.php(50): IteratorIterator->__construct(Object(Cake\ORM\Query))
+#11 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(260): Cake\Collection\Collection->__construct(Object(Cake\ORM\Query))
+#12 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2459): Cake\View\Helper\FormHelper->Cake\View\Helper\{closure}(Object(Cake\Network\Request), Array)
+#13 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(341): Cake\View\Helper\FormHelper->_getContext(Array)
+#14 D:\wamp\www\pairs\src\Template\Questionnaires\edit.ctp(5): Cake\View\Helper\FormHelper->create(Object(Cake\ORM\Query), Array)
+#15 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\View.php(815): include('D:\\wamp\\www\\pai...')
+#16 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\View.php(775): Cake\View\View->_evaluate('D:\\wamp\\www\\pai...', Array)
+#17 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\View\View.php(463): Cake\View\View->_render('D:\\wamp\\www\\pai...')
+#18 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(576): Cake\View\View->render(NULL, NULL)
+#19 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#20 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#21 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2015-05-21 15:08:06 Error: [BadMethodCallException] Unknown finder method "first"
+Request URL: /pairs/questionnaires/edit/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\ORM\Table.php(882): Cake\ORM\Table->callFinder('first', Object(Cake\ORM\Query), Array)
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(714): Cake\ORM\Table->find('first')
+#2 [internal function]: App\Controller\QuestionnairesController->edit('7')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-05-21 15:08:52 Error: Fatal Error (1): Call to undefined method App\Model\Entity\Questionnaire::matching() in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 714]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-21 15:08:52 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Model\Entity\Questionnaire::matching()
+Request URL: /pairs/questionnaires/edit/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'D:\\wamp\\www\\pai...', 714)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-21 15:17:18 Error: Fatal Error (1): Call to a member function read() on a non-object in [D:\wamp\www\pairs\src\Controller\QuestionnairesController.php, line 728]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-05-21 15:17:19 Error: [Cake\Error\FatalErrorException] Call to a member function read() on a non-object
+Request URL: /pairs/questionnaires/edit/7
+Stack Trace:
+#0 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\pai...', 728)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-05-21 15:27:45 Error: [BadMethodCallException] Unknown method "count"
+Request URL: /pairs/questionnaires/edit/1
+Stack Trace:
+#0 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(836): Cake\ORM\Table->__call('count', Array)
+#1 D:\wamp\www\pairs\src\Controller\QuestionnairesController.php(836): Cake\ORM\Table->count()
+#2 [internal function]: App\Controller\QuestionnairesController->edit('1')
+#3 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Controller\Controller.php(405): call_user_func_array(Array, Array)
+#4 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\wamp\www\pairs\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\QuestionnairesController))
+#6 D:\wamp\www\pairs\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+

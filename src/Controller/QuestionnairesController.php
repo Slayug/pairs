@@ -13,7 +13,6 @@ use Cake\Network\Email\Email;
  */
 class QuestionnairesController extends AppController
 {
-
 	/**
 	 * Methode permettant de gérer les droits pour
 	 * ce controller
@@ -708,19 +707,107 @@ class QuestionnairesController extends AppController
      * @return void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
-    {
+    public function edit($id = null){
         $questionnaire = $this->Questionnaires->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
-            if ($this->Questionnaires->save($questionnaire)) {
-                $this->Flash->success('The questionnaire has been saved.');
-                return $this->redirect(['action' => 'index']);
-            } else {
-                $this->Flash->error('The questionnaire could not be saved. Please, try again.');
-            }
+			
+			$success = true;
+			$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
+			$transaction->begin();
+			$associations = TableRegistry::get('answers_questions_questionnaires');
+			$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
+			
+			//on vide par les tableaux fournis par défault de cake
+			$this->request->data['answers'] = array();
+			$this->request->data['questions'] = array();
+			//on save le questionnaire en vérifiant que titre et description ne sont pas null et de même pour les dates
+			if(strlen($this->request->data['title']) > 0 && strlen($this->request->data['description']) > 0 &&
+				strlen($this->request->data['date_creation']) > 0 &&
+				strlen($this->request->data['date_limit']) > 0){
+			
+				$session = $this->request->session();
+				$currentUser = $session->read('Auth.User');
+				
+				$this->request->data['date_creation'] = $this->dateTimePickerToDatetime($this->request->data['date_creation']);
+				$this->request->data['date_limit'] = $this->dateTimePickerToDatetime($this->request->data['date_limit']);
+				
+				$questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
+				//debug($questionnaire);
+				$questionnaire = $this->Questionnaires->save($questionnaire);
+				if(!$questionnaire){
+					$transaction->rollback();				
+					$this->Flash->error('Une erreur s\'est produite, merci de réessayer..');
+					$success = false;
+				}
+			}else{
+                $this->Flash->error('Le questionnaire doit contenir au moins un titre & une description.');
+				$success = false;
+			}
+			if($success){
+				foreach($this->request->data as $key => $value){
+					if(strstr($key, '#-#')){
+						/**
+						*	Question:
+						*	idQuestion#-#question
+						*/
+						$keySplitted = explode('#-#', $key);
+						$idQuestion = $keySplitted[0];
+						$question = str_replace('_', ' ', $keySplitted[1]);
+						
+						//on test si la question existe déjà en BDD
+						$questionTable = TableRegistry::get('Questions');
+						$questionTuple = $questionTable->find()->where(['Questions.id' => $idQuestion]);
+						if($questionTuple->first() == null){
+							$questionTuple = $questionTable->newEntity();
+							$questionTuple->content = $question;
+							$questionTuple->type = 0;
+							$questionTuple = $questionTable->save($questionTuple);
+							$success = $success AND $questionTuple;
+						}else{
+							$questionTuple->id = $idQuestion;
+						}
+						for($i = 1; $i < count($value); $i++){
+							$valueSplitted = explode('#-#', $value[$i]);
+							/**
+							*	Answer:
+							*	idAnswer#-#answer
+							*/
+							$idAnswer = $valueSplitted[0];
+							$answer = $valueSplitted[1];
+							//on test si la réponse existe déjà en BDD
+							$answerTable = TableRegistry::get('Answers');
+							$answerTuple = $answerTable->find()->where(['Answers.id' => $idAnswer]);
+							if($answerTuple->first() == null){
+								//debug('insert answer ' . $idAnswer . ' '. $answer);
+								$answerTuple = $answerTable->newEntity();
+								$answerTuple->value = $answer;
+								$answerTuple = $answerTable->save($answerTuple);
+								$success = $success AND $answerTuple;
+							}else{
+								$answerTuple->id = $idAnswer;
+							}
+							
+							//on save ensuite l'association avec la position de la question & le questionnaire
+							$associationTable = TableRegistry::get('answers_questions_questionnaires');
+							$association = $associationTable->newEntity();
+							$association->question_id = $questionTuple->id;
+							$association->answer_id = $answerTuple->id;
+							$association->questionnaire_id = $questionnaire->id;
+							$association->position = $i - 1;
+							$success = $success AND $associationTable->save($association);
+						}
+					}
+				}
+			}
+			if($success){
+				$transaction->commit();				
+				$this->Flash->success('Le questionnaire a bien été modifié.');
+				return $this->redirect(['controller' => 'Questionnaires', 'action' => 'index']);
+			}else{
+				$transaction->rollback();
+				$this->Flash->error('Une erreur s\'est produite, merci de réessayer plus tard.');
+			}
         }
-		
 		
 		//chargement des associations contenu par ce questionnaire
 		$associationTable = TableRegistry::get('answers_questions_questionnaires');
@@ -742,8 +829,15 @@ class QuestionnairesController extends AppController
 			// on place la question à la bonne position
 			$questionsQuestionnaire[$question['id']]['answers'][$associations[$p]['position']] = $answers;
 		}
-			
 		
+			
+		$userHasAnswer = TableRegistry::get('answers_questionnaires_users');
+		$userHasAnswerQuery = $userHasAnswer->find()->where(['questionnaire_id' => $id]);
+		$dangerUserHasAnswer = false;
+		if($userHasAnswerQuery->count()){
+			$dangerUserHasAnswer = true;
+		}
+		$this->set('dangerUserHasAnswer', $dangerUserHasAnswer);
 		$this->set('questionsQuestionnaire', $questionsQuestionnaire);
 		
 		

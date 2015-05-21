@@ -55,8 +55,9 @@ function submitDiv(div){
 	document.getElementById(div).submit();
 }
 function updateEditQuestionnaire(questions){
-	console.log(questions);
 	
+	$('#date_creation').val(dateTimeToDateTimePicker($('#date_creation').val()));
+	$('#date_limit').val(dateTimeToDateTimePicker($('#date_limit').val()));
 	for(var key in questions){
 		selectSelected = 0;
 		$('#questions option[value="'+key+'"]').prop('selected', true);
@@ -67,6 +68,7 @@ function updateEditQuestionnaire(questions){
 			for(var subAnswer in questions[key]['answers']){
 				$('#answers option[value="'+questions[key]['answers'][subAnswer]['id']+'"]').prop('selected', false);
 			}
+			//une par une pour garder la bonne position de chaque réponse.
 			$('#answers option[value="'+questions[key]['answers'][answer]['id']+'"]').prop('selected', true);
 			arrowRight();
 		}
@@ -209,9 +211,7 @@ function isVisibleAfterScroll(elem)
 		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	}
 }
-
-function dateTimePickerToDatetime(date){
-		var months = {
+var months = {
 			'Janvier':'01',
 			'Février':'02',
 			'Mars':'03',
@@ -224,7 +224,23 @@ function dateTimePickerToDatetime(date){
 			'Octobre': '10',
 			'Novembre': '11',
 			'Décembre': '12'};
+
+function dateTimeToDateTimePicker(date){			
+		var day = date.substr(0, 2);
+		var month = date.substr(3, 2);
+		var year = date.substr(6, 4);
+		var hour = date.substr(11, 2);
+		var min = date.substr(14, 2);
 		
+		for(var key in months){
+			if(month == months[key]){
+				month = key;
+			}
+		}
+		return day+' '+month+' '+year+' - '+hour+':'+min;
+
+}
+function dateTimePickerToDatetime(date){
 		var tmp = date.split(' - ');
 		var date = tmp[0];
 		var hour = tmp[1].split(':')[0];

@@ -6,6 +6,16 @@
 		<div id="error_questionnaire_add">
 		</div>
         <?php
+		
+			if($dangerUserHasAnswer){
+			?>
+				<div class="alert alert-danger" role="alert"><strong>Attention</strong> Un ou plusieurs utilisateur(s) a répondu à ce questionnaire,
+				si vous modifiez une question le questionnaire sera faussé.<br>
+				Vous pouvez toujours copier le questionnaire pour en faire un nouveau sans réponse d'utilisateur.
+				</div>
+			<?php
+			}
+		
             echo $this->Form->input('title', ['label' => 'Titre:']);
             echo $this->Form->input('description', ['label' => 'Description:']);
             $dateLimit = new DateTime($questionnaire->date_limit);
