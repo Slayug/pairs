@@ -6,10 +6,11 @@
 ?>
 
 <div class="panel panel-default users view large-12 medium-12 columns">
-	<?= $this->Flash->render() ?>
-	<?= $this->Flash->render('auth') ?>
     <div class="panel-heading"><h2 class="panel-title">Module: <?= h($module->name) ?></h2></div>
 	<div class="panel-body">
+	
+	<?= $this->Flash->render() ?>
+	<?= $this->Flash->render('auth') ?>
 	<?php 
 	if($isOwner){?>
 		<div class="actions">

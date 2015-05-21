@@ -508,13 +508,30 @@ class QuestionnairesController extends AppController
 	*	vers un DateTime de php
 	*/
 	private function dateTimePickerToDatetime($date){
-		$months = ['Jan' => '01','Fev' =>'02','Mar' =>'03','Avr' =>'04','Mai'=> '05','Jui' => '06','Jul' => '07','Aou' => '08','Sep' => '09','Oct' => '10','Nov' => '11','Dec' => '12'];
+		$months = [
+		'Janvier' => '01',
+		'Février' =>'02',
+		'Mars' =>'03',
+		'Avril' =>'04',
+		'Mai'=> '05',
+		'Juin' => '06',
+		'Juillet' => '07',
+		'Août' => '08',
+		'Septembre' => '09',
+		'Octobre' => '10',
+		'Novembre' => '11',
+		'Décembre' => '12'];
+		
 		$tmp = explode(' - ', $date);
 		$date = $tmp[0];
 		$hour = $tmp[1] . ':00';
-		$month = substr($date, 3, 3);
-		$year = substr($date, 7, 4);
+		
 		$day = substr($date, 0, 2);
+		
+		$dateExploded = explode(' ', $date);
+		$month = $dateExploded[1];
+		$year = $dateExploded[2];
+		
 		return $year . '-' . $months[$month] . '-' . $day . ' ' . $hour;
 	}
 	
@@ -558,70 +575,73 @@ class QuestionnairesController extends AppController
 									])
 									->where(['gm.module_id' => $idModule]); // et on cible le module où on est
 				$this->request->data['groups'] = $queryGroups->toArray();
-				
 				$questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
+				//debug($questionnaire);
 				$questionnaire = $this->Questionnaires->save($questionnaire);
 				if(!$questionnaire){
-					$transaction->rollback();
-					$this->Flash->error('Une erreur s\'est produite, merci de réessayer.');
-					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'add', $idModule]);
+					$transaction->rollback();				
+					$this->Flash->error('Une erreur s\'est produite, merci de réessayer..');
+					$success = false;
+					//return $this->redirect(['controller' => 'Questionnaires', 'action' => 'add', $idModule]);
 				}
 			}else{
                 $this->Flash->error('Le questionnaire doit contenir au moins un titre & une description.');
-				return $this->redirect(['controller' => 'Questionnaires', 'action' => 'add', $idModule]);
+				$success = false;
+				//return $this->redirect(['controller' => 'Questionnaires', 'action' => 'add', $idModule]);
 			}
-			
-			foreach($this->request->data as $key => $value){
-				if(strstr($key, '#-#')){
-					/**
-					*	Question:
-					*	idQuestion#-#question
-					*/
-					$keySplitted = explode('#-#', $key);
-					$idQuestion = $keySplitted[0];
-					$question = str_replace('_', ' ', $keySplitted[1]);
-					
-					//on test si la question existe déjà en BDD
-					$questionTable = TableRegistry::get('Questions');
-					$questionTuple = $questionTable->find()->where(['Questions.id' => $idQuestion]);
-					if($questionTuple->first() == null){
-						$questionTuple = $questionTable->newEntity();
-						$questionTuple->content = $question;
-						$questionTuple->type = 0;
-						$questionTuple = $questionTable->save($questionTuple);
-						$success = $success AND $questionTuple;
-					}else{
-						$questionTuple->id = $idQuestion;
-					}
-					for($i = 1; $i < count($value); $i++){
-						$valueSplitted = explode('#-#', $value[$i]);
+			if($success){
+				foreach($this->request->data as $key => $value){
+					if(strstr($key, '#-#')){
 						/**
-						*	Answer:
-						*	idAnswer#-#answer
+						*	Question:
+						*	idQuestion#-#question
 						*/
-						$idAnswer = $valueSplitted[0];
-						$answer = $valueSplitted[1];
-						//on test si la réponse existe déjà en BDD
-						$answerTable = TableRegistry::get('Answers');
-						$answerTuple = $answerTable->find()->where(['Answers.id' => $idAnswer]);
-						if($answerTuple->first() == null){
-							debug('insert answer ' . $idAnswer . ' '. $answer);
-							$answerTuple = $answerTable->newEntity();
-							$answerTuple->value = $answer;
-							$answerTuple = $answerTable->save($answerTuple);
-							$success = $success AND $answerTuple;
-						}else{
-							$answerTuple->id = $idAnswer;
-						}
+						$keySplitted = explode('#-#', $key);
+						$idQuestion = $keySplitted[0];
+						$question = str_replace('_', ' ', $keySplitted[1]);
 						
-						//on save ensuite l'association avec la position de la question & le questionnaire
-						$associationTable = TableRegistry::get('answers_questions_questionnaires');
-						$association = $associationTable->newEntity();
-						$association->question_id = $questionTuple->id;
-						$association->answer_id = $answerTuple->id;
-						$association->questionnaire_id = $questionnaire->id;
-						$association->position = $i - 1;
-						$success = $success AND $associationTable->save($association);
+						//on test si la question existe déjà en BDD
+						$questionTable = TableRegistry::get('Questions');
+						$questionTuple = $questionTable->find()->where(['Questions.id' => $idQuestion]);
+						if($questionTuple->first() == null){
+							$questionTuple = $questionTable->newEntity();
+							$questionTuple->content = $question;
+							$questionTuple->type = 0;
+							$questionTuple = $questionTable->save($questionTuple);
+							$success = $success AND $questionTuple;
+						}else{
+							$questionTuple->id = $idQuestion;
+						}
+						for($i = 1; $i < count($value); $i++){
+							$valueSplitted = explode('#-#', $value[$i]);
+							/**
+							*	Answer:
+							*	idAnswer#-#answer
+							*/
+							$idAnswer = $valueSplitted[0];
+							$answer = $valueSplitted[1];
+							//on test si la réponse existe déjà en BDD
+							$answerTable = TableRegistry::get('Answers');
+							$answerTuple = $answerTable->find()->where(['Answers.id' => $idAnswer]);
+							if($answerTuple->first() == null){
+								//debug('insert answer ' . $idAnswer . ' '. $answer);
+								$answerTuple = $answerTable->newEntity();
+								$answerTuple->value = $answer;
+								$answerTuple = $answerTable->save($answerTuple);
+								$success = $success AND $answerTuple;
+							}else{
+								$answerTuple->id = $idAnswer;
+							}
+							
+							//on save ensuite l'association avec la position de la question & le questionnaire
+							$associationTable = TableRegistry::get('answers_questions_questionnaires');
+							$association = $associationTable->newEntity();
+							$association->question_id = $questionTuple->id;
+							$association->answer_id = $answerTuple->id;
+							$association->questionnaire_id = $questionnaire->id;
+							$association->position = $i - 1;
+							$success = $success AND $associationTable->save($association);
+						}
 					}
 				}
 			}
@@ -668,8 +688,8 @@ class QuestionnairesController extends AppController
 				return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);
 			}else{
 				$transaction->rollback();
-				$this->Flash->success('Une erreur s\'est produite, merci de réessayer plus tard.');
-				return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);
+				$this->Flash->error('Une erreur s\'est produite, merci de réessayer plus tard.');
+				//return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);
 			}
 		
 		}
@@ -700,9 +720,38 @@ class QuestionnairesController extends AppController
                 $this->Flash->error('The questionnaire could not be saved. Please, try again.');
             }
         }
-        $groups = $this->Questionnaires->Groups->find('list', ['limit' => 200]);
-        $questions = $this->Questionnaires->Questions->find('list', ['limit' => 200]);
-        $this->set(compact('questionnaire', 'groups', 'questions'));
+		
+		
+		//chargement des associations contenu par ce questionnaire
+		$associationTable = TableRegistry::get('answers_questions_questionnaires');
+		$associations = $associationTable->find()->where(['questionnaire_id' => $id]);
+		// on charge ensuite chaque questions et ses réponses.
+		$questionsQuestionnaire = array();
+		$associations = $associations->toArray();
+		$questionTable = TableRegistry::get('Questions');
+		$answerTable = TableRegistry::get('Answers');
+		for($p = 0; $p < count($associations); $p++){
+			$question = $questionTable->get($associations[$p]['question_id']);
+			$answers = $answerTable->get($associations[$p]['answer_id']);
+			if(!array_key_exists($question['id'], $questionsQuestionnaire)){
+				$questionsQuestionnaire[$question['id']]['answers'] = array();
+			}
+			//on met les infos de la question (id, content)
+			$questionsQuestionnaire[$question['id']]['content'] = $question['content'];
+			$questionsQuestionnaire[$question['id']]['id'] = $question['id']; // plus simple d'y accéder comme ceci que par un index pour un for.
+			// on place la question à la bonne position
+			$questionsQuestionnaire[$question['id']]['answers'][$associations[$p]['position']] = $answers;
+		}
+			
+		
+		$this->set('questionsQuestionnaire', $questionsQuestionnaire);
+		
+		
+        $questions = TableRegistry::get('Questions');
+		$questions = $questions->find('list');
+		$answers = TableRegistry::get('Answers');
+		$answers = $answers->find('list');
+        $this->set(compact('questionnaire', 'questions', 'answers'));
         $this->set('_serialize', ['questionnaire']);
     }
 
@@ -714,7 +763,6 @@ class QuestionnairesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function delete($id = null){
-	
 		
 		$success = true;
 		$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes

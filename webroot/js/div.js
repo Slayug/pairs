@@ -54,6 +54,23 @@ function closeDiv(divName){
 function submitDiv(div){
 	document.getElementById(div).submit();
 }
+function updateEditQuestionnaire(questions){
+	console.log(questions);
+	
+	for(var key in questions){
+		selectSelected = 0;
+		$('#questions option[value="'+key+'"]').prop('selected', true);
+		//juste à faire l'action pour déplacer vers la liste dynamique
+		arrowRight();
+		selectSelected = 1;
+		for(var answer in questions[key]['answers']){
+			$('#answers option[value="'+questions[key]['answers'][answer]['id']+'"]').prop('selected', true);
+		}
+		arrowRight();
+	}
+	selectSelected = -1;
+	$("#questions_submit").empty();
+}
 function arrowRight(){
 	var elements = new Map();
 	if(selectSelected == 0){
@@ -95,7 +112,7 @@ function arrowRight(){
 		$("#answers-question-"+questionSelected).disableSelection();
 		//});
 	}
-	console.log(answers_);
+	//console.log(answers_);
 	updateQuestionSelected();
 }
 function arrowLeft(){
@@ -189,19 +206,50 @@ function isVisibleAfterScroll(elem)
 		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	}
 }
+
+function dateTimePickerToDatetime(date){
+		var months = {
+			'Janvier':'01',
+			'Février':'02',
+			'Mars':'03',
+			'Avril':'04',
+			'Mai':'05',
+			'Juin': '06',
+			'Juillet': '07',
+			'Août': '08',
+			'Septembre': '09',
+			'Octobre': '10',
+			'Novembre': '11',
+			'Décembre': '12'};
+		
+		var tmp = date.split(' - ');
+		var date = tmp[0];
+		var hour = tmp[1].split(':')[0];
+		var min = tmp[1].split(':')[1];
+		
+		day = date.substr(0, 2);
+		
+		var dateExploded = date.split(' ');
+		month = dateExploded[1];
+		year = dateExploded[2];
+		console.log(year+' '+months[month]+' '+day+' '+hour+' '+min);
+		return new Date(year, months[month], day, hour, min);
+}
+
+
 function submitQuestionnaireAdd(){
 	$("#error_questionnaire_add").empty();
-	var months = {Jan:'01',Fev:'02',Mar:'03',Avr:'04',Mai:'05',Jui: '06',Jul: '07',Aou: '08',Sep: '09',Oct: '10',Nov: '11',Dec: '12'};
+	
 	var dateLimit = $('#date_limit').val();
 	var dateCreation = $('#date_creation').val();
-	dateCreation = new Date(dateCreation.substr(7, 4), months[dateCreation.substr(3, 3)], dateCreation.substr(0, 2), dateCreation.substr(14, 2), dateCreation.substr(17, 2));
-	dateLimit = new Date(dateLimit.substr(7, 4), months[dateLimit.substr(3, 3)], dateLimit.substr(0, 2), dateLimit.substr(14, 2), dateLimit.substr(17, 2));
+	
+	dateCreation = dateTimePickerToDatetime(dateCreation);
+	dateLimit = dateTimePickerToDatetime(dateLimit);
 	
 	if(dateCreation >= dateLimit){
 		$("#error_questionnaire_add").append('<p class="message_error">La date de création doit être strictement inférieur à celle limite.</p>');
 		return;
 	}
-	
 	
 	for(var key of questions_.keys()){
 		var input = '<div class="input select"><input type="hidden" name="'+key+'#-#'+questions_.get(key+'')+'[]" value><select id="question-'+key+'" name="'+key+'#-#'+questions_.get(key+'')+'[]" id="'+key+'" multiple="multiple">';

@@ -1,10 +1,11 @@
 <div class="panel panel-default questionnaires form large-12 medium-12 columns">
-	<?= $this->Flash->render() ?>
 	<div class="panel-heading"><h2 class="panel-title">Ajouter un questionnaire</h2></div>
 <div class="panel-body">
 		<?= $this->Form->create($questionnaire, ['id' => 'questionnaire_add']); ?>
 		<div id="error_questionnaire_add">
 		</div>
+		
+		<?= $this->Flash->render() ?>
         <?php
             echo $this->Form->input('title', ['label' => 'Titre:']);
             echo $this->Form->input('description', ['label' => 'Description:']);
@@ -85,7 +86,7 @@
 			
     <?= $this->Form->end() ?>
 	<div class="col-md-12">
-	<button type="submit" onclick="submitQuestionnaireAdd()" type="button">Valider</button>
+		<button type="submit" onclick="submitQuestionnaireAdd()" type="button">Valider</button>
 	</div>
 </div>
 
