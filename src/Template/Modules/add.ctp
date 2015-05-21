@@ -1,11 +1,10 @@
-<div class="actions columns large-12 medium-12">
-</div>
-<div class="roles form large-10 medium-9 columns">
+<div class="panel panel-default roles form large-12 medium-12 columns">
+    <div class="panel-heading"><h2 class="panel-title">Ajouter un module</h2></div>
+	<div class="panel-body">
+		
 	<?= $this->Flash->render() ?>
     <?= $this->Form->create($module); ?>
-    <fieldset>
-        <legend><?= __('Ajouter un Module') ?></legend>
-		<p class="alert alert-warning">Pour le nom de votre Module, vous pouvez par exemple mettre L2-Matière</p>
+		<p class="alert alert-warning">Pour le nom de votre Module, vous pouvez par exemple mettre L2-VotreMatière</p>
         <?php
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
@@ -13,10 +12,8 @@
 		
             echo $this->Form->input('name', ['label' => 'Nom:']);
             echo $this->Form->input('description', ['label' => 'Description:']);
-            echo $this->Form->input('groups._ids', ['options' => $groups,
-													'label' => 'Groupes:']);
         ?>
-    </fieldset>
     <?= $this->Form->button(__('Valider')) ?>
     <?= $this->Form->end() ?>
+</div>
 </div>

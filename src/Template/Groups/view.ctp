@@ -6,8 +6,9 @@
 
 ?>
 <?= $this->Flash->render() ?>
-<div class="groups view large-10 medium-9 columns">
-    <h2><?= h($group->name) ?></h2>
+<div class="panel panel-default groups view large-12 medium-12 columns">
+    <div class="panel-heading"><h2 class="panel-title"><?= h($group->name) ?></h2></div>
+	<div class="panel-body">
 	<?php 
 	if($isOwner){?>
 		<div class="actions">
@@ -38,7 +39,6 @@
             <p><?= h($group->description) ?></p>
         </div>
     </div>
-</div>
 <div class="related row">
     <div class="column large-12">
     <h4 class="subheader"><?= __('Utilisateurs') ?></h4>
@@ -79,43 +79,5 @@
     <?php endif; ?>
     </div>
 </div>
-<div class="related row">
-    <div class="column large-12">
-    <h4 class="subheader"><?= __('Questionnaires') ?></h4>
-    <?php if (!empty($group->questionnaires)): ?>
-    <table cellpadding="0" cellspacing="0">
-        <tr>
-            <th><?= __('Titre') ?></th>
-            <th><?= __('Description') ?></th>
-            <th><?= __('Date Creation') ?></th>
-            <th><?= __('Date Limite') ?></th>
-            <th class="actions"><?= __('Actions') ?></th>
-        </tr>
-        <?php foreach ($group->questionnaires as $questionnaires): ?>
-        <tr>
-            <td><?= h($questionnaires->title) ?></td>
-            <td><?= h($questionnaires->description) ?></td>
-            <td><?= h($questionnaires->date_creation) ?></td>
-            <td><?= h($questionnaires->date_limit) ?></td>
-
-            <td class="actions">
-			
-                <?= $this->Html->link(__('Voir'), ['controller' => 'Questionnaires', 'action' => 'view', $questionnaires->id]) ?>
-				<?php
-					if($isOwner){ 
-						echo $this->Html->link(__('Editer'), ['controller' => 'Questionnaires', 'action' => 'edit', $questionnaires->id]);
-						?>
-						 <?= $this->Form->postLink(__('Supprimer'), ['controller' => 'Questionnaires', 'action' => 'delete', $questionnaires->id], ['confirm' => __('Are you sure you want to delete # {0}?', $questionnaires->id)]) ?>
-							<?php
-					}
-				?>
-		
-               
-            </td>
-        </tr>
-
-        <?php endforeach; ?>
-    </table>
-    <?php endif; ?>
-    </div>
+</div>
 </div>

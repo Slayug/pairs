@@ -1,5 +1,6 @@
-<div class="questionnaires view large-12 medium-12 columns">
-    <h2><?= h($questionnaire->title) ?></h2>
+<div class="panel panel-default questionnaires view large-12 medium-12 columns">
+    <div class="panel-heading"><h2 class="panel-title"><?= h($questionnaire->title) ?></h2></div>
+<div class="panel-body">
     <div class="row">
         <div class="large-5 columns strings">
             <h6 class="subheader"><?= __('Titre') ?></h6>
@@ -193,7 +194,17 @@
 				}
 			?>
 			<?php
+		}else{ // !usersValidated
+			?>
+				<div class="col-md-12">
+					<p>
+						Aucun membre a terminé le questionnaire.
+					</p>
+				</div>
+			<?php
 		}
 	}
 	?>
+</div>
+
 </div>

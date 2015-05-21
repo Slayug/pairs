@@ -1,15 +1,14 @@
-<div id="pairs_panel" class="users view large-12 medium-12 columns">
+<div id="pairs_panel" class="panel panel-default users view large-12 medium-12 columns">
 
-<h2>Panel</h2>
-<p>
-	<?= $this->Flash->render() ?>
-	<?= $this->Flash->render('auth') ?>
+<div class="panel-heading"><h2 class="panel-title">Panel</h2></div>
+<div class="panel-body">
 <?php
 	$session = $this->request->session();
 	$currentUser = $session->read('Auth.User');
 	$role = $currentUser['role_id'];
 	?>
-		<p>Bonjour <?php echo h(ucfirst($currentUser['first_name']) . ' ' . ucfirst($currentUser['last_name'])); ?>.</p>
+		<p>Bonjour <?php echo h(ucfirst($currentUser['first_name']) . ' ' . ucfirst($currentUser['last_name'])); ?>.
+		<?= $this->Flash->render() ?></p>
 	<?php
 	
 	if($role == 1){ //admin
@@ -50,11 +49,7 @@
 			</ul>
 		<?php
 	}
-	
-	
-	
 ?>
-</p>
 
 <div class="related row">
     <div class="column large-12">
@@ -112,6 +107,8 @@
     </table>
     <?php endif; ?>
     </div>
+</div>
+
 </div>
 
 </div>

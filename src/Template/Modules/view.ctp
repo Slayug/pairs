@@ -5,10 +5,11 @@
 	$role = $currentUser['role_id'];
 ?>
 
-<div class="users view large-10 medium-9 columns">
+<div class="panel panel-default users view large-12 medium-12 columns">
 	<?= $this->Flash->render() ?>
 	<?= $this->Flash->render('auth') ?>
-    <h2>Module: <?= h($module->name) ?></h2>
+    <div class="panel-heading"><h2 class="panel-title">Module: <?= h($module->name) ?></h2></div>
+	<div class="panel-body">
 	<?php 
 	if($isOwner){?>
 		<div class="actions">
@@ -35,7 +36,6 @@
             <p><?= h($module->description) ?></p>
         </div>
     </div>
-</div>
 
 <div class="related row">
     <div class="column large-12">
@@ -147,3 +147,6 @@
 	</table>
 		</div>
 	</div>
+
+</div>
+</div>

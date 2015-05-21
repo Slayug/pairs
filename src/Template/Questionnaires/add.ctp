@@ -1,8 +1,8 @@
-<div class="questionnaires form large-12 medium-12 columns">
+<div class="panel panel-default questionnaires form large-12 medium-12 columns">
 	<?= $this->Flash->render() ?>
-    <?= $this->Form->create($questionnaire, ['id' => 'questionnaire_add']); ?>
-    <fieldset>
-        <legend><?= __('Ajouter un Questionnaire') ?></legend>
+	<div class="panel-heading"><h2 class="panel-title">Ajouter un questionnaire</h2></div>
+<div class="panel-body">
+		<?= $this->Form->create($questionnaire, ['id' => 'questionnaire_add']); ?>
 		<div id="error_questionnaire_add">
 		</div>
         <?php
@@ -83,8 +83,10 @@
 				<input type="checkbox" name="sendEmail" id="sendEmail" checked /><label for="sendEmail">Notifier les membres par email</label>
 			</div>
 			
-    </fieldset>
     <?= $this->Form->end() ?>
-	
+	<div class="col-md-12">
 	<button type="submit" onclick="submitQuestionnaireAdd()" type="button">Valider</button>
+	</div>
+</div>
+
 </div>
