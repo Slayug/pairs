@@ -174,7 +174,7 @@ class QuestionnairesController extends AppController
 						$idQuestion = $keySplitted[1];
 						$idAnswer = $value;
 						
-						$success = $success && $associationsPartials->deleteAll(['questionnaire_id' => $idQuestionnaire,
+						$associationsPartials->deleteAll(['questionnaire_id' => $idQuestionnaire,
 																				'user_id' => $idUser]);
 																				
 						$association = $associations->newEntity();

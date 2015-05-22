@@ -125,7 +125,69 @@
 								5 => [
 									'color'=>'#ec43c2',
 									'highlight'=>'#e55cc3'
-									]
+									],
+								6 => [
+									'color'=>'#e1f220',
+									'highlight'=>'#e7f54c'
+									],
+								7 => [
+									'color'=>'#ea6504',
+									'highlight'=>'#e3701b'
+									],
+								8 => [
+									'color'=>'#1f1be8',
+									'highlight'=>'#322eef'
+									],
+								9 => [
+									'color'=>'#2bc308',
+									'highlight'=>'#38c617'
+									],
+								10 => [
+									'color'=>'#871080',
+									'highlight'=>'#901f89'
+									],
+								11 => [
+									'color'=>'#7a7a7a',
+									'highlight'=>'#888888'
+									], //colors random
+								12 => [ 'color'=>'F353FA', 'highlight'=>'F353B6'],
+								13 => [ 'color'=>'59F27D', 'highlight'=>'59F279'],
+								14 => [ 'color'=>'29C744', 'highlight'=>'29C744'],
+								15 => [ 'color'=>'A9821D', 'highlight'=>'A98219'],
+								16 => [ 'color'=>'A684D0', 'highlight'=>'A68490'],
+								17 => [ 'color'=>'07D4F9', 'highlight'=>'07D4B5'],
+								18 => [ 'color'=>'DF4288', 'highlight'=>'DF4288'],
+								19 => [ 'color'=>'943CB9', 'highlight'=>'943C75'],
+								20 => [ 'color'=>'9032D2', 'highlight'=>'903292'],
+								21 => [ 'color'=>'08A89E', 'highlight'=>'08A85A'],
+								22 => [ 'color'=>'5EEC8B', 'highlight'=>'5EEC87'],
+								23 => [ 'color'=>'758B21', 'highlight'=>'758B21'],
+								24 => [ 'color'=>'F58226', 'highlight'=>'F58226'],
+								25 => [ 'color'=>'91B2A1', 'highlight'=>'91B261'],
+								26 => [ 'color'=>'F9DA8F', 'highlight'=>'F9DA8B'],
+								27 => [ 'color'=>'8FB2A8', 'highlight'=>'8FB268'],
+								28 => [ 'color'=>'28D72D', 'highlight'=>'28D729'],
+								29 => [ 'color'=>'E55765', 'highlight'=>'E55765'],
+								30 => [ 'color'=>'F54FCB', 'highlight'=>'F54F87'],
+								31 => [ 'color'=>'F6F672', 'highlight'=>'F6F672'],
+								32 => [ 'color'=>'5D45FD', 'highlight'=>'5D45B9'],
+								33 => [ 'color'=>'59AB1F', 'highlight'=>'59AB1B'],
+								34 => [ 'color'=>'958080', 'highlight'=>'958080'],
+								35 => [ 'color'=>'2EAAD4', 'highlight'=>'2EAA94'],
+								36 => [ 'color'=>'B921E9', 'highlight'=>'B921A5'],
+								37 => [ 'color'=>'00F1F1', 'highlight'=>'00F1B1'],
+								38 => [ 'color'=>'1DD004', 'highlight'=>'1DD004'],
+								39 => [ 'color'=>'3CE301', 'highlight'=>'3CE301'],
+								40 => [ 'color'=>'9FBE35', 'highlight'=>'9FBE35'],
+								41 => [ 'color'=>'5E8D32', 'highlight'=>'5E8D32'],
+								42 => [ 'color'=>'A2737A', 'highlight'=>'A27376'],
+								43 => [ 'color'=>'74134D', 'highlight'=>'741349'],
+								44 => [ 'color'=>'333026', 'highlight'=>'333026'],
+								45 => [ 'color'=>'678333', 'highlight'=>'678333'],
+								46 => [ 'color'=>'A7AE27', 'highlight'=>'A7AE27'],
+								47 => [ 'color'=>'2950CD', 'highlight'=>'295089'],
+								48 => [ 'color'=>'DAECF0', 'highlight'=>'DAECB0'],
+								49 => [ 'color'=>'80581A', 'highlight'=>'805816']
 								];
 					$colorsAnswers = array();
 					$idColors = 0;
