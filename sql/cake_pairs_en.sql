@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 21 Mai 2015 à 21:19
+-- Généré le :  Ven 22 Mai 2015 à 17:09
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -31,20 +31,25 @@ CREATE TABLE IF NOT EXISTS `answers` (
   `value` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `value` (`value`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Contenu de la table `answers`
 --
 
 INSERT INTO `answers` (`id`, `value`) VALUES
+(12, 'Beaucoup plus que normal'),
 (7, 'Je ne sais pas'),
 (1, 'Je suis un chat'),
 (3, 'Je suis un cheval'),
 (2, 'Je suis un chien'),
 (4, 'Je suis une patate'),
 (6, 'Non'),
-(5, 'Oui');
+(10, 'Normal'),
+(5, 'Oui'),
+(8, 'Un peu'),
+(9, 'Un peu plus'),
+(11, 'Un peu plus que normal');
 
 -- --------------------------------------------------------
 
@@ -70,6 +75,8 @@ CREATE TABLE IF NOT EXISTS `answers_questionnaires_users` (
 --
 
 INSERT INTO `answers_questionnaires_users` (`question_id`, `user_id`, `answer_id`, `questionnaire_id`, `for_who`) VALUES
+(1, 1, 2, 27, 1),
+(1, 8, 4, 27, 1),
 (5, 1, 5, 1, 1),
 (5, 25, 5, 1, 25),
 (6, 1, 5, 1, 1),
@@ -80,12 +87,18 @@ INSERT INTO `answers_questionnaires_users` (`question_id`, `user_id`, `answer_id
 (7, 25, 5, 1, 25),
 (8, 1, 5, 1, 1),
 (5, 1, 6, 1, 25),
+(5, 1, 6, 27, 1),
+(5, 1, 6, 27, 8),
 (5, 25, 6, 1, 1),
 (6, 25, 6, 1, 1),
 (8, 1, 6, 1, 25),
+(5, 8, 7, 27, 1),
 (7, 25, 7, 1, 1),
 (8, 25, 7, 1, 1),
-(8, 25, 7, 1, 25);
+(8, 25, 7, 1, 25),
+(1, 8, 8, 27, 8),
+(1, 1, 10, 27, 8),
+(5, 8, 10, 27, 8);
 
 -- --------------------------------------------------------
 
@@ -131,47 +144,109 @@ INSERT INTO `answers_questions_questionnaires` (`question_id`, `answer_id`, `que
 (1, 1, 4, 0),
 (1, 1, 20, 0),
 (1, 1, 23, 1),
+(1, 1, 27, 2),
 (1, 2, 2, 1),
 (1, 2, 3, 2),
 (1, 2, 20, 2),
 (1, 2, 23, 2),
+(1, 2, 27, 4),
 (1, 3, 2, 0),
 (1, 3, 3, 1),
 (1, 3, 4, 2),
 (1, 3, 20, 1),
 (1, 3, 23, 0),
+(1, 3, 27, 3),
+(1, 4, 27, 5),
+(1, 5, 27, 8),
+(1, 6, 27, 6),
 (1, 7, 4, 1),
+(1, 7, 27, 1),
+(1, 8, 27, 9),
+(1, 9, 27, 10),
+(1, 10, 27, 7),
+(1, 11, 27, 11),
+(1, 12, 27, 0),
 (2, 1, 3, 0),
 (2, 1, 4, 1),
 (2, 1, 20, 0),
 (2, 1, 23, 0),
+(2, 1, 24, 1),
+(2, 1, 25, 2),
 (2, 2, 23, 2),
+(2, 2, 24, 3),
+(2, 2, 25, 4),
 (2, 3, 3, 1),
 (2, 3, 4, 2),
 (2, 3, 20, 1),
 (2, 3, 23, 1),
+(2, 3, 24, 2),
+(2, 3, 25, 3),
+(2, 4, 24, 4),
+(2, 4, 25, 5),
+(2, 5, 24, 6),
+(2, 5, 25, 8),
+(2, 6, 24, 5),
+(2, 6, 25, 6),
 (2, 7, 4, 0),
+(2, 7, 24, 0),
+(2, 7, 25, 1),
+(2, 8, 24, 7),
+(2, 8, 25, 9),
+(2, 9, 24, 8),
+(2, 9, 25, 10),
+(2, 10, 24, 9),
+(2, 10, 25, 7),
+(2, 11, 24, 10),
+(2, 11, 25, 11),
+(2, 12, 24, 11),
+(2, 12, 25, 0),
 (3, 1, 2, 1),
+(3, 1, 24, 1),
+(3, 1, 26, 1),
 (3, 2, 2, 3),
 (3, 2, 10, 1),
+(3, 2, 24, 3),
 (3, 3, 2, 2),
 (3, 3, 10, 0),
+(3, 3, 24, 2),
 (3, 4, 2, 4),
+(3, 4, 24, 4),
 (3, 5, 2, 6),
+(3, 5, 24, 6),
 (3, 6, 2, 5),
+(3, 6, 24, 5),
 (3, 7, 2, 0),
+(3, 7, 24, 0),
+(3, 7, 26, 0),
+(3, 8, 24, 7),
+(3, 9, 24, 8),
+(3, 10, 24, 9),
+(3, 11, 24, 10),
+(3, 12, 24, 11),
 (5, 1, 2, 1),
 (5, 1, 23, 0),
+(5, 1, 27, 2),
 (5, 2, 2, 3),
 (5, 2, 23, 2),
+(5, 2, 27, 4),
 (5, 3, 2, 2),
 (5, 3, 23, 1),
+(5, 3, 27, 3),
 (5, 4, 2, 4),
+(5, 4, 27, 5),
 (5, 5, 1, 1),
 (5, 5, 2, 6),
+(5, 5, 27, 8),
 (5, 6, 1, 0),
 (5, 6, 2, 5),
+(5, 6, 27, 6),
 (5, 7, 2, 0),
+(5, 7, 27, 1),
+(5, 8, 27, 9),
+(5, 9, 27, 10),
+(5, 10, 27, 7),
+(5, 11, 27, 11),
+(5, 12, 27, 0),
 (6, 5, 7, 0),
 (6, 5, 21, 0),
 (6, 5, 22, 0),
@@ -344,7 +419,7 @@ CREATE TABLE IF NOT EXISTS `modules` (
   `name` varchar(255) COLLATE utf8_bin NOT NULL,
   `description` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=8 ;
 
 --
 -- Contenu de la table `modules`
@@ -355,7 +430,8 @@ INSERT INTO `modules` (`id`, `name`, `description`) VALUES
 (3, 'L2-BD', 'Conception de Base de données'),
 (4, 'L2-Maths', 'Groupe d''élèves travaillant sur les démonstrations'),
 (5, 'Physique', 'C''est nul !'),
-(6, 'L2-Algo', 'coucou');
+(6, 'L2-Algo', 'coucou'),
+(7, 'Jim le plus fort', 'Coucou');
 
 -- --------------------------------------------------------
 
@@ -412,6 +488,7 @@ INSERT INTO `modules_owners` (`module_id`, `user_id`) VALUES
 (3, 4),
 (4, 4),
 (5, 4),
+(7, 4),
 (6, 5);
 
 -- --------------------------------------------------------
@@ -451,7 +528,7 @@ CREATE TABLE IF NOT EXISTS `questionnaires` (
   `date_creation` datetime DEFAULT CURRENT_TIMESTAMP,
   `date_limit` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
 
 --
 -- Contenu de la table `questionnaires`
@@ -474,7 +551,11 @@ INSERT INTO `questionnaires` (`id`, `title`, `description`, `date_creation`, `da
 (20, 'TImmy', 'LOL', '2015-05-21 15:43:00', '2015-05-31 19:55:00'),
 (21, 'Test', 'Test', '2015-05-20 19:55:00', '2015-05-31 23:00:00'),
 (22, 'Test', 'Test', '2015-05-20 19:55:00', '2015-05-31 23:00:00'),
-(23, 'tpti', 'gdf', '2015-05-21 21:15:00', '2015-07-16 10:50:00');
+(23, 'tpti', 'gdf', '2015-05-21 21:15:00', '2015-07-16 10:50:00'),
+(24, 'Colors Test', 'On test toutes les couleurs !', '2015-05-21 14:50:00', '2015-07-11 11:55:00'),
+(25, 'Colors Check', 'come on', '2015-05-21 10:50:00', '2015-06-06 11:55:00'),
+(26, 'Groups Check', 'COUCOU', '2015-05-01 06:30:00', '2015-05-23 15:55:00'),
+(27, 'COLORS CHECK', 'COUCOU', '2015-05-21 10:50:00', '2015-07-19 11:55:00');
 
 -- --------------------------------------------------------
 
@@ -525,7 +606,10 @@ INSERT INTO `questionnaires_groups` (`group_id`, `questionnaire_id`) VALUES
 (20, 22),
 (23, 22),
 (21, 23),
-(22, 23);
+(22, 23),
+(27, 27),
+(28, 27),
+(29, 27);
 
 -- --------------------------------------------------------
 
@@ -554,6 +638,9 @@ INSERT INTO `questionnaires_owners` (`questionnaire_id`, `user_id`) VALUES
 (21, 4),
 (22, 4),
 (23, 4),
+(25, 4),
+(26, 4),
+(27, 4),
 (13, 5),
 (20, 5);
 
@@ -629,30 +716,30 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `role_id`, `email`, `first_name`, `last_name`, `password`) VALUES
 (1, 3, 'alexis.puret@etu.univ-tours.fr', 'Alexis', 'PURET', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
-(2, 1, 'toast@gmail.com', 'Auto', 'Route', '$2y$10$wIOv6m2XqZeE9X/gT2gNfuotsAFMDuny4gK2AX/rY8jauufqOQx4K'),
-(3, 3, 'etudiant@toast.com', 'auto', 'route', '$2y$10$G4cmuh5MoI7j/kgUaS.J1e3TiOfnHlSYNFiphoS5B.Ri8wuUwlnoq'),
-(4, 2, 'professeur@toast.com', 'professeur', 'test', '$2y$10$7PIe37gUdDlU/lLd/HRL1u2e.XSx9bblyE6Fr8YoEPWmu49Y7Kqui'),
+(2, 1, 'toast@gmail.com', 'Auto', 'Route', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
+(3, 3, 'etudiant@toast.com', 'auto', 'route', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
+(4, 2, 'professeur@toast.com', 'professeur', 'test', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
 (5, 2, 'prof@toast.com', 'Machin', 'Chose', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
-(6, 3, 'Monsieur.Dupont@etu.univ-tours.fr', 'Monsieur', 'Dupont', '$2y$10$hQxHdvX83kw5ykpTGKHtuOYXlowu20ujKUcWw9mL4TjnC8qcGj1X2'),
+(6, 3, 'Monsieur.Dupont@etu.univ-tours.fr', 'Monsieur', 'Dupont', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
 (8, 3, 'manon.dupuet@etu.univ-tours.fr', 'manon', 'dupuet', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
-(9, 3, 'Alexandre.Astier@etu.univ-tours.fr', 'Alexandre', 'Astier', '$2y$10$bTo92JkNcMN.HN/v3VLdj.6jMUAXHixpTehW.ucIEsnFPTsf99XPK'),
-(10, 1, 'coucou@tofkl.com', 'coucou', 'toto', '$2y$10$1KGfXtTmllUlnHACm.rFSuxHPLAIMojVCC0JvZUDlTZj5Kw7LHDA6'),
-(11, 3, 'jean.jardin@etu.univ-tours.fr', 'Jean', 'Jardin', '$2y$10$vLsd2otwNo2UVSG30Cma7eWEikbVYlt5XtzeoS9Nh3kcZ/2tmn7bW'),
-(12, 3, 'slim.shady@etu.univ-tours.fr', 'Slim', 'Shady', '$2y$10$xnbinPJYSGFh0HsnCyVM3OenAEOIBQBdVvuq/b5tRcXJ3eMPpgfRa'),
+(9, 3, 'Alexandre.Astier@etu.univ-tours.fr', 'Alexandre', 'Astier', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
+(10, 1, 'coucou@tofkl.com', 'coucou', 'toto', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
+(11, 3, 'jean.jardin@etu.univ-tours.fr', 'Jean', 'Jardin', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
+(12, 3, 'slim.shady@etu.univ-tours.fr', 'Slim', 'Shady', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
 (13, 3, 'jim.warrior@etu.univ-tours.fr', 'Jim', 'Warrior', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
-(14, 3, 'alexandre.astier@etu.univ-tours.fr', 'Alexandre', 'Astier', '$2y$10$hzNPsMWdHnA50J.Dw.MK2uMpBSi9gafkwM3dw9zmPRZqvdnosMRNO'),
+(14, 3, 'alexandre.astier@etu.univ-tours.fr', 'Alexandre', 'Astier', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
 (15, 3, 'jim.roux@etu.univ-tours.fr', 'jim', 'roux', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
 (16, 3, 'jim.toast@etu.univ-tours.fr', 'jim', 'toast', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
-(17, 3, 'paul.dupont@etu.univ-tours.fr', 'paul', 'dupont', '$2y$10$Fmr3ois3yXAXUopN1ptSZuZw/DmVz/SRN9YA1QfbxiuF8VV.dDYVC'),
-(18, 3, 'marie.dupont@etu.univ-tours.fr', 'marie', 'dupont', '$2y$10$9gb3ICBMhWZ5A/7.2A.86eHL6BDYFjlDJy.G/jkTnyxdGZFFlEy2a'),
-(19, 3, 'jim.dupont@etu.univ-tours.fr', 'jim', 'dupont', '$2y$10$tVyfr8OHpSIE6N1Bo5Pa8u8WhTy.c0C0wjmdB19Ab2I6hT0SlQl6O'),
+(17, 3, 'paul.dupont@etu.univ-tours.fr', 'paul', 'dupont', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
+(18, 3, 'marie.dupont@etu.univ-tours.fr', 'marie', 'dupont', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
+(19, 3, 'jim.dupont@etu.univ-tours.fr', 'jim', 'dupont', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
 (20, 3, 'manon.dupont@etu.univ-tours.fr', 'manon', 'dupont', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
-(21, 3, 'jimmy.neutron@etu.univ-tours.fr', 'jimmy', 'neutron', '$2y$10$DKOtZJ.VZnHQ9BoeH.egxeNONWlHa1ZUJ/46gUgjlTKX9RDaNeSGS'),
-(22, 3, 'elon.musk@etu.univ-tours.fr', 'elon', 'musk', '$2y$10$JZzCWR39n8hm9UMfYCWtY.ccw0IeE3l6ie71N5BGoK8Pg7or95AEK'),
-(23, 3, 'aaron.swartz@etu.univ-tours.fr', 'aaron', 'swartz', '$2y$10$e652VNU2k8gwTOiRkVXMhuH01fm/H.HWzgZQciQ6BQhTyeal7dhlC'),
-(24, 3, 'mark.zuckerberg@etu.univ-tours.fr', 'mark', 'zuckerberg', '$2y$10$CrZZIC./AkTE/f8o//9Rw.NHBB3oxwOoFchvo68eIsWuo5pjC5oTS'),
+(21, 3, 'jimmy.neutron@etu.univ-tours.fr', 'jimmy', 'neutron', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
+(22, 3, 'elon.musk@etu.univ-tours.fr', 'elon', 'musk', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
+(23, 3, 'aaron.swartz@etu.univ-tours.fr', 'aaron', 'swartz', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
+(24, 3, 'mark.zuckerberg@etu.univ-tours.fr', 'mark', 'zuckerberg', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
 (25, 3, 'chuck.norris@etu.univ-tours.fr', 'chuck', 'norris', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
-(26, 3, 'chuck.bartowski@etu.univ-tours.fr', 'chuck', 'bartowski', '$2y$10$DX8.qSfoMd.qq8f40Q6vhO5mo6QgyTlaGVJ9JF0dIngkda/fp66yW'),
+(26, 3, 'chuck.bartowski@etu.univ-tours.fr', 'chuck', 'bartowski', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
 (27, 3, 'truc.much@etu.univ-tours.fr', 'truc', 'much', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
 (28, 3, 'car.resse@etu.univ-tours.fr', 'car', 'resse', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa'),
 (29, 3, 'aloe.vera@etu.univ-tours.fr', 'aloe', 'vera', '$2y$10$vu2vKuRWVYEsEwVLtQr9oe6XWxvjvXwDMgla0blNpgFYOKOonpYwa');
