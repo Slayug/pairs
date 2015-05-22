@@ -542,6 +542,7 @@ class QuestionnairesController extends AppController
     public function add($idModule = null){
         $questionnaire = $this->Questionnaires->newEntity();
         if ($this->request->is('post')){
+			$msgError = '';
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
 			$success = true;
@@ -573,7 +574,11 @@ class QuestionnairesController extends AppController
 									
 									])
 									->where(['gm.module_id' => $idModule]); // et on cible le module où on est
-				$this->request->data['groups'] = $queryGroups->toArray();
+				if($queryGroups->count()){
+					$this->request->data['groups'] = $queryGroups->toArray();
+				}else{
+					$msgError .= 'Le questionnaire a été associé a aucun groupe.';
+				}
 				$questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
 				//debug($questionnaire);
 				$questionnaire = $this->Questionnaires->save($questionnaire);
@@ -683,7 +688,7 @@ class QuestionnairesController extends AppController
 					}
 				}**/
 				
-				$this->Flash->success('Le questionnaire a bien été ajouté.');
+				$this->Flash->success('Le questionnaire a bien été ajouté.' . $msgError);
 				return $this->redirect(['controller' => 'Modules', 'action' => 'view', $idModule]);
 			}else{
 				$transaction->rollback();

@@ -127,6 +127,8 @@
 									'highlight'=>'#e55cc3'
 									]
 								];
+					$colorsAnswers = array();
+					$idColors = 0;
 					$idDonut = 0;
 					foreach($groupsStats as $group){?>
 						<a href="#<?= $group['name']; ?>">> <?= $group['name']; ?></a><br>
@@ -153,9 +155,16 @@
 											?>
 											{
 											<?php
+											
+												//gestion couleurs
+												if(!array_key_exists($question['answers'][$a]['id'], $colorsAnswers)){
+													$colorsAnswers[$question['answers'][$a]['id']] = $idColors++;
+												}
+											
 												echo 'value:' . count($question['answers'][$a]['users']);
-												echo ',color:"' . $colors[$a]['color'];
-												echo '",highlight:"' . $colors[$a]['highlight'] . '",';
+												$idColor = $colorsAnswers[$question['answers'][$a]['id']];
+												echo ',color:"' . $colors[$idColor]['color'];
+												echo '",highlight:"' . $colors[$idColor]['highlight'] . '",';
 											?>
 												label: "<?= $question['answers'][$a]['value'] ?>"
 											}
@@ -172,8 +181,9 @@
 								<ul>
 									<?php
 									for($a = 0; $a < count($question['answers']); $a++){
-									?>
-										<li><div class="cube" style="background-color:<?= $colors[$a]['color'] ?>"></div>
+										$idColor = $colorsAnswers[$question['answers'][$a]['id']];
+										?>
+										<li><div class="cube" style="background-color:<?= $colors[$idColor]['color'] ?>"></div>
 										<span class="chart-li"><?= $question['answers'][$a]['value'] . ' (' . count($question['answers'][$a]['users']) . ')' ?></span>
 										</li>
 									<?php
