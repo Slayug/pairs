@@ -1,12 +1,13 @@
-<div class="groups form large-12 medium-12 columns">
+<?= $this->Flash->render() ?>
+<div class="panel panel-default roles form large-12 medium-12 columns">
+    <div class="panel-heading"><h2 class="panel-title">Editer un module</h2></div>
+	<div class="panel-body">
     <?= $this->Form->create($module); ?>
-    <fieldset>
-        <legend><?= __('Editer un module') ?></legend>
         <?php
             echo $this->Form->input('name');
             echo $this->Form->input('description');
         ?>
-    </fieldset>
     <?= $this->Form->button(__('Valider')) ?>
     <?= $this->Form->end() ?>
+</div>
 </div>

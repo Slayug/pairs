@@ -1,9 +1,10 @@
+
+<?= $this->Flash->render() ?>
 <div class="panel panel-default questionnaires index large-12 medium-12 columns">
 	<div class="panel-heading"><h2 class="panel-title"><?= h($questionnaire->title) ?></h2></div>
 	<div class="panel-body">
 	
     <?= $this->Form->create($questionnaire, ['id' => 'questionnaire_reply']); ?>
-		<?= $this->Flash->render() ?>
 		<?php
 		$nbreQuestion = 0;
 		foreach ($users as $user): ?>

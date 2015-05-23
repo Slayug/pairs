@@ -1,3 +1,7 @@
+
+		<?= $this->Flash->render('auth') ?>
+		<?= $this->Flash->render() ?>
+
 <div id="pairs_panel" class="panel panel-default users view large-12 medium-12 columns">
 
 <div class="panel-heading"><h2 class="panel-title">Panel</h2></div>
@@ -9,8 +13,6 @@
 	?>
 		
 		<h4 style="color:#404040;">Bonjour <?php echo h(ucfirst($currentUser['first_name']) . ' ' . ucfirst($currentUser['last_name'])); ?>.</h4>
-		<?= $this->Flash->render('auth') ?>
-		<?= $this->Flash->render() ?>
 		<br>
 	<?php
 	

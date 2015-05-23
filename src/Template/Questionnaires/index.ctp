@@ -2,11 +2,11 @@
 $session = $this->request->session();
 $currentUser = $session->read('Auth.User');
 ?>
+	<?= $this->Flash->render() ?>
+	<?= $this->Flash->render('auth') ?>
 <div class="panel panel-default questionnaires index large-12 medium-12 columns">
 	<div class="panel-heading"><h2 class="panel-title">Liste des questionnaires</h2></div>
 	<div class="panel-body">
-	<?= $this->Flash->render() ?>
-	<?= $this->Flash->render('auth') ?>
 	<div id="accordion">
     <?php foreach ($questionnaires as $questionnaire): ?>
 		<h3><?= h($questionnaire->title) ?></h3>

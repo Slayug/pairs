@@ -4,7 +4,7 @@
         <li><?= $this->Html->link(__('Panel'), ['controller' => 'Users', 'action' => 'panel']) ?> </li>
     </ul>
 </div>
-<div class="users view large-10 medium-9 columns">
+<div class="users view large-12 medium-12 columns">
     <h2><?= h($user->id) ?></h2>
     <div class="row">
         <div class="large-5 columns strings">

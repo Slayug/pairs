@@ -1,3 +1,5 @@
+
+	<?= $this->Flash->render() ?>
 <div class="panel panel-default questionnaires form large-12 medium-12 columns">
 	<div class="panel-heading"><h2 class="panel-title">Editer un questionnaire: <?= h($questionnaire->title) ?></h2></div>
 <div class="panel-body">
@@ -5,7 +7,6 @@
 		<div id="error_questionnaire_add">
 		</div>
 		
-	<?= $this->Flash->render() ?>
         <?php
 		
 			if($dangerUserHasAnswer){

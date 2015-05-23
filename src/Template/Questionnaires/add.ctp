@@ -1,3 +1,5 @@
+<?= $this->Flash->render() ?>
+
 <div class="panel panel-default questionnaires form large-12 medium-12 columns">
 	<div class="panel-heading"><h2 class="panel-title">Ajouter un questionnaire</h2></div>
 <div class="panel-body">
@@ -5,7 +7,7 @@
 		<div style="display:none;" class="alert alert-danger" id="error_questionnaire_add">
 		</div>
 		
-		<?= $this->Flash->render() ?>
+		
         <?php
             echo $this->Form->input('title', ['label' => 'Titre:']);
             echo $this->Form->input('description', ['label' => 'Description:']);
