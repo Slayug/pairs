@@ -32,7 +32,7 @@ class QuestionnairesController extends AppController
 			}
 		}
 		if($idQuestionnaire != null){
-			$questionnaires = TableRegistry::get('Questionnaires');
+			$questionnaires = TableRegistry::get('questionnaires');
 			//permet de vérifier si l'utilisateur peut répondre au questionnaire
 			//en vérifiant qu'il appartient bien au groupe, auquel le le questionnaire appartient lui aussi.
 			$queryReply = $questionnaires->find()->hydrate(false)
@@ -105,10 +105,10 @@ class QuestionnairesController extends AppController
 		
 		if($currentDate > $dateLimit){
 			$this->Flash->error('La date limite pour ce questionnaire est passée.');
-			return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);			
+			return $this->redirect(['controller' => 'questionnaires', 'action' => 'view', $idQuestionnaire]);			
 		}else if($currentDate < $dateCreation){
 			$this->Flash->error('Vous ne pouvez pas encore accéder à ce questionnaire.');
-			return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);
+			return $this->redirect(['controller' => 'questionnaires', 'action' => 'view', $idQuestionnaire]);
 		}
 		
 		$answersTable = TableRegistry::get('answers_questionnaires_users');
@@ -116,7 +116,7 @@ class QuestionnairesController extends AppController
 															'user_id' => $idUser]);
 		if($answers->count()){
 			$this->Flash->error('Vous avez déjà répondu(e) à ce formulaire.');
-			return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);	
+			return $this->redirect(['controller' => 'questionnaires', 'action' => 'view', $idQuestionnaire]);	
 		}
 		
         $questionnaire = $this->Questionnaires->newEntity();
@@ -152,15 +152,15 @@ class QuestionnairesController extends AppController
 					$transaction->commit();
 					if(!array_key_exists('save', $this->request->data)){
 						$this->Flash->error('Vos réponses ont bien été sauvegardées. Mais vous devez répondre à toutes les questions pour valider ce questionnaire.');
-					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'reply', $idQuestionnaire]);	
+					return $this->redirect(['controller' => 'questionnaires', 'action' => 'reply', $idQuestionnaire]);	
 					}else{
 						$this->Flash->success('Vos réponses ont bien été sauvegardées.');
 					}
-					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);				
+					return $this->redirect(['controller' => 'questionnaires', 'action' => 'view', $idQuestionnaire]);				
 				}else{
 					$transaction->rollback();
 					$this->Flash->error('Une erreur s\'est produite, merci de réessayer.');
-					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);
+					return $this->redirect(['controller' => 'questionnaires', 'action' => 'view', $idQuestionnaire]);
 				}
 				
 			}else{
@@ -190,16 +190,16 @@ class QuestionnairesController extends AppController
 				if($success){
 					$transaction->commit();
 					$this->Flash->success('Le questionnaire a bien été validé !');
-					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);				
+					return $this->redirect(['controller' => 'questionnaires', 'action' => 'view', $idQuestionnaire]);				
 				}else{
 					$transaction->rollback();
 					$this->Flash->error('Une erreur s\'est produite, merci de réessayer.');
-					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'view', $idQuestionnaire]);
+					return $this->redirect(['controller' => 'questionnaires', 'action' => 'view', $idQuestionnaire]);
 				}
 			}		
 		}
 		
-		$groups = TableRegistry::get('Groups');
+		$groups = TableRegistry::get('groups');
 		$groupsQuery = $groups->find()->hydrate(false)
 									->join([
 										'gu' => [ // on join les groupes associés à l'étudiant
@@ -216,7 +216,7 @@ class QuestionnairesController extends AppController
 									])
 									->where(['qg.questionnaire_id' => $idQuestionnaire]) // où l'id questionnaire
 									->andWhere(['gu.user_id' => $idUser]); // et on cible où c'est l'user actuel
-		$users = TableRegistry::get('Users');
+		$users = TableRegistry::get('users');
 		$usersQuery = $users->find()->hydrate(false)
 									->join([
 										'gu' =>[
@@ -235,8 +235,8 @@ class QuestionnairesController extends AppController
 		// on charge ensuite chaque questions et ses réponses.
 		$questions = array();
 		$associations = $associations->toArray();
-		$questionTable = TableRegistry::get('Questions');
-		$answerTable = TableRegistry::get('Answers');
+		$questionTable = TableRegistry::get('questions');
+		$answerTable = TableRegistry::get('answers');
 		for($p = 0; $p < count($associations); $p++){
 			$question = $questionTable->get($associations[$p]['question_id']);
 			$answers = $answerTable->get($associations[$p]['answer_id']);
@@ -272,7 +272,7 @@ class QuestionnairesController extends AppController
 		$session = $this->request->session();
 		$currentUser = $session->read('Auth.User');
 		$idUser = $currentUser['id'];
-		$questionnaires = TableRegistry::get('Questionnaires');
+		$questionnaires = TableRegistry::get('questionnaires');
 		$queryOwner = $questionnaires->find()->matching('Owners',
 			function($q){
 			$session = $this->request->session();		
@@ -340,7 +340,7 @@ class QuestionnairesController extends AppController
 			$this->set('isValidated', $isValidated);
 			$this->set('hasPartialAnswer', $hasPartialAnswer);
 		}else{
-			$questions = TableRegistry::get('Questions');
+			$questions = TableRegistry::get('questions');
 			$questionsQuery = $questions->find()
 									->hydrate(false)
 									->join([
@@ -353,7 +353,7 @@ class QuestionnairesController extends AppController
 									])
 									->where(['aqq.questionnaire_id' => $id]) // et on cible le questionnaire où on est
 									->distinct(['question_id']);
-			$answers = TableRegistry::get('Answers');						
+			$answers = TableRegistry::get('answers');						
 			$answersQuery = $answers->find()
 									->hydrate(false)
 									->join([
@@ -372,7 +372,7 @@ class QuestionnairesController extends AppController
 				
 			
 			//requête contenant tous les utilisateurs associés au questionnaire			
-			$users = TableRegistry::get('Users');
+			$users = TableRegistry::get('users');
 			$usersQuery = $users->find()->hydrate(false)
 									->join([
 										'gu' => [ // on join les groupes associés aux étudiant
@@ -436,7 +436,7 @@ class QuestionnairesController extends AppController
 					}
 				}
 				if(!empty($usersStats[$i])){
-					$groups = TableRegistry::get('Groups');
+					$groups = TableRegistry::get('groups');
 					$groupsQuery = $groups->find()->hydrate(false)
 									->join([
 										'gu' => [ // on join les groupes associés à l'étudiant
@@ -468,7 +468,7 @@ class QuestionnairesController extends AppController
 			$this->set('groupsStats', $groupsStats);
 			//$this->set('usersStats', $usersStats);
 			
-			$users = TableRegistry::get('Users');
+			$users = TableRegistry::get('users');
 			$usersQuery = $users->find()
 								->hydrate(false)
 								->join([
@@ -563,7 +563,7 @@ class QuestionnairesController extends AppController
 				
 				$this->request->data['owners'][0] = $currentUser; // on ajoute l'utilisateur actuel pour indiquer qu'il est lier au questionnaire
 				
-				$groups = TableRegistry::get('Groups');
+				$groups = TableRegistry::get('groups');
 				$queryGroups = $groups->find()->hydrate(false)
 									 ->join([
 										'gm' => [ // on join les modules
@@ -586,12 +586,12 @@ class QuestionnairesController extends AppController
 					$transaction->rollback();				
 					$this->Flash->error('Une erreur s\'est produite, merci de réessayer..');
 					$success = false;
-					//return $this->redirect(['controller' => 'Questionnaires', 'action' => 'add', $idModule]);
+					//return $this->redirect(['controller' => 'questionnaires', 'action' => 'add', $idModule]);
 				}
 			}else{
                 $this->Flash->error('Le questionnaire doit contenir au moins un titre & une description.');
 				$success = false;
-				//return $this->redirect(['controller' => 'Questionnaires', 'action' => 'add', $idModule]);
+				//return $this->redirect(['controller' => 'questionnaires', 'action' => 'add', $idModule]);
 			}
 			if($success){
 				foreach($this->request->data as $key => $value){
@@ -605,7 +605,7 @@ class QuestionnairesController extends AppController
 						$question = str_replace('_', ' ', $keySplitted[1]);
 						
 						//on test si la question existe déjà en BDD
-						$questionTable = TableRegistry::get('Questions');
+						$questionTable = TableRegistry::get('questions');
 						$questionTuple = $questionTable->find()->where(['Questions.id' => $idQuestion]);
 						if($questionTuple->first() == null){
 							$questionTuple = $questionTable->newEntity();
@@ -625,7 +625,7 @@ class QuestionnairesController extends AppController
 							$idAnswer = $valueSplitted[0];
 							$answer = $valueSplitted[1];
 							//on test si la réponse existe déjà en BDD
-							$answerTable = TableRegistry::get('Answers');
+							$answerTable = TableRegistry::get('answers');
 							$answerTuple = $answerTable->find()->where(['Answers.id' => $idAnswer]);
 							if($answerTuple->first() == null){
 								//debug('insert answer ' . $idAnswer . ' '. $answer);
@@ -656,7 +656,7 @@ class QuestionnairesController extends AppController
 				// on envoi les mails si demandé
 				/**if(array_key_exists('sendEmail', $this->request->data)){
 					//tous les utilisateurs à notifier
-					$users = TableRegistry::get('Users');
+					$users = TableRegistry::get('users');
 					$usersQuery = $users->find()->hydrate(false)
 									->join([
 										'gu' => [ // on join les groupes associés aux étudiant
@@ -697,9 +697,9 @@ class QuestionnairesController extends AppController
 			}
 		
 		}
-        $questions = TableRegistry::get('Questions');
+        $questions = TableRegistry::get('questions');
 		$questions = $questions->find('list');
-		$answers = TableRegistry::get('Answers');
+		$answers = TableRegistry::get('answers');
 		$answers = $answers->find('list');
         $this->set(compact('questionnaire', 'questions', 'answers'));
         $this->set('_serialize', ['questionnaire']);
@@ -760,7 +760,7 @@ class QuestionnairesController extends AppController
 						$question = str_replace('_', ' ', $keySplitted[1]);
 						
 						//on test si la question existe déjà en BDD
-						$questionTable = TableRegistry::get('Questions');
+						$questionTable = TableRegistry::get('questions');
 						$questionTuple = $questionTable->find()->where(['Questions.id' => $idQuestion]);
 						if($questionTuple->first() == null){
 							$questionTuple = $questionTable->newEntity();
@@ -780,7 +780,7 @@ class QuestionnairesController extends AppController
 							$idAnswer = $valueSplitted[0];
 							$answer = $valueSplitted[1];
 							//on test si la réponse existe déjà en BDD
-							$answerTable = TableRegistry::get('Answers');
+							$answerTable = TableRegistry::get('answers');
 							$answerTuple = $answerTable->find()->where(['Answers.id' => $idAnswer]);
 							if($answerTuple->first() == null){
 								//debug('insert answer ' . $idAnswer . ' '. $answer);
@@ -807,7 +807,7 @@ class QuestionnairesController extends AppController
 			if($success){
 				$transaction->commit();				
 				$this->Flash->success('Le questionnaire a bien été modifié.');
-				return $this->redirect(['controller' => 'Questionnaires', 'action' => 'index']);
+				return $this->redirect(['controller' => 'questionnaires', 'action' => 'index']);
 			}else{
 				$transaction->rollback();
 				$this->Flash->error('Une erreur s\'est produite, merci de réessayer plus tard.');
@@ -820,8 +820,8 @@ class QuestionnairesController extends AppController
 		// on charge ensuite chaque questions et ses réponses.
 		$questionsQuestionnaire = array();
 		$associations = $associations->toArray();
-		$questionTable = TableRegistry::get('Questions');
-		$answerTable = TableRegistry::get('Answers');
+		$questionTable = TableRegistry::get('questions');
+		$answerTable = TableRegistry::get('answers');
 		for($p = 0; $p < count($associations); $p++){
 			$question = $questionTable->get($associations[$p]['question_id']);
 			$answers = $answerTable->get($associations[$p]['answer_id']);
@@ -846,9 +846,9 @@ class QuestionnairesController extends AppController
 		$this->set('questionsQuestionnaire', $questionsQuestionnaire);
 		
 		
-        $questions = TableRegistry::get('Questions');
+        $questions = TableRegistry::get('questions');
 		$questions = $questions->find('list');
-		$answers = TableRegistry::get('Answers');
+		$answers = TableRegistry::get('answers');
 		$answers = $answers->find('list');
         $this->set(compact('questionnaire', 'questions', 'answers'));
         $this->set('_serialize', ['questionnaire']);
@@ -865,7 +865,7 @@ class QuestionnairesController extends AppController
 			$associations = TableRegistry::get('answers_questions_questionnaires');
 			$success = $success && $associations->deleteAll(['questionnaire_id' => $id]);
 			//supprimer le questionnaire dans questionnaires
-			$associations = TableRegistry::get('Questionnaires');
+			$associations = TableRegistry::get('questionnaires');
 			$success = $success && $associations->deleteAll(['id' => $id]);
 			$this->Flash->success('Le questionnaire a bien été supprimé.');
 			$this->redirect($this->referer());
@@ -902,7 +902,7 @@ class QuestionnairesController extends AppController
 		$associations->deleteAll(['questionnaire_id' => $id]);
 		
 		//supprimer le questionnaire dans questionnaires
-		//$associations = TableRegistry::get('Questionnaires');
+		//$associations = TableRegistry::get('questionnaires');
 		//$success = $success && $associations->deleteAll(['id' => $id]);
 		
 		$this->Flash->success('Le questionnaire a bien été supprimé.');
@@ -940,7 +940,7 @@ class QuestionnairesController extends AppController
 				$countGroup = 0;
 				for($m = 0; $m < count($this->request->data['modules']['ids']); $m++){
 					//on associe le questionnaire avec le ou les modules voulus
-					$groups = TableRegistry::get('Groups');
+					$groups = TableRegistry::get('groups');
 					$idModule = $this->request->data['modules']['ids'][$m];
 					$queryGroups = $groups->find()->hydrate(false)
 										 ->join([
@@ -978,7 +978,7 @@ class QuestionnairesController extends AppController
 				if($success){
 					$transaction->commit();
 					$this->Flash->success('Le questionnaire a bien été copié !');
-					return $this->redirect(['controller' => 'Questionnaires', 'action' => 'edit', $questionnaireCopy->id]);
+					return $this->redirect(['controller' => 'questionnaires', 'action' => 'edit', $questionnaireCopy->id]);
 				}else{
 					$transaction->rollback();
 					$this->Flash->error('Une erreur s\'est produite, merci de réessayer plus tard.');

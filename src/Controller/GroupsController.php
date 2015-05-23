@@ -91,7 +91,7 @@ class GroupsController extends AppController
 	*	est le propriétaire de ce groupe
 	*/
 	private function isOwner(){
-		$groups = TableRegistry::get('Groups');
+		$groups = TableRegistry::get('groups');
 		$queryOwner = $groups->find()->matching('Owners', function($q){
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
@@ -104,7 +104,7 @@ class GroupsController extends AppController
 				}
 			}
 			return $q
-					->select(['Owners.id', 'Groups.name'])
+					->select(['Owners.id', 'groups.name'])
 					->where(['Owners.id' => $idUser,
 							 'Groups.id' => $id]);
 		});

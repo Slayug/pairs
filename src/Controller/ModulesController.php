@@ -42,7 +42,7 @@ class ModulesController extends AppController
 			$canAccess = $isOwner = GroupsController::isAuthorized($user);
 			
 		}else if($idModule != null){
-			$modules = TableRegistry::get('Modules');
+			$modules = TableRegistry::get('modules');
 			$queryAccess = $modules->find()->hydrate(false)
 									 ->join([
 										'mg' => [ // on join les modules
@@ -91,7 +91,7 @@ class ModulesController extends AppController
 	*	est le propriétaire de ce module
 	*/
 	private function isOwner(){
-		$modules = TableRegistry::get('Modules');
+		$modules = TableRegistry::get('modules');
 		$queryOwner = $modules->find()->matching('Owners', function($q){
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
@@ -103,9 +103,9 @@ class ModulesController extends AppController
 				}
 			}
 			return $q
-						->select(['Owners.id', 'Modules.name'])
+						->select(['Owners.id', 'modules.name'])
 						->where(['Owners.id' => $idUser,
-								'Modules.id' => $id]);
+								'modules.id' => $id]);
 		});
 		return $queryOwner->count();
 	}
@@ -405,7 +405,7 @@ class ModulesController extends AppController
 			$session = $this->request->session();
 			$currentUser = $session->read('Auth.User');
 			
-			$groups = TableRegistry::get('Groups');
+			$groups = TableRegistry::get('groups');
 			$queryQuestionnaires = $groups->find()->hydrate(false)
 									 ->join([
 										'gm' => [ // on join les modules
@@ -424,7 +424,7 @@ class ModulesController extends AppController
 									->andWhere(['mg.module_id' => $id]); // et on cible le module où on est
 			
 			
-			$questionnaires = TableRegistry::get('Questionnaires');
+			$questionnaires = TableRegistry::get('questionnaires');
 			$queryQuestionnaires = $questionnaires->find()->hydrate(false)
 									 ->join([
 										'qg' => [ // on join les groupes
@@ -448,7 +448,7 @@ class ModulesController extends AppController
 									->andWhere(['mg.module_id' => $id]); // et on cible le module où on est
 			$this->set('questionnaires', $queryQuestionnaires);
 		}else{
-			$questionnaires = TableRegistry::get('Questionnaires');
+			$questionnaires = TableRegistry::get('questionnaires');
 			$queryQuestionnaires = $questionnaires->find()->hydrate(false)
 									 ->join([
 										'qg' => [ // on join les groupes

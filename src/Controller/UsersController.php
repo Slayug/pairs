@@ -86,7 +86,7 @@ class UsersController extends AppController
 			$user = $this->Users->get($id, [
 				'contain' => ['ModuleOwner']
 			]);
-			$modules = TableRegistry::get('Modules');
+			$modules = TableRegistry::get('modules');
 			$modulesUser = $modules->find()->hydrate(false)
 									 ->join([
 										'mg' => [ // on join les modules
