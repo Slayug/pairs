@@ -65,13 +65,32 @@
     <?php if (!empty($group->users)): ?>
     <table cellpadding="0" cellspacing="0">
         <tr>
-            <th><?= __('Prénom') ?></th>
             <th><?= __('Nom') ?></th>
+            <th><?= __('Prénom') ?></th>
+			<?php
+				if($isOwner){
+					echo '<th></th>';
+				}
+			?>
         </tr>
         <?php foreach ($group->users as $users): ?>
         <tr>
-            <td><?php echo ucfirst(h($users->first_name)) ?></td>
             <td><?php echo ucfirst(h($users->last_name)) ?></td>
+            <td><?php echo ucfirst(h($users->first_name)) ?></td>
+			<?php
+				if($isOwner){
+				?><td>
+					<?= $this->Form->postLink(
+						$this->Html->image('delete.png',
+							array('alt' => __('Supprimer'),
+								  'title' => __('Supprimer'))),
+							array('controller' => 'Groups',
+								  'action' => 'deleteUser', $group['id'], $users->id),
+							array('escape' => false,
+								  'confirm' => __('Êtes vous sûr de supprimer l\'utilisateur #{0}# ?', $users->last_name))); ?>
+				</td><?php
+				}
+			?>
         </tr>
 
         <?php endforeach; ?>

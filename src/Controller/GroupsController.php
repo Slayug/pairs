@@ -65,7 +65,7 @@ class GroupsController extends AppController
 		
 		$isOwner = $this->isOwner();
 		$canAccess = $queryAccess->count() + $isOwner;
-		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add', 'addUser'])){
+		if(in_array($action, ['edit', 'delete', 'deleteGroup', 'add', 'addUser', 'deleteUser'])){
 			if($role == 2){ // professeur
 				if(in_array($action, ['add'])){
 					return true;
@@ -264,6 +264,20 @@ class GroupsController extends AppController
         $this->set(compact('group', 'users', 'questionnaires'));
         $this->set('_serialize', ['group']);
     }
+	
+	public function deleteUser($id = null, $idUser = null){
+	
+		if(ctype_digit($id) && ctype_digit($idUser)){ // on vérifie que c'est bien un entier
+			$user = $this->Groups->Users
+				->find()
+				->where(['Users.id' => $idUser])
+				->toArray();
+			$group = $this->Groups->get($id);
+			$this->Groups->Users->unlink($group, $user);
+			$this->Flash->success('L\'utilisateur a bien été supprimé du groupe !');			
+		}
+		$this->redirect($this->referer());
+	}
 
     /**
      * Delete method

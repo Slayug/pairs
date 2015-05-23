@@ -1,3 +1,4 @@
 /.svn
 /tmp
 composer.phar
+/logs
