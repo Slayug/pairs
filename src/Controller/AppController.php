@@ -15,6 +15,7 @@
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+use Cake\Event\Event;
 
 /**
  * Application Controller
@@ -48,6 +49,11 @@ class AppController extends Controller
                     ]
                 ]
             ],
+			'flash' => [
+				'params' => [
+					'class' => 'alert alert-danger authError'
+				]
+			],
 			'authError' => 'Vous ne pouvez pas accéder à ce contenu.',
             'loginAction' => [
                 'controller' => 'Users',
@@ -59,7 +65,11 @@ class AppController extends Controller
         // Autorise l'action display pour que notre controller de pages
         // continue de fonctionner.
         $this->Auth->allow(['display']);
-		$this->Auth->AuthError = "Vous ne pouvez pas accéder à cette page.";
+		//$this->Auth->flash['params']['class'] = 'alert alert-danger';
+		//debug($this->Auth->AuthError);
+		// $this->Auth->config('class', "alert alert-danger");
+		//debug($this->Auth->Flash);
+		//$this->Auth->flash['params']['class'] = 'alert alert-danger';
 		
 		
     }
