@@ -207,7 +207,7 @@
 						foreach($usersStats[$i]['questions'] as $question){
 							$legend = array();
 						?>
-							<div class="chart-questionnaire col-md-3">
+							<div class="chart-questionnaire col-sm-6 col-md-3">
 								<h6 style="height:45px;"><?= $question['content'] ?></h6>
 								<canvas id="<?php echo 'ctx_' . $idDonut; ?>" width="200" height="200"></canvas>
 								<script type="text/javascript">
