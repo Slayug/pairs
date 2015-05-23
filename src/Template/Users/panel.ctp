@@ -4,7 +4,7 @@
 
 <div id="pairs_panel" class="panel panel-default users view large-12 medium-12 columns">
 
-<div class="panel-heading"><h2 class="panel-title">Panel</h2></div>
+<div class="panel-heading"><h2 class="panel-title">Accueil</h2></div>
 <div class="panel-body">
 <?php
 	$session = $this->request->session();

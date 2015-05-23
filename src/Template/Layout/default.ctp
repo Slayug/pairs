@@ -81,7 +81,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 							}else{
 								echo '<li>';
 							}
-							echo $this->Html->link(__('Panel'), ['controller' => 'Users', 'action' => 'panel']);
+							echo $this->Html->link(__('Accueil'), ['controller' => 'Users', 'action' => 'panel']);
 							echo '</li>';
 							echo '<li>';
 							echo $this->Html->link(__('Déconnexion'), ['controller' => 'Users', 'action' => 'logout']);
