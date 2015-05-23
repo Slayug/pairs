@@ -549,6 +549,37 @@ class ModulesController extends AppController
     public function delete($id = null){
         $this->request->allowMethod(['post', 'delete']);
         $module = $this->Modules->get($id);
+			$session = $this->request->session();
+			$currentUser = $session->read('Auth.User');
+			$idUser = $currentUser['id'];
+		
+		$questionnaires = TableRegistry::get('questionnaires');
+		$queryQuestionnaires = $questionnaires->find()->hydrate(false)
+								 ->join([
+									'qg' => [ // on join les groupes
+										'table' => 'questionnaires_groups',
+										'type' => 'INNER',
+										'conditions' => 'qg.questionnaire_id = questionnaires.id',
+									],
+									'mg' => [
+										'table' => 'modules_groups',
+										'type' => 'INNER',
+										'conditions' => 'mg.group_id = qg.group_id',
+									],
+									'gu' => [ // on join les users associés au join précédent
+										'table' => 'groups_users',
+										'type' => 'INNER',
+										'conditions' => 'qg.group_id = gu.group_id',
+									]])
+									->where(['gu.user_id' => $currentUser['id']])
+									->andWhere(['mg.module_id' => $id]); // et on cible le module où on est
+		
+		$questionnaireArray = $queryQuestionnaires->toArray();
+		$questionnaire = new QuestionnairesController();
+		for($i = 0;$i < count($questionnaireArray); $i++){
+			$questionnaire->deleteAssociation($questionnaireArray[$i]['id']);
+		}
+		
         if ($this->Modules->delete($module)) {
             $this->Flash->success('Le module a bien été supprimé.');
         } else {
