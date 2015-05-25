@@ -285,9 +285,9 @@ class QuestionnairesController extends AppController
 				}
 			}
 			return $q
-						->select(['Owners.id', 'Questionnaires.title'])
+						->select(['Owners.id', 'questionnaires.title'])
 						->where(['Owners.id' => $idUser,
-								'Questionnaires.id' => $id]);
+								'questionnaires.id' => $id]);
 		});
 		return $queryOwner->count();
 	}

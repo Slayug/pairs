@@ -29,7 +29,7 @@ Ce site offre aux professeurs un moyen de créer des questionnaires. Chaque grou
 	<li>extension mod_rewrite</li>
 </ul>
 <p>Le site fonctionne sous le framwork CakePHP 3.0 il suffit donc de cloner les fichiers dans un répertoire d'un serveur web.<br>
-Par exemple sous lampp, ouvrir un terminal, se placer dans /opt/lampp/htdocs<br>
+Par exemple sous lampp, ouvrez un terminal, se placer dans /opt/lampp/htdocs<br>
 Sous wamp, */wamp/www et faire: <strong>git clone https://github.com/Slayug/pairs</strong></p>
 
 <p>Vous devez aussi importer les tables, le fichier d'importation est dans le dossier sql <cake_pairs_en.sql>. Une fois le fichier téléchargé, il doit être importé dans la base de données: <cake_pairs>.</p>
