@@ -106,7 +106,7 @@ class GroupsController extends AppController
 			return $q
 					->select(['Owners.id', 'groups.name'])
 					->where(['Owners.id' => $idUser,
-							 'Groups.id' => $id]);
+							 'groups.id' => $id]);
 		});
 		
 		return $queryOwner->count();
