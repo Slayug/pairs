@@ -23,7 +23,7 @@ Ce site offre aux professeurs un moyen de créer des questionnaires. Chaque grou
 <ul>
 	<li>HTTP Server</li>
 	<li>PHP 5.4.16+</li>
-	<li>MySQL (5.1.10 ou supérieur)+</li>
+	<li>MySQL 5.1.10+</li>
 	<li>extension mbstring</li>
 	<li>extension intl</li>
 	<li>extension mod_rewrite</li>
