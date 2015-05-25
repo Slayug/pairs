@@ -4,7 +4,7 @@ use Cake\Core\Configure;
 if (Configure::read('debug')):
     $this->layout = 'dev_error';
 
-    $this->assign('title', $message);
+    $this->assign('title', 'Page Inconnue');
     $this->assign('templateName', 'error400.ctp');
 
     $this->start('file');
@@ -28,11 +28,8 @@ if (Configure::read('debug')):
     $this->end();
 endif;
 ?>
-<h2><?= h($message) ?></h2>
+<h2>Page Inconnue</h2>
 <p class="error">
-    <strong><?= __d('cake', 'Error') ?>: </strong>
-    <?= sprintf(
-        __d('cake', 'The requested address %s was not found on this server.'),
-        "<strong>'{$url}'</strong>"
-    ) ?>
+	<?= $this->Html->image('ghost.png', array('alt' => 'Ghost 404 Error')); ?>
+    <p><strong>Erreur: </strong>Cette page n'existe pas.</p>
 </p>
