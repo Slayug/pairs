@@ -101,7 +101,8 @@ class UsersController extends AppController
 										]
 									
 									])
-									->where(['gu.user_id' => $id]); // où l'id de l'user est le même que celui qui est connecté
+									->where(['gu.user_id' => $id]) // où l'id de l'user est le même que celui qui est connecté
+									->distinct(['modules.id']);
 			if(!$modulesUser->count()){
 				$modulesUser = array();
 			}
