@@ -14,9 +14,6 @@ use Cake\Network\Email\Email;
 class QuestionnairesController extends AppController
 {
 
-	
-	date_default_timezone_set('Europe/Paris');
-
 	/**
 	 * Methode permettant de gérer les droits pour
 	 * ce controller
@@ -98,6 +95,8 @@ class QuestionnairesController extends AppController
 	*	25-5 => 5
 	*/
 	public function reply($idQuestionnaire = null){
+		
+		date_default_timezone_set('Europe/Paris');
 		$session = $this->request->session();
 		$currentUser = $session->read('Auth.User');
 		$idUser = $currentUser['id'];
