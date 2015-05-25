@@ -718,12 +718,12 @@ class QuestionnairesController extends AppController
     public function edit($id = null){
         $questionnaire = $this->Questionnaires->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
-			
+			$msgError = '';
 			$success = true;
 			$transaction = ConnectionManager::get('default'); // permet de faire un rollback si une des insertions plantes
 			$transaction->begin();
 			$associations = TableRegistry::get('answers_questions_questionnaires');
-			$success = $success && $associations->deleteAll(['questionnaire_id' => $id]);
+			$success = $success AND $associations->deleteAll(['questionnaire_id' => $id]);
 			
 			//on vide par les tableaux fournis par défault de cake
 			$this->request->data['answers'] = array();
@@ -764,7 +764,7 @@ class QuestionnairesController extends AppController
 						
 						//on test si la question existe déjà en BDD
 						$questionTable = TableRegistry::get('questions');
-						$questionTuple = $questionTable->find()->where(['Questions.id' => $idQuestion]);
+						$questionTuple = $questionTable->find()->where(['questions.id' => $idQuestion]);
 						if($questionTuple->first() == null){
 							$questionTuple = $questionTable->newEntity();
 							$questionTuple->content = $question;
@@ -784,7 +784,7 @@ class QuestionnairesController extends AppController
 							$answer = $valueSplitted[1];
 							//on test si la réponse existe déjà en BDD
 							$answerTable = TableRegistry::get('answers');
-							$answerTuple = $answerTable->find()->where(['Answers.id' => $idAnswer]);
+							$answerTuple = $answerTable->find()->where(['answers.id' => $idAnswer]);
 							if($answerTuple->first() == null){
 								//debug('insert answer ' . $idAnswer . ' '. $answer);
 								$answerTuple = $answerTable->newEntity();
@@ -808,7 +808,7 @@ class QuestionnairesController extends AppController
 				}
 			}
 			if($success){
-				$transaction->commit();				
+				$transaction->commit();
 				$this->Flash->success('Le questionnaire a bien été modifié.');
 				return $this->redirect(['controller' => 'questionnaires', 'action' => 'index']);
 			}else{
