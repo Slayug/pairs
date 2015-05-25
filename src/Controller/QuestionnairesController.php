@@ -606,7 +606,7 @@ class QuestionnairesController extends AppController
 						
 						//on test si la question existe déjà en BDD
 						$questionTable = TableRegistry::get('questions');
-						$questionTuple = $questionTable->find()->where(['Questions.id' => $idQuestion]);
+						$questionTuple = $questionTable->find()->where(['questions.id' => $idQuestion]);
 						if($questionTuple->first() == null){
 							$questionTuple = $questionTable->newEntity();
 							$questionTuple->content = $question;
@@ -626,7 +626,7 @@ class QuestionnairesController extends AppController
 							$answer = $valueSplitted[1];
 							//on test si la réponse existe déjà en BDD
 							$answerTable = TableRegistry::get('answers');
-							$answerTuple = $answerTable->find()->where(['Answers.id' => $idAnswer]);
+							$answerTuple = $answerTable->find()->where(['answers.id' => $idAnswer]);
 							if($answerTuple->first() == null){
 								//debug('insert answer ' . $idAnswer . ' '. $answer);
 								$answerTuple = $answerTable->newEntity();
