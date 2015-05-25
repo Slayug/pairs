@@ -66,7 +66,7 @@ class QuestionnairesController extends AppController
 					return true;
 				}
 			}
-		}else if(in_array($action, ['view'])){
+		}else if(in_array($action, ['view', 'show'])){
 			if($role == 2){
 				return true;
 			}else if($role == 3 && $canReply){
@@ -293,6 +293,69 @@ class QuestionnairesController extends AppController
 								'questionnaires.id' => $id]);
 		});
 		return $queryOwner->count();
+	}
+	
+	/**
+	*
+	* Permet de visualiser un questionnaire les questions & réponses associées
+	*
+	*/
+	public function show($id = null){
+		if($id != null){
+			if(ctype_digit($id)){ //isInt
+				$questions = TableRegistry::get('questions');
+				$questionsQuery = $questions->find()
+										->hydrate(false)
+										->join([
+											'aqq' => [ // on join associations avec les questions du questionnaires
+												'table' => 'answers_questions_questionnaires',
+												'type' => 'INNER',
+												'conditions' => 'aqq.question_id = questions.id',
+											]
+										
+										])
+										->where(['aqq.questionnaire_id' => $id]) // et on cible le questionnaire où on est
+										->distinct(['question_id']);
+				$answers = TableRegistry::get('answers');						
+				$answersQuery = $answers->find()
+										->hydrate(false)
+										->join([
+											'aqq' => [ // on join associations avec les réponses du questionnaires
+												'table' => 'answers_questions_questionnaires',
+												'type' => 'INNER',
+												'conditions' => 'aqq.answer_id = answers.id',
+											]
+										
+										])
+										->where(['aqq.questionnaire_id' => $id]) // et on cible le questionnaire où on est
+										->distinct(['answer_id']);
+				
+				$questionsArray = $questionsQuery->toArray();
+				$answersArray = $answersQuery->toArray();
+				$questions = array(); // contient les questions associées aux réponses.
+				$answersQuestionsQuestionnaires = TableRegistry::get('answers_questions_questionnaires');
+				$answersQuestionsQuestionnairesQuery = $answersQuestionsQuestionnaires->find()->where(['questionnaire_id' => $id]);
+				$answersQuestionsQuestionnairesArray = $answersQuestionsQuestionnairesQuery->toArray();
+				// on parcours les associations
+				for($p = 0; $p < count($answersQuestionsQuestionnairesArray); $p++){
+					$question = $this->getValueFromId($questionsArray, $answersQuestionsQuestionnairesArray[$p]['question_id']);
+					$answer = $this->getValueFromId($answersArray, $answersQuestionsQuestionnairesArray[$p]['answer_id']);
+					// et récupère la réponse & la question 
+					if(!array_key_exists($question['id'], $questions)){
+						//si la question n'est pas encore dans le tableau on l'ajoute
+						$questions[$question['id']] = $question;
+					}
+					//et on ajoute la réponse en vérifiant si le tableau des questions existe déjà ou pas pour ne pas effacer les précédentes réponses.
+					if(!array_key_exists('answers', $questions[$question['id']])){
+						$questions[$question['id']]['answers'] = array();
+					}
+					$questions[$question['id']]['answers'][$answersQuestionsQuestionnairesArray[$p]['position']] = $answer;
+				}
+				$questionnaire = $this->Questionnaires->get($id);
+				$this->set('questionnaire', $questionnaire);
+				$this->set('questions', $questions);
+			}
+		}
 	}
 	
     /**

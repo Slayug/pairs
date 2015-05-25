@@ -13,6 +13,10 @@ $currentUser = $session->read('Auth.User');
 		<div>
         <p>Description: <?= h($questionnaire->description) ?></p>
         <ul	class="actions">
+				<li><a href="/pairs/questionnaires/show/<?= $questionnaire->id ?>"
+						onclick="open('/pairs/questionnaires/show/<?= $questionnaire->id ?>',
+						'Popup', 'scrollbars=1,resizable=1,height=560,width=770');
+						return false;" >Afficher</a></li>
 				<li><?= $this->Html->link(__('Copier'), ['action' => 'copy', $questionnaire->id]) ?></li>
 				<?php
 				if($questionnaire->_matchingData['Owners']->id == $currentUser['id']){?>
