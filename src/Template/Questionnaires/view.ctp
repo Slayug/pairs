@@ -30,7 +30,6 @@
 		?>
 		<p><?php
 			$currentDate = new DateTime('now');
-			echo $currentDate->format('d-m-Y H:i:s');
 		if($isValidated){?>
 			<div class="alert alert-success">
 				<p>Vous avez validé le formulaire ! <strong>Merci !</strong></p>
