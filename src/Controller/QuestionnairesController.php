@@ -13,6 +13,10 @@ use Cake\Network\Email\Email;
  */
 class QuestionnairesController extends AppController
 {
+
+	
+	date_default_timezone_set('Europe/Paris');
+
 	/**
 	 * Methode permettant de gérer les droits pour
 	 * ce controller
