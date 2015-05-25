@@ -1,5 +1,4 @@
-
-	<?= $this->Flash->render() ?>
+<?= $this->Flash->render() ?>
 <div class="panel panel-default questionnaires view large-12 medium-12 columns">
     <div class="panel-heading"><h2 class="panel-title"><?= h($questionnaire->title) ?></h2></div>
 <div class="panel-body">
@@ -12,6 +11,8 @@
             <p><?= h($questionnaire->description) ?></p>
         </div>
 		<?php
+			date_default_timezone_set('Europe/Paris');
+		
 			$dateLimit = new DateTime($questionnaire->date_limit);
 			$dateCreation = new DateTime($questionnaire->date_creation);
 		?>
