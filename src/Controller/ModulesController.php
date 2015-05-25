@@ -423,7 +423,6 @@ class ModulesController extends AppController
 									->where(['gu.user_id' => $currentUser['id']])
 									->andWhere(['mg.module_id' => $id]); // et on cible le module où on est
 			
-			
 			$questionnaires = TableRegistry::get('questionnaires');
 			$queryQuestionnaires = $questionnaires->find()->hydrate(false)
 									 ->join([
@@ -445,7 +444,8 @@ class ModulesController extends AppController
 									
 									])
 									->where(['gu.user_id' => $currentUser['id']])
-									->andWhere(['mg.module_id' => $id]); // et on cible le module où on est
+									->andWhere(['mg.module_id' => $id]) // et on cible le module où on est
+									->distinct(['questionnaires.id']);
 			$this->set('questionnaires', $queryQuestionnaires);
 		}else{
 			$questionnaires = TableRegistry::get('questionnaires');
