@@ -42,4 +42,4 @@ Dans WAMP, l’extension intl est “activée” par défaut mais ne fonctionne 
 </p>
 <p>Source: <a href="http://book.cakephp.org/3.0/fr/installation.html#conditions-requises">cakePHP</a></p>
 
-
+<b>Besoin de refactoring..</b>
